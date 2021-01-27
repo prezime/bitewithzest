@@ -1,0 +1,23 @@
+{% extends "base.html" %} 
+{% block about %} {% include 'about.html' %} {% endblock about %}
+{% block post_showcase %}
+
+<div class="gallery">
+        <!-- Blog Entries Column -->
+            {% for post in post_list|slice:":10" %}
+            
+            <div class="item-{{post.id}}">
+                <a href="{% url 'post_detail' post.slug  %}" class="card">
+                  <div class="thumb" style="background-image: url(https://source.unsplash.com/random/400x300?v={{post.id}});"></div>
+                  <article>
+                    <h1>{{ post.title }}</h1>
+                    <span>{{ post.author }} | {{ post.created_on}}</span>
+                  </article>
+                </a>
+              </div>
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock post_showcase %}

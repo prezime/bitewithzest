@@ -1,0 +1,11 @@
+{% block sidebar %}
+
+<!-- Sidebar Widgets Column -->
+
+        <ul>
+            {%for post in side_post_list %}
+            <li><a href="{% url 'post_detail' post.slug  %}">{{post.id}} - {{post.title}}</a> </li>
+            {% endfor %}
+        </ul>
+
+{% endblock sidebar %}

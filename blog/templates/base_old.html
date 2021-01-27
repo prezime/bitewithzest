@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Django Central</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <meta name="google" content="notranslate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+
+    <body>
+		<header>
+			<a class="site-header__logo"></a>
+				<div class="navbar" id="myTopnav">
+					<a href="#contact">Contact</a>
+					<a href="#work">Work</a>
+					<a href="#home" class="active">Home</a>
+					<a href="javascript:void(0);" class="icon" onclick="openRespMenu()">
+					  <i class="fa fa-bars"></i>
+					</a>
+				  </div> 
+		</header>
+		
+			{% block content %}
+			<!-- Content Goes here -->
+			{% endblock content %}
+			
+			<!-- Footer -->
+			<footer>
+				<p>Copyright &copy; BiteWithZest</p>
+			</footer>
+			<script>
+			function openRespMenu() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "navbar") {
+					x.className += " responsive";
+				} else {
+					x.className = "navbar";
+				}
+			}
+			</script>
+		</div>
+    </body>
+</html>

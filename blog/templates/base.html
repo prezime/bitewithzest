@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+  <title>Bite With Zest! - the ultimate Life Zest blog</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <button aria-expanded="false" aria-controls="nav-menu">
+        <span class="open">☰</span>
+        <span class="close">×</span>
+        Menu
+    </button> 
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="nav-logo">
+                <a href="/" title="BiteWithZest">
+                    <img src="{% static 'img/BWZ_logo_red_2.png' %}" alt="logo">        
+                </a>
+            </div>
+             
+             
+            <div class="nav-menu nav-home">     
+                <a href="#home" class="active">Home</a>
+            </div> 
+            <div class="nav-menu nav-work">   
+                <a href="#work">Work</a>
+            </div> 
+            <div class="nav-menu nav-contact">
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>               
+    
+    {% block about %}
+    <!-- Content Goes here -->
+    {% endblock about %}
+
+    {% if object.intro %}
+      {% block post_content %}{% endblock post_content %}
+      {% block post_content_css %} {% include 'post_detail_css.html' %} {% endblock post_content_css %}
+    {% else %}
+      {% block post_showcase %}{% endblock post_showcase %}
+      {% block post_showcase_css %} {% include 'post_showcase_css.html' %} {% endblock post_showcase_css %}         
+    {% endif %}
+    
+    {% block footer %}
+    <!-- Content Goes here -->
+    {% endblock footer %}
+    
+    
+  </div>
+  <script></script>
+</body>
+</html>

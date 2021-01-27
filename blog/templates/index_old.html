@@ -1,0 +1,22 @@
+{% extends "base.html" %} 
+{% block content %}
+
+<div class="band">
+        <!-- Blog Entries Column -->
+            {% for post in post_list %}
+            
+            <div class="item-{{post.id}}">
+                <a href="{% url 'post_detail' post.slug  %}" class="card">
+                  <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);"></div>
+                  <article>
+                    <h1>{{ post.title }}</h1>
+                    <span>{{ post.author }} | {{ post.created_on}}</span>
+                  </article>
+                </a>
+              </div>
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}
