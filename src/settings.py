@@ -31,7 +31,7 @@ SECRET_KEY = '4czmp-4f95_%5upj8f3_5hm5p4%ggsd*b9da)@w#ba+-ts9)yu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -193,3 +193,5 @@ SUMMERNOTE_CONFIG = {
     #    '//somewhere_in_internet/summernote-plugin-name.js',
     #},
 }
+
+django_heroku.settings(locals())
