@@ -11,7 +11,10 @@
             {{ object.intro | safe }}
         </div>
         <div class="post-date">{% block created_on %} {{ object.created_on}} {% endblock  %}</div>
-    </div>    
+    </div>
+    <div class="mobile-food-logo">
+        <img src="../static/img/carrots-logo.jpg" alt=""> 
+    </div>   
     <div class="post-content">
         <div class="intro1-text">
             {{ object.intro1 | safe }}
@@ -20,8 +23,9 @@
             {{ object.title }} 
         </div>
         <div class="preparation">
-            {{ object.preparationtext | safe }}
+            
             <img src="../media/post{{post.id}}/intro/post_intro{{post.id}}.jpg" alt="">
+            {{ object.preparationtext | safe }}
         </div>    
         
         <div class="maintext"> 
@@ -41,6 +45,8 @@
 
     </div> 
 
-</div>
 
 {% endblock post_content %}
+
+{% block post_content_css %} {% include 'post_detail_css.html' %} {% endblock post_content_css %}
+

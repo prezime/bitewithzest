@@ -13,11 +13,7 @@
 <body>
 
   <div class="wrapper">
-    <button aria-expanded="false" aria-controls="nav-menu">
-        <span class="open">☰</span>
-        <span class="close">×</span>
-        Menu
-    </button> 
+    
     <nav class="navbar">
         <div class="navbar-content">
             <div class="nav-logo">
@@ -26,7 +22,11 @@
                 </a>
             </div>
              
-             
+            <button id="menubutton" aria-expanded="false" aria-controls="nav-menu">
+              <span class="open">☰</span>
+              <span class="close">×</span>
+              Menu
+          </button>
             <div class="nav-menu nav-home">     
                 <a href="#home" class="active">Home</a>
             </div> 
@@ -38,25 +38,28 @@
             </div>
         </div>
     </nav>               
-    
-    {% block about %}
-    <!-- Content Goes here -->
-    {% endblock about %}
+    <div class="content">
+      {% block about %}{% endblock about %}
 
-    {% if object.intro %}
       {% block post_content %}{% endblock post_content %}
-      {% block post_content_css %} {% include 'post_detail_css.html' %} {% endblock post_content_css %}
-    {% else %}
-      {% block post_showcase %}{% endblock post_showcase %}
-      {% block post_showcase_css %} {% include 'post_showcase_css.html' %} {% endblock post_showcase_css %}         
-    {% endif %}
-    
-    {% block footer %}
-    <!-- Content Goes here -->
-    {% endblock footer %}
-    
-    
+
+      {% block post_content_css %} {% endblock post_content_css %}
+
+      {% block post_showcase %}{% endblock post_showcase %}   
+
+      <!-- {% block post_showcase_css %} {% endblock post_showcase_css %}     -->
+    </div>  
+    {% block footer_showcase %}{% include 'footer.html' %} {% endblock %}
   </div>
-  <script></script>
+  <script>
+    const navButton = document.querySelector('button[id]');
+    function toggleNav(target){
+      const htmltarget = target.originalTarget;
+      const expanded = htmltarget.getAttribute('aria-expanded') === 'true' || false;
+      navButton.setAttribute('aria-expanded',!expanded);
+    }
+    
+    navButton.addEventListener('click',toggleNav);
+  </script>
 </body>
 </html>

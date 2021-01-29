@@ -1,32 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Playball&family=Ubuntu:wght@300&display=swap');
-body {
-    font-size: 15px;
-}
-  
-button {
-    background: #ffc600;
-    border: 0;
-    padding: 10px 20px;
-}
+
 
 img {
     max-width: 100%;
 }
 
+
 .wrapper{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 120px 500px 1fr 120px;
-    grid-template-areas: 
-    "nav"
-    "about"
-    "gallery"
-    "footer";
-    gap: 1px;
+  display: grid;
+  grid-template-rows: auto 1fr auto ;
 }
 
 .footer {
-  grid-area: footer;
   height: 120px;
 }
 
@@ -95,7 +80,7 @@ img {
 }
 
 [aria-controls="nav-menu"] {
-    display: none;
+    /* display: none; */
 }
 
 /* About Section */
@@ -126,7 +111,6 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     width: 100%;
-    max-width: $my_max-width;
     margin: 0 auto;
     padding-top: 5%;
     
@@ -186,5 +170,152 @@ img {
     background-size: cover;
     background-position: center center;
   }
+
+  
+
+@media (min-width: 1020px){
+  .post-body{
+      display: grid;
+      max-width: 1440px;
+      margin: 100px auto;
+      column-gap: 10px 25px;
+      font-family: 'Rubik', serif;
+      font-size: 18px;
+      color: var(--black);
+      border-top: 7px solid var(--red);
+  }
+  .post-title-figure {
+      position: absolute;
+      top: 20px;
+      right: -300px;
+      display: table-cell; /* keep the background color wrapped tight */
+      margin: 20px; 
+      padding-left: 27px;
+      font-size:23px;
+      background-color:rgba(255, 255, 255, 0.8);
+      max-width: 600px;
+      color: var(--red);
+      text-align: left;
+  }
+  .intro{
+      display: grid;
+      grid-template-areas: 
+          "picture picture picture intro-empty"
+          "picture picture picture intro-empty"
+          "picture picture picture intro-empty"
+          "picture picture picture intro-text" 
+          "picture picture picture post-date" 
+  }
+  .intro-text{
+      grid-area: intro-text;
+      padding: 20px;
+  }
+
+  .intro-empty{
+      grid-area: intro-empty;
+  }
+
+  .post-date{
+      grid-area: post-date;
+      bottom: 0;
+      padding-left: 20px;
+      font-style: italic;
+      color: rgb(153, 153, 153);
+  }
+  .picture{
+      grid-area: picture;
+      position: relative;
+      text-align: center;
+      color: var(--black);
+        
+  }
+  .picture img{
+      width: 1000px;
+      height: 600px;
+      object-fit: cover;
+  }
+
+  .post-content {
+    display: grid;
+    max-width: 1440px;
+    margin: 100px auto;
+    grid-template-columns: 3fr 12fr 5fr;
+    grid-gap: 10px 30px;
+  }
+  .post-content>* {
+      grid-column: 2/span 1;
+  }
+  .mobile-food-logo{
+    display: none;
+  }
+  .post-title{
+      display: grid;
+      font-size: 35px;
+      font-weight: 500;
+      border-bottom: 5px solid var(--red);
+      color: var(--red);
+  }
+  
+  .preparation{
+      display: grid;
+      grid-template-columns: 3fr auto;  
+      margin-top: 20px;  
+  }
+  .preparation img{
+      grid-column: 2/span 1;
+      grid-row: 1/span 4;
+      width: 210px;
+      height: 210px;
+      object-fit: cover;
+  }
+  
+  .preparation .webicons1 {
+      display: inline;
+      grid-column: 1/-2;
+      height: 30px;
+      font-size: 23px;
+      padding-left: 35px; 
+      background-image: url({% static 'img/web_icons.png' %});
+      background-size: contain;
+      background-repeat: no-repeat;
+  }
+  .preparation .webicons2 {
+      grid-column: 1/-2;
+      height: 30px;
+      font-size: 23px;
+      padding-left: 35px; 
+      background-image: url({% static 'img/web_icons2.png' %});
+      background-size: contain;
+      background-repeat: no-repeat;
+  
+  }
+  
+  .preparation .webicons3 {
+      grid-column: 1/-2;
+      height: 30px;
+      font-size: 23px;
+      padding-left: 35px; 
+      background-image: url({% static 'img/web_icons3.png' %});
+      background-size: contain;
+      background-repeat: no-repeat;
+  }
+  
+  .preparation .webicons4 {
+      grid-column: 1/-2;
+      height: 30px;
+      font-size: 23px;
+      padding-left: 35px; 
+      background-image: url({% static 'img/web_icons4.png' %});
+      background-size: contain;
+      background-repeat: no-repeat;
+  
+  }
+  
+  [aria-expanded="true"] ~ div {
+    display: grid;
+    min-height: 500px;
+    display: none;
+  }
+}
 
   
