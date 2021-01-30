@@ -19,7 +19,9 @@ img {
 
 .navbar{
     background: #eee;
-    height: 120px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 .navbar-content {
     display: grid;
@@ -308,14 +310,8 @@ img {
       background-image: url({% static 'img/web_icons4.png' %});
       background-size: contain;
       background-repeat: no-repeat;
-  
   }
-  
-  [aria-expanded="true"] ~ div {
-    display: grid;
-    min-height: 500px;
-    display: none;
-  }
+
 }
 
   

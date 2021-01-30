@@ -27,7 +27,9 @@
             <img src="../media/post{{post.id}}/intro/post_intro{{post.id}}.jpg" alt="">
             {{ object.preparationtext | safe }}
         </div>    
-        
+        <div class="ingerdients"> 
+            {{ object.ingredients | safe }}
+        </div>
         <div class="maintext"> 
             {{ object.maintext | safe }}
         </div>
