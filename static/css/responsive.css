@@ -81,45 +81,10 @@ img {
     border-bottom: 1px solid var(--red);
 }
 
-[aria-controls="nav-menu"] {
-    /* display: none; */
-}
 
-/* About Section */
 
-.about {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    position: relative;
-    background: #ffffff;
-    padding-top: 120px;
-    padding-bottom: 0;
-    text-align: center;
-    font-family: 'Playball';
-  }
-.about_details h2  {
-    font-size: 44px;
-    font-weight: 400;
-    color: var(--black);    
-}
-
-.about_details p  {
-    font-size: 30px;
-    color: var(--grey);    
-}
   /* Gallery */
-  .gallery{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 5%;
-    
-    /* grid-template-columns: 1fr; */
-    grid-template-rows: auto;
-    grid-gap: 20px;
-  }
+  
 
   .card {
     background: white;
@@ -176,6 +141,64 @@ img {
   
 
 @media (min-width: 1020px){
+  /* About Section */
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    position: relative;
+    background: #ffffff;
+    padding-top: 120px;
+    padding-bottom: 0;
+    text-align: center;
+    font-family: 'Playball';
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .about h2  {
+    font-size: 44px;
+    font-weight: 400;
+    color: var(--black);    
+  }
+
+  .about p  {
+    font-size: 30px;
+    color: var(--grey);    
+  }
+
+  .about hr {
+      position: relative;
+      display: inline-block;
+      height: 1px;
+      background: #eeeeee;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      border: 0;
+  }
+
+  .about hr::after {
+      position: relative;
+      top: -15px;
+      content: "";
+      display: inline-block;
+      width: 70px;
+      height: 2px;
+      background: var(--red);
+      
+  }
+
+  .gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 5%;
+    
+    /* grid-template-columns: 1fr; */
+    grid-template-rows: auto;
+    grid-gap: 20px;
+  }
   .post-body{
       display: grid;
       max-width: 1440px;

@@ -36,10 +36,47 @@ h1,h2,h3,h4,h5,h6{
     margin: 0,0, 5px,0;
 }
 
-.about_details hr {
+/* About Section */
+.content{
+    display: grid;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr ;
+    align-items: center;
+    background: #ffffff;
+    padding-top: 120px;
+    padding-bottom: 0;
+    text-align: center;
+    font-family: 'Playball';  
+    justify-items: center;
+    margin: auto 0; 
+    
+  }
+
+.about>*{
+    grid-column: 1/span 1;
+}
+
+.about h2  {
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--black); 
+    text-align: center;   
+    word-wrap:break-word;
+}
+
+.about p  {
+    font-size: 20px;
+    color: var(--grey);  
+    text-align: center;  
+    word-wrap:break-word;
+}
+
+.about hr {
     position: relative;
     display: inline-block;
-    width: 360px;
     height: 1px;
     background: #eeeeee;
     margin-top: 40px;
@@ -47,7 +84,7 @@ h1,h2,h3,h4,h5,h6{
     border: 0;
 }
 
-.about_details hr::after {
+.about hr::after {
     position: relative;
     top: -15px;
     content: "";
