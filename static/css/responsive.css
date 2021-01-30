@@ -222,6 +222,9 @@ img {
       color: var(--red);
       text-align: left;
   }
+  .post-title-figure > h1 {
+    font-weight: 200;    
+  }
   .intro{
       display: grid;
       grid-template-areas: 
