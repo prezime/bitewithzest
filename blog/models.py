@@ -72,10 +72,10 @@ class Category(models.Model):
     def get_absolute_url(self):
         return reverse('home')   
 
-# cats = Category.objects.all().values_list('description','description')
-# category_list = []
-# for item in cats:
-#   category_list.append(item) 
+cats = Category.objects.all().values_list('description','description')
+category_list = []
+for item in cats:
+  category_list.append(item) 
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
