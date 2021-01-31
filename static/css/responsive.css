@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playball&family=Ubuntu:wght@300&display=swap');
 
-
 img {
     max-width: 100%;
 }
@@ -90,15 +89,56 @@ img {
 }
 
 
-.nav-home:hover {   
-    border-bottom: 1px solid var(--red);
+/* Header / Nav */
+
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  margin: 0 auto;
 }
-.nav-work:hover {
-    border-bottom: 1px solid var(--red);
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
 }
-.nav-contact:hover {
-    border-bottom: 1px solid var(--red);
+
+.header li a {
+  display: grid;
+  margin: auto 0 ;
+  text-decoration: none;
+  color: var(--grey);   
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  line-height: 20px;
 }
+
+.header li a:hover,
+.header .menu-btn:hover {
+  border-bottom: 1px solid var(--red);
+}
+
+
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.logo>img {
+  max-width: 80px;
+}
+
 
 
 
@@ -170,7 +210,7 @@ img {
     background: #ffffff;
     padding-top: 120px;
     padding-bottom: 0;
-    text-align: center;
+    text-align: left;
     max-width: 1440px;
     margin: 0 auto;
   }
@@ -210,9 +250,8 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     width: 100%;
-    margin: 0 auto 0 30px;
+    margin: 0 auto 30px 0;
     grid-template-rows: auto;
-    grid-gap: 20px;
   }
   .post-body{
       display: grid;
@@ -307,27 +346,24 @@ img {
   .preparation img{
       grid-column: 2/span 1;
       grid-row: 1/span 4;
-      width: 210px;
-      height: 210px;
+      width: 125px;
+      height: 125px;
       object-fit: cover;
   }
   
   .preparation .webicons1 {
-      display: inline;
       grid-column: 1/-2;
-      height: 30px;
-      font-size: 23px;
-      padding-left: 35px; 
-      background-image: url({% static 'img/web_icons.png' %});
+      height: 18px;
+      padding-left: 25px; 
+      background-image: url('/static/img/web_icons1.png' );
       background-size: contain;
       background-repeat: no-repeat;
   }
   .preparation .webicons2 {
       grid-column: 1/-2;
-      height: 30px;
-      font-size: 23px;
-      padding-left: 35px; 
-      background-image: url({% static 'img/web_icons2.png' %});
+      height: 18px;
+      padding-left: 25px;  
+      background-image: url('/static/img/web_icons2.png' );
       background-size: contain;
       background-repeat: no-repeat;
   
@@ -335,23 +371,31 @@ img {
   
   .preparation .webicons3 {
       grid-column: 1/-2;
-      height: 30px;
-      font-size: 23px;
-      padding-left: 35px; 
-      background-image: url({% static 'img/web_icons3.png' %});
+      height: 18px;
+      padding-left: 25px; 
+      background-image: url('/static/img/web_icons3.png');
       background-size: contain;
       background-repeat: no-repeat;
   }
   
   .preparation .webicons4 {
       grid-column: 1/-2;
-      height: 30px;
-      font-size: 23px;
-      padding-left: 35px; 
-      background-image: url({% static 'img/web_icons4.png' %});
+      height: 18px;
+      padding-left: 25px; 
+      background-image: url('/static/img/web_icons4.png' );
       background-size: contain;
       background-repeat: no-repeat;
   }
+
+  .preparation .webicons5 {
+    grid-column: 1/-2;
+    height: 18px;
+    padding-left: 25px; );
+    background-image: url('/static/img/web_icons5.png' );
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
   .breadcrumbs{
     padding: 10px;
   }

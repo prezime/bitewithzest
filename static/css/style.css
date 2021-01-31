@@ -49,9 +49,9 @@ h1,h2,h3,h4,h5,h6{
     background: #ffffff;
     padding-top: 120px;
     padding-bottom: 0;
-    text-align: center;
+    text-align: left;
     justify-items: center;
-    margin: auto 0; 
+    margin: auto 10px; 
     
   }
 
@@ -70,7 +70,7 @@ h1,h2,h3,h4,h5,h6{
 .about p  {
     font-size: 20px;
     color: var(--grey);  
-    text-align: center;  
+    text-align: left;  
     word-wrap: break-word;
 }
 
@@ -175,55 +175,57 @@ h1,h2,h3,h4,h5,h6{
     margin-top: 5px;
 }
 .preparation img{
-    grid-column: 2/span 1;
-    grid-row: 1/span 4;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+  grid-column: 2/span 1;
+  grid-row: 1/span 4;
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
 }
 
 .preparation .webicons1 {
-    display: inline;
-    grid-column: 1/-2;
-    height: 20px;
-    font-size: 18px;    
-    padding-left: 35px; 
-    background-image: url('../img/web_icons.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+  grid-column: 1/-2;
+  height: 18px;
+  padding-left: 25px; 
+  background-image: url('/static/img/web_icons1.png' );
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-
 .preparation .webicons2 {
-    grid-column: 1/-2;
-    height: 20px;
-    font-size: 18px;
-    padding-left: 35px; 
-    background-image: url('../img/web_icons2.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+  grid-column: 1/-2;
+  height: 18px;
+  padding-left: 25px;  
+  background-image: url('/static/img/web_icons2.png' );
+  background-size: contain;
+  background-repeat: no-repeat;
 
 }
 
 .preparation .webicons3 {
-    grid-column: 1/-2;
-    height: 20px;
-    font-size: 18px;
-    padding-left: 35px; 
-    background-image: url('../img/web_icons3.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+  grid-column: 1/-2;
+  height: 18px;
+  padding-left: 25px; 
+  background-image: url('/static/img/web_icons3.png');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .preparation .webicons4 {
-    grid-column: 1/-2;
-    height: 20px;
-    font-size: 18px;
-    padding-left: 35px; 
-    background-image: url('../img/web_icons4.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-
+  grid-column: 1/-2;
+  height: 18px;
+  padding-left: 25px; 
+  background-image: url('/static/img/web_icons4.png' );
+  background-size: contain;
+  background-repeat: no-repeat;
 }
+
+.preparation .webicons5 {
+  grid-column: 1/-2;
+  height: 18px;
+  padding-left: 25px; );
+  background-image: url('/static/img/web_icons5.png' );
+  background-size: contain;
+  background-repeat: no-repeat;
+  }
 
   
   /* header */
@@ -245,17 +247,8 @@ h1,h2,h3,h4,h5,h6{
     background-color: #fff;
   }
   
-  .header li a {
-    display: block;
-    padding: 20px 20px;
-    border-right: 1px solid #f4f4f4;
-    text-decoration: none;
-  }
   
-  .header li a:hover,
-  .header .menu-btn:hover {
-    background-color: #f4f4f4;
-  }
+  
   
   .header .logo {
     display: block;
