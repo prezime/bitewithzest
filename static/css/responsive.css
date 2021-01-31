@@ -101,7 +101,7 @@ img {
 }
 
 .header ul {
-  margin: 18px 0 0 0;
+  margin:  7px 0 0 0;
   padding: 0;
   list-style: none;
   overflow: hidden;
@@ -117,12 +117,12 @@ img {
   text-align: center;
   font-weight: 300;
   letter-spacing: 0.08em;
-  line-height: 20px;
+  line-height: 50px;
 }
 
 .header li a:hover,
 .header .menu-btn:hover {
-  border-bottom: 1px solid var(--red);
+  border-bottom: 3px solid var(--red);
 }
 
 
@@ -249,7 +249,7 @@ img {
       max-width: 1440px;
       margin: 100px auto;
       column-gap: 10px 25px;
-      font-family: 'Rubik', serif;
+      font-family: 'Raleway', serif;
       font-size: 18px;
       color: var(--black);
       border-top: 7px solid var(--red);
