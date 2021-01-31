@@ -19,7 +19,7 @@
         <div class="intro-text">  
             {{ object.intro | safe }}
         </div>
-        <div class="post-date">{% block created_on %} {{ object.created_on}} {% endblock  %}</div>
+        <div class="post-date">{% block created_on %} {{ object.created_on | date:"F d Y"}} {% endblock  %}</div>
     </div>
     <div class="mobile-food-logo">
         <img src="../static/img/carrots-logo.jpg" alt=""> 
@@ -39,9 +39,11 @@
             {{ object.legend | safe }}
         </div>    
         <div class="ingredients"> 
+            <h3>Ingredients:</h3>
             {{ object.ingredients | safe }}
         </div>
         <div class="preparationtext"> 
+            <h3>Preparation:</h3>
             {{ object.preparationtext | safe }}
         </div>
             {% block tips %}

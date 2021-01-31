@@ -252,7 +252,6 @@ img {
       font-family: 'Raleway', serif;
       font-size: 18px;
       color: var(--black);
-      border-top: 7px solid var(--red);
   }
   .post-title-figure {
       position: absolute;
@@ -277,7 +276,9 @@ img {
           "picture picture picture intro-empty"
           "picture picture picture intro-empty"
           "picture picture picture intro-text" 
-          "picture picture picture post-date" 
+          "picture picture picture post-date";
+
+      border-top: 5px solid var(--red);    
   }
   .intro-text{
       grid-area: intro-text;
@@ -345,7 +346,7 @@ img {
   .preparation .intro1{
     grid-column: 1/ span 1;
     font-style: italic;
-    margin: 10px 10px 10px 0; 
+    margin: 0 10px 10px 0; 
   }
 
 
@@ -392,6 +393,10 @@ img {
     background-image: url('/static/img/web_icons5.png' );
     background-size: contain;
     background-repeat: no-repeat;
+  }
+
+  .preparationtext>h3, .ingredients>h3{
+    color: var(--red);
   }
 
   .breadcrumbs{
