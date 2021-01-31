@@ -50,7 +50,6 @@ h1,h2,h3,h4,h5,h6{
     padding-top: 120px;
     padding-bottom: 0;
     text-align: center;
-    font-family: 'Playball';  
     justify-items: center;
     margin: auto 0; 
     
@@ -72,7 +71,7 @@ h1,h2,h3,h4,h5,h6{
     font-size: 20px;
     color: var(--grey);  
     text-align: center;  
-    word-wrap:break-word;
+    word-wrap: break-word;
 }
 
 .about hr {
