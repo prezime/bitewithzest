@@ -65,17 +65,17 @@ CARDTYPE = (
 )
 
 class Category(models.Model):
-    name = models.CharField(max_length=200, unique=True)
+    description = models.CharField(max_length=200, unique=True)
     def __str__(self):
-        return self.name
+        return self.description
 
     def get_absolute_url(self):
         return reverse('home')   
 
-cats = Category.objects.all().values_list('name','name')
-category_list = []
-for item in cats:
-  category_list.append(item) 
+# cats = Category.objects.all().values_list('description','description')
+# category_list = []
+# for item in cats:
+#   category_list.append(item) 
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -84,7 +84,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now= True)
     created_on = models.DateTimeField(auto_now_add=True)
-    category = models.CharField(max_length=200, choices=category_list, default='uncategorized')
+    category = models.CharField(max_length=200, default='')
     status = models.IntegerField(choices=STATUS, default=0)
     cardtype = models.IntegerField(choices=CARDTYPE, default=0)
 
