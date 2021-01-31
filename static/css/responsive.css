@@ -332,28 +332,35 @@ img {
   .preparation{
       display: grid;
       grid-template-columns: 3fr auto;  
-      margin-top: 20px;  
+      margin-top: 10px;  
   }
   .preparation img{
       grid-column: 2/span 1;
-      grid-row: 1/span 4;
+      grid-row: 1/ span 6;
       width: 125px;
       height: 125px;
       object-fit: cover;
   }
   
+  .preparation .intro1{
+    grid-column: 1/ span 1;
+    font-style: italic;
+    margin: 10px 10px 10px 0; 
+  }
+
+
   .preparation .webicons1 {
       grid-column: 1/-2;
-      height: 18px;
-      padding-left: 25px; 
+      height: 23px;
+      padding-left: 27px; 
       background-image: url('/static/img/web_icons1.png' );
       background-size: contain;
       background-repeat: no-repeat;
   }
   .preparation .webicons2 {
       grid-column: 1/-2;
-      height: 18px;
-      padding-left: 25px;  
+      height: 23px;
+      padding-left: 27px; 
       background-image: url('/static/img/web_icons2.png' );
       background-size: contain;
       background-repeat: no-repeat;
@@ -362,8 +369,8 @@ img {
   
   .preparation .webicons3 {
       grid-column: 1/-2;
-      height: 18px;
-      padding-left: 25px; 
+      height: 23px;
+      padding-left: 27px;
       background-image: url('/static/img/web_icons3.png');
       background-size: contain;
       background-repeat: no-repeat;
@@ -371,8 +378,8 @@ img {
   
   .preparation .webicons4 {
       grid-column: 1/-2;
-      height: 18px;
-      padding-left: 25px; 
+      height: 23px;
+      padding-left: 27px;
       background-image: url('/static/img/web_icons4.png' );
       background-size: contain;
       background-repeat: no-repeat;
@@ -380,8 +387,8 @@ img {
 
   .preparation .webicons5 {
     grid-column: 1/-2;
-    height: 18px;
-    padding-left: 25px; );
+    height: 23px;
+      padding-left: 27px;
     background-image: url('/static/img/web_icons5.png' );
     background-size: contain;
     background-repeat: no-repeat;

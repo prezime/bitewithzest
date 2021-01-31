@@ -25,22 +25,24 @@
         <img src="../static/img/carrots-logo.jpg" alt=""> 
     </div>   
     <div class="post-content">
-        <div class="intro1-text">
-            {{ object.intro1 | safe }}
+        <div class="maintext">
+            {{ object.maintext | safe }}
         </div> 
         <div class="post-title">
             {{ object.title }} 
         </div>
         <div class="preparation">
-            
+            <div class="intro1">
+                {{ object.intro1 | safe }}    
+            </div>
             <img src="../static/media/post{{post.id}}/intro/post_intro{{post.id}}.jpg" alt="">
-            {{ object.preparationtext | safe }}
+            {{ object.legend | safe }}
         </div>    
-        <div class="ingerdients"> 
+        <div class="ingredients"> 
             {{ object.ingredients | safe }}
         </div>
-        <div class="maintext"> 
-            {{ object.maintext | safe }}
+        <div class="preparationtext"> 
+            {{ object.preparationtext | safe }}
         </div>
             {% block tips %}
                 {% if object.tip %}
