@@ -31,6 +31,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  color: var(--grey);
+  
 }
 
 /* Nav Section */
@@ -101,7 +103,7 @@ img {
 }
 
 .header ul {
-  margin: 0;
+  margin: 18px 0 0 0;
   padding: 0;
   list-style: none;
   overflow: hidden;
@@ -169,12 +171,14 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
   }
   
   .card h1 {
     font-size: 20px;
     margin: 0;
     color: #333;
+    font-weight: normal;
   }
   
   .card p {
@@ -184,7 +188,6 @@ img {
   
   .card span {
     font-size: 12px;
-    font-weight: bold;
     color: #999;
     text-transform: uppercase;
     letter-spacing: .05em;
@@ -321,7 +324,7 @@ img {
     display: grid;
     max-width: 1440px;
     margin: 100px auto;
-    grid-template-columns: 3fr 12fr 5fr;
+    grid-template-columns: 5fr 10fr 5fr;
     grid-gap: 10px 30px;
   }
   .post-content>* {

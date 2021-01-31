@@ -7,12 +7,9 @@
         <li class="breadcrumbs-item">
             <a href="/" class="breadcrumbs-link">Home</a>
         </li>
-        {% block post_detail_link %}
-        
         <li class="breadcrumbs-item">
             <a href="{% url 'post_detail' post.slug  %}" class="breadcrumbs-link">{{ object.title }}</a>
         </li>
-        {% endblock%}
     </ul>
     <div class="intro">
         <div class="picture">
