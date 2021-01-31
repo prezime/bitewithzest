@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Playball&family=Ubuntu:wght@300&display=swap');
-
 img {
     max-width: 100%;
 }
@@ -214,8 +212,8 @@ img {
     padding-top: 120px;
     padding-bottom: 0;
     text-align: left;
-    max-width: 1440px;
-    margin: 0 auto;
+    max-width: 440px;
+    margin: 10px auto 30px auto;
   }
   .about h2  {
     font-size: 44px;
@@ -231,23 +229,13 @@ img {
   .about hr {
       position: relative;
       display: inline-block;
-      height: 1px;
-      background: #eeeeee;
-      margin-top: 40px;
-      margin-bottom: 40px;
-      border: 0;
-  }
-
-  .about hr::after {
-      position: relative;
-      top: -15px;
-      content: "";
-      display: inline-block;
-      width: 70px;
       height: 2px;
       background: var(--red);
-      
+      border: 0;
+      width: 300px;
   }
+
+
 
   .gallery{
     display: grid;

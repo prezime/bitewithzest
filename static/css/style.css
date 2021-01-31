@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
 :root {
     --yellow: #ffc600;
     --black: rgb(45, 73, 95);
@@ -13,7 +13,7 @@
 }   
 body{
     /* background-image: linear-gradient(110deg,#f93d66,#6d47d9); */
-    font-family: Rubik, sans-serif;
+    font-family: Raleway, sans-serif;
     font-weight: lighter;
     margin: 0;
     letter-spacing: -1px;
@@ -51,7 +51,7 @@ h1,h2,h3,h4,h5,h6{
     padding-bottom: 0;
     text-align: left;
     justify-items: center;
-    margin: auto 10px; 
+    margin: 10px 10px 30px 10px;
     
   }
 
@@ -75,30 +75,19 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .about hr {
-    position: relative;
-    display: inline-block;
-    height: 1px;
-    background: #eeeeee;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border: 0;
+  position: relative;
+  display: inline-block;
+  height: 2px;
+  background: var(--red);
+  border: 0;
+  width: 100px;
 }
 
-.about hr::after {
-    position: relative;
-    top: -15px;
-    content: "";
-    display: inline-block;
-    width: 70px;
-    height: 2px;
-    background: var(--red);
-    
-}
 
 .post-body{
     display: grid;
     margin: 100px auto;
-    font-family: 'Rubik', serif;
+    font-family: 'Raleway', serif;
     font-size: 18px;
     color: var(--black);
     border-top: 7px solid var(--red);
