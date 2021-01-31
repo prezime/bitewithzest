@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from uuid import uuid4
 import os
+from django.urls import reverse
+
 
 def path_and_rename(instance, filename):
     upload_to = 'post'+str(instance.pk)+'/thumbs'
@@ -62,6 +64,19 @@ CARDTYPE = (
     (1,"Small")
 )
 
+class Category(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('home')   
+
+cats = Category.objects.all().values_list('name','name')
+category_list = []
+for item in cats:
+  category_list.append(item) 
+
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     titleplus = models.CharField(max_length=200, default='')
@@ -69,8 +84,10 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now= True)
     created_on = models.DateTimeField(auto_now_add=True)
+    category = models.CharField(max_length=200, choices=category_list, default='uncategorized')
     status = models.IntegerField(choices=STATUS, default=0)
     cardtype = models.IntegerField(choices=CARDTYPE, default=0)
+
 
     intro = models.TextField()
     intro1 = models.TextField(default='',blank=True)
@@ -91,3 +108,6 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('home')    

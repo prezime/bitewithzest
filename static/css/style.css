@@ -164,7 +164,7 @@ h1,h2,h3,h4,h5,h6{
 .post-title{
     display: grid;
     font-size: 35px;
-    font-weight: 500;
+    font-weight: 502000;
     border-bottom: 5px solid var(--red);
     color: var(--red);
 }
@@ -266,7 +266,7 @@ h1,h2,h3,h4,h5,h6{
   }
 
   .logo>img {
-    max-width: 85px;
+    max-width: 80px;
   }
 
   
