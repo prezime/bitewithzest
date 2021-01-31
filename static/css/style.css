@@ -343,6 +343,32 @@ h1,h2,h3,h4,h5,h6{
   .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
   }
+
+  .breadcrumbs{
+    padding: 10px;
+  }
+
+  .breadcrumbs-item{
+    display: block;
+  }
+
+  .breadcrumbs-item:not(:last-of-type)::after{
+    content: ' /';
+    color: #999;
+  }
+
+  .breadcrumbs-link{
+    text-decoration: none;
+    color: var(--grey);
+  }
+
+  .breadcrumbs-link-active{
+    font-weight: 500;
+  }
+
+  .breadcrumbs-link:hover{
+    text-decoration: underline;
+  }
   
   /* 48em = 768px */
   
@@ -361,6 +387,7 @@ h1,h2,h3,h4,h5,h6{
     .header .menu-icon {
       display: none;
     }
+ 
   }
   
 
