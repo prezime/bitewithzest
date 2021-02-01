@@ -7,7 +7,7 @@
   {% for post in post_list %}
   <div class="item-{{post.id}}">
       <a href="{% url 'post_detail' post.slug  %}" class="card">
-        <div class="thumb" style="background-image: url(./media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg);"></div>
+        <div class="thumb" style="background-image: url(./static/media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg);"></div>
         <article>
           <h1>{{ post.titleplus }}</h1>
           <!-- <span>{{ post.author }} | {{ post.created_on}}</span> -->
