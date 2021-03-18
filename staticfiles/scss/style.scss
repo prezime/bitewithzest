@@ -1,0 +1,40 @@
+$my_max-width: 1290px;
+$navbar_height:70px;
+
+* {
+    margin:0;
+}
+
+html {
+    background: #f5f7f8;
+    font-family: system-ui;
+    -webkit-font-smoothing: antialiased;
+}
+  
+header {
+    width: 100%;
+    margin: 0 auto;
+    background:#eee;  
+}
+
+footer {
+    //max-width: $my_max-width;
+    margin: 0 auto;  
+    padding-top: 30px; 
+    padding-bottom: 30px; 
+    text-align: center;  
+    width: 100%;
+    bottom: 10px;
+}
+
+
+@import 'nav';
+@import 'blog_main';
+@import 'blog_body';
+
+
+
+
+
+
+  

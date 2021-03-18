@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://localhost:8000/admin/blog/post/ -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Select post to change | Django site admin</title>
+<link rel="stylesheet" type="text/css" href="./Change post _ Django site admin_files/base.css">
+
+  <link rel="stylesheet" type="text/css" href="./Change post _ Django site admin_files/nav_sidebar.css">
+  <script src="./Change post _ Django site admin_files/nav_sidebar.js" defer=""></script>
+
+
+  
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/static/admin/css/changelists.css">
+  
+  
+    <script src="./Change post _ Django site admin_files/saved_resource"></script><script data-dapp-detection="">
+(function() {
+  let alreadyInsertedMetaTag = false
+
+  function __insertDappDetected() {
+    if (!alreadyInsertedMetaTag) {
+      const meta = document.createElement('meta')
+      meta.name = 'dapp-detected'
+      document.head.appendChild(meta)
+      alreadyInsertedMetaTag = true
+    }
+  }
+
+  if (window.hasOwnProperty('web3')) {
+    // Note a closure can't be used for this var because some sites like
+    // www.wnyc.org do a second script execution via eval for some reason.
+    window.__disableDappDetectionInsertion = true
+    // Likely oldWeb3 is undefined and it has a property only because
+    // we defined it. Some sites like wnyc.org are evaling all scripts
+    // that exist again, so this is protection against multiple calls.
+    if (window.web3 === undefined) {
+      return
+    }
+    __insertDappDetected()
+  } else {
+    var oldWeb3 = window.web3
+    Object.defineProperty(window, 'web3', {
+      configurable: true,
+      set: function (val) {
+        if (!window.__disableDappDetectionInsertion)
+          __insertDappDetected()
+        oldWeb3 = val
+      },
+      get: function () {
+        if (!window.__disableDappDetectionInsertion)
+          __insertDappDetected()
+        return oldWeb3
+      }
+    })
+  }
+})()</script>
+  
+  
+  
+
+
+
+
+<script src="./Change post _ Django site admin_files/jquery.js"></script>
+<script src="./Change post _ Django site admin_files/jquery.init.js"></script>
+<script src="./Change post _ Django site admin_files/core.js"></script>
+<script src="./Change post _ Django site admin_files/RelatedObjectLookups.js"></script>
+<script src="./Change post _ Django site admin_files/actions.js"></script>
+<script src="./Change post _ Django site admin_files/urlify.js"></script>
+<script src="./Change post _ Django site admin_files/prepopulate.js"></script>
+<script src="./Change post _ Django site admin_files/xregexp.js"></script>
+
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./Change post _ Django site admin_files/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+
+<body class=" app-blog model-post change-list" data-admin-utc-offset="0">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name"><a href="http://localhost:8000/admin/">Django administration</a></h1>
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>Admin</strong>.
+            
+            
+                
+                    <a href="http://localhost:8000/">View site</a> /
+                
+                
+                    
+                    
+                
+                
+                <a href="http://localhost:8000/admin/password_change/">Change password</a> /
+                
+                <a href="http://localhost:8000/admin/logout/">Log out</a>
+            
+        </div>
+        
+        
+        
+    </div>
+    <!-- END Header -->
+    
+<div class="breadcrumbs">
+<a href="http://localhost:8000/admin/">Home</a>
+› <a href="http://localhost:8000/admin/blog/">Blog</a>
+› Posts
+</div>
+
+    
+
+    <div class="main shifted" id="main">
+      
+        
+          
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Toggle navigation"></button>
+<nav class="sticky" id="nav-sidebar">
+  
+
+
+  
+    <div class="app-auth module">
+      <table>
+        <caption>
+          <a href="http://localhost:8000/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
+        </caption>
+        
+          <tbody><tr class="model-group">
+            
+              <th scope="row"><a href="http://localhost:8000/admin/auth/group/">Groups</a></th>
+            
+
+            
+              <td><a href="http://localhost:8000/admin/auth/group/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-user">
+            
+              <th scope="row"><a href="http://localhost:8000/admin/auth/user/">Users</a></th>
+            
+
+            
+              <td><a href="http://localhost:8000/admin/auth/user/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </tbody></table>
+    </div>
+  
+    <div class="app-blog module current-app">
+      <table>
+        <caption>
+          <a href="http://localhost:8000/admin/blog/" class="section" title="Models in the Blog application">Blog</a>
+        </caption>
+        
+          <tbody><tr class="model-post current-model">
+            
+              <th scope="row"><a href="http://localhost:8000/admin/blog/post/" aria-current="page">Posts</a></th>
+            
+
+            
+              <td><a href="http://localhost:8000/admin/blog/post/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </tbody></table>
+    </div>
+  
+    <div class="app-django_summernote module">
+      <table>
+        <caption>
+          <a href="http://localhost:8000/admin/django_summernote/" class="section" title="Models in the Django Summernote application">Django Summernote</a>
+        </caption>
+        
+          <tbody><tr class="model-attachment">
+            
+              <th scope="row"><a href="http://localhost:8000/admin/django_summernote/attachment/">Attachments</a></th>
+            
+
+            
+              <td><a href="http://localhost:8000/admin/django_summernote/attachment/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </tbody></table>
+    </div>
+  
+
+
+</nav>
+
+        
+      
+      <div class="content">
+        
+          
+            <ul class="messagelist">
+              <li class="success">The post “<a href="http://localhost:8000/admin/blog/post/10/change/">Vegan Elderflower Fritters</a>” was changed successfully.</li>
+            </ul>
+          
+        
+        <!-- Content -->
+        <div id="content" class="flex">
+          
+          <h1>Select post to change</h1>
+          
+  <div id="content-main">
+    
+        <ul class="object-tools">
+          
+            
+
+
+  
+  <li>
+    
+    <a href="http://localhost:8000/admin/blog/post/add/" class="addlink">
+      Add post
+    </a>
+  </li>
+  
+
+
+          
+        </ul>
+    
+    
+    <div class="module filtered" id="changelist">
+      
+
+<div id="toolbar"><form id="changelist-search" method="get">
+<div data-children-count="1"><!-- DIV needed for valid HTML -->
+<label for="searchbar"><img src="http://localhost:8000/static/admin/img/search.svg" alt="Search" data-children-count="0"></label>
+<input type="text" size="40" name="q" value="" id="searchbar" autofocus="">
+<input type="submit" value="Search">
+
+
+</div>
+</form></div>
+
+
+      
+
+      
+        
+          <div id="changelist-filter">
+            <h2>Filter</h2>
+            
+            
+<h3> By status </h3>
+<ul>
+
+    <li class="selected">
+    <a href="http://localhost:8000/admin/blog/post/?" title="All">All</a></li>
+
+    <li>
+    <a href="http://localhost:8000/admin/blog/post/?status__exact=0" title="Draft">Draft</a></li>
+
+    <li>
+    <a href="http://localhost:8000/admin/blog/post/?status__exact=1" title="Publish">Publish</a></li>
+
+</ul>
+
+<h3> By cardtype </h3>
+<ul>
+
+    <li class="selected">
+    <a href="http://localhost:8000/admin/blog/post/?" title="All">All</a></li>
+
+    <li>
+    <a href="http://localhost:8000/admin/blog/post/?cardtype__exact=0" title="Big">Big</a></li>
+
+    <li>
+    <a href="http://localhost:8000/admin/blog/post/?cardtype__exact=1" title="Small">Small</a></li>
+
+</ul>
+
+          </div>
+        
+      
+
+      <form id="changelist-form" method="post" novalidate=""><input type="hidden" name="csrfmiddlewaretoken" value="oCgOTI0UFcga0swwsBGs9iRHCIlylrgem32GiZvD6tYIaPK1nsHW1I46J01rYBLA">
+      
+
+      
+          
+<div class="actions">
+  
+    
+    <label data-children-count="1">Action: <select name="action" required="">
+  <option value="" selected="">---------</option>
+
+  <option value="delete_selected">Delete selected posts</option>
+
+</select></label><input type="hidden" name="select_across" value="0" class="select-across">
+    
+    
+    <button type="submit" class="button" title="Run the selected action" name="index" value="0">Go</button>
+    
+    
+    
+        <span class="action-counter" data-actions-icnt="10" style="display: inline;">0 of 10 selected</span>
+        
+    
+    
+  
+</div>
+
+          
+
+
+<div class="results">
+<table id="result_list">
+<thead>
+<tr>
+
+<th scope="col" class="action-checkbox-column">
+   
+   <div class="text"><span data-children-count="1"><input type="checkbox" id="action-toggle"></span></div>
+   <div class="clear"></div>
+</th>
+<th scope="col" class="sortable column-title">
+   
+     
+   
+   <div class="text"><a href="http://localhost:8000/admin/blog/post/?o=1.-4">Title</a></div>
+   <div class="clear"></div>
+</th>
+<th scope="col" class="sortable column-slug">
+   
+     
+   
+   <div class="text"><a href="http://localhost:8000/admin/blog/post/?o=2.-4">Slug</a></div>
+   <div class="clear"></div>
+</th>
+<th scope="col" class="sortable column-status">
+   
+     
+   
+   <div class="text"><a href="http://localhost:8000/admin/blog/post/?o=3.-4">Status</a></div>
+   <div class="clear"></div>
+</th>
+<th scope="col" class="sortable column-created_on sorted descending">
+   
+     
+       <div class="sortoptions">
+         <a class="sortremove" href="http://localhost:8000/admin/blog/post/?o=" title="Remove from sorting"></a>
+         
+         <a href="http://localhost:8000/admin/blog/post/?o=4" class="toggle descending" title="Toggle sorting"></a>
+       </div>
+     
+   
+   <div class="text"><a href="http://localhost:8000/admin/blog/post/?o=4">Created on</a></div>
+   <div class="clear"></div>
+</th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr><td class="action-checkbox" data-children-count="1"><input type="checkbox" name="_selected_action" value="10" class="action-select"></td><th class="field-title"><a href="http://localhost:8000/admin/blog/post/10/change/">Vegan Elderflower Fritters</a></th><td class="field-slug">vegan-elderflower-fritters</td><td class="field-status">Publish</td><td class="field-created_on nowrap">Jan. 22, 2021, 10:03 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox" data-children-count="1"><input type="checkbox" name="_selected_action" value="9" class="action-select"></td><th class="field-title"><a href="http://localhost:8000/admin/blog/post/9/change/">i jos jedan</a></th><td class="field-slug">i-jos-jedan</td><td class="field-status">Publish</td><td class="field-created_on nowrap">Jan. 22, 2021, 10:03 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox" data-children-count="1"><input type="checkbox" name="_selected_action" value="8" class="action-select"></td><th class="field-title"><a href="http://localhost:8000/admin/blog/post/8/change/">Haj jos jedan</a></th><td class="field-slug">haj-jos-jedan</td><td class="field-status">Publish</td><td class="field-created_on nowrap">Jan. 22, 2021, 10:03 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox" data-children-count="1"><input type="checkbox" name="_selected_action" value="7" class="action-select"></td><th class="field-title"><a href="http://localhost:8000/admin/blog/post/7/change/">One more thing</a></th><td class="field-slug">one-more-thing</td><td class="field-status">Publish</td><td class="field-created_on nowrap">Jan. 5, 2021, 9:39 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox" data-children-count="1"><input type="checkbox" name="_selected_action" value="6" class="action-select"></td><th class="field-title"><a href="http://localhost:8000/admin/blog/post/6/change/">Numma Numma Je</a></th><td class="field-slug">numma-numma-je</td><td class="field-status">Publish</td><td class="field-created_on nowrap">Jan. 4, 2021, 3:06 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox" data-children-count="1"><input type="checkbox" name="_selected_action" value="5" class="action-select"></td><th class="field-title"><a href="http://localhost:8000/admin/blog/post/5/change/">Und der Numma 5</a></th><td class="field-slug">und-der-numma-5</td><td class="field-status">Publish</td><td class="field-created_on nowrap">Jan. 4, 2021, 3:06 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox" data-children-count="1"><input type="checkbox" name="_selected_action" value="4" class="action-select"></td><th class="field-title"><a href="http://localhost:8000/admin/blog/post/4/change/">Third Post - let there be Website</a></th><td class="field-slug">third-post-let-there-be-website</td><td class="field-status">Publish</td><td class="field-created_on nowrap">Jan. 4, 2021, 3:04 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox" data-children-count="1"><input type="checkbox" name="_selected_action" value="3" class="action-select"></td><th class="field-title"><a href="http://localhost:8000/admin/blog/post/3/change/">Chantarelle mushroom soup</a></th><td class="field-slug">chantarelle-mushroom-soup</td><td class="field-status">Publish</td><td class="field-created_on nowrap">Sept. 26, 2020, 4:38 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox" data-children-count="1"><input type="checkbox" name="_selected_action" value="2" class="action-select"></td><th class="field-title"><a href="http://localhost:8000/admin/blog/post/2/change/">Second Post - it's happening</a></th><td class="field-slug">second-post-its-happening</td><td class="field-status">Publish</td><td class="field-created_on nowrap">Sept. 11, 2020, 8:34 p.m.</td></tr>
+
+
+<tr><td class="action-checkbox" data-children-count="1"><input type="checkbox" name="_selected_action" value="1" class="action-select"></td><th class="field-title"><a href="http://localhost:8000/admin/blog/post/1/change/">First Post - Let it be</a></th><td class="field-slug">first-post</td><td class="field-status">Publish</td><td class="field-created_on nowrap">Sept. 11, 2020, 8:32 p.m.</td></tr>
+
+</tbody>
+</table>
+</div>
+
+
+          
+      
+      
+
+<p class="paginator">
+
+10 posts
+
+
+</p>
+
+      </form>
+    </div>
+  </div>
+
+          
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        <div id="footer"></div>
+      </div>
+    </div>
+</div>
+<!-- END Container -->
+
+
+</body></html>
