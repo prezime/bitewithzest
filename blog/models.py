@@ -1,8 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 from uuid import uuid4
-import os
+import os, shutil
 from django.urls import reverse
+from django.conf import settings
 
 
 def path_and_rename(instance, filename):
@@ -14,6 +15,9 @@ def path_and_rename(instance, filename):
     else:
         # set filename as random string
         filename = '{}.{}'.format(uuid4().hex, ext)
+    fullname = os.path.join(settings.MEDIA_ROOT, upload_to)    
+    if os.path.exists(fullname):
+        shutil.rmtree(fullname)     
     # return the whole path to the file
     return os.path.join(upload_to, filename)
 
@@ -26,6 +30,9 @@ def path_and_rename_intro(instance, filename):
     else:
         # set filename as random string
         filename = '{}.{}'.format(uuid4().hex, ext)
+    fullname = os.path.join(settings.MEDIA_ROOT, upload_to)    
+    if os.path.exists(fullname):
+        shutil.rmtree(fullname)     
     # return the whole path to the file
     return os.path.join(upload_to, filename)
 
@@ -38,6 +45,9 @@ def path_and_rename_main(instance, filename):
     else:
         # set filename as random string
         filename = '{}.{}'.format(uuid4().hex, ext)
+    fullname = os.path.join(settings.MEDIA_ROOT, upload_to)    
+    if os.path.exists(fullname):
+        shutil.rmtree(fullname) 
     # return the whole path to the file
     return os.path.join(upload_to, filename)
 
@@ -50,6 +60,9 @@ def path_and_rename_add(instance, filename):
     else:
         # set filename as random string
         filename = '{}.{}'.format(uuid4().hex, ext)
+    fullname = os.path.join(settings.MEDIA_ROOT, upload_to)    
+    if os.path.exists(fullname):
+        shutil.rmtree(fullname)     
     # return the whole path to the file
     return os.path.join(upload_to, filename)
 

@@ -14,7 +14,7 @@
 
   <div class="wrapper">
     
-    <div class="header">
+    <!-- <div class="header">
       <div class="navbar">
         <a href="/" class="logo" title="BiteWithZest">
           <img src="{% static 'img/BWZ_logo_red_2.png' %}" alt="logo">        
@@ -23,14 +23,48 @@
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
         <ul class="menu">
           <li><a href="/">Home</a></li>
-          <li><a href="#about">Enjoy the food</a></li>
-          <li><a href="#careers">Immunity boosting </a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Enjoy the food</a></li>
+          <li><a href="#">Immunity boosting </a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
+      </div>
+    </div> -->
+    <div class="topnav" id="myTopnav">
+      <div class="dropdown">
+        <button class="dropbtn"><a href="#">contact</a></button>
+        <div class="dropdown-content"></div>
+      </div>
+      <div class="dropdown">  
+        <button class="dropbtn"><a href="#">our planet</a></button>
+        <div class="dropdown-content"></div>
+      </div>  
+      <div class="dropdown">    
+        <button class="dropbtn"><a href="#">Immunity boosting</a></button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+        </div>
+      </div>
+      <div class="dropdown">  
+        <button class="dropbtn"><a href="#">Enjoy the food</a></button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+        </div>
+      </div>
+      <div class="dropdown active">
+        <button class="dropbtn"><a href="/">home</a></button>
+        <div class="dropdown-content"></div>
+      </div>
+      
+      <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
+      <div class="logo">
+        <img src="{% static 'img/BWZ_logo_red_2.png' %}" alt="logo">
       </div>
     </div>
   
-
+    <div class="responsive_logo">
+      <img src="{% static 'img/BWZ_logo_red_2.png' %}" alt="logo">
+    </div>
     <div class="content">
       {% block about %}{% endblock about %}
 
@@ -41,6 +75,15 @@
     </div>  
     {% block footer_showcase %}{% include 'footer.html' %} {% endblock %}
   </div>
-  <script></script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
 </body>
 </html>
