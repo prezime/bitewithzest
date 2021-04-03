@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Post, Category, SubCategory
-from django_summernote.admin import SummernoteModelAdmin
+
 
 class PostAdmin(admin.ModelAdmin):
 #class PostAdmin(SummernoteModelAdmin):       
@@ -8,7 +8,7 @@ class PostAdmin(admin.ModelAdmin):
     list_filter = ("status",'cardtype')
     search_fields = ['title', 'intro', 'maintext']
     prepopulated_fields = {'slug': ('title',)}
-    summernote_fields = ('intro','maintext','preparationtext','ingredients')
+    #summernote_fields = ('intro','maintext','preparationtext','ingredients')
   
 admin.site.register(Post, PostAdmin)
 admin.site.register(Category)
