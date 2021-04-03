@@ -194,4 +194,3 @@ SUMMERNOTE_CONFIG = {
     #},
 }
 
-django_heroku.settings(locals())
