@@ -69,7 +69,8 @@ def path_and_rename_add(instance, filename):
 
 STATUS = (
     (0,"Draft"),
-    (1,"Publish")
+    (1,"Publish"),
+    (2,"Un-Publish")
 )
 
 CARDTYPE = (
@@ -77,8 +78,13 @@ CARDTYPE = (
     (1,"Small")
 )
 
+
 class Category(models.Model):
     description = models.CharField(max_length=200, unique=True)
+    status = models.IntegerField(choices=STATUS, default=0)
+
+    class Meta:
+        verbose_name_plural = 'Categories'   
     def __str__(self):
         return self.description
 
@@ -90,6 +96,22 @@ category_list = []
 for item in cats:
   category_list.append(item) 
 
+ 
+class SubCategory(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    category = models.CharField(max_length=200, choices=category_list, default='')
+    status = models.IntegerField(choices=STATUS, default=0)
+    class Meta:
+        verbose_name_plural = 'Sub Categories'   
+    def __str__(self):
+            return self.name
+  
+
+subcats = SubCategory.objects.all().values_list('name','name')
+subcategory_list = []
+for item in subcats:
+    subcategory_list.append(item)           
+
 class Post(models.Model):
     titleplus = models.CharField(max_length=200, default='')
     
@@ -98,6 +120,7 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now= True)
     created_on = models.DateTimeField(auto_now_add=True)
     category = models.CharField(max_length=200, choices=category_list, default='')
+    subcategory = models.CharField(max_length=200, choices=subcategory_list, default='')
     status = models.IntegerField(choices=STATUS, default=0)
     cardtype = models.IntegerField(choices=CARDTYPE, default=0)
 
@@ -115,15 +138,14 @@ class Post(models.Model):
     tip = models.TextField(default='',blank=True)
     
     
-    
-    
-    
-    
     class Meta:
         ordering = ['-created_on']
+        verbose_name_plural = 'Posts'
 
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('home')    
+        return reverse('home')
+
+

@@ -16,10 +16,10 @@ body{
     font-family: Raleway, sans-serif;
     letter-spacing: 1px;
     margin: 0;
-    font-weight: 100;
+    font-weight: 300;
 }
 button{
-  font-weight: lighter;
+  font-family: Raleway, sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -262,7 +262,10 @@ background-repeat: no-repeat;
     .responsive_logo{
       display: none;
     }
- 
+    .asc {
+      display: none;
+    }
+    
   }
   
 

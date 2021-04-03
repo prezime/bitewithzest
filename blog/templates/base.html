@@ -13,28 +13,36 @@
 <body>
 
   <div class="wrapper">
-    
-    <!-- <div class="header">
-      <div class="navbar">
-        <a href="/" class="logo" title="BiteWithZest">
-          <img src="{% static 'img/BWZ_logo_red_2.png' %}" alt="logo">        
-        </a>
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-        <ul class="menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="#">Enjoy the food</a></li>
-          <li><a href="#">Immunity boosting </a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </div> -->
     <div class="topnav" id="myTopnav">
-      <div class="dropdown">
-        <button class="dropbtn"><a href="#">contact</a></button>
-        <div class="dropdown-content"></div>
+      <div class="desc">
+        {% for category in cat_list %}
+        <div class="dropdown">
+          <button class="dropbtn"><a href="#">{{category.description}}</a></button>
+          <div class="dropdown-content">
+            {% for subcategory in subcat_list %}
+              {% if subcategory.category == category.description %}
+              <a href="#">{{subcategory.name}}</a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>  
+      <div class="asc">
+        {% for category in cat_list_asc %}
+        <div class="dropdown">
+          <button class="dropbtn"><a href="#">{{category.description}}</a></button>
+          <div class="dropdown-content">
+            {% for subcategory in subcat_list %}
+              {% if subcategory.category == category.description %}
+              <a href="#">{{subcategory.name}}</a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
       </div>
-      <div class="dropdown">  
+      <!-- <div class="dropdown">  
         <button class="dropbtn"><a href="#">our planet</a></button>
         <div class="dropdown-content"></div>
       </div>  
@@ -54,7 +62,7 @@
       <div class="dropdown active">
         <button class="dropbtn"><a href="/">home</a></button>
         <div class="dropdown-content"></div>
-      </div>
+      </div> -->
       
       <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
       <div class="logo">
