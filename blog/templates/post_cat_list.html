@@ -1,0 +1,59 @@
+
+{% extends "base.html" %} 
+{% load static %}
+{% block post_showcase %}
+
+<div class="gallery-cat">
+  <header class="post-cat-header">
+    {% if request.resolver_match.url_name  == 'category_view' %}
+    <h3 class="post-cat-title">{{object.description|upper}} </h3>	
+    {% else %}	
+    <h3 class="post-cat-title">{{object.name|upper}} </h3>	
+    {% endif %}	
+  </header><!-- end .archive-header-->
+  {% if request.resolver_match.url_name  == 'category_view' %}
+    {% for post in post_cat_list %}
+      {% if object.description == post.category %}
+      <a href="{% url 'post_detail' post.slug  %}">
+      <div class="post-cat-card">
+        <div class="post-cat-card__img">
+          <img src="../../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="">
+        </div>
+        <div class="post-cat-card__info">
+          <div class="post-cat-card__date">
+            <span>Sunday</span>
+            <span>October 27 2019</span>
+          </div>
+          <h1 class="post-cat-card__title">Some Title</h1>
+          <p class="post-cat-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+        </div>
+      </div>
+    </a>
+      {% endif %}
+    {% endfor %}  
+  {% else %}
+    {% for post in post_subcat_list %}  
+      {% if object.name == post.subcategory %}
+        <div class="post-cat-card">
+          <div class="post-cat-card__img">
+            <img src="https://source.unsplash.com/random" alt="">
+          </div>
+          <div class="post-cat-card__info">
+            <div class="post-cat-card__date">
+              <span>Sunday</span>
+              <span>October 27 2019</span>
+            </div>
+            <h1 class="post-cat-card__title">Some Title</h1>
+            <p class="post-cat-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %} 
+</div> 
+
+ 
+
+{% endblock  %}
+  
+

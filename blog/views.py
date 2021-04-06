@@ -30,5 +30,23 @@ def shared_context(context):
     subcat_queryset = SubCategory.objects.all()
     context['subcat_list'] = subcat_queryset.filter(status=1).order_by('-id') 
     context['subcat_list_asc'] = subcat_queryset.filter(status=1).order_by('id') 
+    post_cat_queryset = Post.objects.all()
+    context['post_cat_list'] = post_cat_queryset.filter(status=1).order_by('-id') 
+    context['post_subcat_list'] = post_cat_queryset.filter(status=1).order_by('id') 
 
+class CategoryList(generic.DetailView):
+    model = Category
+    template_name = 'post_cat_list.html'
+    def get_context_data(self, **kwargs):
+        context = super(CategoryList, self).get_context_data(**kwargs)
+        shared_context(context)
+        return context 
 
+class SubCategoryList(generic.DetailView):
+    model = SubCategory
+    template_name = 'post_cat_list.html'
+    def get_context_data(self, **kwargs):
+        context = super(SubCategoryList, self).get_context_data(**kwargs)
+        shared_context(context)
+        return context 
+       

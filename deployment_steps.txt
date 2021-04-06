@@ -1,0 +1,37 @@
+DEV
+after the change and test in the dev, add, commit and push changes to the github:
+git add .
+git commit
+git push
+
+(do not forget to move static changes to staticfiles folder)
+
+
+DEPLOYMENT TO WEB
+open terminal
+ssh to the project: 
+    ssh prezime@s30.wservices.ch; 
+    secure pasword
+find the folder
+~/init/bitewithzest stop
+mv ~/bitewithzest ~/bitewithzest_bak  
+rm -rf bitewithzest
+git clone https://github.com/prezime/bitewithzest.git
+
+cd bitewithzest
+python3 manage.py collectstatic
+
+
+~/init/nginx restart
+~/init/bitewithzest start
+
+
+#links
+https://docs.djangoproject.com/en/3.1/ref/templates/builtins/
+https://panel.djangoeurope.com/faq/upload-django-project
+
+
+USEFULL CODE:
+if i need to know in which view I am
+  {% if request.resolver_match.url_name  != 'category_view' %}
+  {% endif %}

@@ -6,6 +6,7 @@ from django.urls import reverse
 from django.conf import settings
 
 
+
 def path_and_rename(instance, filename):
     upload_to = 'post'+str(instance.pk)+'/thumbs'
     ext = filename.split('.')[-1]
@@ -82,6 +83,7 @@ CARDTYPE = (
 class Category(models.Model):
     description = models.CharField(max_length=200, unique=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    slug = models.SlugField(max_length=200,unique=True, default='')
 
     class Meta:
         verbose_name_plural = 'Categories'   
@@ -101,6 +103,7 @@ class SubCategory(models.Model):
     name = models.CharField(max_length=100, unique=True)
     category = models.CharField(max_length=200, choices=category_list, default='')
     status = models.IntegerField(choices=STATUS, default=0)
+    slug = models.SlugField(max_length=200,unique=True, default='')
     class Meta:
         verbose_name_plural = 'Sub Categories'   
     def __str__(self):
@@ -120,7 +123,7 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now= True)
     created_on = models.DateTimeField(auto_now_add=True)
     category = models.CharField(max_length=200, choices=category_list, default='')
-    subcategory = models.CharField(max_length=200, choices=subcategory_list, default='')
+    subcategory = models.CharField(max_length=200, choices=subcategory_list, default='uncategorized')
     status = models.IntegerField(choices=STATUS, default=0)
     cardtype = models.IntegerField(choices=CARDTYPE, default=0)
 

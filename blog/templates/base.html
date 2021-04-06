@@ -11,17 +11,17 @@
 </head>
 
 <body>
-
+  
   <div class="wrapper">
     <div class="topnav" id="myTopnav">
       <div class="desc">
         {% for category in cat_list %}
         <div class="dropdown">
-          <button class="dropbtn"><a href="#">{{category.description}}</a></button>
+          <button class="dropbtn"><a href="{% url 'category_view' category.slug  %}" class="">{{category.description}}</a></button>
           <div class="dropdown-content">
             {% for subcategory in subcat_list %}
               {% if subcategory.category == category.description %}
-              <a href="#">{{subcategory.name}}</a>
+              <a href="{% url 'subcategory_view' subcategory.slug  %}" class="">{{subcategory.name}}</a>
               {% endif %}
             {% endfor %}
           </div>
@@ -42,44 +42,24 @@
         </div>
         {% endfor %}
       </div>
-      <!-- <div class="dropdown">  
-        <button class="dropbtn"><a href="#">our planet</a></button>
-        <div class="dropdown-content"></div>
-      </div>  
-      <div class="dropdown">    
-        <button class="dropbtn"><a href="#">Immunity boosting</a></button>
-        <div class="dropdown-content">
-          <a href="#">Link 1</a>
-        </div>
-      </div>
-      <div class="dropdown">  
-        <button class="dropbtn"><a href="#">Enjoy the food</a></button>
-        <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-        </div>
-      </div>
-      <div class="dropdown active">
-        <button class="dropbtn"><a href="/">home</a></button>
-        <div class="dropdown-content"></div>
-      </div> -->
       
       <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
       <div class="logo">
-        <img src="{% static 'img/BWZ_logo_red_2.png' %}" alt="logo">
+        <a href="/"><img src="{% static 'img/BWZ_logo_red_2.png' %}" alt="logo"></a>
       </div>
     </div>
   
     <div class="responsive_logo">
-      <img src="{% static 'img/BWZ_logo_red_2.png' %}" alt="logo">
+      <a href="/"><img src="{% static 'img/BWZ_logo_red_2.png' %}" alt="logo"></a>
     </div>
     <div class="content">
+      
       {% block about %}{% endblock about %}
 
       {% block post_content %}{% endblock post_content %}
 
       {% block post_showcase %}{% endblock post_showcase %}   
-
+      
     </div>  
     {% block footer_showcase %}{% include 'footer.html' %} {% endblock %}
   </div>
