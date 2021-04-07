@@ -31,11 +31,11 @@
       <div class="asc">
         {% for category in cat_list_asc %}
         <div class="dropdown">
-          <button class="dropbtn"><a href="#">{{category.description}}</a></button>
+          <button class="dropbtn"><a href="{% url 'category_view' category.slug  %}">{{category.description}}</a></button>
           <div class="dropdown-content">
             {% for subcategory in subcat_list %}
               {% if subcategory.category == category.description %}
-              <a href="#">{{subcategory.name}}</a>
+              <a href="{% url 'subcategory_view' subcategory.slug  %}">{{subcategory.name}}</a>
               {% endif %}
             {% endfor %}
           </div>
