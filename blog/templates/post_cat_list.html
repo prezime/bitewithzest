@@ -3,7 +3,7 @@
 {% load static %}
 {% block post_showcase %}
 
-<div class="gallery-cat">
+<div class="gallery-cat" id="galleryCat">
   <header class="post-cat-header">
     {% if request.resolver_match.url_name  == 'category_view' %}
     <h3 class="post-cat-title">{{object.description|upper}} </h3>	

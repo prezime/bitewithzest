@@ -53,6 +53,23 @@
                     </div>
                 {% endif %}
             {% endblock %}
+        {% if object.relates_to.id != 1 %}
+        <a href="{% url 'post_detail' object.relates_to.slug  %}">
+        <div class="link-post-card"> 
+            <div class="link-post-card__img">
+                <img src="../../media/post{{object.relates_to.id}}/thumbs/post_thumb{{object.relates_to.id}}.jpg" alt="">
+            </div>
+                <div class="link-post-card__info">
+                    <!-- <div class="link-post-card__date">
+                        <span>{{ object.relates_to.created_on | date:"F d Y"}}</span>
+                    </div> -->
+                <h1 class="link-post-card__title">{{object.relates_to.title}}</h1>
+                <p class="link-post-card__text" id="link-post-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+        </div>
+        </a>
+        {% endif %}  
     </div>
     <div class="post-footer">
 

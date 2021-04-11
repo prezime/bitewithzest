@@ -139,14 +139,14 @@ class Post(models.Model):
     preparationtext = models.TextField(default='',blank=True)
     main_pic = models.FileField(upload_to=path_and_rename_main,blank=True)
     tip = models.TextField(default='',blank=True)
-    
+    relates_to = models.ForeignKey('self', on_delete=models.CASCADE, default=11)
     
     class Meta:
         ordering = ['-created_on']
         verbose_name_plural = 'Posts'
 
     def __str__(self):
-        return self.title
+        return self.slug
 
     def get_absolute_url(self):
         return reverse('home')
