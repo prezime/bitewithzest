@@ -1,4 +1,3 @@
-
 {% extends "base.html" %} 
 {% load static %}
 {% block post_showcase %}
@@ -15,38 +14,38 @@
     {% for post in post_cat_list %}
       {% if object.description == post.category %}
       <a href="{% url 'post_detail' post.slug  %}">
-      <div class="post-cat-card">
-        <div class="post-cat-card__img">
-          <img src="../../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="">
-        </div>
-        <div class="post-cat-card__info">
-          <div class="post-cat-card__date">
-            <span>Sunday</span>
-            <span>October 27 2019</span>
+        <div class="post-cat-card">
+          <div class="post-cat-card__img">
+            <img src="../../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="">
           </div>
-          <h1 class="post-cat-card__title">Some Title</h1>
-          <p class="post-cat-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+          <div class="post-cat-card__info">
+            <div class="post-cat-card__date">
+              <span>{{ post.created_on | date:"F d Y"}}</span>
+            </div>
+            <h1 class="post-cat-card__title">{{ post.title }}</h1>
+            <p class="post-cat-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
       {% endif %}
     {% endfor %}  
   {% else %}
     {% for post in post_subcat_list %}  
       {% if object.name == post.subcategory %}
+      <a href="{% url 'post_detail' post.slug  %}">
         <div class="post-cat-card">
           <div class="post-cat-card__img">
-            <img src="https://source.unsplash.com/random" alt="">
+            <img src="../../../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="">
           </div>
           <div class="post-cat-card__info">
             <div class="post-cat-card__date">
-              <span>Sunday</span>
-              <span>October 27 2019</span>
+              <span>{{ post.created_on | date:"F d Y"}}</span>
             </div>
-            <h1 class="post-cat-card__title">Some Title</h1>
+            <h1 class="post-cat-card__title">{{ post.titleplus }}</h1>
             <p class="post-cat-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
           </div>
         </div>
+      </a>  
       {% endif %}
     {% endfor %}
   {% endif %} 

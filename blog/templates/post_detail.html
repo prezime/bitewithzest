@@ -1,11 +1,18 @@
 {% extends 'base.html' %} 
-
-
 {% block post_content %}
 <div class="post-body">
     <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
             <a href="/" class="breadcrumbs-link">Home</a>
+        </li>
+        <li class="breadcrumbs-item">
+            {% for category in cat_list %}
+                {% if category.description == post.category %}
+                <a href="{% url 'category_view' category.slug  %}"class="breadcrumbs-link">
+                    {{ object.category }}
+                </a>
+                {% endif %}
+            {% endfor %} 
         </li>
         <li class="breadcrumbs-item">
             <a href="{% url 'post_detail' post.slug  %}" class="breadcrumbs-link">{{ object.title }}</a>
@@ -19,7 +26,7 @@
         <div class="intro-text">  
             {{ object.intro | safe }}
         </div>
-        <div class="post-date">{% block created_on %} {{ object.created_on | date:"F d Y"}} {% endblock  %}</div>
+        <div class="post-date">{{ object.created_on | date:"F d Y"}}</div>
     </div>
     <div class="mobile-food-logo">
         <img src="../static/img/carrots-logo.jpg" alt=""> 
@@ -32,27 +39,24 @@
             {{ object.title }} 
         </div>
         <div class="preparation">
+            {% if object.intro1 %} 
             <div class="intro1">
                 {{ object.intro1 | safe }}    
             </div>
-            <img src="../static/media/post{{post.id}}/intro/post_intro{{post.id}}.jpg" alt="">
+            {% endif %} 
+            {% if object.intro_pic %}
+                <img src="../static/media/post{{post.id}}/intro/post_intro{{post.id}}.jpg" alt="">
+            {% endif %}    
             {{ object.legend | safe }}
         </div>    
         <div class="ingredients"> 
-            <h3>Ingredients:</h3>
             {{ object.ingredients | safe }}
         </div>
         <div class="preparationtext"> 
-            <h3>Preparation:</h3>
             {{ object.preparationtext | safe }}
         </div>
-            {% block tips %}
-                {% if object.tip %}
-                    <div class="tip tip1"> 
-                        {{ object.tip | safe }}
-                    </div>
-                {% endif %}
-            {% endblock %}
+        
+         
         {% if object.relates_to.id != 1 %}
         <a href="{% url 'post_detail' object.relates_to.slug  %}">
         <div class="link-post-card"> 
@@ -63,13 +67,33 @@
                     <!-- <div class="link-post-card__date">
                         <span>{{ object.relates_to.created_on | date:"F d Y"}}</span>
                     </div> -->
-                <h1 class="link-post-card__title">{{object.relates_to.title}}</h1>
-                <p class="link-post-card__text" id="link-post-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+                <!-- <h1 class="link-post-card__title">{{object.relates_to.title}}</h1> -->
+                <p class="link-post-card__text" id="link-post-card__text">{{object.relates_to.relates_to_desc}} </p>
             </div>
         </div>
         </a>
-        {% endif %}  
+        {% endif %} 
+        {% if object.outro %}   
+            <div class="outro"> 
+                {{ object.outro | safe }}
+            </div> 
+        {% endif %}
+        {% if object.add_pic %} 
+            <div class="add_pic">
+             <img src="../../media/post{{post.id}}/add/post_add{{post.id}}.jpg" alt=""> 
+             <article>
+                {{ object.add_pic_desc }}
+              </article>
+            </div> 
+        {% endif %}
+        
+        {% if object.tip %}
+            <div class="tip"> 
+                {{ object.tip | safe }}
+            </div>
+        {% endif %}
+
+        
     </div>
     <div class="post-footer">
 

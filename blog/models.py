@@ -128,18 +128,24 @@ class Post(models.Model):
     cardtype = models.IntegerField(choices=CARDTYPE, default=0)
 
     thumbnail = models.FileField(upload_to=path_and_rename,blank=True)
+    thumbnail_desc = models.CharField(max_length=200,default='',blank=True)
     intro_pic= models.FileField(upload_to=path_and_rename_intro,blank=True)
+    intro_pic_desc = models.CharField(max_length=200,default='',blank=True)
     intro = models.TextField()
     title = models.CharField(max_length=200, unique=True)
     maintext = models.TextField(default='')
     intro1 = models.TextField(default='',blank=True)
     legend = models.TextField(default='',blank=True)
     add_pic = models.FileField(upload_to=path_and_rename_add,blank=True)
-    ingredients = models.TextField(default='',blank=True)
+    add_pic_desc = models.CharField(max_length=200,default='',blank=True)
+    ingredients = models.TextField(blank=True)
     preparationtext = models.TextField(default='',blank=True)
     main_pic = models.FileField(upload_to=path_and_rename_main,blank=True)
+    main_pic_desc = models.CharField(max_length=200,default='',blank=True)
     tip = models.TextField(default='',blank=True)
-    relates_to = models.ForeignKey('self', on_delete=models.CASCADE, default=11)
+    relates_to = models.ForeignKey('self', on_delete=models.CASCADE, default=1)
+    relates_to_desc = models.CharField(max_length=300,default='',blank=True)
+    outro = models.TextField(default='',blank=True)
     
     class Meta:
         ordering = ['-created_on']

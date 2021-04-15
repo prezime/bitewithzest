@@ -30,7 +30,6 @@ img {
   justify-content: center;
   align-items: flex-end;
   color: var(--grey);
-  
 }
 
 /* Nav Section */
@@ -151,7 +150,7 @@ img {
     .gallery-cat{
       display: block; 
       margin: auto;
-      
+      height: 100vh;
     }
 
     .post-cat-card{
@@ -372,6 +371,7 @@ img {
     display: block; 
     margin: auto;
     width: 56%;
+    height: 100vmax;
   }
 
   .post-cat-card{
@@ -386,15 +386,16 @@ img {
   .link-post-card{
     max-width: 80rem;
     max-height: 14rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
     box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.2); 
     display: flex;
     align-items: center; 
   } 
   .link-post-card__img{
-    min-width: 14rem;
-    max-width: 14rem;
-    height: 14rem;
+    min-width: 10rem;
+    max-width: 10rem;
+    height: 10rem;
     position: relative;
   
   }
@@ -424,15 +425,33 @@ img {
   }
 
   .post-cat-card__info{
-  padding-left: 2rem;
+    padding-left: 2rem;
   }
   a{
   text-decoration: none;
+  color: var(--black);
   }
 
   .post-cat-card:hover{
-  box-shadow: 0 1.4rem 8rem rgba(0,0,0,0.2);  
+  box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.2);  
+  }
 
+  .tip{
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.2);
+    padding: 1rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+  .outro{
+    margin-bottom: 2rem;
+  }
+  .add_pic{
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.2);
+    margin-bottom: 2rem;
+  }
+  .add_pic>article{
+    padding: 10px;
+    font-size: 14px;
   }
 
 
