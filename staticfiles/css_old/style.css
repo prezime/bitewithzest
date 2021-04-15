@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,500;0,600;1,100;1,200&display=swap');
 :root {
     --yellow: #ffc600;
     --black: rgb(45, 73, 95);
@@ -161,6 +161,10 @@ h1,h2,h3,h4,h5,h6{
     color: var(--red);
 }
 
+.maintext{
+  margin-bottom: 10px;
+}
+
 .preparation{
   display: grid;
   grid-template-columns: 3fr auto;  
@@ -180,7 +184,6 @@ h1,h2,h3,h4,h5,h6{
   margin: 0 10px 10px 0; 
 }
 
-
 .preparation .webicons1 {
   grid-column: 1/-2;
   height: 23px;
@@ -188,6 +191,7 @@ h1,h2,h3,h4,h5,h6{
   background-image: url('/static/img/web_icons1.png' );
   background-size: contain;
   background-repeat: no-repeat;
+  margin-top: 20px;
 }
 .preparation .webicons2 {
   grid-column: 1/-2;
@@ -208,26 +212,33 @@ h1,h2,h3,h4,h5,h6{
   background-repeat: no-repeat;
 }
 
-.preparation .webicons4 {
-  grid-column: 1/-2;
-  height: 23px;
-  padding-left: 27px;
-  background-image: url('/static/img/web_icons4.png' );
-  background-size: contain;
-  background-repeat: no-repeat;
-}
+  .preparation .webicons4 {
+    grid-column: 1/-2;
+    height: 23px;
+    padding-left: 27px;
+    background-image: url('/static/img/web_icons4.png' );
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 
-.preparation .webicons5 {
-grid-column: 1/-2;
-height: 23px;
-  padding-left: 27px;
-background-image: url('/static/img/web_icons5.png' );
-background-size: contain;
-background-repeat: no-repeat;
-}
-.preparationtext>h3, .ingredients>h3{
-  color: var(--red);
-}
+  .preparation .webicons5 {
+    grid-column: 1/-2;
+    height: 23px;
+      padding-left: 27px;
+    background-image: url('/static/img/web_icons5.png' );
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .preparationtext>h3, .ingredients>h3{
+    color: var(--red);
+    margin-bottom: 10px;
+  }
+  .preparationtext{
+    margin-top: -10px;
+  }
+  .ingredients>ul{
+    margin-top: 10px;
+  }
 
   .breadcrumbs{
     padding: 10px;
