@@ -4,6 +4,8 @@ from uuid import uuid4
 import os, shutil
 from django.urls import reverse
 from django.conf import settings
+from ckeditor.fields import RichTextField
+
 
 
 
@@ -122,6 +124,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now= True)
     created_on = models.DateTimeField(auto_now_add=True)
+    custom_date = models.DateTimeField(blank=True)
     category = models.CharField(max_length=200, choices=category_list, default='')
     subcategory = models.CharField(max_length=200, choices=subcategory_list, default='uncategorized')
     status = models.IntegerField(choices=STATUS, default=0)
@@ -131,21 +134,21 @@ class Post(models.Model):
     thumbnail_desc = models.CharField(max_length=200,default='',blank=True)
     intro_pic= models.FileField(upload_to=path_and_rename_intro,blank=True)
     intro_pic_desc = models.CharField(max_length=200,default='',blank=True)
-    intro = models.TextField()
+    intro = RichTextField()
     title = models.CharField(max_length=200, unique=True)
-    maintext = models.TextField(default='')
-    intro1 = models.TextField(default='',blank=True)
-    legend = models.TextField(default='',blank=True)
+    maintext = RichTextField(default='')
+    intro1 = RichTextField(default='',blank=True)   
+    legend = RichTextField(default='',blank=True)
     add_pic = models.FileField(upload_to=path_and_rename_add,blank=True)
     add_pic_desc = models.CharField(max_length=200,default='',blank=True)
-    ingredients = models.TextField(blank=True)
-    preparationtext = models.TextField(default='',blank=True)
+    ingredients = RichTextField(blank=True)
+    preparationtext = RichTextField(default='',blank=True)
     main_pic = models.FileField(upload_to=path_and_rename_main,blank=True)
     main_pic_desc = models.CharField(max_length=200,default='',blank=True)
-    tip = models.TextField(default='',blank=True)
+    tip = RichTextField(default='',blank=True)
     relates_to = models.ForeignKey('self', on_delete=models.CASCADE, default=1)
     relates_to_desc = models.CharField(max_length=300,default='',blank=True)
-    outro = models.TextField(default='',blank=True)
+    outro = RichTextField(default='',blank=True)
     
     class Meta:
         ordering = ['-created_on']

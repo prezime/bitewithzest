@@ -26,7 +26,7 @@
         <div class="intro-text">  
             {{ object.intro | safe }}
         </div>
-        <div class="post-date">{{ object.created_on | date:"F d Y"}}</div>
+        <div class="post-date">{{ object.created_on | date:"F d Y"}}, {{ object.author}}</div>
     </div>
     <div class="mobile-food-logo">
         <img src="../static/img/carrots-logo.jpg" alt=""> 

@@ -2,7 +2,6 @@ img {
     max-width: 100%;
 }
 
-
 .wrapper{
   display: grid;
   grid-template-rows: auto 1fr auto ;
@@ -479,7 +478,7 @@ img {
       text-align: left;
   }
   .post-title-figure > h1 {
-    font-weight: 200;    
+    font-weight: 400;    
   }
   .intro{
       display: grid;
