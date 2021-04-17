@@ -35,3 +35,6 @@ USEFULL CODE:
 if i need to know in which view I am
   {% if request.resolver_match.url_name  != 'category_view' %}
   {% endif %}
+  
+#copy from remote ssh to local:
+scp prezime@s30.wservices.ch:~/bitewithzest/db.json /Users/igorsarkanovic/Documents/Python/bitewithzest/  
