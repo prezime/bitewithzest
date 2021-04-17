@@ -186,23 +186,12 @@ img {
       margin: auto;
   
     }
-    .preparation .webicons1 {
-      font-size: 14px;
+    .preparation>ol{
+      margin:  0 -2rem;
     }
-    .preparation .webicons2 {
+    .preparation>ol li{
       font-size: 14px;
-    }
-    
-    .preparation .webicons3 {
-      font-size: 14px;
-    }
-    
-    .preparation .webicons4 {
-      font-size: 14px;
-    }
-    
-    .preparation .webicons5 {
-      font-size: 14px;
+      list-style-type: none;
     }
 
     .link-post-card{
@@ -549,8 +538,8 @@ img {
   .preparation img{
       grid-column: 2/span 1;
       grid-row: 1/ span 6;
-      width: 125px;
-      height: 125px;
+      width: 15rem;
+      height: 15rem;
       object-fit: cover;
   }
   
@@ -559,8 +548,12 @@ img {
     font-style: italic;
     margin: 0 10px 10px 0; 
   }
-
-
+  .preparation>ol{
+    margin:  0 -40px;
+  }
+  .preparation>ol li{
+    list-style-type: none;
+  }
   .preparation .webicons1 {
       grid-column: 1/-2;
       height: 23px;

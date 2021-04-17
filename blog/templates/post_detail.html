@@ -38,7 +38,7 @@
         <div class="post-title">
             {{ object.title }} 
         </div>
-        <div class="preparation">
+        <div class="preparation" id="preparation">
             {% if object.intro1 %} 
             <div class="intro1">
                 {{ object.intro1 | safe }}    
@@ -47,7 +47,7 @@
             {% if object.intro_pic %}
                 <img src="../static/media/post{{post.id}}/intro/post_intro{{post.id}}.jpg" alt="">
             {% endif %}    
-            {{ object.legend | safe }}
+            {{ object.legend | safe }}  
         </div>    
         <div class="ingredients"> 
             {{ object.ingredients | safe }}

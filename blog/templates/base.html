@@ -65,15 +65,30 @@
   
   </div>
   <script>
-    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-    var z = document.getElementById("link-post-card__text").innerHTML;  
-    if (z.length > 50 && vw < 500) {
-      document.getElementById("link-post-card__text").innerHTML = z.substring(0, 49) + "...";
-    }
+    // const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    // const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    // var z = document.getElementById("link-post-card__text").innerHTML;  
+    // if (z.length > 50 && vw < 500) {
+    //   document.getElementById("link-post-card__text").innerHTML = z.substring(0, 49) + "...";
+    // }
+    const preparationClass = document.getElementById('preparation');
+    // var olElement = preparationClass.lastElementChild;
+    // var ol = preparationClass.getElementsByTagName('ol');
+
+    // select the list items
+    var lists = preparationClass.getElementsByTagName('li');
+    console.log(lists);
+
+    // // now loop through the items and set a custom property 'index'
+    var l = lists.length; // total items
+    
+    for (var i=0;i<=l;i++){
+       // list[i].index = i;
+
+       lists[i].className = "webicons"+(parseInt(i)+1);
+     }
     function myFunction() {
       var x = document.getElementById("myTopnav");
-      var y = document.getElementById("galleryCat");
       
       var djangoView = "{{ request.resolver_match.url_name }}";
       if (x.className === "topnav") {
@@ -81,13 +96,8 @@
       } else {
         x.className = "topnav";
       }
-      if (y.className === "gallery") {
-        y.className = "gallery-cat";
-      } 
+
       
-    }
-    if (djangoView === "home") {
-      alert("hey");
     }
     
     
