@@ -32,17 +32,12 @@ img {
 }
 
 /* Nav Section */
-.topnav-wrapper {
-  box-shadow: 0 4px 2px -2px rgba(0,0,0,.1);
-  z-index: 1;
-  max-width: 100%;
-}
+
 .topnav {
   overflow: hidden;
   background-color: #fff;
-  margin: auto ;
-  width: 1440px;
-  z-index: 2;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  margin: auto 0 ;
 }
 
 .topnav a {
@@ -64,9 +59,15 @@ img {
   display: none;
 }
 
+.topnav .logo {
+  display: block;
+  float: left;
+  padding: 10px 20px;
+  text-decoration: none;
+}
 
-.logo  {
-  max-width: 120px;
+.logo a img {
+  max-width: 80px;
 }
 
 .dropdown {
@@ -108,52 +109,8 @@ img {
   padding-top: 40px;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 60px;
-}
-
-.header-wrapper {
-  background-color: var(--red);
-  max-width: 100%;
-
-}
-.header {
-  background-color: var(--red);
-  text-align: center;
-  margin: auto;
-  width: 1440px;
-  display: grid;
-  grid-template-columns: auto auto;
-}
-.header-nav{
-  display: block;	
-  color: white;
-  text-align: right;
-}
-.header-nav a{
-  color: white;
-  font-size: 17px;
-  letter-spacing: .05em;
-}
-.header-nav>ul{
-      list-style-type: none;
-      line-height: 30px;
-}
-
 @media screen and (max-width: 600px) {
-  .header {
-    width: 100%;
-    padding-right: 10px;
-  }
-  .topnav {
-    width: 100%;
-  }
+
   .topnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
   }
@@ -182,9 +139,7 @@ img {
     display: block;
     width: 100%;
     text-align: left;
-  } 
-
-  
+    } 
     .desc {
       display: none;
     }
@@ -316,7 +271,7 @@ img {
     border: none;
     color: var(--grey);
     background-color: inherit;
-    line-height: 20px;
+    line-height: 50px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     text-align: center;
@@ -350,7 +305,7 @@ img {
     font-size: 17px;    
     border: none;
     color: var(--grey);
-    padding-left: 21px;
+    padding: 21px;
     background-color: inherit;
     line-height: 50px;
     text-transform: uppercase;
