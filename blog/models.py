@@ -5,6 +5,7 @@ import os, shutil
 from django.urls import reverse
 from django.conf import settings
 from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 
@@ -136,7 +137,7 @@ class Post(models.Model):
     intro_pic_desc = models.CharField(max_length=200,default='',blank=True)
     intro = RichTextField()
     title = models.CharField(max_length=200, unique=True)
-    maintext = RichTextField(default='')
+    maintext = RichTextUploadingField(default='')
     intro1 = RichTextField(default='',blank=True)   
     legend = RichTextField(default='',blank=True)
     add_pic = models.FileField(upload_to=path_and_rename_add,blank=True)

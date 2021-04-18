@@ -38,3 +38,7 @@ if i need to know in which view I am
   
 #copy from remote ssh to local:
 scp prezime@s30.wservices.ch:~/bitewithzest/db.json /Users/igorsarkanovic/Documents/Python/bitewithzest/  
+
+..ako bude problema sa ckeditor uploaderom -> urls.py:
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
