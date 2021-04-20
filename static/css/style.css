@@ -3,7 +3,7 @@
     --yellow: #ffc600;
     --black: rgb(45, 73, 95);
     --grey: #777777;
-    --red: #f33233;
+    --red: rgb(239, 54, 54);
 }
 
 *,
@@ -47,45 +47,69 @@ p{
 }
 
 .about {
-    display: grid;
-    grid-template-columns: 1fr ;
-    align-items: center;
-    background: #ffffff;
-    padding-top: 20px;
-    padding-bottom: 0;
-    text-align: left;
-    justify-items: center;
-    margin: 10px 10px 30px 10px;
-    
-  }
-
-.about>*{
-    grid-column: 1/span 1;
+  display: grid;
+  grid-template-areas: 
+                       "ornament1 topleft   .         .         .         .         .         .           ornament2"
+                       "ornament1 abouttext abouttext abouttext abouttext abouttext abouttext abouttext   ornament2"
+                       "ornament1 .         .         .         .         .         .         bottomright ornament2"; 
+  background: #ffffff;
+  max-width: 60%;
+  margin: 30px auto 30px auto; 
 }
 
+
 .about h2  {
-    font-size: 30px;
-    font-weight: 400;
-    color: var(--black); 
-    text-align: center;   
-    word-wrap:break-word;
+  font-size: 44px;
+  font-weight: 400;
+  color: var(--black);    
 }
 
 .about p  {
-    font-size: 20px;
-    color: var(--grey);  
-    text-align: left;  
-    word-wrap: break-word;
+  font-size: 21px;
+  color: var(--grey);    
 }
 
 .about hr {
-  position: relative;
-  display: inline-block;
-  height: 2px;
-  background: var(--red);
-  border: 0;
-  width: 100px;
+    display: none;
 }
+.abouttext{
+  grid-area: abouttext;
+  /* border-top: 2px solid  var(--red);
+  border-bottom: 2px solid  var(--red); */
+ 
+}
+.topleft{
+  grid-area: topleft;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.topleft>img{
+  height:5px;
+}
+.bottomright{
+  grid-area: bottomright;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.bottomright>img{
+  height:5px;
+}
+
+.ornament1{
+  grid-area: ornament1;
+}
+.ornament2{
+  grid-area: ornament2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+} 
+
+
+
+
 
 
 .post-body{

@@ -43,7 +43,7 @@ img {
   overflow: hidden;
   background-color: #fff;
   margin: auto ;
-  width: 80%;
+  width: 70%;
   z-index: 2;
 }
 
@@ -129,7 +129,7 @@ img {
   background-color: var(--red);
   text-align: center;
   margin: auto;
-  width: 80%;
+  width: 70%;
   display: grid;
   grid-template-columns: auto auto;
 }
@@ -271,7 +271,59 @@ img {
       margin: 0;
     }
   
-
+    .about {
+      display: grid;
+      grid-template-columns: 1fr  ;
+      align-items: center;
+      background: #ffffff;
+      padding-top: 20px;
+      padding-bottom: 0;
+      text-align: center;
+      justify-items: center;
+      margin: 10px 10px 30px 10px;
+      max-width: 100%;
+    }
+  
+  .about>*{
+      grid-column: 1/span 1;
+  }
+  
+  .about h2  {
+      font-size: 30px;
+      font-weight: 400;
+      color: var(--black); 
+      text-align: center;   
+      word-wrap:break-word;
+  }
+  
+  .about p  {
+      font-size: 20px;
+      color: var(--grey);  
+      text-align: left;  
+      word-wrap: break-word;
+  }
+  
+  .about hr {
+    position: relative;
+    display: inline-block;
+    height: 2px;
+    background: var(--red);
+    border: 0;
+    width: 100px;
+     
+  }
+  .topleft{
+    display: none;
+  }
+  .bottomright{
+    display: none;
+  }
+  .ornament1{
+    display: none;
+  }
+  .ornament2{
+    display: none;
+  } 
 
 }
 
@@ -360,36 +412,7 @@ img {
     text-align: center;
   }
 
-  .about {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    position: relative;
-    background: #ffffff;
-    padding-bottom: 0;
-    text-align: left;
-    max-width: 440px;
-    margin: 10px auto 30px auto;
-  }
-  .about h2  {
-    font-size: 44px;
-    font-weight: 400;
-    color: var(--black);    
-  }
-
-  .about p  {
-    font-size: 24px;
-    color: var(--grey);    
-  }
-
-  .about hr {
-      position: relative;
-      display: inline-block;
-      height: 2px;
-      background: var(--red);
-      border: 0;
-      width: 300px;
-  }
+ 
 
 
 /* GAllery front */
@@ -493,7 +516,7 @@ img {
   /* Blog post */
   .post-body{
       display: grid;
-      max-width: 80%;
+      max-width: 70%;
       margin: 100px auto;
       column-gap: 10px 25px;
       font-family: 'Raleway', serif;
@@ -558,7 +581,7 @@ img {
 
   .post-content {
     display: grid;
-    max-width: 80%;
+    max-width: 70%;
     margin: 100px auto;
     grid-template-columns: 2fr 10fr 2fr;
     grid-gap: 10px 30px;
