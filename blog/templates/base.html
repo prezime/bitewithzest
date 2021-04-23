@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="/static/css/responsive.css" />
 		<title>Bite With Zest! - the ultimate Life Zest blog</title>
 	</head>
-<body>
+<body onresize="resizeWindow()">
 <div class="header-wrapper">
 	<div class="header">
 		<div class="logo">
@@ -60,7 +60,7 @@
  
 
 
-	<div class="content">
+	<div class="content" id="content">
       
 		{% block about %}{% endblock about %}
   
@@ -105,6 +105,15 @@ function beResponsive() {
   } else {
 	x.classList.remove("responsive");
   }
+}
+
+function resizeWindow() {
+  var w = window.outerWidth;
+  var h = window.outerHeight;
+  var txt = "Window size: width=" + w + ", height=" + h;
+  var line = document.getElementById("post-cat-line");
+  document.getElementById('post-cat-line').style.width = w-870 + 'px';
+  console.log(txt);
 }
 
 </script>

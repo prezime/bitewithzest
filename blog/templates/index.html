@@ -1,19 +1,29 @@
 {% extends "base.html" %} 
 {% block about %} {% include 'about.html' %} {% endblock about %}
+{% load static %}
 {% block post_showcase %}
+
 
 <div class="gallery">
         <!-- Blog Entries Column -->
-  {% for post in post_list %}
-  
-      <a href="{% url 'post_detail' post.slug  %}" class="card">
-        <div class="thumb" style="background-image: url(./static/media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg);"></div>
-        <article>
-          <h1>{{ post.titleplus }}</h1>
-        </article>
-      </a>
-    
-    {% endfor %}
+    <div class="cat-header">
+      <div class="post-cat-title">{{post_cat1.description|upper}} </div>
+      <div class="post-cat-line" id="post-cat-line"></div>
+      <div class="post-cat-more"><a href="{% url 'category_view' post_cat1.slug  %}"> >>> more</a></div>  
+
+    </div>
+    {% for post in post_cat1_list|slice:":3" %}
+    <a href="{% url 'post_detail' post.slug  %}">
+    <div class="card">
+      <div class="card-img">
+        <img src="./media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="" />
+      </div>
+      <div class="card-title">
+        <h4>{{ post.titleplus }}</h4>
+      </div>  
+    </div>
+  </a>
+  {% endfor %}
 </div>
 
 {% endblock  %}

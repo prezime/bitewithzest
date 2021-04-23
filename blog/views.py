@@ -5,9 +5,10 @@ from .models import Post,Category,SubCategory
 
 
 class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
+    # queryset = Post.objects.filter(status=1).order_by('-created_on')
+    model = Post
     template_name = 'index.html'
-    context_object_name = 'post_list'
+    # context_object_name = 'post_list'
 
     def get_context_data(self, **kwargs):
         context = super(PostList, self).get_context_data(**kwargs)
@@ -34,6 +35,9 @@ def shared_context(context):
     context['post_cat_list'] = post_queryset.filter(status=1).order_by('-id') 
     context['post_subcat_list'] = post_queryset.filter(status=1).order_by('id') 
     context['related_posts'] = post_queryset
+    context['post_cat1_list'] = post_queryset.filter(category='Enjoy The Food').filter(status=1).order_by('id') 
+    context['post_cat1'] = Category.objects.get(id=1)
+
 
 class CategoryList(generic.DetailView):
     model = Category

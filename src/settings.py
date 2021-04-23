@@ -140,13 +140,21 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_CONFIGS = {
     'default': {
+        'enterMode': 0, 
         'toolbar': 'Custom',
         'toolbar_Custom': [
             ['Undo'],
-            ['Format','Bold', 'Italic', 'Underline'],
+            ['Styles', 'Format', 'Font', 'FontSize','Bold', 'Italic', 'Underline','Blockquote'],
+            ['TextColor', 'BGColor'],
             ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
             ['Link', 'Unlink'],
-            ['RemoveFormat', 'Image','Source']
+            ['RemoveFormat', 'Image','Table','Source'],
+            {'name': 'Custom Styles', 'items': [
+                # put the name of your editor.ui.addButton here
+                'Preview',
+                'Maximize'
+
+            ]}
         ]
     }
 }
