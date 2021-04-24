@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import Post,Category,SubCategory
+from .models import User,Post,Category,SubCategory
 
 
 
@@ -54,4 +54,15 @@ class SubCategoryList(generic.DetailView):
         context = super(SubCategoryList, self).get_context_data(**kwargs)
         shared_context(context)
         return context 
+
+# class About(generic.DetailView):
+#     model = User
+#     template_name = 'about.html'
+#     def get_context_data(self, **kwargs):
+#         context = super(SubCategoryList, self).get_context_data(**kwargs)
+#         shared_context(context)
+#         return context   
+# def About(request):
+#          # return response
+#     return render(request, "about.html")              
        

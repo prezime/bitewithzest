@@ -25,6 +25,21 @@ def path_and_rename(instance, filename):
     # return the whole path to the file
     return os.path.join(upload_to, filename)
 
+def path_and_rename_opener(instance, filename):
+    upload_to = 'post'+str(instance.pk)+'/opener'
+    ext = filename.split('.')[-1]
+    # get filename
+    if instance.pk:
+        filename = '{}.{}'.format('post_opener'+str(instance.pk), ext)
+    else:
+        # set filename as random string
+        filename = '{}.{}'.format(uuid4().hex, ext)
+    fullname = os.path.join(settings.MEDIA_ROOT, upload_to)    
+    if os.path.exists(fullname):
+        shutil.rmtree(fullname)     
+    # return the whole path to the file
+    return os.path.join(upload_to, filename)
+
 def path_and_rename_intro(instance, filename):
     upload_to = 'post'+str(instance.pk)+'/intro'
     ext = filename.split('.')[-1]
@@ -77,10 +92,10 @@ STATUS = (
     (2,"Un-Publish")
 )
 
-CARDTYPE = (
-    (0,"Big"),
-    (1,"Small")
-)
+# CARDTYPE = (
+#     (0,"Big"),
+#     (1,"Small")
+# )
 
 
 class Category(models.Model):
@@ -121,7 +136,7 @@ for item in subcats:
 class Post(models.Model):
     titleplus = models.CharField(max_length=200, default='')
     
-    slug = models.SlugField(max_length=200, unique=True)
+    
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now= True)
     created_on = models.DateTimeField(auto_now_add=True)
@@ -129,16 +144,19 @@ class Post(models.Model):
     category = models.CharField(max_length=200, choices=category_list, default='')
     subcategory = models.CharField(max_length=200, choices=subcategory_list, default='uncategorized')
     status = models.IntegerField(choices=STATUS, default=0)
-    cardtype = models.IntegerField(choices=CARDTYPE, default=0)
+    # cardtype = models.IntegerField(choices=CARDTYPE, default=0)
 
     thumbnail = models.FileField(upload_to=path_and_rename,blank=True)
     thumbnail_desc = models.CharField(max_length=200,default='',blank=True)
-    intro_pic= models.FileField(upload_to=path_and_rename_intro,blank=True)
-    intro_pic_desc = models.CharField(max_length=200,default='',blank=True)
+    opener_pic= models.FileField(upload_to=path_and_rename_opener,blank=True)
+    
     intro = RichTextUploadingField()
     title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
     maintext = RichTextUploadingField(default='')
-    intro1 = RichTextUploadingField(default='',blank=True)   
+    intro1 = RichTextUploadingField(default='',blank=True) 
+    intro_pic= models.FileField(upload_to=path_and_rename_intro,blank=True)
+    intro_pic_desc = models.CharField(max_length=200,default='',blank=True)  
     legend = RichTextField(default='',blank=True)
     add_pic = models.FileField(upload_to=path_and_rename_add,blank=True)
     add_pic_desc = models.CharField(max_length=200,default='',blank=True)

@@ -149,13 +149,9 @@ CKEDITOR_CONFIGS = {
             ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
             ['Link', 'Unlink'],
             ['RemoveFormat', 'Image','Table','Source'],
-            {'name': 'Custom Styles', 'items': [
-                # put the name of your editor.ui.addButton here
-                'Preview',
-                'Maximize'
-
-            ]}
-        ]
+            
+        ],
+        'colorButton_colors': 'ffc600,00aab3,777777,2d495f,CCEAEE,66AB16'
     }
 }
 
