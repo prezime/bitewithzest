@@ -92,10 +92,10 @@ STATUS = (
     (2,"Un-Publish")
 )
 
-# CARDTYPE = (
-#     (0,"Big"),
-#     (1,"Small")
-# )
+CARDTYPE = (
+     (0,"Big"),
+     (1,"Small")
+)
 
 
 class Category(models.Model):
@@ -144,7 +144,7 @@ class Post(models.Model):
     category = models.CharField(max_length=200, choices=category_list, default='')
     subcategory = models.CharField(max_length=200, choices=subcategory_list, default='uncategorized')
     status = models.IntegerField(choices=STATUS, default=0)
-    # cardtype = models.IntegerField(choices=CARDTYPE, default=0)
+    cardtype = models.IntegerField(choices=CARDTYPE, default=0)
 
     thumbnail = models.FileField(upload_to=path_and_rename,blank=True)
     thumbnail_desc = models.CharField(max_length=200,default='',blank=True)
