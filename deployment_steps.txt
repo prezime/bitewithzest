@@ -44,4 +44,8 @@ if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 #static to staticfiles:
-
+~/.virtualenvs/bitewithzest/bin/python manage.py collectstatic
+#Dumpdata
+~/.virtualenvs/bitewithzest/bin/python manage.py dumpdata>db_remote_20210427.json 
+#loaddata
+~/.virtualenvs/bitewithzest/bin/python manage.py loaddata ~/db_remote_20210427.json 
