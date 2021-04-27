@@ -80,16 +80,16 @@ window.onscroll = function() {beSticky()};
 
 var navbar = document.getElementById("myTopnavWrapper");
 var sticky = navbar.offsetTop;
-console.log(sticky);
-const preparationClass = document.getElementById('preparation');
-    // select the list items
-var lists = preparationClass.getElementsByTagName('li');
-console.log(lists);
-// now loop through the items and set a custom property 'index'
-var l = lists.length; // total items  
-for (var i=0;i<=l;i++){
-	lists[i].className = "webicons"+(parseInt(i)+1);
-}
+// console.log(sticky);
+// const preparationClass = document.getElementById('preparation');
+//     // select the list items
+// var lists = preparationClass.getElementsByTagName('li');
+// console.log(lists);
+// // now loop through the items and set a custom property 'index'
+// var l = lists.length; // total items  
+// for (var i=0;i<=l;i++){
+// 	lists[i].className = "webicons"+(parseInt(i)+1);
+// }
 function beSticky() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
