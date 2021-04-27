@@ -17,12 +17,13 @@ blockquote{
     'footer-info        footer-info        footer-info'
     'footer-info        footer-info        footer-info'
     '.                  footer-copyright   .          ';
-  height: 320px;
-  background-color: #fff;
+  height: 120px;
+  background-color: var(--main);
   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
   width: 100%;
   z-index: 3;
   margin: 0 auto;
+
 }
 
 .footer-copyright{
@@ -32,7 +33,7 @@ blockquote{
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  color: var(--grey);
+  color: white
 }
 
 /* Nav Section */
@@ -200,8 +201,13 @@ blockquote{
     /* Gallery Categories*/
     .gallery-cat{
       display: block; 
-      margin: auto;
+      margin: auto auto 30px;
       height: 100vh;
+    }
+    .gallery-cat-home{
+      display: block; 
+      margin: auto auto 30px;
+      width: 56%;
     }
 
     .post-cat-card{
@@ -340,13 +346,13 @@ blockquote{
     flex-direction: column;
     flex-wrap: wrap;
     width: 90%;
-    margin: auto;
+    margin: auto auto 100px;
     align-items: center;
     padding-top: 20px;
     padding-bottom: 0;
     text-align: center;
     justify-items: center;
-    grid-gap: 2rem;
+    grid-column-gap: 30px;
   }
   .card {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
@@ -356,7 +362,7 @@ blockquote{
   }
   .card-img img {
     width: 17rem;
-    height: 22rem;
+    height: 25rem;
     object-fit: cover;
   }
   .card-title {
@@ -370,6 +376,11 @@ blockquote{
     letter-spacing: 1px;
     font-size: 21px;
   }
+ .cat-header-wrapper{
+   width:70%;
+   display: grid;
+   grid-template-columns: 3fr;
+ }
 
   .cat-header{
     grid-area: cat-header;
@@ -413,53 +424,18 @@ blockquote{
     display:inline-block;
     position: relative; 
     color: var(--main); 
-    font-size: 23px; 
+    font-size: 26px; 
     font-weight: 400;
+    text-decoration: none;
   }
 
-
+  .moto{
+    display: none;
+  }
 
 }
 
-
-
-
-  /* Gallery Front*/
   
-  /* .card:hover {
-    top: -2px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card article {
-    padding: 20px;    
-  }
-  
-  .card h1 {
-    font-size: 20px;
-    margin: 0;
-    color: #333;
-    font-weight: normal;
-  }
-  
-  .card p {
-    flex: 1;
-    line-height: 1.4;
-  }
-  
-  .card span {
-    font-size: 12px;
-    color: #999;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    margin: 2em 0 0 0;
-  }
-  
-  .card .thumb {
-    padding-bottom: 60%;
-    background-size: cover;
-    background-position: center center;
-  } */
 
   .dropdown .dropbtn {
     font-size: 17px;    
@@ -511,9 +487,14 @@ blockquote{
   /* Gallery Categories*/
   .gallery-cat{
     display: block; 
-    margin: auto;
+    margin: auto auto 30px;
     width: 56%;
     height: 100vmax;
+  }
+  .gallery-cat-home{
+    display: block; 
+    margin: auto auto 100px;
+    width: 56%;
   }
 
   .post-cat-card{
@@ -613,18 +594,22 @@ blockquote{
   .post-title-figure {
       position: absolute;
       top: 20px;
-      right: -300px;
       display: table-cell; /* keep the background color wrapped tight */
       margin: 20px; 
       padding-left: 27px;
       font-size:23px;
       background-color:rgba(255, 255, 255, 0.8);
       max-width: 600px;
+      width: 500px;
       color: var(--main);
       text-align: left;
+      right: -450px;
+      /* transform: translateX(38rem); */
+
   }
   .post-title-figure > h1 {
-    font-weight: 400;    
+    font-weight: 400;
+    line-height: 60px ;    
   }
   .intro{
       display: grid;
@@ -661,7 +646,7 @@ blockquote{
         
   }
   .picture img{
-      width: 1000px;
+      width: 910px;
       height: 600px;
       object-fit: cover;
   }

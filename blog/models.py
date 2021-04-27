@@ -157,7 +157,7 @@ class Post(models.Model):
     intro1 = RichTextUploadingField(default='',blank=True) 
     intro_pic= models.FileField(upload_to=path_and_rename_intro,blank=True)
     intro_pic_desc = models.CharField(max_length=200,default='',blank=True)  
-    legend = RichTextField(default='',blank=True)
+    legend = RichTextUploadingField(default='',blank=True)
     add_pic = models.FileField(upload_to=path_and_rename_add,blank=True)
     add_pic_desc = models.CharField(max_length=200,default='',blank=True)
     ingredients = RichTextField(blank=True)
