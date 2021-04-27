@@ -624,12 +624,12 @@ blockquote{
   .intro-text{
       grid-area: intro-text;
       padding: 20px;
-      max-width: 400px;
+      max-width: 350px;
   }
 
   .intro-empty{
       grid-area: intro-empty;
-      max-width: 400px;
+      max-width: 350px;
   }
 
   .post-date{
