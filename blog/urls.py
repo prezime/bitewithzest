@@ -7,6 +7,7 @@ urlpatterns = [
     path('filter/<slug:slug>/', views.CategoryList.as_view(), name='category_view'),
     path('filter/sub/<slug:slug>/', views.SubCategoryList.as_view(), name='subcategory_view'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
+    path('filter/type/<cardtype>', views.FeaturedList.as_view(), name='featured_view'),
     # path('about', views.About.as_view(), name='about'),
     # path('about/', TemplateView.as_view(template_name="about.html")),
 ]

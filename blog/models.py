@@ -93,8 +93,8 @@ STATUS = (
 )
 
 CARDTYPE = (
-     (0,"Big"),
-     (1,"Small")
+     (0,"Normal"),
+     (1,"Featured")
 )
 
 
@@ -134,7 +134,7 @@ for item in subcats:
     subcategory_list.append(item)           
 
 class Post(models.Model):
-    titleplus = models.CharField(max_length=200, default='')
+    titleplus = models.TextField(max_length=240, default='')
     
     
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')

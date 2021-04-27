@@ -8,6 +8,8 @@
   <header class="post-cat-header">
     {% if request.resolver_match.url_name  == 'category_view' %}
     <h3 class="post-cat-title">{{object.description|upper}} </h3>	
+    {% elif request.resolver_match.url_name  == 'featured_view'%}
+    <h3 class="post-cat-title">FEATURED </h3>	
     {% else %}	
     <h3 class="post-cat-title">{{object.name|upper}} </h3>	
     {% endif %}	
@@ -24,14 +26,14 @@
             <div class="post-cat-card__date">
               <span>{{ post.created_on | date:"F d Y"}}</span>
             </div>
-            <h1 class="post-cat-card__title">{{ post.title }}</h1>
-            <p class="post-cat-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+            <h1 class="post-cat-card__title">{{ post.title | safe }}</h1>
+            <p class="post-cat-card__text">{{post.titleplus}}</p>
           </div>
         </div>
       </a>
       {% endif %}
     {% endfor %}  
-  {% else %}
+  {% elif request.resolver_match.url_name  == 'subcategory_view'  %}
     {% for post in post_subcat_list %}  
       {% if object.name == post.subcategory %}
       <a href="{% url 'post_detail' post.slug  %}">
@@ -50,6 +52,23 @@
       </a>  
       {% endif %}
     {% endfor %}
+  {% else %}
+    {% for post in post_featured_list|slice:":3" %}  
+      <a href="{% url 'post_detail' post.slug  %}">
+        <div class="post-cat-card">
+          <div class="post-cat-card__img">
+            <img src="../../../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="">
+          </div>
+          <div class="post-cat-card__info">
+            <div class="post-cat-card__date">
+              <span>{{ post.created_on | date:"F d Y"}}</span>
+            </div>
+            <h1 class="post-cat-card__title">{{ post.titleplus }}</h1>
+            <p class="post-cat-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+          </div>
+        </div>
+      </a>  
+    {% endfor %}  
   {% endif %} 
 </div> 
 

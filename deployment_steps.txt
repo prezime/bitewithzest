@@ -42,3 +42,6 @@ scp prezime@s30.wservices.ch:~/bitewithzest/db.json /Users/igorsarkanovic/Docume
 ..ako bude problema sa ckeditor uploaderom -> urls.py:
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+#static to staticfiles:
+

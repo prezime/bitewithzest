@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import User,Post,Category,SubCategory
+from django.views.generic import ListView
 
 
 
@@ -37,6 +38,11 @@ def shared_context(context):
     context['related_posts'] = post_queryset
     context['post_cat1_list'] = post_queryset.filter(category='Enjoy The Food').filter(status=1).order_by('id') 
     context['post_cat1'] = Category.objects.get(id=1)
+    context['post_cat2_list'] = post_queryset.filter(category='Immunity Boosting').filter(status=1).order_by('id') 
+    context['post_cat2'] = Category.objects.get(id=3)
+    context['post_cat3_list'] = post_queryset.filter(category='Our Planet').filter(status=1).order_by('id') 
+    context['post_cat3'] = Category.objects.get(id=4)
+    context['post_featured_list'] = post_queryset.filter(cardtype='1').filter(status=1).order_by('id') 
 
 
 class CategoryList(generic.DetailView):
@@ -54,6 +60,16 @@ class SubCategoryList(generic.DetailView):
         context = super(SubCategoryList, self).get_context_data(**kwargs)
         shared_context(context)
         return context 
+
+class FeaturedList(ListView):
+    model = Post
+    template_name = 'post_cat_list.html'
+    def get_context_data(self, **kwargs):
+        context = super(FeaturedList, self).get_context_data(**kwargs)
+        shared_context(context)
+        return context 
+# class FeaturedList(ListView):
+#     model = Post               
 
 # class About(generic.DetailView):
 #     model = User

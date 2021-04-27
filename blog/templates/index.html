@@ -7,23 +7,72 @@
 <div class="gallery">
         <!-- Blog Entries Column -->
     <div class="cat-header">
-      <div class="post-cat-title">{{post_cat1.description|upper}} </div>
-      <div class="post-cat-line" id="post-cat-line"></div>
-      <div class="post-cat-more"><a href="{% url 'category_view' post_cat1.slug  %}"> >>> more</a></div>  
-
+      <div class="cat-header-col1 post-cat-title">{{post_cat1.description|upper}}</div>
+      <div class="cat-header-col2"><div class="post-cat-more"><a href="{% url 'category_view' post_cat1.slug  %}">more >>></a></div></div>
     </div>
     {% for post in post_cat1_list|slice:":3" %}
     <a href="{% url 'post_detail' post.slug  %}">
-    <div class="card">
-      <div class="card-img">
-        <img src="./media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="" />
+      <div class="card">
+        <div class="card-img">
+          <img src="./media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="" />
+        </div>
+        <div class="card-title">
+          <h4>{{ post.titleplus }}</h4>
+        </div>  
       </div>
-      <div class="card-title">
-        <h4>{{ post.titleplus }}</h4>
-      </div>  
-    </div>
-  </a>
-  {% endfor %}
+    </a>
+    {% endfor %}
+</div>
+
+
+<div class="cat-header-wrapper">
+  <div class="cat-header">
+    <div class="cat-header-col1 post-cat-title">{{post_cat2.description|upper}}</div>
+    <div class="cat-header-col2"><div class="post-cat-more"><a href="{% url 'category_view' post_cat2.slug  %}">more >>></a></div></div>
+  </div>
+</div>
+<div class="gallery-cat-home"> 
+  {% for post in post_cat2_list|slice:":3" %}
+      <a href="{% url 'post_detail' post.slug  %}">
+        <div class="post-cat-card">
+          <div class="post-cat-card__img">
+            <img src="../../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="">
+          </div>
+          <div class="post-cat-card__info">
+            <div class="post-cat-card__date">
+              <span>{{ post.created_on | date:"F d Y"}}</span>
+            </div>
+            <h1 class="post-cat-card__title">{{ post.title }}</h1>
+            <p class="post-cat-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+          </div>
+        </div>
+      </a>
+    {% endfor %}  
+</div>   
+
+<div class="cat-header-wrapper">
+  <div class="cat-header">
+    <div class="cat-header-col1 post-cat-title">{{post_cat3.description|upper}}</div>
+    <div class="cat-header-col2"><div class="post-cat-more"><a href="{% url 'category_view' post_cat3.slug  %}">more >>></a></div></div>
+  </div>
+</div>
+<div class="gallery-cat-home"> 
+  {% for post in post_cat3_list|slice:":3" %}
+      <a href="{% url 'post_detail' post.slug  %}">
+        <div class="post-cat-card">
+          <div class="post-cat-card__img">
+            <img src="../../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="">
+          </div>
+          <div class="post-cat-card__info">
+            <div class="post-cat-card__date">
+              <span>{{ post.created_on | date:"F d Y"}}</span>
+            </div>
+            <h1 class="post-cat-card__title">{{ post.title }}</h1>
+            <p class="post-cat-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+          </div>
+        </div>
+      </a>
+    {% endfor %}  
 </div>
 
 {% endblock  %}

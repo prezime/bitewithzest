@@ -20,13 +20,17 @@
     </ul>
     <div class="intro">
         <div class="picture">
-            <img src="../media/post{{post.id}}/intro/post_intro{{post.id}}.jpg" alt=""> 
-            <div class="post-title-figure"><h1> {{ object.titleplus }} </h1></div>         
+            <img src="../media/post{{post.id}}/opener/post_opener{{post.id}}.jpg" alt=""> 
+            <div class="post-title-figure"><h1>{{ object.titleplus | safe }}</h1></div>         
         </div>
         <div class="intro-text">  
             {{ object.intro | safe }}
         </div>
-        <div class="post-date">{{ object.created_on | date:"F d Y"}}, {{ object.author}}</div>
+        {% if object.custom_date %}
+            <div class="post-date">{{ object.custom_date | date:"F d Y"}}, {{ object.author}}</div>
+        {% else %}    
+            <div class="post-date">{{ object.created_on | date:"F d Y"}}, {{ object.author}}</div>
+        {% endif %}     
     </div>
     <div class="mobile-food-logo">
         <img src="../static/img/carrots-logo.jpg" alt=""> 
@@ -37,7 +41,7 @@
         </div> 
         {% if object.category == post_cat1.description %}
         <div class="post-title">
-            {{ object.title }} 
+            {{ object.title }}  
         </div>
         {% endif %} 
         <div class="preparation" id="preparation">
@@ -97,11 +101,31 @@
 
         
     </div>
-    <div class="post-footer">
+    
 
+</div>
+<div class="post-footer">
+    <div class="gallery">
+        <!-- Blog Entries Column -->
+    <div class="cat-header">
+      <div class="cat-header-col1 post-cat-title">FEATURED</div>
+      <div class="cat-header-col2"><div class="post-cat-more"><a href="{% url 'featured_view' 'featured' %}">more >>></a></div></div>
     </div>
+    {% for post in post_featured_list|slice:":3" %}
+    <a href="{% url 'post_detail' post.slug  %}">
+      <div class="card_featured">
+        <div class="card-img">
+          <img src="../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="" />
+        </div>
+        <div class="card-title">
+          <h4>{{ post.titleplus }}</h4>
+        </div>  
+      </div>
+    </a>
+    {% endfor %}
+</div>
 
-    </div> 
+</div> 
 
 
 {% endblock post_content %}
