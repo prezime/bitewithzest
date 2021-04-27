@@ -646,7 +646,7 @@ blockquote{
         
   }
   .picture img{
-      width: 910px;
+      width: 990px;
       height: 600px;
       object-fit: cover;
   }
@@ -744,6 +744,10 @@ blockquote{
   .preparationtext>h3, .ingredients>h3{
     color: var(--main);
     font-weight: 600;
+  }
+  .preparationtext li, .ingredients li{
+    line-height: 1.5em;
+     height: auto;
   }
 
   .breadcrumbs{
