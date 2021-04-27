@@ -61,7 +61,7 @@ class SubCategoryList(generic.DetailView):
         shared_context(context)
         return context 
 
-class FeaturedList(ListView):
+class FeaturedList(generic.DetailView):
     model = Post
     template_name = 'post_cat_list.html'
     def get_context_data(self, **kwargs):
