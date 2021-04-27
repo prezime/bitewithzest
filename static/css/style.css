@@ -4,7 +4,7 @@
     --black: rgb(45, 73, 95);
     --grey: #777777;
     --main: rgb(0, 170, 179);
-    --main_transparent: rgba(0, 170, 179, 0.4);
+    --main_transparent: rgba(0, 170, 179, 0.1);
     --divider-border-style: solid;
     --divider-color: var( --main );
     --divider-border-width: 3px;
