@@ -286,6 +286,10 @@ p{
   .preparationtext{
     margin-top: -10px;
   }
+  .preparationtext li, .ingredients li{
+    line-height: 1.5em;
+     height: auto;
+  }
   .ingredients>ul{
     margin-top: 10px;
   }
