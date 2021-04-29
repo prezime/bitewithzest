@@ -6,84 +6,7 @@ from django.urls import reverse
 from django.conf import settings
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
-
-
-
-
-def path_and_rename(instance, filename):
-    upload_to = 'post'+str(instance.pk)+'/thumbs'
-    ext = filename.split('.')[-1]
-    # get filename
-    if instance.pk:
-        filename = '{}.{}'.format('post_thumb'+str(instance.pk), ext)
-    else:
-        # set filename as random string
-        filename = '{}.{}'.format(uuid4().hex, ext)
-    fullname = os.path.join(settings.MEDIA_ROOT, upload_to)    
-    if os.path.exists(fullname):
-        shutil.rmtree(fullname)     
-    # return the whole path to the file
-    return os.path.join(upload_to, filename)
-
-def path_and_rename_opener(instance, filename):
-    upload_to = 'post'+str(instance.pk)+'/opener'
-    ext = filename.split('.')[-1]
-    # get filename
-    if instance.pk:
-        filename = '{}.{}'.format('post_opener'+str(instance.pk), ext)
-    else:
-        # set filename as random string
-        filename = '{}.{}'.format(uuid4().hex, ext)
-    fullname = os.path.join(settings.MEDIA_ROOT, upload_to)    
-    if os.path.exists(fullname):
-        shutil.rmtree(fullname)     
-    # return the whole path to the file
-    return os.path.join(upload_to, filename)
-
-def path_and_rename_intro(instance, filename):
-    upload_to = 'post'+str(instance.pk)+'/intro'
-    ext = filename.split('.')[-1]
-    # get filename
-    if instance.pk:
-        filename = '{}.{}'.format('post_intro'+str(instance.pk), ext)
-    else:
-        # set filename as random string
-        filename = '{}.{}'.format(uuid4().hex, ext)
-    fullname = os.path.join(settings.MEDIA_ROOT, upload_to)    
-    if os.path.exists(fullname):
-        shutil.rmtree(fullname)     
-    # return the whole path to the file
-    return os.path.join(upload_to, filename)
-
-def path_and_rename_main(instance, filename):
-    upload_to = 'post'+str(instance.pk)+'/main'
-    ext = filename.split('.')[-1]
-    # get filename
-    if instance.pk:
-        filename = '{}.{}'.format('post_main'+str(instance.pk), ext)
-    else:
-        # set filename as random string
-        filename = '{}.{}'.format(uuid4().hex, ext)
-    fullname = os.path.join(settings.MEDIA_ROOT, upload_to)    
-    if os.path.exists(fullname):
-        shutil.rmtree(fullname) 
-    # return the whole path to the file
-    return os.path.join(upload_to, filename)
-
-def path_and_rename_add(instance, filename):
-    upload_to = 'post'+str(instance.pk)+'/add'
-    ext = filename.split('.')[-1]
-    # get filename
-    if instance.pk:
-        filename = '{}.{}'.format('post_add'+str(instance.pk), ext)
-    else:
-        # set filename as random string
-        filename = '{}.{}'.format(uuid4().hex, ext)
-    fullname = os.path.join(settings.MEDIA_ROOT, upload_to)    
-    if os.path.exists(fullname):
-        shutil.rmtree(fullname)     
-    # return the whole path to the file
-    return os.path.join(upload_to, filename)
+from blog import path_rename
 
 
 STATUS = (
@@ -146,23 +69,24 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     cardtype = models.IntegerField(choices=CARDTYPE, default=0)
 
-    thumbnail = models.FileField(upload_to=path_and_rename,blank=True)
+    thumbnail = models.FileField(upload_to=path_rename.path_and_rename,blank=True)
     thumbnail_desc = models.CharField(max_length=200,default='',blank=True)
-    opener_pic= models.FileField(upload_to=path_and_rename_opener,blank=True)
+    opener_pic= models.FileField(upload_to=path_rename.path_and_rename_opener,blank=True)
     
     intro = RichTextUploadingField()
     title = models.CharField(max_length=200, unique=True)
+    title_invisible = models.BooleanField(default=False)
     slug = models.SlugField(max_length=200, unique=True)
     maintext = RichTextUploadingField(default='')
     intro1 = RichTextUploadingField(default='',blank=True) 
-    intro_pic= models.FileField(upload_to=path_and_rename_intro,blank=True)
+    intro_pic= models.FileField(upload_to=path_rename.path_and_rename_intro,blank=True)
     intro_pic_desc = models.CharField(max_length=200,default='',blank=True)  
     legend = RichTextUploadingField(default='',blank=True)
-    add_pic = models.FileField(upload_to=path_and_rename_add,blank=True)
+    add_pic = models.FileField(upload_to=path_rename.path_and_rename_add,blank=True)
     add_pic_desc = models.CharField(max_length=200,default='',blank=True)
     ingredients = RichTextField(blank=True)
     preparationtext = RichTextUploadingField(default='',blank=True)
-    main_pic = models.FileField(upload_to=path_and_rename_main,blank=True)
+    main_pic = models.FileField(upload_to=path_rename.path_and_rename_main,blank=True)
     main_pic_desc = models.CharField(max_length=200,default='',blank=True)
     tip = RichTextField(default='',blank=True)
     relates_to = models.ForeignKey('self', on_delete=models.CASCADE, default=1)

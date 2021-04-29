@@ -18,6 +18,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='post',
             name='opener_pic',
-            field=models.FileField(blank=True, upload_to=blog.models.path_and_rename_opener),
+            field=models.FileField(blank=True, upload_to=blog.path_rename.path_and_rename_opener),
         ),
     ]

@@ -9,7 +9,28 @@ blockquote{
 }
 
 
-
+.paginator{
+  font-size:21px;
+  max-width: 20rem;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  line-height:50px;
+}
+.paginator>a{
+  color: var(--grey);
+} 
+a.prev a.next{
+  color: var(--grey);
+}
+span.count_active{
+  color: var(--main);
+  font-weight: 400;
+  text-decoration:overline;
+}
+a.count:hover, a.prev:hover, a.next:hover{
+  color: var(--main);
+}
 
 .footer {
   display: grid;
