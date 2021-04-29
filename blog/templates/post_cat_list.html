@@ -25,8 +25,8 @@
             <div class="post-cat-card__date">
               <span>{{ post.created_on | date:"F d Y"}}</span>
             </div>
-            <h1 class="post-cat-card__title">{{ post.title | safe }}</h1>
-            <p class="post-cat-card__text">{{ post.titleplus | safe }}</p>
+            <h1 class="post-cat-card__title">{{ post.titleplus|safe }}</h1>
+            <p class="post-cat-card__text">{{ post.intro|safe|slice:"131" }}{% if post.intro|safe|length > 131 %}...{% endif %}</p>
           </div>
         </div>
       </a>
@@ -61,8 +61,8 @@
             <div class="post-cat-card__date">
               <span>{{ post.created_on | date:"F d Y"}}</span>
             </div>
-            <h1 class="post-cat-card__title">{{ post.title | safe }}</h1>
-            <p class="post-cat-card__text">{{ post.titleplus | safe }}</p>
+            <h1 class="post-cat-card__title">{{ post.titleplus|safe }}</h1>
+            <p class="post-cat-card__text">{{ post.intro|safe|slice:"131" }}{% if post.intro|safe|length > 131 %}...{% endif %}</p>
           </div>
         </div>
       </a>  
@@ -96,8 +96,8 @@
             <div class="post-cat-card__date">
               <span>{{ post.created_on | date:"F d Y"}}</span>
             </div>
-            <h1 class="post-cat-card__title">{{ post.titleplus }}</h1>
-            <p class="post-cat-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+            <h1 class="post-cat-card__title">{{ post.titleplus|safe }}</h1>
+            <p class="post-cat-card__text">{{ post.intro|safe|slice:"131" }}{% if post.intro|safe|length > 131 %}...{% endif %}</p>
           </div>
         </div>
       </a>  
