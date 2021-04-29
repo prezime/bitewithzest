@@ -9,7 +9,28 @@ blockquote{
 }
 
 
-
+.paginator{
+  font-size:21px;
+  max-width: 20rem;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  line-height:50px;
+}
+.paginator>a{
+  color: var(--grey);
+} 
+a.prev a.next{
+  color: var(--grey);
+}
+span.count_active{
+  color: var(--main);
+  font-weight: 400;
+  text-decoration:overline;
+}
+a.count:hover, a.prev:hover, a.next:hover{
+  color: var(--main);
+}
 
 .footer {
   display: grid;
@@ -599,11 +620,10 @@ blockquote{
       padding-left: 27px;
       font-size:23px;
       background-color:rgba(255, 255, 255, 0.8);
-      max-width: 600px;
       width: 500px;
       color: var(--main);
       text-align: left;
-      right: -450px;
+      right: -390px;
       /* transform: translateX(38rem); */
 
   }
@@ -625,10 +645,12 @@ blockquote{
   .intro-text{
       grid-area: intro-text;
       padding: 20px;
+      max-width: 350px;
   }
 
   .intro-empty{
       grid-area: intro-empty;
+      max-width: 350px;
   }
 
   .post-date{
@@ -643,10 +665,10 @@ blockquote{
       position: relative;
       text-align: center;
       color: var(--black);
-        
+      width: 100%;   
   }
   .picture img{
-      width: 990px;
+      width: 1140px;
       height: 600px;
       object-fit: cover;
   }
