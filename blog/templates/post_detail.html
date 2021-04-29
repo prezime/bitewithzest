@@ -39,7 +39,7 @@
         <div class="maintext">
             {{ object.maintext | safe }}
         </div> 
-        {% if object.category == post_cat1.description %}
+        {% if not object.title_invisible %}
         <div class="post-title">
             {{ object.title }}  
         </div>

@@ -16,8 +16,8 @@ class PostList(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(PostList, self).get_context_data(**kwargs)
-        pn = self.request.GET.get('page',1) 
-        shared_context(context,pn)
+        #pn = self.request.GET.get('page',1) 
+        shared_context(context,self)
         return context   
 
 class PostDetail(generic.DetailView):
