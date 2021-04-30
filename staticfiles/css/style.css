@@ -5,6 +5,7 @@
     --grey: #777777;
     --main: rgb(0, 170, 179);
     --main_transparent: rgba(0, 170, 179, 0.1);
+    
     --divider-border-style: solid;
     --divider-color: var( --main );
     --divider-border-width: 3px;
@@ -28,6 +29,8 @@ button{
 
 h1,h2,h3,h4,h5,h6{
     margin: 0,0,5px,0;
+    color: var(--main);
+    font-weight: 400;
 }
 
 .item{
@@ -286,11 +289,11 @@ p{
   .preparationtext{
     margin-top: -10px;
   }
-  .preparationtext li, .ingredients li{
+  .preparationtext li, .ingredients li, .maintext li, .outro li{
     line-height: 1.5em;
      height: auto;
   }
-  .ingredients>ul{
+  .ingredients>ul,.preparationtext>ul,.maintext>ul, .outro>ul{
     margin-top: 10px;
   }
 
@@ -347,6 +350,23 @@ p{
     height: 31rem;
     object-fit: cover;
   }
+  .card-img-feat img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .card-title-feat {
+    margin: 0;
+    min-height: 5rem;
+  }
+  .card-title-feat>h5 {
+    color: var(--grey);
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 19px;
+    margin: 0.5rem;
+  }
+  
+
   .card-title {
     margin: 0;
     min-height: 5rem;
