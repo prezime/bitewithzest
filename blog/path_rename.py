@@ -1,5 +1,5 @@
 from uuid import uuid4
-import os
+import os, shutil
 from django.conf import settings
 
 def path_and_rename(instance, filename):

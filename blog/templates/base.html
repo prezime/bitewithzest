@@ -1,9 +1,12 @@
 {% load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
 		<link rel="stylesheet" href="/static/css/style.css" />
 		<link rel="stylesheet" href="/static/css/responsive.css" />
 		<title>Bite With Zest! - the ultimate Life Zest blog</title>
@@ -81,10 +84,10 @@ window.onscroll = function() {beSticky()};
 var navbar = document.getElementById("myTopnavWrapper");
 var sticky = navbar.offsetTop;
 // console.log(sticky);
-// const preparationClass = document.getElementById('preparation');
-//     // select the list items
-// var lists = preparationClass.getElementsByTagName('li');
-// console.log(lists);
+const img_data = document.getElementById("hello");
+console.log(img_data);
+var img_title = img_data.getAttribute('title');
+console.log(img_title);
 // // now loop through the items and set a custom property 'index'
 // var l = lists.length; // total items  
 // for (var i=0;i<=l;i++){

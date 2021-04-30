@@ -1,16 +1,17 @@
 {% extends "base.html" %} 
-{% block about %} {% include 'about.html' %} {% endblock about %}
+
 {% load static %}
+{% load shuffle %}
 {% block post_showcase %}
 
 
 <div class="gallery">
         <!-- Blog Entries Column -->
     <div class="cat-header">
-      <div class="cat-header-col1 post-cat-title">{{post_cat1.description|upper}}</div>
-      <div class="cat-header-col2"><div class="post-cat-more"><a href="{% url 'category_view' post_cat1.slug  %}">more >>></a></div></div>
+      <div class="cat-header-col1 post-cat-title">{{post_cat1.name|upper}}</div>
+      <div class="cat-header-col2"><div class="post-cat-more"><a href="{% url 'subcategory_view' post_cat1.slug  %}">more >>></a></div></div>
     </div>
-    {% for post in post_cat1_list|slice:":3" %}
+    {% for post in post_cat1_list|shuffle|slice:":3" %}
     <a href="{% url 'post_detail' post.slug  %}">
       <div class="card">
         <div class="card-img">
@@ -32,7 +33,7 @@
   </div>
 </div>
 <div class="gallery-cat-home"> 
-  {% for post in post_cat2_list|slice:":3" %}
+  {% for post in post_cat2_list|shuffle|slice:":3" %}
       <a href="{% url 'post_detail' post.slug  %}">
         <div class="post-cat-card">
           <div class="post-cat-card__img">
@@ -57,7 +58,7 @@
   </div>
 </div>
 <div class="gallery-cat-home"> 
-  {% for post in post_cat3_list|slice:":3" %}
+  {% for post in post_cat3_list|shuffle|slice:":3" %}
       <a href="{% url 'post_detail' post.slug  %}">
         <div class="post-cat-card">
           <div class="post-cat-card__img">
