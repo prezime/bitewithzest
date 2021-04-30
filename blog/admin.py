@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Category, SubCategory
+from .models import Post, Category, SubCategory,Contibutor
 from django.template.defaultfilters import slugify
 
 
@@ -20,6 +20,7 @@ class SubCatAdmin(admin.ModelAdmin):
 admin.site.register(Post, PostAdmin)
 admin.site.register(Category,CatAdmin)
 admin.site.register(SubCategory,SubCatAdmin)
+admin.site.register(Contibutor)
 
 
 

@@ -20,6 +20,19 @@ CARDTYPE = (
      (1,"Featured")
 )
 
+class Contibutor(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    inactive = models.BooleanField(default=False)
+ 
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('home')  
+contributors = Contibutor.objects.all().values_list('name','name')
+contributor_list = []
+for item in contributors:
+    contributor_list.append(item)           
 
 class Category(models.Model):
     description = models.CharField(max_length=200, unique=True)
@@ -60,7 +73,9 @@ class Post(models.Model):
     titleplus = models.TextField(max_length=240, default='')
     
     
-    author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
+    # author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
+    author = models.CharField(max_length=200, choices=contributor_list, default='')
+
     updated_on = models.DateTimeField(auto_now= True)
     created_on = models.DateTimeField(auto_now_add=True)
     custom_date = models.DateTimeField(null= True,blank=True)

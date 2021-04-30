@@ -18,7 +18,7 @@
           <img src="./media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="" />
         </div>
         <div class="card-title">
-          <h4>{{ post.titleplus }}</h4>
+          <h4>{{ post.titleplus|safe }}</h4>
         </div>  
       </div>
     </a>
@@ -40,11 +40,13 @@
             <img src="../../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="">
           </div>
           <div class="post-cat-card__info">
-            <div class="post-cat-card__date">
-              <span>{{ post.created_on | date:"F d Y"}}</span>
-            </div>
+            {% if object.custom_date %}
+            <div class="post-cat-card__date">{{ object.custom_date | date:"F d Y"}}, {{ object.author}}</div>
+            {% else %}    
+                <div class="post-cat-card__date">{{ object.created_on | date:"F d Y"}}, {{ object.author}}</div>
+            {% endif %} 
             <h1 class="post-cat-card__title">{{ post.title }}</h1>
-            <p class="post-cat-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+            <p class="post-cat-card__text">{{ post.intro|safe|slice:"131" }}{% if post.intro|safe|length > 131 %}...{% endif %}</p>
           </div>
         </div>
       </a>
@@ -69,7 +71,7 @@
               <span>{{ post.created_on | date:"F d Y"}}</span>
             </div>
             <h1 class="post-cat-card__title">{{ post.title }}</h1>
-            <p class="post-cat-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+            <p class="post-cat-card__text">{{ post.intro|safe|slice:"131" }}{% if post.intro|safe|length > 131 %}...{% endif %} </p>
           </div>
         </div>
       </a>
