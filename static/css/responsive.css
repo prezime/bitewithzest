@@ -567,8 +567,9 @@ a.count:hover, a.prev:hover, a.next:hover{
   .header-nav a,.gallery a,.gallery-cat a, .gallery-cat-home a, .post-cat-more a{
     text-decoration: none;
   }
-  
- 
+  .maintext a{
+    text-decoration-color: var(--main);
+  } 
 
   .post-cat-card:hover{
   box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.2);  
