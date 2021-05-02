@@ -564,9 +564,11 @@ a.count:hover, a.prev:hover, a.next:hover{
   .post-cat-card__info{
     padding-left: 2rem;
   }
-  .header-nav a{
+  .header-nav a,.gallery a,.gallery-cat a, .gallery-cat-home a, .post-cat-more a{
     text-decoration: none;
   }
+  
+ 
 
   .post-cat-card:hover{
   box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.2);  

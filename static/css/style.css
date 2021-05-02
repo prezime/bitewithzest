@@ -46,7 +46,7 @@ p{
     margin: 0; 
     line-height: 29px; 
 }
-
+a { color: inherit; } 
 
 /* About Section */
 .content{
