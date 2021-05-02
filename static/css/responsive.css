@@ -10,7 +10,9 @@ blockquote>h1,h2,h3,h4,h5,h6{
   margin-top: 0;
   margin-bottom: 10px;
 }
-
+.bwz-link{
+  text-decoration-color: var(--main);
+}
 .paginator{
   font-size:21px;
   max-width: 20rem;
@@ -562,9 +564,8 @@ a.count:hover, a.prev:hover, a.next:hover{
   .post-cat-card__info{
     padding-left: 2rem;
   }
-  a{
-  text-decoration: none;
-  color: var(--black);
+  .header-nav a{
+    text-decoration: none;
   }
 
   .post-cat-card:hover{
