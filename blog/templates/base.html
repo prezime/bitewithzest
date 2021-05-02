@@ -1,6 +1,5 @@
 {% load static %}
 
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -19,7 +18,7 @@
 		</div>
 		<div class="header-nav">
 			<ul>
-				<li><a href="/">about</a></li>
+				<li><a href="{% url 'about_view' %}">about</a></li>
 				<li><a href="javascript:void(0)">contact</a></li>
 				<li><a href="javascript:void(0)">fb</a>  <a href="javascript:void(0)">ig</a></li>
 			</ul>
@@ -69,10 +68,12 @@
 			<div class="moto">Passion for <strong> LIFE</strong>, compassion for the <strong>ANIMALS</strong>.</div>
 			{% endblock moto %}
 		{% endif %}
-  
+		{% if request.resolver_match.url_name  == 'about_view' %}
+	   	 	{% block about %}{% endblock about %}
+		{% endif %} 
 		{% block post_content %}{% endblock post_content %}
-  
-		{% block post_showcase %}{% endblock post_showcase %}   
+		{% block post_showcase %}{% endblock post_showcase %} 
+			
 		
 	</div>  
 	{% block footer_showcase %}{% include 'footer.html' %} {% endblock %}

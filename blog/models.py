@@ -38,6 +38,7 @@ class Category(models.Model):
     description = models.CharField(max_length=200, unique=True)
     status = models.IntegerField(choices=STATUS, default=0)
     slug = models.SlugField(max_length=200,unique=True, default='')
+    order_count = models.IntegerField(default=0)
 
     class Meta:
         verbose_name_plural = 'Categories'   
@@ -58,6 +59,7 @@ class SubCategory(models.Model):
     category = models.CharField(max_length=200, choices=category_list, default='')
     status = models.IntegerField(choices=STATUS, default=0)
     slug = models.SlugField(max_length=200,unique=True, default='')
+    order_count = models.IntegerField(default=0)
     class Meta:
         verbose_name_plural = 'Sub Categories'   
     def __str__(self):
@@ -83,7 +85,7 @@ class Post(models.Model):
     subcategory = models.CharField(max_length=200, choices=subcategory_list, default='uncategorized')
     status = models.IntegerField(choices=STATUS, default=0)
     cardtype = models.IntegerField(choices=CARDTYPE, default=0)
-
+    
     thumbnail = models.FileField(upload_to=path_rename.path_and_rename,blank=True)
     thumbnail_desc = models.CharField(max_length=200,default='',blank=True)
     opener_pic= models.FileField(upload_to=path_rename.path_and_rename_opener,blank=True)

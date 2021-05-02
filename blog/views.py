@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import User,Post,Category,SubCategory
-from django.views.generic import ListView
+from .models import User,Post,Category,SubCategory,Contibutor
+from django.views.generic import ListView,TemplateView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger, InvalidPage
 
 
@@ -26,7 +26,8 @@ class PostDetail(generic.DetailView):
     #queryset = Post.objects.filter(status=1).order_by('-created_on')
     def get_context_data(self, **kwargs):
         context = super(PostDetail, self).get_context_data(**kwargs)
-        # pn = self.request.GET.get('page',1) 
+        # post = Post.objects.filter(slug=self.kwargs.get('slug'))
+        # post.update(count=F('count') + 1)
         shared_context(context,self)
         return context
     
@@ -34,8 +35,8 @@ class PostDetail(generic.DetailView):
 
 def shared_context(context,self):
     cat_queryset = Category.objects.all()
-    context['cat_list'] = cat_queryset.filter(status=1).order_by('-id') 
-    context['cat_list_asc'] = cat_queryset.filter(status=1).order_by('id') 
+    context['cat_list'] = cat_queryset.filter(status=1).order_by('order_count') 
+    context['cat_list_asc'] = cat_queryset.filter(status=1).order_by('-order_count') 
     subcat_queryset = SubCategory.objects.all()
     context['subcat_list'] = subcat_queryset.filter(status=1).order_by('-id') 
     context['subcat_list_asc'] = subcat_queryset.filter(status=1).order_by('id') 
@@ -98,7 +99,7 @@ def shared_context(context,self):
     context['related_posts'] = post_queryset
 
 
-class CategoryList(generic.DetailView):
+class CategoryList(generic.ListView):
     model = Category
     template_name = 'post_cat_list.html'
     def get_context_data(self,**kwargs):
@@ -114,27 +115,44 @@ class SubCategoryList(generic.DetailView):
         shared_context(context,self)
         return context 
 
-class FeaturedList(ListView):
+class FeaturedList(generic.ListView):
     model = Post
     template_name = 'post_cat_list.html'
     def get_context_data(self, **kwargs):
         context = super(FeaturedList, self).get_context_data(**kwargs)
         shared_context(context,self)
         return context 
-        
-# class RequestTest(generic.DetailView):
-     
+               
 
-        
-
-# class About(generic.DetailView):
-#     model = User
-#     template_name = 'about.html'
-#     def get_context_data(self, **kwargs):
-#         context = super(SubCategoryList, self).get_context_data(**kwargs)
-#         shared_context(context)
-#         return context   
+class About(generic.TemplateView):
+    template_name = 'about.html'
+    # def get_context_data(self, **kwargs):
+    #     context = super(About, self).get_context_data(**kwargs)
+    #     shared_context(context,self)
+    #     return context  
+         
 # def About(request):
-#          # return response
-#     return render(request, "about.html")              
+#     return render(request, "about.html")  
+# 
+# def contact(request):
+# 	if request.method == 'POST':
+# 		form = ContactForm(request.POST)
+# 		if form.is_valid():
+# 			subject = "Website Inquiry" 
+# 		    body = {
+# 			'first_name': form.cleaned_data['first_name'], 
+# 			'last_name': form.cleaned_data['last_name'], 
+# 			'email': form.cleaned_data['email_address'], 
+# 			'message':form.cleaned_data['message'], 
+# 			}
+# 			message = "\n".join(body.values())
+
+# 			try:
+# 				send_mail(subject, message, 'admin@example.com', ['admin@example.com']) 
+# 			except BadHeaderError:
+# 				return HttpResponse('Invalid header found.')
+# 			return redirect ("main:homepage")
+      
+# 	form = ContactForm()
+# 	return render(request, "main/contact.html", {'form':form})            
        
