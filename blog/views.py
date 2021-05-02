@@ -38,8 +38,8 @@ def shared_context(context,self):
     context['cat_list'] = cat_queryset.filter(status=1).order_by('order_count') 
     context['cat_list_asc'] = cat_queryset.filter(status=1).order_by('-order_count') 
     subcat_queryset = SubCategory.objects.all()
-    context['subcat_list'] = subcat_queryset.filter(status=1).order_by('-id') 
-    context['subcat_list_asc'] = subcat_queryset.filter(status=1).order_by('id') 
+    context['subcat_list'] = subcat_queryset.filter(status=1).order_by('-order_count') 
+    context['subcat_list_asc'] = subcat_queryset.filter(status=1).order_by('order_count') 
     context['post_cat1'] = SubCategory.objects.get(id=8)
     context['post_cat2'] = Category.objects.get(id=3)
     context['post_cat3'] = Category.objects.get(id=4)
@@ -99,7 +99,7 @@ def shared_context(context,self):
     context['related_posts'] = post_queryset
 
 
-class CategoryList(generic.ListView):
+class CategoryList(generic.DetailView):
     model = Category
     template_name = 'post_cat_list.html'
     def get_context_data(self,**kwargs):
