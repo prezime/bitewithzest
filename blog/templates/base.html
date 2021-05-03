@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
 		<link rel="stylesheet" href="/static/css/style.css" />
-		<link rel="stylesheet" href="/static/css/responsive.css" />
+		<link rel="stylesheet" href="/static/css/responsive_desktop.css" />
 		<title>Bite With Zest! - the ultimate Life Zest blog</title>
 	</head>
 <body onresize="resizeWindow()">
@@ -19,7 +19,7 @@
 		<div class="header-nav">
 			<ul>
 				<li><a href="{% url 'about_view' %}">about</a></li>
-				<li><a href="javascript:void(0)">contact</a></li>
+				<li><a href="{% url 'contact_view' %}">contact</a></li>
 				<li><a href="javascript:void(0)">fb</a>  <a href="javascript:void(0)">ig</a></li>
 			</ul>
 		</div>
@@ -65,11 +65,14 @@
 	<div class="content" id="content">
 		{% if request.resolver_match.url_name  == 'home' %}
 	   	 	{% block moto %}
-			<div class="moto">Passion for <strong> LIFE</strong>, compassion for the <strong>ANIMALS</strong>.</div>
+			<div class="moto"><span>Passion for <strong>LIFE</strong>, compassion for the <strong>ANIMALS</strong>.</span></div>
 			{% endblock moto %}
 		{% endif %}
 		{% if request.resolver_match.url_name  == 'about_view' %}
 	   	 	{% block about %}{% endblock about %}
+		{% endif %} 
+		{% if request.resolver_match.url_name  == 'contact_view' %}
+	   	 	{% block contact %}{% endblock contact %}
 		{% endif %} 
 		{% block post_content %}{% endblock post_content %}
 		{% block post_showcase %}{% endblock post_showcase %} 

@@ -1,10 +1,8 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import User,Post,Category,SubCategory,Contibutor
-from django.views.generic import ListView,TemplateView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger, InvalidPage
-
-
+from .forms import ContactForm
 
 
 
@@ -130,9 +128,17 @@ class About(generic.TemplateView):
     #     context = super(About, self).get_context_data(**kwargs)
     #     shared_context(context,self)
     #     return context  
-         
-# def About(request):
-#     return render(request, "about.html")  
+class Contact(generic.TemplateView):
+    template_name = 'contact.html'         
+# class Contact(generic.FormView):
+#     template_name = 'contact.html'
+#     from_class = ContactForm 
+#     success_url = '/contact/'
+#     def form_valid(self, form):
+#         # This method is called when valid form data has been POSTed.
+#         # It should return an HttpResponse.
+#         form.send_email()
+#         return super().form_valid(form)
 # 
 # def contact(request):
 # 	if request.method == 'POST':
