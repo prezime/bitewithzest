@@ -63,7 +63,7 @@ a { color: inherit; }
   flex-wrap: wrap;
   margin: 0;
 }
-.moto>strong{
+.moto span>strong{
   color: var(--main);
   margin-left: 5px;
 }
