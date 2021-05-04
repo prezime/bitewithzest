@@ -1378,6 +1378,12 @@ input[type=submit] {
     color: var(--main);
     margin-left: 5px;
   }
+  table{
+    width:100% !important;
+  }
+  td{
+    font-size: 13px;
+  }
 
 }
 
