@@ -67,10 +67,11 @@
             <h1 class="post-cat-card__title">{{ post.titleplus|safe }}</h1>
             <p class="post-cat-card__text">{{ post.intro|safe|slice:"131" }}{% if post.intro|safe|length > 131 %}...{% endif %}</p>
           </div>
+          <div class="card-title">
+            <h4>{{ post.titleplus|safe }}</h4>
+          </div>
         </div>
-        <div class="card-title">
-          <h4>{{ post.titleplus|safe }}</h4>
-        </div>
+        
       </a>  
     {% endif %}  
     {% endfor %}

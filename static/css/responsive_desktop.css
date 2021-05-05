@@ -99,9 +99,6 @@ a.count:hover, a.prev:hover, a.next:hover{
 
 
 
-
-
-
 .post-body{
   display: grid;
   margin: 100px auto;
@@ -178,6 +175,10 @@ a.count:hover, a.prev:hover, a.next:hover{
 
 .maintext{
 margin-bottom: 10px;
+}
+
+.maintext div{
+  clear: both;
 }
 
 .preparation{
@@ -706,7 +707,7 @@ background-repeat: no-repeat;
     display: none;
   }
 
-  .post-cat-card .card-title{
+  .gallery-cat .card-title,.gallery-cat-home .card-title {
     display: none;  
   }
   .header-nav a,.gallery a,.gallery-cat a, .gallery-cat-home a, .post-cat-more a{
@@ -1115,9 +1116,8 @@ input[type=submit] {
     letter-spacing: 1px;
     font-size: 21px;
   }
-  .post-cat-card__info{
-    display: none;
-  }
+
+  
 
 
 
@@ -1143,6 +1143,7 @@ input[type=submit] {
     overflow: hidden;
     width: 17rem;
     margin: 8px;
+    height:100%;
   }
 
   .post-cat-card__img img {
@@ -1180,6 +1181,7 @@ input[type=submit] {
     justify-items: center;
     justify-content: space-between;
   }
+ 
   
   .preparation>ol{
     margin:  0 -2rem;
