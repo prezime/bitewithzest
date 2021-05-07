@@ -151,10 +151,14 @@ CKEDITOR_CONFIGS = {
             ['TextColor', 'BGColor'],
             ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
             ['Link', 'Unlink'],
-            ['RemoveFormat', 'Image','Table','Source'],
+            ['RemoveFormat', 'Youtube','Image','Table','Source'],
+            
             
         ],
-        'colorButton_colors': 'ffc600,00aab3,777777,2d495f,CCEAEE,66AB16'
+        'colorButton_colors': 'ffc600,00aab3,777777,2d495f,CCEAEE,66AB16',
+        'extraPlugins': ','.join([
+            'youtube',
+        ]),
     }
 }
 
