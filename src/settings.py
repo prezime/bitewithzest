@@ -151,7 +151,7 @@ CKEDITOR_CONFIGS = {
             ['TextColor', 'BGColor'],
             ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
             ['Link', 'Unlink'],
-            ['RemoveFormat', 'Youtube','Image','Table','Source'],
+            ['RemoveFormat', 'Youtube','mediaEmbed','Image','Table','Source'],
             
             
         ],

@@ -10,11 +10,20 @@
             {% for category in cat_list %}
                 {% if category.description == post.category %}
                 <a href="{% url 'category_view' category.slug  %}"class="breadcrumbs-link">
-                    {{ object.category }}
+                    {{ object.category }} 
                 </a>
                 {% endif %}
             {% endfor %} 
         </li>
+        {% for subcategory in subcat_list %}
+            {% if subcategory.name == post.subcategory %}
+            <li class="breadcrumbs-item">
+                <a href="{% url 'subcategory_view' subcategory.slug  %}"class="breadcrumbs-link">
+                    {{ post.subcategory }}
+                </a>            
+            </li>
+            {% endif %}
+        {% endfor %}
         <li class="breadcrumbs-item">
             <a href="{% url 'post_detail' post.slug  %}" class="breadcrumbs-link">{{ object.title }}</a>
         </li>

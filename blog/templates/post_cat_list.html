@@ -10,7 +10,14 @@
     {% elif request.resolver_match.url_name  == 'featured_view'%}
     <h3 class="post-cat-title">FEATURED </h3>	
     {% else %}	
-    <h3 class="post-cat-title">{{object.name|upper}} </h3>	
+    <h3 class="post-cat-title">
+      {% for category in cat_list %}
+          {% if category.description == object.category %}
+          <a href="{% url 'category_view' category.slug  %}">
+              {{ object.category|upper }} 
+          </a>
+          {% endif %}
+      {% endfor %}  / {{object.name|upper}} </h3>	
     {% endif %}	
   </header><!-- end .archive-header-->
   {% if request.resolver_match.url_name  == 'category_view' %}
