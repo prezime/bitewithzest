@@ -9,7 +9,7 @@ from .forms import ContactForm
 class PostList(generic.ListView):
     # queryset = Post.objects.filter(status=1).order_by('-created_on')
     model = Post
-    template_name = 'index.html'
+    template_name = 'showcase.html'
     # context_object_name = 'post_list'
 
     def get_context_data(self, **kwargs):
@@ -38,19 +38,28 @@ def shared_context(context,self):
     subcat_queryset = SubCategory.objects.all()
     context['subcat_list'] = subcat_queryset.filter(status=1).order_by('-order_count') 
     context['subcat_list_asc'] = subcat_queryset.filter(status=1).order_by('order_count') 
-    context['post_cat1'] = SubCategory.objects.get(id=8)
-    context['post_cat2'] = Category.objects.get(id=3)
-    context['post_cat3'] = Category.objects.get(id=4)
+    context['post_cat1'] = Category.objects.get(id=1)
+    context['post_cat2'] = Category.objects.get(id=7)
+    context['post_cat3'] = Category.objects.get(id=3)
+    context['post_cat4'] = Category.objects.get(id=4)
+    context['post_cat5'] = Category.objects.get(id=8)
     post_queryset_ascending = Post.objects.all().filter(status=1).filter(category = list(context.values())[1]).order_by('-id') 
     post_queryset_descending = Post.objects.all().filter(status=1).filter(subcategory = list(context.values())[1]).order_by('id')
-    post_queryset_cat1 = Post.objects.all().filter(subcategory = context['post_cat1'].name).filter(status=1).order_by('id')  
+    post_queryset_cat1 = Post.objects.all().filter(category = context['post_cat1'].description).filter(status=1).order_by('id')  
     post_queryset_cat2 = Post.objects.all().filter(category = context['post_cat2'].description).filter(status=1).order_by('id') 
     post_queryset_cat3 = Post.objects.all().filter(category = context['post_cat3'].description).filter(status=1).order_by('id') 
+    post_queryset_cat4 = Post.objects.all().filter(category = context['post_cat4'].description).filter(status=1).order_by('id')  
+    post_queryset_cat5 = Post.objects.all().filter(category = context['post_cat5'].description).filter(status=1).order_by('id') 
+    
+
     post_queryset_featured = Post.objects.all().filter(cardtype='1').filter(status=1).order_by('id') 
     post_count = 5
     p_cat1 = Paginator(post_queryset_cat1,post_count)
     p_cat2 = Paginator(post_queryset_cat2,post_count)
     p_cat3 = Paginator(post_queryset_cat3,post_count)
+    p_cat4 = Paginator(post_queryset_cat4,post_count)
+    p_cat5 = Paginator(post_queryset_cat5,post_count)
+
     p_feat = Paginator(post_queryset_featured,post_count)
     p_asc = Paginator(post_queryset_ascending,post_count)
     p_desc = Paginator(post_queryset_descending,post_count)
@@ -69,6 +78,16 @@ def shared_context(context,self):
         post_queryset_paginated_cat3 = p_cat3.page(page_num)
     except (EmptyPage, PageNotAnInteger, InvalidPage):        
         post_queryset_paginated_cat3 = p_cat3.page(1)
+
+    try:    
+        post_queryset_paginated_cat4 = p_cat4.page(page_num)
+    except (EmptyPage, PageNotAnInteger, InvalidPage):        
+        post_queryset_paginated_cat4 = p_cat4.page(1)
+
+    try:    
+        post_queryset_paginated_cat5 = p_cat5.page(page_num)
+    except (EmptyPage, PageNotAnInteger, InvalidPage):        
+        post_queryset_paginated_cat5 = p_cat5.page(1)       
    
     try:    
         post_queryset_paginated_feat = p_feat.page(page_num)
@@ -93,6 +112,9 @@ def shared_context(context,self):
     context['post_cat1_list'] = post_queryset_paginated_cat1
     context['post_cat2_list'] = post_queryset_paginated_cat2
     context['post_cat3_list'] = post_queryset_paginated_cat3
+    context['post_cat4_list'] = post_queryset_paginated_cat4
+    context['post_cat5_list'] = post_queryset_paginated_cat5
+
     context['post_featured_list'] = post_queryset_paginated_feat
     context['related_posts'] = post_queryset
 

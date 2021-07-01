@@ -1,0 +1,136 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
+		<link rel="stylesheet" href="/static/css/style.css" />
+		<link rel="stylesheet" href="/static/css/responsive_desktop.css" />
+		<title>Bite With Zest! - the ultimate Life Zest blog</title>
+	</head>
+<body onresize="resizeWindow()">
+<div class="header-wrapper">
+	<div class="header">
+		<div class="logo">
+			<a href="/"><img src="{% static 'img/BwZ_logo_W.png' %}" alt="logo"></a>
+		</div>
+		<div class="header-nav">
+			<ul>
+				<li><a href="{% url 'about_view' %}">about</a></li>
+				<li><a href="#">contact</a></li>
+				<li><a href="javascript:void(0)">fb</a>  <a href="javascript:void(0)">ig</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="topnav-wrapper" id="myTopnavWrapper">
+	<div class="topnav" id="myTopnav">
+	<div class="desc">
+	  {% for category in cat_list %}
+	  <div class="dropdown">
+		<button class="dropbtn"><a href="{% url 'category_view' category.slug  %}" class="">{{category.description}}</a></button>
+		<div class="dropdown-content">
+		  {% for subcategory in subcat_list %}
+			{% if subcategory.category == category.description %}
+			<a href="{% url 'subcategory_view' subcategory.slug  %}" class="">{{subcategory.name}}</a>
+			{% endif %}
+		  {% endfor %}
+		</div>
+	  </div>
+	  {% endfor %}
+	</div>  
+	<div class="asc">
+	  {% for category in cat_list_asc %}
+	  <div class="dropdown">
+		<button class="dropbtn"><a href="{% url 'category_view' category.slug  %}">{{category.description}}</a></button>
+		<div class="dropdown-content">
+		  {% for subcategory in subcat_list %}
+			{% if subcategory.category == category.description %}
+			<a href="{% url 'subcategory_view' subcategory.slug  %}">{{subcategory.name}}</a>
+			{% endif %}
+		  {% endfor %}
+		</div>
+	  </div>
+	  {% endfor %}
+	</div>
+	
+	<a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="beResponsive()">&#9776;</a>
+  </div>
+</div>
+
+	<div class="content" id="content">
+		{% if request.resolver_match.url_name  == 'about_view' %}
+	   	 	{% block about %}{% endblock about %}
+		{% endif %} 
+		{% if request.resolver_match.url_name  == 'contact_view' %}
+	   	 	{% block contact %}{% endblock contact %}
+		{% endif %} 
+		{% block post_content %}{% endblock post_content %}
+		{% block post_showcase %}{% endblock post_showcase %} 
+		{% block post_listed_showcase %}{% endblock post_listed_showcase %} 
+		
+			
+		
+	</div>  
+	{% block footer_showcase %}{% include 'footer.html' %} {% endblock %}
+
+
+<script>
+window.onscroll = function() {beSticky()};
+
+var navbar = document.getElementById("myTopnavWrapper");
+var sticky = navbar.offsetTop;
+// console.log(sticky);
+const img_data = document.getElementById("hello");
+console.log(img_data);
+var img_title = img_data.getAttribute('title');
+console.log(img_title);
+// // now loop through the items and set a custom property 'index'
+// var l = lists.length; // total items  
+// for (var i=0;i<=l;i++){
+// 	lists[i].className = "webicons"+(parseInt(i)+1);
+// }
+function beSticky() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+
+function beResponsive() {
+  var x = document.getElementById("myTopnav");
+      
+  var djangoView = "{{ request.resolver_match.url_name }}";
+  if (x.className === "topnav") {
+	x.classList.add("responsive")
+  } else {
+	x.classList.remove("responsive");
+  }
+}
+
+function resizeWindow() {
+  var w = window.outerWidth;
+  var h = window.outerHeight;
+  var txt = "Window size: width=" + w + ", height=" + h;
+  var line = document.getElementById("post-cat-line");
+  document.getElementById('post-cat-line').style.width = w-870 + 'px';
+  console.log(txt);
+}
+
+</script>
+<script src="{% static 'js/rellax.min.js' %}"></script>
+<script>
+
+// Pretty simple huh?
+var rellax = new Rellax('.rellax',{
+	center:true
+});
+
+
+</script>
+</body>
+</html>

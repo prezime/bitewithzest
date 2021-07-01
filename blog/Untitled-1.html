@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" type="image/png" href="/static/img/favicon.png"/>
+		<link rel="stylesheet" href="/static/css/style.css" />
+		<link rel="stylesheet" href="/static/css/responsive_desktop.css" />
+    <link rel="stylesheet" href="/static/css/responsive_phone.css" />
+		<title>Bite With Zest! - the ultimate Life Zest blog</title>
+	</head>
+<body onresize="resizeWindow()">
+<div class="wrapper">  
+  <div class="header-wrapper">
+    <div class="header">
+      <div class="logo">
+        <a href="/"><img src="/static/img/BwZ_logo_W.png" alt="logo"></a>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li><a href="/about/info/">about</a></li>
+          <li><a href="#">contact</a></li>
+          <li><a href="javascript:void(0)">fb</a>  <a href="javascript:void(0)">ig</a></li>
+        </ul>
+      </div> 
+    </div>  
+  </div>
+  <div class="topnav-wrapper desktop" id="myTopnavWrapper">
+      <div class="topnav" id="myTopnav">
+        
+        <div class="dropdown" id="dropdown">
+          <button class="dropbtn"><a href="/filter/recipes/" class="">Recipes</a></button>
+        </div>
+        
+        <div class="dropdown" id="dropdown">
+          <button class="dropbtn"><a href="/filter/lexicon-of-plants/" class="">Lexicon of plants</a></button>
+        </div>
+        
+        <div class="dropdown" id="dropdown">
+          <button class="dropbtn"><a href="/filter/immunity-boosting/" class="">Immunity Boosting</a></button>
+        </div>
+        
+        <div class="dropdown" id="dropdown">
+          <button class="dropbtn"><a href="/filter/our-planet/" class="">Our Planet</a></button>
+        </div>
+        
+        <div class="dropdown" id="dropdown">
+          <button class="dropbtn"><a href="/filter/lifestyle/" class="">Lifestyle</a></button>
+        </div>
+        
+        <div class="dropdown" id="dropdown">
+          <button class="dropbtn"><a href="/filter/faq/" class="">FAQ</a></button>
+        </div>
+        
+    </div> 
+  </div>
+  <div class="topnav-wrapper mobile" id="myTopnavWrapperMob">
+    <div class="openclose mobile" onclick="openNav()">&#9776;</div>
+    <div id="BwzNav" class="overlay mobile">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+      <div class="overlay-content">
+        <a href="/filter/faq/">FAQ</a>
+      </div>
+      
+      <div class="overlay-content">
+        <a href="/filter/lifestyle/">Lifestyle</a>
+      </div>
+      
+      <div class="overlay-content">
+        <a href="/filter/our-planet/">Our Planet</a>
+      </div>
+      
+      <div class="overlay-content">
+        <a href="/filter/immunity-boosting/">Immunity Boosting</a>
+      </div>
+      
+      <div class="overlay-content">
+        <a href="/filter/lexicon-of-plants/">Lexicon of plants</a>
+      </div>
+      
+      <div class="overlay-content">
+        <a href="/filter/recipes/">Recipes</a>
+      </div>
+      
+    </div>
+  </div>
+  <div class="content" id="content">
+     
+		 
+		
+    
+
+<div class="gallery-cat" id="galleryCat">
+  <header class="post-cat-header">
+    
+    <h3 class="post-cat-title">LIFESTYLE </h3>	
+    	
+  </header><!-- end .archive-header-->
+  
+     
+    <div class="paginator">
+       
+        
+      
+    </div> 
+   
+</div>
+
+
+ 
+
+ 
+       
+</div> 
+</div> 
+<div class="footer">
+  <div class="footer-copyright">
+    <p>For creation of this website no animal was harmed.<br />Copyright © 2021 BiteWithZest.<br />
+      All rights reserved. Unauthorized use of copyrighted content is prohibited and punishable.</p>
+  </div>  
+  
+</div>
+
+<script src="/static/js/scrollr.js"></script>
+<script src="/static/js/bwz.js"></script>
+<script>
+      var s = skrollr.init();
+      var w = window.outerWidth;
+      if (w <= 640) {
+        s.destroy();
+      }
+      navSlide();
+</script>
+</body>
+</html>

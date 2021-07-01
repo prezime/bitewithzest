@@ -12,7 +12,8 @@ class PostAdmin(admin.ModelAdmin):
     #summernote_fields = ('intro','maintext','preparationtext','ingredients')
 
 class CatAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug': (slugify('description'),)}    
+    prepopulated_fields = {'slug': (slugify('description'),)}   
+    list_display = ('description', 'slug', 'status','order_count','id') 
 
 class SubCatAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': (slugify('name'),)}   

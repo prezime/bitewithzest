@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" type="image/png" href="/static/img/favicon.png"/>
+		<link rel="stylesheet" href="/static/css/style.css" />
+		<link rel="stylesheet" href="/static/css/responsive_desktop.css" />
+    <link rel="stylesheet" href="/static/css/responsive_phone.css" />
+		<title>Bite With Zest! - the ultimate Life Zest blog</title>
+	</head>
+<body onresize="resizeWindow()">
+<div class="wrapper">  
+  <div class="header-wrapper">
+    <div class="header">
+      <div class="logo">
+        <a href="/"><img src="/static/img/BwZ_logo_W.png" alt="logo"></a>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li><a href="#">about</a></li>
+          <li><a href="#">contact</a></li>
+          <li><a href="javascript:void(0)">fb</a>  <a href="javascript:void(0)">ig</a></li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  <div class="topnav-wrapper desktop" id="myTopnavWrapper">
+
+    <div class="topnav" id="myTopnav">
+    <div class="desc">
+      <div class="dropdown" id="dropdown">
+      
+      <button class="dropbtn active"><a href="#" >Recipes</a></button>
+      <button class="dropbtn"><a href="#lexicon">Lexicon of plants</a></button>
+      <button class="dropbtn"><a href="#">Immunity boosting</a></button>
+      <button class="dropbtn"><a href="#">Our Planet</a></button>
+      <button class="dropbtn"><a href="#">Lifestyle</a></button>
+      <button class="dropbtn"><a href="#">FAQ</a></button>
+      </div>
+    </div>  
+    
+    </div>
+  </div>
+  <div class="topnav-wrapper mobile" id="myTopnavWrapperMob">
+    <div class="openclose mobile" onclick="openNav()">&#9776;</div>
+    <div id="BwzNav" class="overlay mobile">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      {% for category in cat_list_asc %}
+      <div class="overlay-content">
+        <a href="{% url 'category_view' category.slug  %}">{{category.description}}</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="hero-grid1">
+    <div class="hero-element1 desktop">
+      <div class="layer1-1-1" >
+        <img src="/../media/layout/layer1_1.png" alt="">
+      </div> 
+      <div class="layer1-1-2" data-100="top: 10px; " data-500="top: 200px;">
+        <img src="/../media/layout/basil-10.png" alt="">
+      </div>  
+    </div>
+    <div class="hero-element2" >
+      <div class="layer1-2-1">
+        <img class= "desktop" src="/../media/layout/layer1_2.png" alt="">
+        <div class="moto1"> 
+          <h2>Plant-based</h2>
+          <h1>Recipes</h1>
+          <h1>Ideas</h1>
+          <p>Healthy and delicious recipes, easy and quick to make. All about how to start & end your day nutritionally well and with a positive energy.</p>
+          <button class="hero-btn">discover more</button>
+        </div>
+      </div>
+    </div>
+    <div class="hero-element3" >
+      <div class="layer1-3-1" data-0="opacity: 1; transform: scale(1);" data-600="opacity: 0.3; transform: scale(1.5);">
+        <img src="/../media/layout/bg1.jpeg" alt="">
+      </div>  
+      <div class="layer1-3-2"  >
+        <img src="/../media/layout/layer1_3.png" alt="">
+      </div>
+    </div>
+    <div class="hero-element4 desktop" >
+      <div class="layer1-4-1" >
+        <img src="/../media/layout/layer1_4.png" alt="">
+      </div>  
+      <div class="layer1-4-2" data-0="top: 0px; width:60%;" data-800="top: 100px;" >
+        <img src="/../media/layout/basil-8.png" alt="">
+      </div>
+      <div class="layer1-4-3" data-0="left: -160px; width:130%;" data-800="left: -200px;" >
+        <img src="/../media/layout/basil-9.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="hero-grid2">
+    <div class="hero-element1 desktop">
+      <div class="layer1-1-1 " >
+        <img src="/../media/layout/layer2_1.png" alt="">
+      </div> 
+      <div class="layer1-1-2" data-500="top: -150px; width:110%; left:-100px" data-1800="top: 80px;">
+        <img src="/../media/layout/layer2-1.png" alt="">
+      </div>  
+    </div> 
+    <div class="hero-element2" >
+      <div class="layer1-2-1">
+        <img class="desktop" src="/../media/layout/layer2_2.png" alt="">
+        <div class="moto2" id="lexicon"> 
+          <h2>Lexicon</h2>
+          <h1>of plants</h1>
+          <span>Find of more about nutricion fact of fruits, vegetables, seeds, legumes etc.</span>
+          <p>Healthy and delicious recipes, easy and quick to make. All about how to start & end your day nutritionally well and with a positive energy.</p>
+          <button class="hero-btn">discover more</button>
+        </div>
+      </div>
+    </div>
+    <div class="hero-element1 mobile" >
+      <div class="layer1-1-1" >
+        <img src="/../media/layout/layer2_1.png" alt="">
+      </div> 
+      <div class="layer1-1-2" style="transform: scaleX(-1) translateX(-30%); ">
+        <img src="/../media/layout/layer2-1.png" alt="">
+      </div>  
+    </div> 
+  </div>  
+
+
+  <div class="hero-grid3">
+    <div class="hero-element1 desktop"> 
+      <div class="layer1-1-1 " >
+        <img src="/../media/layout/layer3-1.png" alt="">
+      </div> 
+      <div class="layer1-1-2" data-1700="left: -20px; width:90%; top:200px" data-2500="left: 10px;">
+        <img src="/../media/layout/basil-3.png" alt="">
+      </div>   
+    </div>
+    <div class="hero-element2">
+      <div class="moto3"> 
+        <h2>Plant-based</h2>
+        <h1>Lifestyle</h1>
+      </div>
+      <div class="layer1-1-1" >
+        <img class="desktop" src="/../media/layout/layer3-2.png" alt="">
+        <div class="hero3-card1">
+          <div class="hero3-card1-pic">
+            <img src="/../media/post29/opener/post_opener29.jpg" alt="">
+          </div>
+          <div class="hero3-card1-text">
+            <span>jkhsd lkdjhalk ljdalkj</span>
+            <p>djfkhksjdhbnlökjkj lkdfjalk lkjkj slfdkjs lkjdslkj lkjdslkjlkbbd</p>
+          </div>
+        </div>
+      </div> 
+      <div class="layer1-1-2" data-2000="top: 900px; width:40%; left: 70%">
+        <img class="desktop" src="/../media/layout/basil-5.png" alt="">
+      </div> 
+    </div>  
+    <div class="hero-element3">
+      <div class="layer1-1-1" >
+        <img class="desktop" src="/../media/layout/layer3-3.png" alt="">
+      </div> 
+      <div class="hero3-card2">
+        <div class="hero3-card2-pic">
+          <img src="/../media/post30/opener/post_opener30.jpg" alt="">
+        </div>
+        <div class="hero3-card2-text">
+          <span>jkhsd lkdjhalk ljdalkj</span>
+          <p>djfkhksjdhbnlökjkj lkdfjalk lkjkj slfdkjs lkjdslkj lkjdslkjlkbbd</p>
+        </div>
+        <button class="hero3-btn">discover more</button>
+      </div> 
+      
+    </div> 
+    <div class="hero-element4 desktop">
+      <div class="layer1-1-1" >
+        <img src="/../media/layout/layer3-4.png" alt="">
+      </div> 
+    </div> 
+  </div>
+
+
+  <div class="hero-grid4">
+    <div class="layer1-3-3 mobile" style="top: 300px; z-index: 50; transform: rotate(-20deg) ">
+      <img src="/../media/layout/octopus.png" alt="">
+    </div> 
+    <div class="hero-element1 desktop"> 
+      <div class="layer1-1-1" >
+        <img src="/../media/layout/layer4-1.png" alt="">
+      </div> 
+      <div class="layer1-1-2" data-2500="top: 80px; left: 3%; width:70%;">
+        <img src="/../media/layout/basil-7.png" alt="">
+      </div>   
+    </div>
+    <div class="hero-element2 desktop">
+      <div class="moto4"> 
+        <h2>Our</h2>
+        <h1>planet</h1>
+        <span>Find of more about nutricion fact of fruits, vegetables, seeds, legumes etc.</span>
+        <p>Healthy and delicious recipes, easy and quick to make. All about how to start & end your day nutritionally well and with a positive energy.</p>
+        <button class="hero4-btn">discover more</button>
+      </div>
+      <div class="layer1-1-1 desktop" >
+        <img src="/../media/layout/layer4-2.png" alt="">
+      </div> 
+      <div class="layer1-1-2" data-2500="top: 580px; width:70%; transform: rotate(0deg);" data-3600="transform: rotate(-20deg);">
+        <img src="/../media/layout/octopus.png" alt="">
+      </div> 
+    </div>  
+    <div class="hero-element3">
+      <div class="layer4-1-1" data-2500="left: 110px"  data-3900="left:0px">
+        <img src="/../media/layout/bg4.jpg" alt="">
+      </div>  
+      <div class="layer1-3-3"  >
+        <img src="/../media/layout/layer4-3.png" alt="">
+      </div> 
+    </div> 
+    <div class="hero-element2 mobile">
+      
+      <div class="moto4"> 
+        <h2>Our</h2>
+        <h1>planet</h1>
+        <span>Find of more about nutricion fact of fruits, vegetables, seeds, legumes etc.</span>
+        <p>Healthy and delicious recipes, easy and quick to make. All about how to start & end your day nutritionally well and with a positive energy.</p>
+        <button class="hero4-btn">discover more</button>
+      </div>
+      
+    </div>
+    <div class="hero-element4 desktop">
+      <div class="layer1-1-1" >
+        <img src="/../media/layout/layer4-4.png" alt="">
+      </div> 
+      <div class="layer1-1-2" data-2500="top: 600px; width:70%;" data-3500="top:520px">
+        <img src="/../media/layout/pig.png" alt="">
+      </div> 
+    </div> 
+  </div>
+
+  <div class="hero-grid5">
+    <div class="hero-element1 desktop">
+      
+    </div>
+    <div class="hero-element2">
+      <div class="moto5"> 
+        <h2>Immunity</h2>
+        <h1>boosting</h1>
+      </div>
+      <div class="layer5-1-1" >
+        <img class="desktop"src="/../media/layout/layer5-2.png" alt="">
+        <div class="hero5-card1">
+          <div class="hero5-card1-pic">
+            <img src="/../media/post29/opener/post_opener29.jpg" alt="">
+          </div>
+          <div class="hero5-card1-text">
+            <span>jkhsd lkdjhalk ljdalkj</span>
+            <p>djfkhksjdhbnlökjkj lkdfjalk lkjkj slfdkjs lkjdslkj lkjdslkjlkbbd</p>
+          </div>
+        </div>
+        <div class="hero5-card2">
+          <div class="hero5-card2-text">
+            <span>jkhsd lkdjhalk ljdalkj</span>
+            <p>djfkhksjdhbnlökjkj lkdfjalk lkjkj slfdkjs lkjdslkj lkjdslkjlkbbd</p>
+          </div>
+          <div class="hero5-card2-pic">
+            <img src="/../media/post29/opener/post_opener29.jpg" alt="">
+          </div>          
+        </div>
+        <div class="hero5-card3">
+          <div class="hero5-card1-pic">
+            <img src="/../media/post29/opener/post_opener29.jpg" alt="">
+          </div>
+          <div class="hero5-card1-text">
+            <span>jkhsd lkdjhalk ljdalkj</span>
+            <p>djfkhksjdhbnlökjkj lkdfjalk lkjkj slfdkjs lkjdslkj lkjdslkjlkbbd</p>
+          </div>
+          
+        </div>
+        
+      </div>
+      <div class="hero5-btn">
+        <button>discover more</button> 
+      </div>
+    </div>
+    
+    <div class="hero-element3 desktop">
+      <div class="layer1-1-2" data-3600="top: 300px; width: 80%;" data-4200="top:420px">
+        <img src="/../media/layout/basil-2.png" alt="">
+      </div> 
+    </div>
+  </div>
+
+
+  
+</div>
+ 
+<div class="footer">
+  <div class="footer-copyright">
+    <p>For creation of this website no animal was harmed.<br />Copyright © 2021 BiteWithZest.<br />
+      All rights reserved. Unauthorized use of copyrighted content is prohibited and punishable.</p>
+  </div>  
+  
+</div>
+
+<script src="/static/js/scrollr.js"></script>
+<script src="/static/js/bwz.js"></script>
+<script>
+      var s = skrollr.init();
+      var w = window.outerWidth;
+      if (w <= 640) {
+        s.destroy();
+      }
+      navSlide();
+</script>
+</body>
+</html>

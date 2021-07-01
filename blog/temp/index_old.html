@@ -5,28 +5,6 @@
 {% block post_showcase %}
 
 
-<div class="gallery">
-        <!-- Blog Entries Column -->
-    <div class="cat-header">
-      <div class="cat-header-col1 post-cat-title">{{post_cat1.name|upper}}</div>
-      <div class="cat-header-col2"><div class="post-cat-more"><a href="{% url 'subcategory_view' post_cat1.slug  %}">more >>></a></div></div>
-    </div>
-    {% for post in post_cat1_list|shuffle|slice:":3" %}
-    <a href="{% url 'post_detail' post.slug  %}">
-      <div class="card">
-        <div class="card-img">
-          <img src="./media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="" />
-        </div>
-        <div class="card-title">
-          <h4>{{ post.titleplus|safe }}</h4>
-        </div>  
-      </div>
-    </a>
-    {% endfor %}
-    <div class="post-cat-more"><a href="{% url 'subcategory_view' post_cat1.slug  %}">more >>></a></div>
-</div>
-
-
 <div class="cat-header-wrapper">
   <div class="cat-header">
     <div class="cat-header-col1 post-cat-title">{{post_cat2.description|upper}}</div>
