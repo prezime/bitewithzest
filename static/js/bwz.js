@@ -74,7 +74,7 @@ function setActive () {
     // alert(this.className);
     //this.classList.add("active");
     var current = document.getElementsByClassName("dropbtn");
-    alert(current.className);
+    // alert(current.className);
     // if ()
     this.className += " active";
     

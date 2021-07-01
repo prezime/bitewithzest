@@ -6,8 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" type="image/png" href="/static/img/favicon.png"/>
 		<link rel="stylesheet" href="{% static '/css/style.css' %}" />
-		<link rel="stylesheet" href="/static/css/responsive_desktop_.css" />
-    <link rel="stylesheet" href="/static/css/responsive_phone_.css" />
+		<link rel="stylesheet" href="{% static '/css/responsive_desktop_.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/responsive_phone_.css' %}" />
 		<title>Bite With Zest! - the ultimate Life Zest blog</title>
 	</head>
 <body onresize="resizeWindow()">
@@ -66,8 +66,8 @@
   
 </div>
 
-<script src="/static/js/scrollr.js"></script>
-<script src="/static/js/bwz.js"></script>
+<script src="{% static '/static/js/scrollr.js' %}"></script>
+<script src="{% static '/static/js/bwz.js' %}"></script>
 <script>
       var s = skrollr.init();
       var w = window.outerWidth;
