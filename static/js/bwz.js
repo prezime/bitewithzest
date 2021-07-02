@@ -7,7 +7,7 @@ const navSlide = () =>{
 
     openClose.addEventListener('click', () => {
         //Toggle Nav
-        topnavWrapper.style.opacity = 0;
+        // topnavWrapper.style.opacity = 0;
 
         //Animate Links
         // navLinks.forEach((link,index) => {
