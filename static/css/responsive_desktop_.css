@@ -87,7 +87,6 @@
   
   
   .topnav-wrapper {
-    
     max-width: 100%;
     background: url('/../media/layout/topnav.png') no-repeat top right;
     background-size: 100%; 
@@ -100,9 +99,6 @@
     overflow: hidden;
     margin: auto;
     width: 70%;
-    display: flex;  
-    justify-content: end;
-    
   }
   
   .topnav a {
@@ -128,7 +124,6 @@
   .dropdown {
     float: right;
     overflow: hidden;
-    /* margin-top: 10px; */
   }
   
   
@@ -1108,9 +1103,7 @@
   }
   
   
-  .topnav button:hover {
-    border-bottom: 2px solid var(--main);
-  }
+ 
   
   
   .dropdown-content a:hover,.dropdown-content a:active  {

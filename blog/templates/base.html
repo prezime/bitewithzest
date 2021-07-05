@@ -30,7 +30,7 @@
       <div class="topnav" id="myTopnav">
         {% for category in cat_list %}
         <div class="dropdown" id="dropdown">
-          <button class="dropbtn"><a href="{% url 'category_view' category.slug  %}" >{{category.description}}</a></button>
+          <button class="dropbtn {% if category.description == object.description %}active{% endif %}"><a href="{% url 'category_view' category.slug  %}" >{{category.description}}</a></button>
         </div>
         {% endfor %}
     </div> 
