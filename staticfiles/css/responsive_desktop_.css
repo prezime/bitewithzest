@@ -613,7 +613,7 @@
   }
   
   .moto1 h1{
-    font-family: var(--font-cool);
+    font-family: "Richie Brusher";
     margin: 0 0 -20px ;
   }
   .moto1 h2{
@@ -650,7 +650,7 @@
     letter-spacing: 0.02em;
   }
   .moto2 h1{
-    font-family: var(--font-cool);
+    font-family: "Richie Brusher";
     margin: -20px  30px 10px ;
   }
   .moto2 p{
@@ -676,7 +676,7 @@
     margin-bottom: 0;
   }
   .moto3 h1{
-    font-family: var(--font-cool);
+    font-family: "Richie Brusher";
     margin: -23px  30px 10px ;
   }
   .moto3 p{
@@ -696,7 +696,7 @@
     z-index: 1;
   }
   .moto4 h1{
-    font-family: var(--font-cool);
+    font-family: "Richie Brusher";
     margin: -23px  30px 10px;
     color: white;
   }
@@ -729,7 +729,7 @@
     margin-bottom: 0;
   }
   .moto5 h1{
-    font-family: var(--font-cool);
+    font-family: "Richie Brusher";
     margin: -23px  30px 10px ;
   }
   

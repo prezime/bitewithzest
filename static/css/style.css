@@ -21,6 +21,8 @@
     --divider-border-style: solid;
     --divider-color: var( --main);
     --divider-border-width: 3px;
+
+    --font-cool: "Richie Brusher" !important;
 }
 @keyframes smoothScroll {
 	0% {
