@@ -65,23 +65,6 @@ function resizeWindow() {
   // console.log(txt);
 }
 
-// function setActive () {
-//   var header = document.getElementById("dropdown");
-//   var btns = document.getElementsByClassName("dropbtn");
-//   // btns[0].className += " active";
-//   for (var i = 0; i < btns.length; i++) {
-//     btns[i].addEventListener("click", function() {
-//     // alert(this.className);
-//     //this.classList.add("active");
-//     var current = document.getElementsByClassName("dropbtn");
-//     // alert(current.className);
-//     // if ()
-//     this.className += " active";
-    
-//     current[0].className = current[0].className.replace(" active", "");
-//     });
-//   }
-// }
 
 function openNav() {
     document.getElementById("BwzNav").style.animation = `navLinkFade 0.5s ease forwards 0.3s`;

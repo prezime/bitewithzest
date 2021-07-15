@@ -1,0 +1,146 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block post_listed_showcase %}
+<div class="gallery-cat" id="galleryCat">
+  <header class="post-cat-header">
+    {% if request.resolver_match.url_name  == 'category_view' %}
+    <h3 class="post-cat-title">{{object.description|upper}} </h3>	
+    {% elif request.resolver_match.url_name  == 'featured_view'%}
+    <h3 class="post-cat-title">FEATURED </h3>	
+    {% else %}	
+    <h3 class="post-cat-title">
+      {% for category in cat_list %}
+          {% if category.description == object.category %}
+          <a href="{% url 'category_view' category.slug  %}">
+              {{ object.category|upper }} 
+          </a>
+          {% endif %}
+      {% endfor %}  / {{object.name|upper}} </h3>	
+    {% endif %}	
+  </header><!-- end .archive-header-->
+  {% if request.resolver_match.url_name  == 'category_view' %}
+    {% for post in post_cat_list %}
+      {% if object.description == post.category %}
+      <a href="{% url 'post_detail' post.slug  %}">
+        <div class="post-cat-card">
+          <div class="post-cat-card__img">
+            <img src="../../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="">
+          </div>
+          <div class="post-cat-card__info">
+            <div class="post-cat-card__date">
+              <span>{{ post.created_on | date:"F d Y"}}</span>
+            </div>
+            <h1 class="post-cat-card__title">{{ post.titleplus|safe }}</h1>
+            <p class="post-cat-card__text">{{ post.intro|safe|slice:"131" }}{% if post.intro|safe|length > 131 %}...{% endif %}</p>
+          </div>
+          <div class="card-title">
+            <h4>{{ post.titleplus|safe }}</h4>
+          </div>
+        </div>
+      </a>
+      {% endif %}
+    {% endfor %} 
+    <div class="paginator">
+      {% if post_cat_list.has_previous %}
+      <a class='prev' href="{% url 'category_view' object.slug  %}?page={{post_cat_list.previous_page_number}}">prev</a>
+      {% endif %} 
+      {% if post_cat_list.paginator.num_pages > 1 %}
+        {% for n in post_cat_list.paginator.page_range %}
+          {% if post_cat_list.number == n %}
+            <span class="count_active">{{ n }}</span>
+          {% elif n > post_cat_list.number|add:'-3' and n < post_cat_list.number|add:'3' %}
+            <a class="count" href="?page={{ n }}">{{ n }}</a></li>
+          {% endif %}
+        {% endfor %}
+      {% endif %}  
+      {% if post_cat_list.has_next %}
+      <a class='next' href="?page={{post_cat_list.next_page_number}}">next</a>
+      {% endif %}
+    </div> 
+  {% elif request.resolver_match.url_name  == 'subcategory_view'  %}
+    {% for post in post_subcat_list %}  
+      {% if object.name == post.subcategory %}
+      <a href="{% url 'post_detail' post.slug  %}">
+        <div class="post-cat-card">
+          <div class="post-cat-card__img">
+            <img src="../../../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="">
+          </div>
+          <div class="post-cat-card__info">
+            <div class="post-cat-card__date">
+              <span>{{ post.created_on | date:"F d Y"}}</span>
+            </div>
+            <h1 class="post-cat-card__title">{{ post.titleplus|safe }}</h1>
+            <p class="post-cat-card__text">{{ post.intro|safe|slice:"131" }}{% if post.intro|safe|length > 131 %}...{% endif %}</p>
+          </div>
+          <div class="card-title">
+            <h4>{{ post.titleplus|safe }}</h4>
+          </div>
+        </div>
+        
+      </a>  
+    {% endif %}  
+    {% endfor %}
+    <div class="paginator">
+      {% if post_subcat_list.has_previous %}
+      <a class='prev' href="{% url 'subcategory_view' object.slug  %}?page={{post_subcat_list.previous_page_number}}">prev</a>
+      {% endif %}
+      {% if post_subcat_list.paginator.num_pages > 1 %}
+        {% for n in post_subcat_list.paginator.page_range %}
+          {% if post_subcat_list.number == n %}
+            <span class="count_active">{{ n }}</span>
+          {% elif n > post_subcat_list.number|add:'-3' and n < post_subcat_list.number|add:'3' %}
+            <a class="count" href="?page={{ n }}">{{ n }}</a></li>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      {% if post_subcat_list.has_next %}
+      <a class='next' href="?page={{post_subcat_list.next_page_number}}">next</a>
+      {% endif %}
+    </div>    
+  {% else %}
+    {% for post in post_featured_list %}  
+      <a href="{% url 'post_detail' post.slug  %}">
+        <div class="post-cat-card">
+          <div class="post-cat-card__img">
+            <img src="../../../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="">
+          </div>
+          <div class="post-cat-card__info">
+            <div class="post-cat-card__date">
+              <span>{{ post.created_on | date:"F d Y"}}</span>
+            </div>
+            <h1 class="post-cat-card__title">{{ post.titleplus|safe }}</h1>
+            <p class="post-cat-card__text">{{ post.intro|safe|slice:"131" }}{% if post.intro|safe|length > 131 %}...{% endif %}</p>
+          </div>
+          <div class="card-title">
+            <h4>{{ post.titleplus|safe }}</h4>
+          </div>
+        </div>
+      </a>  
+    {% endfor %}
+    <div class="paginator">
+      {% if post_featured_list.has_previous %}
+      <a class='prev' href="{% url 'featured_view' 'featured'  %}?page={{post_featured_list.previous_page_number}}">prev</a>
+      {% endif %}
+      {% if post_featured_list.paginator.num_pages > 1 %}
+        {% for n in post_featured_list.paginator.page_range %}
+          {% if post_featured_list.number == n %}
+            <span class="count_active">{{ n }}</span>
+          {% elif n > post_featured_list.number|add:'-3' and n < post_featured_list.number|add:'3' %}
+            <a class="count" href="?page={{ n }}">{{ n }}</a></li>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      {% if post_featured_list.has_next %}
+      <a class='next' href="{% url 'featured_view' 'featured'  %}?page={{post_featured_list.next_page_number}}">next</a>
+      {% endif %}
+    </div> 
+  {% endif %} 
+</div>
+
+
+ 
+
+{% endblock  %}
+  
+

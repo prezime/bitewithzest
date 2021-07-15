@@ -1,23 +1,20 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
-  <link rel="stylesheet" href="{% static '/css/style.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/responsive_desktop.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/responsive_phone.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/responsive_desktop_.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/responsive_phone_.css' %}" />
+  <link rel="shortcut icon" type="image/png" href="/static/img/favicon.png"/>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/responsive_desktop_.css" />
+  <link rel="stylesheet" href="/static/css/responsive_phone_.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Bite With Zest! - the ultimate Life Zest blog</title>
 </head>
 <body>
   <header>
     <div class="logo">
-      <a href="/"><img src="{% static 'img/BwZ_logo_W.png' %}" alt="logo"></a>
+      <a href="/"><img src="/static/img/BwZ_logo_W.png" alt="logo"></a>
     </div>
     <nav>
       <ul>
@@ -29,9 +26,12 @@
   </header>
   <nav class="navbar" id="navbar">
     <ul id="navbar_ul">
-    {% for category in cat_list %}
-      <li class="{% if category.description == object.description %}active{% endif %}"><a href="{% url 'category_view' category.slug  %}" >{{category.description}}</a></li>
-    {% endfor %}
+      <li><a href="/" >Recipes</a></li>
+      <li><a href="#">Lexicon of plants</a></li>
+      <li><a href="#">Immunity boosting</a></li>
+      <li><a href="#">Our Planet</a></li>
+      <li><a href="#">Lifestyle</a></li>
+      <li><a href="#">FAQ</a></li>
     </ul>
     <div class="menu-toggle" onclick="toggleX(this)">
       <div class="bar1" id="bar1"></div>
@@ -41,15 +41,27 @@
   </nav>
   <div class="wrapper">
     <!-- CONTENT -->
-    {% if request.resolver_match.url_name  == 'about_view' %}
-	    {% block about %}{% endblock about %}
-    {% endif %} 
-    {% if request.resolver_match.url_name  == 'contact_view' %}
-	   	{% block contact %}{% endblock contact %}
-    {% endif %} 
-    {% block post_content %}{% endblock post_content %}
-    {% block post_listed_showcase %}{% endblock post_listed_showcase %} 
-    {% block post_showcase %}{% endblock post_showcase %} 
+    <section class="hero-element1"> 
+      
+      <img class="bg1" src="/../media/layout/bg1_2.png" alt="" data-0="opacity: 1; transform: scale(1);" data-600="opacity: 0.3; transform: scale(1.5);">
+      
+      <img class="layer1-1 desktop" src="/../media/layout/layer1-1.png" alt="" >
+      <img class="layer1-1 mobile" src="/../media/layout/layerMob1-1.png" alt="" > 
+      <div class="moto1"> 
+        <h2>Plant-based</h2>
+        <h1>Recipes</h1>
+        <h1>Ideas</h1>
+        <p>Healthy and delicious recipes, easy and quick to make. All about how to start & end your day nutritionally well and with a positive energy.</p>
+      </div>
+      <button class="hero-btn"><a href="{% url 'category_view' post_cat1.slug  %}">discover more</a></button>
+      
+    </section>
+    <section class="hero-element2">
+      <img class="bg2 desktop" src="/../media/layout/bg2.png" alt=""   >
+      <img class="bg2 mobile" src="/../media/layout/bg2-2.png" alt=""   >
+      <img class="layer2-1" src="/../media/layout/layer2-1.png" alt="" >
+      <!-- data-100="top: 10px; " data-500="top: 200px;"     -->
+    </section>
     <!-- CONTENT -->
 
     <img class="before_footer" src="/../media/layout/footer_basil.png">
@@ -102,7 +114,7 @@
     </div>
   </footer>
 </div>
-  <script src="{% static 'js/scrollr.js' %}"></script>
+  <script src="/static/js/scrollr.js"></script>
   <script>
     var s = skrollr.init();
     var w = window.outerWidth;
