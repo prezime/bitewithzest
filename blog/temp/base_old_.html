@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+  <title>Bite With Zest! - the ultimate Life Zest blog</title>
+</head>
+
+<body>
+  
+  <div class="wrapper">
+    <div class="topnav" id="myTopnav">
+      <div class="desc">
+        {% for category in cat_list %}
+        <div class="dropdown">
+          <button class="dropbtn"><a href="{% url 'category_view' category.slug  %}" class="">{{category.description}}</a></button>
+          <div class="dropdown-content">
+            {% for subcategory in subcat_list %}
+              {% if subcategory.category == category.description %}
+              <a href="{% url 'subcategory_view' subcategory.slug  %}" class="">{{subcategory.name}}</a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>  
+      <div class="asc">
+        {% for category in cat_list_asc %}
+        <div class="dropdown">
+          <button class="dropbtn"><a href="{% url 'category_view' category.slug  %}">{{category.description}}</a></button>
+          <div class="dropdown-content">
+            {% for subcategory in subcat_list %}
+              {% if subcategory.category == category.description %}
+              <a href="{% url 'subcategory_view' subcategory.slug  %}">{{subcategory.name}}</a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      
+      <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
+      <div class="logo">
+        <a href="/"><img src="{% static 'img/BWZ_logo_red_2.png' %}" alt="logo"></a>
+      </div>
+    </div>
+  
+    <div class="responsive_logo">
+      <a href="/"><img src="{% static 'img/BWZ_logo_red_2.png' %}" alt="logo"></a>
+    </div>
+    <div class="content">
+      
+      {% block about %}{% endblock about %}
+
+      {% block post_content %}{% endblock post_content %}
+
+      {% block post_showcase %}{% endblock post_showcase %}   
+      
+    </div>  
+    {% block footer_showcase %}{% include 'footer.html' %} {% endblock %}
+  
+  </div>
+  <script>
+    // const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    // const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    // var z = document.getElementById("link-post-card__text").innerHTML;  
+    // if (z.length > 50 && vw < 500) {
+    //   document.getElementById("link-post-card__text").innerHTML = z.substring(0, 49) + "...";
+    // }
+    const preparationClass = document.getElementById('preparation');
+    // var olElement = preparationClass.lastElementChild;
+    // var ol = preparationClass.getElementsByTagName('ol');
+
+    // select the list items
+    var lists = preparationClass.getElementsByTagName('li');
+    console.log(lists);
+
+    // // now loop through the items and set a custom property 'index'
+    var l = lists.length; // total items
+    
+    for (var i=0;i<=l;i++){
+       // list[i].index = i;
+
+       lists[i].className = "webicons"+(parseInt(i)+1);
+     }
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      
+      var djangoView = "{{ request.resolver_match.url_name }}";
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+
+      
+    }
+    
+    
+  </script>
+</body>
+</html>
