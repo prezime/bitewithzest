@@ -1,4 +1,4 @@
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 2600px) and (min-width: 1700px) {
   .post-opener img{
     margin: 3%;
     border-radius: 0 180px;
