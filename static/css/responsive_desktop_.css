@@ -493,7 +493,6 @@
   .post-opener img{
     margin: 3%;
     border-radius: 0 180px;
-    /* border: solid 1px var(--grey); */
     width: 40vw;
     height: 25vw;
     object-fit: cover;
