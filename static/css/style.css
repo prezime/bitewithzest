@@ -33,6 +33,14 @@
 		transform: translateY(0px);
 	}
 }
+
+@supports ((-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))) {
+  .post-title {
+    background-color: rgba(255, 255, 255, 0.2 );
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+  }
+}
 *{
   box-sizing: border-box;
 }
