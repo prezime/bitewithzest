@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" type="image/png" href="/static/img/favicon.png"/>
+		<link rel="stylesheet" href="/static/css/style.css" />
+		<link rel="stylesheet" href="/static/css/responsive_desktop.css" />
+		<title>Bite With Zest! - the ultimate Life Zest blog</title>
+	</head>
+<body onresize="resizeWindow()">
+<div class="header-wrapper">
+	<div class="header">
+		<div class="logo">
+			<a href="/"><img src="/static/img/BwZ_logo_W.png" alt="logo"></a>
+		</div>
+		<div class="header-nav">
+			<ul>
+				<li><a href="#">about</a></li>
+				<li><a href="#">contact</a></li>
+				<li><a href="javascript:void(0)">fb</a>  <a href="javascript:void(0)">ig</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="topnav-wrapper" id="myTopnavWrapper">
+	<div class="topnav" id="myTopnav">
+	<div class="desc">
+	  <div class="dropdown">
+		<button class="dropbtn"><a href="#" class="">FAQ</a></button>
+    <button class="dropbtn"><a href="#" class="">FAQ1</a></button>
+    <button class="dropbtn"><a href="#" class="">FAQ2</a></button>
+	  </div>
+	</div>  
+	
+	<a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="beResponsive()">&#9776;</a>
+  </div>
+</div>
+<div class="hero1">
+  <div class="layer1-1" data-0="top: 50px" data-500="top: 200px" >
+    <img src="/../media/layout/layer1-1.png" alt="">
+  </div>
+  <div class="bg1" data-0="left: 0px" data-500="left: -100px">
+  </div>
+  <div class="layer-main1" >
+    <img src="/../media/layout/layer-main1.png" alt="">
+    <div class="moto1"> 
+      <span>Plant-based</span>
+      <h1>RECIPES</br>
+      IDEAS</h1>
+      <span>Healthy and delicious recipes, easy and quick to make. All about how to start & end your day nutritionally well and with a positive energy.</span>
+    </div>
+    <!-- <div class="layer1-2" data-500="top:0" data-1000="top: 200px" >
+      <img src="/../media/layout/layer1-2.png" alt="">
+    </div>
+    <div class="layer1-3" data-0="top: 50px" data-500="top: 200px" >
+      <img src="/../media/layout/layer1-3.png" alt="">
+    </div> -->
+  </div>
+</div>
+<div class="hero2">
+  <div class="layer2-1" data-500="top: -200px" data-2000="top: 100px" >
+    <img src="/../media/layout/layer2-1.png" alt="">
+  </div>
+    <div class="layer-main2 ">
+      <img src="/../media/layout/layer-main2.jpg" alt="">
+      <div class="moto1 " ></div>
+    </div>
+</div>
+<div class="layer2-1 " >
+    
+</div>
+<div class="hero3">
+  <div class="layer3-1 " >
+    
+  </div>
+    <div class="layer-main3 ">
+      <img src="/../media/layout/layer-main3.png" alt="">
+      <div class="moto1 " ></div>
+    </div>
+</div>
+<div class="cat-header-wrapper">
+  <div class="cat-header">
+    <div class="cat-header-col1 post-cat-title">{{post_cat2.description|upper}}</div>
+    <div class="cat-header-col2"><div class="post-cat-more"><a href="{% url 'category_view' post_cat2.slug  %}">more >>></a></div></div>
+  </div>
+</div>
+<div class="gallery-cat-home"> 
+  {% for post in post_cat2_list|shuffle|slice:":3" %}
+      <a href="{% url 'post_detail' post.slug  %}">
+        <div class="post-cat-card">
+          <div class="post-cat-card__img">
+            <img src="../../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="">
+          </div>
+          <div class="post-cat-card__info">
+            {% if object.custom_date %}
+            <div class="post-cat-card__date">{{ post.custom_date | date:"F d Y"}}, {{ post.author}}</div>
+            {% else %}    
+            <div class="post-cat-card__date">{{ post.created_on | date:"F d Y"}}, {{ post.author}}</div>
+            {% endif %} 
+            <h1 class="post-cat-card__title">{{ post.title }}</h1>
+            <p class="post-cat-card__text">{{ post.intro|safe|slice:"131" }}{% if post.intro|safe|length > 131 %}...{% endif %}</p>
+            
+          </div>
+          <div class="card-title">
+            <h4>{{ post.titleplus|safe }}</h4>
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+    <div class="post-cat-more"><a href="{% url 'category_view' post_cat2.slug  %}">more >>></a></div>  
+</div>   
+
+<div class="cat-header-wrapper">
+  <div class="cat-header">
+    <div class="cat-header-col1 post-cat-title">{{post_cat3.description|upper}}</div>
+    <div class="cat-header-col2"><div class="post-cat-more"><a href="{% url 'category_view' post_cat3.slug  %}">more >>></a></div></div>
+  </div>
+</div>
+<div class="gallery-cat-home"> 
+  {% for post in post_cat3_list|shuffle|slice:":3" %}
+      <a href="{% url 'post_detail' post.slug  %}">
+        <div class="post-cat-card">
+          <div class="post-cat-card__img">
+            <img src="../../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="">
+          </div>
+          <div class="post-cat-card__info">
+            {% if object.custom_date %}
+            <div class="post-cat-card__date">{{ post.custom_date | date:"F d Y"}}, {{ post.author}}</div>
+            {% else %}    
+            <div class="post-cat-card__date">{{ post.created_on | date:"F d Y"}}, {{ post.author}}</div>
+            {% endif %} 
+            <h1 class="post-cat-card__title">{{ post.title }}</h1>
+            <p class="post-cat-card__text">{{ post.intro|safe|slice:"131" }}{% if post.intro|safe|length > 131 %}...{% endif %} </p>
+          </div>
+          <div class="card-title">
+            <h4>{{ post.titleplus|safe }}</h4>
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+    <div class="post-cat-more"><a href="{% url 'category_view' post_cat2.slug  %}">more >>></a></div> 
+  </div>
+<div class="footer">
+  <div class="footer-copyright">
+    <p>For creation of this website no animal was harmed.<br />Copyright © 2021 BiteWithZest.<br />
+      All rights reserved. Unauthorized use of copyrighted content is prohibited and punishable.</p>
+  </div>  
+</div>
+
+
+<script>
+window.onscroll = function() {beSticky()};
+
+var navbar = document.getElementById("myTopnavWrapper");
+var sticky = navbar.offsetTop;
+// console.log(sticky);
+const img_data = document.getElementById("hello");
+console.log(img_data);
+var img_title = img_data.getAttribute('title');
+console.log(img_title);
+// // now loop through the items and set a custom property 'index'
+// var l = lists.length; // total items  
+// for (var i=0;i<=l;i++){
+// 	lists[i].className = "webicons"+(parseInt(i)+1);
+// }
+function beSticky() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+
+function beResponsive() {
+  var x = document.getElementById("myTopnav");
+      
+  var djangoView = "{{ request.resolver_match.url_name }}";
+  if (x.className === "topnav") {
+	x.classList.add("responsive")
+  } else {
+	x.classList.remove("responsive");
+  }
+}
+
+function resizeWindow() {
+  var w = window.outerWidth;
+  var h = window.outerHeight;
+  var txt = "Window size: width=" + w + ", height=" + h;
+  var line = document.getElementById("post-cat-line");
+  document.getElementById('post-cat-line').style.width = w-870 + 'px';
+  console.log(txt);
+}
+
+</script>
+
+</body>
+</html>
+
+</script>
+<script src="/static/js/scrollr.js"></script>
+<script>
+      var s = skrollr.init();
+</script>
+</body>
+</html>

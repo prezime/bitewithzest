@@ -1,14 +1,14 @@
-@media (min-width: 96em) {
+@media screen and (min-width: 1200px) {
   .post-opener img{
     margin: 3%;
     border-radius: 0 180px;
     /* border: solid 1px var(--grey); */
-    width: 40vw;
-    height: 25vw;
+    width: 50vw;
+    height: 35vw;
     object-fit: cover;
   }
-}  
-@media (min-width: 48em) {
+} 
+@media  screen and (max-width: 2600px) {
   .mobile{
     display: none;
   }
@@ -494,8 +494,8 @@
     margin: 3%;
     border-radius: 0 180px;
     /* border: solid 1px var(--grey); */
-    width: 50vw;
-    height: 35vw;
+    width: 40vw;
+    height: 25vw;
     object-fit: cover;
   }
 
