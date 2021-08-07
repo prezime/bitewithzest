@@ -209,21 +209,24 @@
 
 
   .hero-element1 {
-    /* position: relative; */
+    position: relative;
     width: 100%;
     margin-top: 200px;
     overflow: hidden;
     height:100%;
   }
   .hero-element2 {
-    /* position: relative; */
+    position: relative;
     width: 100%;
-    /* margin-top: 200px; */
+    margin-top: -100px;
     overflow: hidden;
     height:100%;
   }
   .hero-element3 {
-    position: absolute;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height:100%;
   }
   .hero-element4 {
     position: relative;
@@ -259,13 +262,28 @@
     left: 0;
     width: 100%;  
     z-index: -1;
-    position: absolute;
+    position: relative;
   }
-  .layer2-1{
+
+  .bg3{
     left: 0;
-    width: 30%;
+    width: 100%;  
     z-index: -1;
     position: relative;
+  }
+  .bg4{
+    left: 0;
+    width: 100%;  
+    z-index: -1;
+    position: relative;
+  }
+
+  .layer2-1{
+    left: -10%;
+    width: 30%;
+    position: absolute;
+    z-index: 1;
+    margin-top: -80px;
   }
 
   .moto1{
@@ -307,7 +325,7 @@
     font-size: 27px;
     font-weight: 400;
     color: var(--black);
-    margin-top: 35px ;
+    margin: 1% 25%;
     position: absolute;
     top: 100px;
     left: 0;
@@ -324,6 +342,8 @@
   .moto2 h1{
     font-family: var(--font-cool);
     margin: -20px  30px 10px ;
+    color: var(--main);
+    font-size:50px;
   }
   .moto2 p{
     font-size: 21px;
@@ -335,7 +355,7 @@
     font-size: 27px;
     font-weight: 400;
     color: var(--black);
-    position: absolute;
+    position: relative;
     top: 110px;
     left: 0;
     max-width: 500px;
@@ -356,6 +376,7 @@
     margin-top  :30px;
     font-weight: 600;
   }
+
   .moto4{
     font-size: 27px;
     font-weight: 400;
@@ -409,10 +430,10 @@
     background-color: var(--main);
     border:none;
     font-size: 22px;
-    margin-top: 400px;
+    top: -650px;
     padding: 5px 10px;
     border-radius: 10px;
-    position: absolute;
+    position: relative;
     left: 15%;
     z-index: 1;
   }
