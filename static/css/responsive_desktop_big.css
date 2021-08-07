@@ -1,4 +1,4 @@
-
+@media screen and (min-width: 1700px){
   .mobile{
     display: none;
   }
@@ -483,8 +483,8 @@
   .post-opener img{
     margin: 3%;
     border-radius: 0 180px;
-    width: 50vw;
-    height: 35vw;
+    width: 40vw;
+    height: 25vw;
     object-fit: cover;
   }
 
@@ -542,6 +542,15 @@
   .breadcrumbs-link:hover{
     color: var(--black);
   }
+
+  .post-content{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin: 0 25%;
+  }
+}
 
 
 

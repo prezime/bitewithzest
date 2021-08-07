@@ -4,9 +4,7 @@
 {% load setvar %}
 {% block post_showcase %}
 <section class="hero-element1"> 
-      
   <img class="bg1" src="/../media/layout/bg1_2.png" alt="" data-0="opacity: 1; transform: scale(1);" data-600="opacity: 0.3; transform: scale(1.5);">
-  
   <img class="layer1-1 desktop" src="/../media/layout/layer1-1.png" alt="" >
   <img class="layer1-1 mobile" src="/../media/layout/layerMob1-1.png" alt="" > 
   <div class="moto1"> 
@@ -16,13 +14,26 @@
     <p>Healthy and delicious recipes, easy and quick to make. All about how to start & end your day nutritionally well and with a positive energy.</p>
   </div>
   <button class="hero-btn"><a href="{% url 'category_view' post_cat1.slug  %}">discover more</a></button>
-  
 </section>
 <section class="hero-element2">
   <img class="bg2 desktop" src="/../media/layout/bg2.png" alt=""   >
   <img class="bg2 mobile" src="/../media/layout/bg2-2.png" alt=""   >
-  <img class="layer2-1" src="/../media/layout/layer2-1.png" alt="" >
-  <!-- data-100="top: 10px; " data-500="top: 200px;"     -->
+  <img class="layer2-1" src="/../media/layout/layer2-1.png" alt="" data-400="top: -50px; " data-700="top: 30px;">
+  <div class="moto2"> 
+    <h2>Lexicon</h2>
+    <h1>of plants</h1>
+    <p>Healthy and delicious recipes, easy and quick to make. All about how to start & end your day nutritionally well and with a positive energy.</p>
+  </div>
+</section>
+<section class="hero-element3">
+  <img class="bg3 desktop" src="/../media/layout/bg3.png" alt=""   >
+  <img class="bg3 mobile" src="/../media/layout/bg3.png" alt=""   >
+  
+</section>
+<section class="hero-element4">
+  <img class="bg4 desktop" src="/../media/layout/bg4.png" alt=""   >
+  <img class="bg4 mobile" src="/../media/layout/bg4.png" alt=""   >
+  
 </section>
 
 {% endblock  %}
