@@ -233,6 +233,9 @@
   }
   .hero-element5 {
     position: relative;
+    width: 100%;
+    overflow: hidden;
+    height:100%;
   }
 
   .layer_relative{
@@ -272,6 +275,14 @@
     position: relative;
   }
   .bg4{
+    float: right;
+    width: 50%;  
+    margin-right: 100px;
+    margin-top: 50px;
+    z-index: -1;
+    position: relative;
+  }
+  .bg5{
     left: 0;
     width: 100%;  
     z-index: -1;
@@ -325,7 +336,7 @@
     color: var(--black);
     margin: 1% 25%;
     position: absolute;
-    top: 100px;
+    top: 200px;
     left: 0;
     max-width: 500px;
     letter-spacing: 0.03em;
@@ -353,9 +364,9 @@
     font-size: 27px;
     font-weight: 400;
     color: var(--black);
-    position: relative;
+    position: absolute;
     top: 110px;
-    left: 0;
+    left: 15%;
     max-width: 500px;
     z-index: 1;
   }
@@ -367,7 +378,9 @@
   }
   .moto3 h1{
     font-family: var(--font-cool);
-    margin: -23px  30px 10px ;
+    margin: -20px  30px 10px ;
+    color: var(--main);
+    font-size:50px;
   }
   .moto3 p{
     font-size: 21px;
@@ -427,11 +440,12 @@
     background-color: var(--main);
     border:none;
     font-size: 22px;
-    top: -250px;
+    margin-top: 20px;
+    /* top: -250px; */
     padding: 5px 10px;
     border-radius: 10px;
     position: relative;
-    left: 15%;
+    /* left: 15%; */
     z-index: 1;
   }
   .hero-btn a{
@@ -458,6 +472,7 @@
     margin-top: 40px;
     padding: 5px 10px;
     border-radius: 10px;
+    position: relative;
   }
   
   .hero5-btn{
@@ -474,6 +489,77 @@
     padding: 5px 10px;
     border-radius: 10px;
     background-color: white;
+  }
+
+
+  .layer1-1-1{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+  .hero3-card1{
+    position: relative;
+    top: 330px;
+    left: 65%;
+    transform: translate(-50%, 0);
+    background-color: white;
+    /* padding: 20px; */
+  }
+  .hero3-card2{
+    position: relative;
+    top: 330px;
+    left: 50%;
+    /* transform: translate(-50%, 0); */
+    background-color: white;
+    border-radius: 0 23% ;
+    /* padding: 20px; */
+  }
+  .hero3-card1-pic{
+    border: 3px solid var(--main);
+    padding: 20px;
+    border-radius: 30% 0;
+    width: 400px;
+    height: 400px;
+    box-sizing: unset;
+  }
+  .hero3-card2-pic{
+    border: 3px solid var(--main);
+    padding: 20px;
+    border-radius: 0 30% ;
+    width: 400px;
+    height: 400px;
+    box-sizing: unset;
+  }
+  
+  .hero3-card1-pic img {
+    border-radius: 30% 0;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+  
+  }
+  .hero3-card2-pic img {
+    border-radius: 0 30% ;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .hero3-card1-text, .hero3-card2-text{
+    margin-top: 30px;
+    width:440px;
+  }
+  
+  .hero3-card1-text span, .hero3-card2-text span{
+    font-size: 26px;
+    font-weight: 400;
+  }
+  .hero3-card1-text p, .hero3-card2-text p{
+    font-size: 21px;
+    margin-top: 20px;
   }
 
   /* POST DETAIL */

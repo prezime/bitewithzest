@@ -12,8 +12,9 @@
     <h1>Recipes</h1>
     <h1>Ideas</h1>
     <p>Healthy and delicious recipes, easy and quick to make. All about how to start & end your day nutritionally well and with a positive energy.</p>
+    <button class="hero-btn"><a href="{% url 'category_view' post_cat1.slug  %}">discover more</a></button>
   </div>
-  <button class="hero-btn"><a href="{% url 'category_view' post_cat1.slug  %}">discover more</a></button>
+  
 </section>
 <section class="hero-element2">
   <img class="bg2 desktop" src="/../media/layout/bg2.png" alt=""   >
@@ -23,16 +24,54 @@
     <h2>Lexicon</h2>
     <h1>of plants</h1>
     <p>Healthy and delicious recipes, easy and quick to make. All about how to start & end your day nutritionally well and with a positive energy.</p>
+    <button class="hero-btn"><a href="{% url 'category_view' post_cat1.slug  %}">discover more</a></button>
   </div>
 </section>
 <section class="hero-element3">
   <img class="bg3 desktop" src="/../media/layout/bg3.png" alt=""   >
   <img class="bg3 mobile" src="/../media/layout/bg3.png" alt=""   >
+  <div class="moto3"> 
+    <h2>Plant-based</h2>
+    <h1>Lifestyle</h1>
+  </div>
+  
+    <div class="layer1-1-1" >
+      {% for post in post_cat5_list|shuffle|slice:"2" %}
+      <a href="{% url 'post_detail' post.slug  %}">
+        <div class="{% cycle 'hero3-card1' 'hero3-card2' %}">
+            <div class="{% cycle 'hero3-card1-pic' 'hero3-card2-pic' %}">
+              <img src="/../media/post{{post.id}}/opener/post_opener{{post.id}}.jpg" alt="">
+            </div>
+          <div class="{% cycle 'hero3-card1-text' 'hero3-card2-text' %}">
+            
+              <span>{{post.title}}</span>
+              <p>{{ post.intro|safe|slice:"131" }}{% if post.intro|safe|length > 131 %}...{% endif %}</p>
+            
+          </div>
+          <button class="hero3-btn"><a href="{% url 'category_view' post_cat5.slug  %}">discover more</a></button>
+        </div>
+      </a>
+      {% endfor %}
+    </div> 
+    
   
 </section>
-<section class="hero-element4">
-  <img class="bg4 desktop" src="/../media/layout/bg4.png" alt=""   >
-  <img class="bg4 mobile" src="/../media/layout/bg4.png" alt=""   >
+<section class="hero-element4"> 
+  <img class="bg4" src="/../media/layout/bg4.jpg" alt="" data-2500="left: 110px"  data-3900="left:0px">
+  <img class="layer1-1 desktop" src="/../media/layout/layer4-1.png" alt="" >
+  <img class="layer1-1 mobile" src="/../media/layout/layerMob4-1.png" alt="" > 
+  <div class="moto1"> 
+    <h2>Plant-based</h2>
+    <h1>Recipes</h1>
+    <h1>Ideas</h1>
+    <p>Healthy and delicious recipes, easy and quick to make. All about how to start & end your day nutritionally well and with a positive energy.</p>
+    <button class="hero4-btn"><a href="{% url 'category_view' post_cat1.slug  %}">discover more</a></button>
+  </div>
+  
+</section>
+<section class="hero-element5">
+  <img class="bg5 desktop" src="/../media/layout/bg5.png" alt=""   >
+  <img class="bg5 mobile" src="/../media/layout/bg5.png" alt=""   >
   
 </section>
 
