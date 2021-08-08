@@ -45,10 +45,10 @@
           <div class="{% cycle 'hero3-card1-text' 'hero3-card2-text' %}">
             
               <span>{{post.title}}</span>
-              <p>{{ post.intro|safe|slice:"131" }}{% if post.intro|safe|length > 131 %}...{% endif %}</p>
+              <p>{{ post.intro|safe|slice:"231" }}{% if post.intro|safe|length > 231 %}...{% endif %}</p>
             
           </div>
-          <button class="hero3-btn"><a href="{% url 'category_view' post_cat5.slug  %}">discover more</a></button>
+          <button class="{% cycle 'invisible' 'hero3-btn' %}"><a href="{% url 'category_view' post_cat5.slug  %}">discover more</a></button>
         </div>
       </a>
       {% endfor %}
@@ -60,18 +60,43 @@
   <img class="bg4" src="/../media/layout/bg4.jpg" alt="" data-2500="left: 110px"  data-3900="left:0px">
   <img class="layer1-1 desktop" src="/../media/layout/layer4-1.png" alt="" >
   <img class="layer1-1 mobile" src="/../media/layout/layerMob4-1.png" alt="" > 
-  <div class="moto1"> 
-    <h2>Plant-based</h2>
-    <h1>Recipes</h1>
-    <h1>Ideas</h1>
+  <div class="moto4"> 
+    <h2>Our</h2>
+    <h1>Planet</h1>
     <p>Healthy and delicious recipes, easy and quick to make. All about how to start & end your day nutritionally well and with a positive energy.</p>
-    <button class="hero4-btn"><a href="{% url 'category_view' post_cat1.slug  %}">discover more</a></button>
+    <div class="hero4-btn">
+      <button><a href="{% url 'category_view' post_cat1.slug  %}">discover more</a></button>
+    </div>
   </div>
   
 </section>
 <section class="hero-element5">
   <img class="bg5 desktop" src="/../media/layout/bg5.png" alt=""   >
   <img class="bg5 mobile" src="/../media/layout/bg5.png" alt=""   >
+  <div class="moto5"> 
+    <h2>Immunity</h2>
+    <h1>boosting</h1>
+  </div>
+  
+  <div class="layer5-1-1" >
+    {% for post in post_cat3_list|shuffle|slice:"3" %}
+    <a href="{% url 'post_detail' post.slug  %}">
+      <div class="{% cycle 'hero5-card1' 'hero5-card2' %}">
+        <div class="{% cycle 'hero5-card1-pic' 'hero5-card2-pic' %}">
+          <img src="/../media/post{{post.id}}/opener/post_opener{{post.id}}.jpg" alt="">
+        </div>
+        <div class="{% cycle 'hero5-card1-text' 'hero5-card2-text' %}">
+            <span>{{post.title}}</span>
+            <p>{{ post.intro|safe|slice:"271" }}{% if post.intro|safe|length > 271 %}...{% endif %}</p>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+    <div class="hero5-btn">
+      <button><a href="{% url 'category_view' post_cat3.slug  %}">discover more</a></button> 
+    </div>
+  </div>
+  
   
 </section>
 

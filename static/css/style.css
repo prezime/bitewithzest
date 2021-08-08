@@ -74,6 +74,10 @@ button a{
   text-decoration: none;
 }
 
+.invisible{
+  display: none;
+}
+
 
 
 

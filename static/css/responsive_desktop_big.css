@@ -393,15 +393,15 @@
     font-weight: 400;
     color: white;
     position: absolute;
-    top: 180px;
-    left: 0;
+    top: 200px;
+    left: 15%;
     max-width: 500px;
     letter-spacing: 0.03em;
     z-index: 1;
   }
   .moto4 h1{
     font-family: var(--font-cool);
-    margin: -23px  30px 10px;
+    margin: -10px  30px 10px ;
     color: white;
   }
   .moto4 h2{
@@ -467,14 +467,23 @@
     width: 200px;
   }
   .hero4-btn{
-    background-color: white;
-    color: var(--main);
+    display:flex;
+    justify-content: flex-end;
+    margin-top: 140px;
+    z-index: 1;
+  }
+  .hero4-btn button {
+    border:none;
+    background: none;
+	  color: inherit;
+  }
+  .hero4-btn button a{
+    color: var(--main)    ;
     border:none;
     font-size: 22px;
-    margin-top: 40px;
     padding: 5px 10px;
     border-radius: 10px;
-    position: relative;
+    background-color: white;
   }
   
   .hero5-btn{
@@ -504,6 +513,10 @@
     left: 50%;
     margin-left: -35%;
 
+  }
+  .layer1-1-1 a{
+    text-decoration: none;
+    color:inherit;
   }
   .hero3-card1{
     position: relative;
@@ -565,10 +578,107 @@
   
   .hero3-card1-text span, .hero3-card2-text span{
     font-size: 26px;
-    font-weight: 400;
+    font-weight: 600;
   }
   .hero3-card1-text p, .hero3-card2-text p{
     font-size: 21px;
+    margin-top: 20px;
+    font-weight: 200;
+  }
+
+  .layer5-1-1{
+    position: absolute;
+    z-index: 1;
+    top: 300px;
+    display: flex;
+    flex-direction:column;
+    /* background-color: grey; */
+    width: 70%;
+    left: 50%;
+    margin-left: -35%;
+
+  }
+  .layer5-1-1 a{
+    text-decoration: none;
+    color:inherit;
+  }
+  .hero5-card1{
+    position: relative;
+    display: flex;
+    align-items: center; 
+    z-index: 1;
+  }
+
+
+
+  .hero5-card2{
+    position: relative;
+    display: flex;
+    align-items: center; 
+    z-index: 1;
+  }
+
+  .hero5-card3{
+    position: relative;
+    display: flex;
+  }
+  .hero5-card1-pic{
+    border: 2px solid var(--main);
+    padding: 15px;
+    border-radius: 30% 0;
+    width: 300px;
+    min-width: 300px;
+    height: 300px;
+    margin-right: 30px;
+    position: relative;
+    box-sizing: unset;
+    background-color: white;
+  }
+
+  .hero5-card2-pic{
+    border: 2px solid var(--main);
+    padding: 15px;
+    border-radius: 0 30% ;
+    width: 300px;
+    min-width: 300px;
+    height: 300px;
+    position: relative;
+    box-sizing: unset;
+    margin-left: 30px;
+    order: 2;
+    background-color: white;
+  }
+  
+  .hero5-card1-pic img {
+    border-radius: 30% 0;
+    width: 300px;
+    min-width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+
+  .hero5-card2-pic img {
+    border-radius: 0 30% ;
+    width: 300px;
+    min-width: 300px;
+    height: 300px;
+    object-fit: cover;
+
+  }
+  .hero5-card2-text{
+    text-align: right;
+  }
+  .hero5-card1-text, .hero5-card2-text{
+    z-index: 1;
+  }
+  .hero5-card1-text span, .hero5-card2-text span{
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .hero5-card1-text p, .hero5-card2-text p{
+    font-size: 24px;
+    font-weight: 200;
     margin-top: 20px;
   }
 
