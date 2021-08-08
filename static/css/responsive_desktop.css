@@ -83,7 +83,7 @@
     display: none;
 
   }
-  
+
   footer{
     position: relative;
     width: 100%;
@@ -102,11 +102,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
     /* padding: 8% 3% 1% 3%; */
-    
+
   }
   footer .footer_container .sec{
     margin-right: 20px;
-    
+
   }
   footer .footer_container .sec.aboutus{
     width: 20%;
@@ -160,17 +160,17 @@
     margin-right: 0 !important ;
   }
   .quicklinks ul li{
-    list-style: none;   
+    list-style: none;
   }
   .quicklinks ul li a{
     color: var(--light_grey);
     text-decoration: none;
     display: inline-block;
-    list-style: none; 
+    list-style: none;
     /* margin: 1px;   */
   }
   .quicklinks ul li a:hover{
-    color: white;  
+    color: white;
   }
   .footer_contact{
     position: relative;
@@ -202,7 +202,7 @@
     position: relative;
     width: 35%;
   }
-  
+
   .before_footer{
     display: none;
   }
@@ -263,20 +263,20 @@
 
   .bg2{
     left: 0;
-    width: 100%;  
+    width: 100%;
     z-index: -1;
     position: relative;
   }
 
   .bg3{
     left: 0;
-    width: 100%;  
+    width: 100%;
     z-index: -1;
     position: relative;
   }
   .bg4{
     float: right;
-    width: 50%;  
+    width: 50%;
     margin-right: 100px;
     margin-top: 50px;
     z-index: -1;
@@ -284,7 +284,7 @@
   }
   .bg5{
     left: 0;
-    width: 100%;  
+    width: 100%;
     z-index: -1;
     position: relative;
   }
@@ -306,9 +306,9 @@
     letter-spacing: 0.02em;
     z-index: 1;
     margin: 5% 15%;
-  
+
   }
-  
+
   .moto1 h1{
     font-family: var(--font-cool);
     margin: 0 0 -15px ;
@@ -326,10 +326,10 @@
     font-size: 21px;
     margin-top  :30px;
     font-weight: 300;
-  
+
   }
-  
-  
+
+
   .moto2{
     font-size: 27px;
     font-weight: 400;
@@ -359,7 +359,7 @@
     margin-top  :30px;
     font-weight: 300;
   }
-  
+
   .moto3{
     font-size: 27px;
     font-weight: 400;
@@ -449,7 +449,7 @@
     z-index: 1;
   }
   .hero-btn a{
-    color: white; 
+    color: white;
   }
 
   .hero3-btn{
@@ -474,14 +474,14 @@
     border-radius: 10px;
     position: relative;
   }
-  
+
   .hero5-btn{
     display:flex;
     justify-content: flex-end;
     margin-top: 240px;
     z-index: 1;
   }
-  
+
   .hero5-btn button{
     color: var(--main)    ;
     border: 3px solid var(--main);
@@ -506,8 +506,9 @@
   .hero3-card1{
     position: relative;
     top: 330px;
-    left: 25%;
-    margin-left: -14%;
+    left: calc(50% - 464px);
+    width: 444px;
+    /* margin-left: -222px; */
     background-color: white;
     border-radius: 140px 0;
     /* padding: 20px; */
@@ -515,15 +516,16 @@
   .hero3-card2{
     position: relative;
     top: 330px;
-    left: 50%;
-    margin-left: -23%;
+    width: 444px;
+    left: calc(50% - 424px);
+    /* margin-left: 111px; */
     /* transform: translate(-50%, 0); */
     background-color: white;
     border-radius: 0 140px ;
     /* padding: 20px; */
   }
   .hero3-card1-pic{
-    border: 3px solid var(--main);
+    border: 2px solid var(--main);
     padding: 20px;
     border-radius: 30% 0;
     width: 400px;
@@ -531,20 +533,20 @@
     box-sizing: unset;
   }
   .hero3-card2-pic{
-    border: 3px solid var(--main);
+    border: 2px solid var(--main);
     padding: 20px;
     border-radius: 0 30% ;
     width: 400px;
     height: 400px;
     box-sizing: unset;
   }
-  
+
   .hero3-card1-pic img {
     border-radius: 30% 0;
     width: 400px;
     height: 400px;
     object-fit: cover;
-  
+
   }
   .hero3-card2-pic img {
     border-radius: 0 30% ;
@@ -552,12 +554,12 @@
     height: 400px;
     object-fit: cover;
   }
-  
+
   .hero3-card1-text, .hero3-card2-text{
     margin-top: 30px;
     width:440px;
   }
-  
+
   .hero3-card1-text span, .hero3-card2-text span{
     font-size: 26px;
     font-weight: 400;
@@ -574,7 +576,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 200px;
-    
+
   }
   .post-intro{
     display: flex;
@@ -588,7 +590,7 @@
     /* filter: blur(40px); */
   }
 
-  
+
   .post-opener img{
     margin: 3%;
     border-radius: 0 180px;
@@ -616,7 +618,7 @@
     background-color: rgba(255, 255, 255, 0.8 );
     width: 500px;
     color: var(--main);
-    text-align: left; 
+    text-align: left;
     border-radius: 40px;
   }
 
@@ -633,21 +635,21 @@
   .breadcrumbs-item{
     display: inline;
   }
-  
+
   .breadcrumbs-item:not(:last-of-type)::after{
     content: ' /';
     color: #999;
   }
-  
+
   .breadcrumbs-link {
     text-decoration: none;
     color: var(--grey);
   }
-  
+
   .breadcrumbs-link-active{
     font-weight: 500;
   }
-  
+
   .breadcrumbs-link:hover{
     color: var(--black);
   }
