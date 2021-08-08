@@ -497,24 +497,29 @@
     z-index: 1;
     top: 0;
     display: flex;
-    justify-items: center;
-    align-items: center;
+    /* background-color: grey; */
+    width: 70%;
+    left: 50%;
+    margin-left: -35%;
+
   }
   .hero3-card1{
     position: relative;
     top: 330px;
-    left: 65%;
-    transform: translate(-50%, 0);
+    left: 25%;
+    margin-left: -14%;
     background-color: white;
+    border-radius: 140px 0;
     /* padding: 20px; */
   }
   .hero3-card2{
     position: relative;
     top: 330px;
     left: 50%;
+    margin-left: -23%;
     /* transform: translate(-50%, 0); */
     background-color: white;
-    border-radius: 0 23% ;
+    border-radius: 0 140px ;
     /* padding: 20px; */
   }
   .hero3-card1-pic{
