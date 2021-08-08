@@ -363,9 +363,9 @@
     font-size: 27px;
     font-weight: 400;
     color: var(--black);
-    position: relative;
+    position: absolute;
     top: 110px;
-    left: 0;
+    left: 15%;
     max-width: 500px;
     z-index: 1;
   }
@@ -377,7 +377,9 @@
   }
   .moto3 h1{
     font-family: var(--font-cool);
-    margin: -23px  30px 10px ;
+    margin: -20px  30px 10px ;
+    color: var(--main);
+    font-size:50px;
   }
   .moto3 p{
     font-size: 21px;
@@ -496,7 +498,7 @@
     z-index: 1;
     top: 0;
     display: flex;
-    background-color: grey;
+    /* background-color: grey; */
     width: 70%;
     left: 50%;
     margin-left: -35%;
@@ -505,7 +507,7 @@
   .hero3-card1{
     position: relative;
     top: 330px;
-    left: calc(50% - 464px);
+    left: calc(50% - 494px);
     width: 444px;
     /* margin-left: -222px; */
     background-color: white;
@@ -516,7 +518,7 @@
     position: relative;
     top: 330px;
     width: 444px;
-    left: calc(50% - 424px);
+    left: calc(50% - 394px);
     /* margin-left: 111px; */
     /* transform: translate(-50%, 0); */
     background-color: white;
@@ -525,7 +527,7 @@
   }
 
   .hero3-card1-pic{
-    border: 3px solid var(--main);
+    border: 2px solid var(--main);
     padding: 20px;
     border-radius: 30% 0;
     width: 400px;
@@ -533,7 +535,7 @@
     box-sizing: unset;
   }
   .hero3-card2-pic{
-    border: 3px solid var(--main);
+    border: 2px solid var(--main);
     padding: 20px;
     border-radius: 0 30% ;
     width: 400px;
