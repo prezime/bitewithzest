@@ -11,6 +11,7 @@
     left: 0;
     background: url('/../media/layout/header.png') no-repeat top left;
     width: 100%;
+    z-index: 0;
   }
   header .logo {
     float: left;
@@ -89,7 +90,7 @@
     font-family: Raleway, sans-serif;
   }
   .sticky {
-    position: fixed;
+    position: absolute;
     top: 0;
     z-index: 2;
   }
@@ -111,6 +112,7 @@
   .change{
     position: fixed;
     right:3%;
+    z-index: 10;
   }
   .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-5px, 6px) scaleX(1.3);
@@ -252,20 +254,28 @@
     height:100%;
   }
   .hero-element2 {
-    /* position: relative; */
+    position: relative;
     width: 100%;
     /* margin-top: 200px; */
     overflow: hidden;
     height:100%;
   }
   .hero-element3 {
-    position: absolute;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height:100%;
+    margin-top: -300px;
   }
   .hero-element4 {
     position: relative;
   }
   .hero-element5 {
     position: relative;
+    width: 100%;
+    overflow: hidden;
+    height:100%;
+    margin-top: -100px;
   }
 
   .layer_relative{
@@ -279,7 +289,7 @@
   .bg1{
     width: 100%;
     margin-left: -3%;
-    z-index: -1;
+    z-index: 0;
     position: relative;
     overflow: hidden;
   }
@@ -299,22 +309,45 @@
     position: relative;
     margin-top:8%;
   }
-  .layer2-1{
+  .bg3{
     left: 0;
-    width: 55%;
+    width: 100%;
+    z-index: -1;
+    position: relative;
+  }
+  .bg4{
+    width: 100%;
+    margin-right: 100px;
+    top: -370px;
+    z-index: -1;
+    position: relative;
+  }
+  .bg5{
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    position: relative;
+  }
+  .layer2-1{
+    left: -20%;
+    width: 75%;
     z-index: 1;
     position: absolute;
-    margin-top:15%;
+    margin-top:25%;
   }
-
-
+  .layer4-1{
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    position: relative;
+  }
 
 
   .moto1{
     font-size: 20px;
     font-weight: 500;
     color: var(--black);
-    top: 180px;
+    top: 130px;
     position: absolute;
     left: 0;
     max-width: 500px;
@@ -323,42 +356,384 @@
     margin: 5% 50% 0 8%;
     display: flex;
     flex-direction: column;
-  
   }
   
   .moto1 h1{
     font-family: var(--font-cool);
-    margin: 0 0 -15px ;
+    margin: 0 0 -11px ;
     color: var(--main);
-    font-size:30px;
+    font-size:45px;
   }
   .moto1 h2{
     color: var(--black);
-    font-size: 18px;
+    font-size: 27px;
     font-weight: 600;
     margin-bottom: 0;
     letter-spacing: 0.02em;
+    width:120%;
   }
   .moto1 p{
-    font-size: 17px;
+    font-size: 19px;
     margin-top  :30px;
     font-weight: 300;
   
   }
 
+  .moto2{
+    font-size: 27px;
+    font-weight: 400;
+    color: var(--black);
+    margin: 1% 5%;
+    position: relative;
+    top: -300px;
+    
+    max-width: 500px;
+    letter-spacing: 0.03em;
+  }
+  .moto2 h2{
+    color: var(--black);
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 0;
+    letter-spacing: 0.02em;
+    margin-left: 45%;
+  }
+  .moto2 h1{
+    font-family: var(--font-cool);
+    margin: -20px  30px 0 50% ;
+    color: var(--main);
+    font-size:44px;
+    width: 100%;
+  }
+  .moto2 p{
+    font-size: 19px;
+    margin-top  :30px;
+    font-weight: 300;
+    
+  }
+  .moto3{
+    font-size: 27px;
+    font-weight: 400;
+    color: var(--black);
+    position: absolute;
+    top: 110px;
+    left: 15%;
+    max-width: 500px;
+    z-index: 1;
+  }
+  .moto3 h2{
+    color: var(--black);
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .moto3 h1{
+    font-family: var(--font-cool);
+    margin: -20px  30px 10px ;
+    color: var(--main);
+    font-size:50px;
+  }
+
+  .moto4{
+    font-size: 27px;
+    font-weight: 400;
+    color: var(--black);
+    position: absolute;
+    top: 480px;
+    margin: 5%;
+    max-width: 500px;
+    letter-spacing: 0.03em;
+    z-index: 1;
+  }
+  .moto4 h1{
+    font-family: var(--font-cool);
+    margin: -10px 30px 10px;
+    color: var(--main);
+  }
+  .moto4 h2{
+    color: var(--black);
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .moto4 p{
+    font-size: 21px;
+    margin-top  :30px;
+    font-weight: 300;
+    color: var(--black);
+    letter-spacing: 0.03em;
+  }
+  .moto5{
+    font-size: 27px;
+    font-weight: 400;
+    color: var(--black);
+    position: absolute;
+    top: 150px;
+    left: 15%;
+    max-width: 500px;
+  }
+  .moto5 h2{
+    color: var(--black);
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .moto5 h1{
+    font-family: var(--font-cool);
+    margin: -18px  30px 10px ;
+    color: var(--main);
+    font-size:50px;
+  }
+
   .hero-btn{
     background-color: var(--main);
     border:none;
-    font-size: 17px;
-    margin-top: 220px;
-    padding: 5px 10px;
+    font-size: 19px;
+    padding: 5px 5px;
     border-radius: 8px; 
-    position: absolute;
-    left: 55%;
+    position: relative;
+    left: 108%;
+    top: -100px;
     z-index: 1;
   }
   .hero-btn a{
     color: white; 
+  }
+
+  .hero2-btn{
+    background-color: var(--main);
+    border:none;
+    font-size: 22px;
+    margin-top: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero2-btn a{
+    color: white;
+  }
+  .hero3-btn{
+    color: var(--main)    ;
+    border: 3px solid var(--main);
+    font-size: 22px;
+    margin-top: 40px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    position: relative;
+    float: right;
+    background-color: white;
+    width: 200px;
+  }
+  .hero4-btn{
+    display:flex;
+    justify-content: flex-end;
+  }
+  .hero4-btn button {
+    border:none;
+    background: none;
+	  color: inherit;
+  }
+  .hero4-btn button a{
+    color: var(--main)    ;
+    border:none;
+    font-size: 22px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: white;
+  }
+  .hero5-btn{
+    display:flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+    z-index: 1;
+  }
+
+  .hero5-btn button{
+    color: var(--main)    ;
+    border: 3px solid var(--main);
+    font-size: 22px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: white;
+  }
+
+  .layer1-1-1{
+    position: relative;
+    z-index: 1;
+    margin-top: -480px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+  .layer1-1-1 a{
+    text-decoration: none;
+    color:inherit;
+  }
+  .hero3-card1{
+    position: relative;
+    background-color: white;
+    border-radius: 105px 0;
+    margin-bottom: 50px;
+  }
+  .hero3-card2{
+    position: relative;
+    background-color: white;
+    border-radius: 0 105px ;
+  }
+  .hero3-card1-pic{
+    border: 2px solid var(--main);
+    padding: 10px;
+    border-radius: 30% 0;
+    width: 300px;
+    height: 300px;
+    box-sizing: unset;
+  }
+  .hero3-card2-pic{
+    border: 2px solid var(--main);
+    padding: 10px;
+    border-radius: 0 30% ;
+    width: 300px;
+    height: 300px;
+    box-sizing: unset;
+  }
+
+  .hero3-card1-pic img {
+    border-radius: 30% 0;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+
+  }
+  .hero3-card2-pic img {
+    border-radius: 0 30% ;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .hero3-card1-text, .hero3-card2-text{
+    margin-top: 15px;
+    width:330px;
+    
+  }
+
+  .hero3-card1-text span, .hero3-card2-text span{
+    font-size: 22px;
+    font-weight: 600;
+    
+  }
+  .hero3-card1-text p, .hero3-card2-text p{
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: 200;
+  }
+
+  .layer5-1-1{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: -500px;
+    margin: auto;
+  }
+  .layer5-1-1 a{
+    text-decoration: none;
+    color:inherit;
+  }
+  .hero5-card1{
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero5-card2{
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero5-card3{
+    position: relative;
+    display: flex;
+  }
+  .hero5-card1-pic{
+    border: 2px solid var(--main);
+    padding: 15px;
+    border-radius: 30% 0 0 0;
+    width: 275px;
+    min-width: 275px;
+    height: 275px;
+    position: relative;
+    box-sizing: unset;
+    background-color: white;
+    margin-bottom: 50px;
+  }
+
+  .hero5-card2-pic{
+    border: 2px solid var(--main);
+    padding: 15px;
+    border-radius: 0 30% 0 0;
+    width: 275px;
+    min-width: 275px;
+    height: 275px;
+    position: relative;
+    box-sizing: unset;
+    background-color: white;
+    margin-bottom: 50px;
+  }
+  
+  .hero5-card1-pic img {
+    border-radius: 30% 0 0 0;
+    width: 275px;
+    min-width: 275px;
+    height: 275px;
+    object-fit: cover;
+  }
+
+
+  .hero5-card2-pic img {
+    border-radius: 0 30% 0 0 ;
+    width: 275px;
+    min-width: 275px;
+    height: 275px;
+    object-fit: cover;
+
+  }
+
+  .hero5-card1-text, .hero5-card2-text{
+    z-index: 1;
+    position: absolute;
+    top: 47%;
+    background-color: rgba(255, 255, 255, 0.9 );
+    width: 98%;
+    height: 50%;
+    margin: auto;
+    left:1%;
+  }
+
+  
+  
+  .hero5-card1-text>h3, .hero5-card2-text>h3{
+    /* font-size: 26px; */
+    font-weight: 600;
+    margin: 2% 5%;
+
+  }
+  .hero5-card1-text p, .hero5-card2-text p{
+    /* font-size: 24px; */
+    font-weight: 200;
+    margin: 5%;
+  }
+  
+  @supports ((-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px))) {
+    .hero5-card1-text, .hero5-card2-text{
+      background-color: rgba(255, 255, 255, 0.2 );
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+    }
   }
   
 

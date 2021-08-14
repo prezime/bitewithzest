@@ -32,9 +32,9 @@
       <li class="{% if category.description == object.description %}active{% endif %}"><a href="{% url 'category_view' category.slug  %}" >{{category.description}}</a></li>
     {% endfor %}
     </ul>
-    <div class="menu-toggle" onclick="toggleX(this)">
+    <div class="menu-toggle" id="menu-toggle" onclick="toggleX(this)">
       <div class="bar1" id="bar1"></div>
-      <div class="bar2" ></div>
+      <div class="bar2" id="bar2"></div>
       <div class="bar3" id="bar3"></div>
     </div>
   </nav>
@@ -105,41 +105,85 @@
   <script>
     var s = skrollr.init();
     var w = window.outerWidth;
-    console.log(w);
-    if (w <= 640) {
-      s.destroy();
-    }
-  </script>
-  <script>
+
     window.onscroll = function() {beSticky()};
     var navbar = document.getElementById("navbar");
     var sticky = navbar.offsetTop;
-    function beSticky() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
-      } else {
-        navbar.classList.remove("sticky");
+    
+    
+
+    if (w <= 640) {
+      s.destroy();
+      // var sticky = 0;
+      function toggleX(x) {
+        // console.log(sticky);
+        x.classList.toggle("change");
+        var navbar_ul = document.getElementById("navbar_ul");
+        var bar1 = document.getElementById("bar1");
+        var bar3 = document.getElementById("bar3");
+        if (x.className == "menu-toggle change"){
+          console.log('change yes');
+          navbar_ul.style.display = 'flex';
+          bar1.style.backgroundColor = "rgb(0, 170, 179)";
+          bar3.style.backgroundColor = "rgb(0, 170, 179)";
+          // navbar.classList.add("sticky");
+          navbar_ul.style.zIndex = 10;
+          navbar.style.zIndex = 10;
+        } else {
+          console.log(navbar.classList);
+          console.log('change no');
+          navbar_ul.style.display = 'none';
+          bar1.style.backgroundColor = "white";
+          bar3.style.backgroundColor = "white";
+          beSticky();
+      
+        }  
+      }
+      document.onclick = function (e) {
+        console.log(e.target.id);
+        var menuToggle = document.getElementById("menu-toggle");
+        if (e.target.id !== 'navbar_ul' && e.target.id !== 'menu-toggle' && e.target.id !== 'change' && e.target.id !== 'bar3' && e.target.id !== 'bar2' && e.target.id !== 'bar1')
+        {
+          menuToggle.classList.remove('change');
+          navbar_ul.style.display = 'none';
+          bar1.style.backgroundColor = "white";
+          bar3.style.backgroundColor = "white";
+          
+        }
+        if (!(e.target instanceof HTMLAnchorElement) && (e.target.id !== 'menu-toggle' && e.target.id !== 'bar3' && e.target.id !== 'bar2' && e.target.id !== 'bar1' && window.pageYOffset > sticky))
+        {
+          navbar.style.position = 'fixed';
+          navbar.style.top = 0;
+          navbar.style.zIndex = 10;
+        }
+      }
+      function beSticky() {
+        // console.log(sticky);
+        // console.log(window.pageYOffset);
+        if (window.pageYOffset >= sticky) {
+          navbar.style.position = 'absolute';
+          navbar.style.top = '100px';
+        } 
+      }
+    } else {
+      //ovdje je sve dobro. ne diraj
+      function beSticky() {
+        // console.log(sticky);
+        if (window.pageYOffset >= sticky) {
+          navbar.style.position = 'fixed';
+          navbar.style.top = 0;
+        } else {
+          navbar.style.position = 'absolute';
+          navbar.style.top = '100px';
+        }
       }
     }
-    function toggleX(x) {
-      x.classList.toggle("change");
-      var navbar_ul = document.getElementById("navbar_ul");
-      var navbar = document.getElementById("navbar");
-      var bar1 = document.getElementById("bar1");
-      var bar3 = document.getElementById("bar3");
-      if (x.className == "menu-toggle change"){
-        navbar_ul.style.display = 'flex';
-        bar1.style.backgroundColor = "rgb(0, 170, 179)";
-        bar3.style.backgroundColor = "rgb(0, 170, 179)";
-        navbar.style.zIndex = 2;  
-      } else {
-        navbar_ul.style.display = 'none';
-        bar1.style.backgroundColor = "white";
-        bar3.style.backgroundColor = "white";
-        navbar.style.zIndex = 1;      
-      }  
-    }
-    </script>
+    
+    
+    
+
+  </script>
+
   
 </body>
 </html>
