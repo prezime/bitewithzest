@@ -39,7 +39,8 @@ if i need to know in which view I am
 #copy from remote ssh to local:
 scp prezime@s30.wservices.ch:~/bitewithzest/db.json /Users/igorsarkanovic/Documents/Python/bitewithzest/  
 scp -r prezime@s30.wservices.ch:~/media /Users/igorsarkanovic/Documents/Python/bitewithzest/media
-scp -r /Users/igorsarkanovic/Documents/Python/bitewithzest/media/layout prezime@s30.wservices.ch:~/media/layout
+scp -r /Users/igorsarkanovic/Documents/Python/bitewithzest/media/layout prezime@s30.wservices.ch:~/bitewithzest/media/layout
+cp -R ~/media/layout ~/bitewithzest/media/layout
 
 ..ako bude problema sa ckeditor uploaderom -> urls.py:
 if settings.DEBUG:

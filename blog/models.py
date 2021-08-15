@@ -103,6 +103,7 @@ class Post(models.Model):
     add_pic_desc = models.CharField(max_length=200,default='',blank=True)
     ingredients = RichTextField(blank=True)
     preparationtext = RichTextUploadingField(default='',blank=True)
+    additionaltext = RichTextUploadingField(default='',blank=True)
     main_pic = models.FileField(upload_to=path_rename.path_and_rename_main,blank=True)
     main_pic_desc = models.CharField(max_length=200,default='',blank=True)
     tip = RichTextField(default='',blank=True)

@@ -53,7 +53,7 @@ def shared_context(context,self):
     
 
     post_queryset_featured = Post.objects.all().filter(cardtype='1').filter(status=1).order_by('id') 
-    post_count = 5
+    post_count = 6
     p_cat1 = Paginator(post_queryset_cat1,post_count)
     p_cat2 = Paginator(post_queryset_cat2,post_count)
     p_cat3 = Paginator(post_queryset_cat3,post_count)

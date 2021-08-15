@@ -33,45 +33,71 @@
     
     <div class="post-intro">
         <div class="post-opener">
-            <img src="../media/post{{post.id}}/opener/post_opener{{post.id}}.jpg" alt=""> 
+            {% if post.category != 'Recipes' %}
+            <img class="layer1-1" src="../media/layout/bg_plants.png" alt=""> 
+            {% endif %} 
+            <img class="bg-post" src="../media/post{{post.id}}/opener/post_opener{{post.id}}.jpg" alt=""> 
             <div class="post-title"><h1>{{ object.titleplus | safe }}</h1></div>         
         </div>
+        </strong>
+        
         <div class="intro-text">  
+            {% if post.category != 'Recipes' %}
             {{ object.intro | safe }}
+            {% endif %} 
             {% if object.custom_date %}
             <div class="post-date">{{ object.custom_date | date:"F d Y"}}, {{ object.author}}</div>
             {% else %}    
             <div class="post-date">{{ object.created_on | date:"F d Y"}}, {{ object.author}}</div>
             {% endif %} 
         </div>
+        
             
     </div> 
     <div class="post-content">
-        <div class="maintext" id="maintext">
-            {{ object.maintext | safe }}
-        </div> 
-        {% if not object.title_invisible %}
-        <div class="post-title">
-            {{ object.title }}  
+        <div class="fill-left">
+            
         </div>
-        {% endif %} 
-        <div class="preparation" id="preparation">
-            {% if object.intro1 %} 
-            <div class="intro1">
-                {{ object.intro1 | safe }}    
+        <div class="fill-right">
+            
+            {{ object.additionaltext | safe }} 
+        </div>
+        <div class="content">
+            <div class="maintext" id="maintext">
+                <strong>
+                {% if post.category == 'Recipes' %}
+                {{ object.intro | safe }}
+                {% endif %} 
+                </strong>
+                {{ object.maintext | safe }}
+            </div> 
+            {% if not object.title_invisible %}
+            <div class="post-title">
+                {{ object.title }}  
             </div>
             {% endif %} 
-            {% if object.intro_pic %}
-                <img src="../media/post{{post.id}}/intro/post_intro{{post.id}}.jpg" alt="">
-            {% endif %}    
-            {{ object.legend | safe }}  
-        </div>    
-        <div class="ingredients"> 
-            {{ object.ingredients | safe }}
-        </div>
-        <div class="preparationtext"> 
-            {{ object.preparationtext | safe }}
-        </div>
+            <div class="preparation" id="preparation">
+                {% if object.intro1 %} 
+                <div class="intro1">
+                    {{ object.intro1 | safe }}    
+                </div>
+                <div class="legend">
+                    {{ object.legend | safe }} 
+                </div>
+                {% endif %} 
+                {% if object.intro_pic %}
+                    <img src="../media/post{{post.id}}/intro/post_intro{{post.id}}.jpg" alt="">
+                {% endif %} 
+                    
+            </div>   
+             
+            <div class="ingredients"> 
+                {{ object.ingredients | safe }}
+            </div>
+            <div class="preparationtext"> 
+                {{ object.preparationtext | safe }}
+            </div>
+        
         
          
         {% if object.relates_to.id != 1 %}
@@ -81,11 +107,10 @@
                 <img src="../../media/post{{object.relates_to.id}}/thumbs/post_thumb{{object.relates_to.id}}.jpg" alt="">
             </div>
                 <div class="link-post-card__info">
-                    <!-- <div class="link-post-card__date">
-                        <span>{{ object.relates_to.created_on | date:"F d Y"}}</span>
-                    </div> -->
-                <!-- <h1 class="link-post-card__title">{{object.relates_to.title}}</h1> -->
-                <p class="link-post-card__text" id="link-post-card__text">{{object.relates_to.relates_to_desc}} </p>
+                    <img src="../../media/layout/tip.png" alt="">    
+                    <p class="link-post-card__text" id="link-post-card__text">{{post.relates_to_desc}} </p>
+                    <p class="link-post-card__title">{{object.relates_to.title}}</p>
+                    {{ object.relates_to.legend | safe}}
             </div>
         </div>
         </a>
@@ -112,28 +137,33 @@
 
         
     </div>
+</div>
     
 
 </div>
 <div class="post-footer">
-    <div class="gallery">
+    
         <!-- Blog Entries Column -->
     <div class="cat-header">
       <div class="cat-header-col1 post-cat-title">FEATURED</div>
-      <div class="cat-header-col2"><div class="post-cat-more"><a href="{% url 'featured_view' 'featured' %}">more >>></a></div></div>
+      <div class="cat-header-col2"></div>
     </div>
-    {% for post in post_featured_list|shuffle|slice:":3" %}
-    <a href="{% url 'post_detail' post.slug  %}">
-      <div class="card_featured">
-        <div class="card-img-feat">
-          <img src="../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="" />
+    <div class="featured">
+        {% for post in post_featured_list|shuffle|slice:":3" %}
+        <a href="{% url 'post_detail' post.slug  %}">
+        <div class="{% cycle  'card_featured1' 'card_featured2' %}">
+            <div class="{% cycle  'card_featured1-pic' 'card_featured2-pic' %}">
+            <img src="../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="" />
+            </div>
+            <div class="{% cycle  'card_featured1-text' 'card_featured2-text' %}">
+                <h3>{{post.title}}</h3>
+
+                <p>{{ post.intro|safe|slice:"171" }}{% if post.intro|safe|length > 171 %}...{% endif %}</p>
+            </div>  
         </div>
-        <div class="card-title-feat">
-          <h5>{{ post.titleplus|safe|slice:"60" }}{% if post.titleplus|safe|length > 60 %}...{% endif %}</h5>
-        </div>  
-      </div>
-    </a>
-    {% endfor %}
+        </a>
+        {% endfor %}
+    </div>
 </div>
 
 </div> 
