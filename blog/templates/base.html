@@ -112,9 +112,19 @@
     
     
 
-    if (w <= 640) {
+    if (w <= 769) {
       s.destroy();
-      // var sticky = 0;
+      var maintext = document.getElementsByClassName('maintext');
+      var documentImages = document.getElementsByTagName('img');
+      var result = '';
+      for (var i=0, len=documentImages.length|0; i<len; i=i+1|0) {
+        result = documentImages[i].style.width;
+        if (parseInt(result,10) >= 400){
+          documentImages[i].style.width = '100%';
+        }
+      }
+      
+
       function toggleX(x) {
         // console.log(sticky);
         x.classList.toggle("change");
@@ -154,7 +164,7 @@
         {
           navbar.style.position = 'fixed';
           navbar.style.top = 0;
-          navbar.style.zIndex = 10;
+          navbar.style.zIndex = 2;
         }
       }
       function beSticky() {
@@ -178,6 +188,7 @@
         }
       }
     }
+   
     
     
     

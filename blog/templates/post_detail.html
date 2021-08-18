@@ -34,15 +34,19 @@
     <div class="post-intro">
         <div class="post-opener">
             {% if post.category != 'Recipes' %}
-            <img class="layer1-1" src="../media/layout/bg_plants.png" alt=""> 
+            <img class="layer1-1 desktop" src="../media/layout/bg_plants.png" alt=""> 
+            <img class="layer1-1 mobile " src="../media/layout/bg_plantsMob.png" alt=""> 
+            <img class="bg-post " src="../media/post{{post.id}}/opener/post_opener{{post.id}}.jpg" alt=""> 
+            {% else %} 
+            <img class="bg-post marginTop0" src="../media/post{{post.id}}/opener/post_opener{{post.id}}.jpg" alt=""> 
             {% endif %} 
-            <img class="bg-post" src="../media/post{{post.id}}/opener/post_opener{{post.id}}.jpg" alt=""> 
-            <div class="post-title"><h1>{{ object.titleplus | safe }}</h1></div>         
+                   
         </div>
         </strong>
         
         <div class="intro-text">  
-            {% if post.category != 'Recipes' %}
+            <div class="post-title"><h1>{{ object.titleplus | safe }}</h1></div>  
+            {% if post.category == 'Recipes' %}
             {{ object.intro | safe }}
             {% endif %} 
             {% if object.custom_date %}
@@ -63,31 +67,37 @@
             {{ object.additionaltext | safe }} 
         </div>
         <div class="content">
+            
             <div class="maintext" id="maintext">
                 <strong>
-                {% if post.category == 'Recipes' %}
+                {% if post.category != 'Recipes' %}
                 {{ object.intro | safe }}
                 {% endif %} 
                 </strong>
                 {{ object.maintext | safe }}
             </div> 
-            {% if not object.title_invisible %}
-            <div class="post-title">
-                {{ object.title }}  
-            </div>
-            {% endif %} 
-            <div class="preparation" id="preparation">
-                {% if object.intro1 %} 
-                <div class="intro1">
-                    {{ object.intro1 | safe }}    
+            
+            <div class="preparation flex-direction-column" id="preparation">
+                <div class="preparation-content">
+                    {% if not object.title_invisible %}
+                    <div class="post-title-inner">
+                        <h2>{{ object.title }}</h2>
+                    </div>
+                    {% endif %}
+                    {% if object.intro1 %} 
+                    <div class="intro1">
+                        {{ object.intro1 | safe }}    
+                    </div>
+                    <div class="legend">
+                        {{ object.legend | safe }} 
+                    </div>
+                    {% endif %} 
                 </div>
-                <div class="legend">
-                    {{ object.legend | safe }} 
+                <div class="preparation-pic">
+                    {% if object.intro_pic %}
+                        <img src="../media/post{{post.id}}/intro/post_intro{{post.id}}.jpg" alt="">
+                    {% endif %} 
                 </div>
-                {% endif %} 
-                {% if object.intro_pic %}
-                    <img src="../media/post{{post.id}}/intro/post_intro{{post.id}}.jpg" alt="">
-                {% endif %} 
                     
             </div>   
              
@@ -102,12 +112,12 @@
          
         {% if object.relates_to.id != 1 %}
         <a href="{% url 'post_detail' object.relates_to.slug  %}">
-        <div class="link-post-card"> 
+        <div class="link-post-card flex-direction-column marginTop30perc marginBottom30perc"> 
             <div class="link-post-card__img">
-                <img src="../../media/post{{object.relates_to.id}}/thumbs/post_thumb{{object.relates_to.id}}.jpg" alt="">
+                <img  src="../../media/post{{object.relates_to.id}}/thumbs/post_thumb{{object.relates_to.id}}.jpg" alt="">
             </div>
                 <div class="link-post-card__info">
-                    <img src="../../media/layout/tip.png" alt="">    
+                    <img class="width40perc" src="../../media/layout/tip.png" alt="">    
                     <p class="link-post-card__text" id="link-post-card__text">{{post.relates_to_desc}} </p>
                     <p class="link-post-card__title">{{object.relates_to.title}}</p>
                     {{ object.relates_to.legend | safe}}
@@ -132,6 +142,9 @@
         {% if object.tip %}
             <div class="tip"> 
                 {{ object.tip | safe }}
+                <div class="tip-pic">    
+                    <img class="width40perc" src="../../media/layout/tip.png" alt=""> 
+                </div>
             </div>
         {% endif %}
 
