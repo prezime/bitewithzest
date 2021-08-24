@@ -1,39 +1,40 @@
 {% extends 'base.html' %} 
 {% load shuffle %}
 {% block post_content %}
-<div class="breadcrumbs">
-    <ul>
-        <li class="breadcrumbs-item">
-            <a href="/" class="breadcrumbs-link">Home</a>
-        </li>
-        <li class="breadcrumbs-item">
-            {% for category in cat_list %}
-                {% if category.description == post.category %}
-                <a href="{% url 'category_view' category.slug  %}"class="breadcrumbs-link">
-                    {{ object.category }} 
-                </a>
-                {% endif %}
-            {% endfor %} 
-        </li>
-        {% for subcategory in subcat_list %}
-            {% if subcategory.name == post.subcategory %}
-            <li class="breadcrumbs-item">
-                <a href="{% url 'subcategory_view' subcategory.slug  %}"class="breadcrumbs-link">
-                    {{ post.subcategory }}
-                </a>            
-            </li>
-            {% endif %}
-        {% endfor %}
-        <li class="breadcrumbs-item">
-            <a href="{% url 'post_detail' post.slug  %}" class="breadcrumbs-link">{{ object.title }}</a>
-        </li>
-    </ul>
-</div>
+
 <div class="post-body">
-    
+    <div class="breadcrumbs" id="breadcrumbs">
+        
+        <ul>
+            <li class="breadcrumbs-item">
+                <a href="/" class="breadcrumbs-link">Home</a>
+            </li>
+            <li class="breadcrumbs-item">
+                {% for category in cat_list %}
+                    {% if category.description == post.category %}
+                    <a href="{% url 'category_view' category.slug  %}"class="breadcrumbs-link">
+                        {{ object.category }} 
+                    </a>
+                    {% endif %}
+                {% endfor %} 
+            </li>
+            {% for subcategory in subcat_list %}
+                {% if subcategory.name == post.subcategory %}
+                <li class="breadcrumbs-item">
+                    <a href="{% url 'subcategory_view' subcategory.slug  %}"class="breadcrumbs-link">
+                        {{ post.subcategory }}
+                    </a>            
+                </li>
+                {% endif %}
+            {% endfor %}
+            <li class="breadcrumbs-item">
+                <a href="{% url 'post_detail' post.slug  %}" class="breadcrumbs-link">{{ object.title }}</a>
+            </li>
+        </ul>
+    </div>
     <div class="post-intro">
         <div class="post-opener">
-            {% if post.category != 'Recipes' %}
+            {% if post.category != 'Recipes' and post.category != 'Lifestyle' %}
             <img class="layer1-1 desktop" src="../media/layout/bg_plants.png" alt=""> 
             <img class="layer1-1 mobile " src="../media/layout/bg_plantsMob.png" alt=""> 
             <img class="bg-post " src="../media/post{{post.id}}/opener/post_opener{{post.id}}.jpg" alt=""> 

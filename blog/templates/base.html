@@ -105,15 +105,17 @@
   <script>
     var s = skrollr.init();
     var w = window.outerWidth;
-
-    window.onscroll = function() {beSticky()};
     var navbar = document.getElementById("navbar");
     var sticky = navbar.offsetTop;
+    var djangoView = "{{ request.resolver_match.url_name }}";
     
     
 
     if (w <= 769) {
       s.destroy();
+      window.onscroll = function() {beSticky()};
+      var bcWidth = 0;
+      
       var maintext = document.getElementsByClassName('maintext');
       var documentImages = document.getElementsByTagName('img');
       var result = '';
@@ -123,6 +125,7 @@
           documentImages[i].style.width = '100%';
         }
       }
+      
       
 
       function toggleX(x) {
@@ -168,17 +171,48 @@
         }
       }
       function beSticky() {
-        // console.log(sticky);
-        // console.log(window.pageYOffset);
         if (window.pageYOffset >= sticky) {
           navbar.style.position = 'absolute';
           navbar.style.top = '100px';
         } 
       }
     } else {
+      window.onscroll = function() {beSticky()};
+      var bcWidth = 0;
+      var piWidth = 0;
+      var factor = 0;
+      var leftOffset = '';
+      if (djangoView == 'post_detail'){
+        var refElement = document.getElementsByClassName('post-intro');
+        factor = 1;
+      } else if (djangoView == 'category_view'){ 
+        var refElement = document.getElementsByClassName('gallery-cat');
+        factor = 0.7;
+      }  
+      var breadcrumbs = document.getElementsByClassName('breadcrumbs');
+      var bc = document.getElementById('breadcrumbs');
+      for (var i = 0, len = breadcrumbs.length; i < len; i++) {
+        bcWidth += breadcrumbs[i].offsetWidth;
+      }
+      for (var i = 0, len = refElement.length; i < len; i++) {
+        piWidth += refElement[i].offsetWidth;
+      }
+      piWidth = piWidth * factor;
+      
+      if (djangoView == 'post_detail'){
+        leftOffset = -(piWidth-bcWidth)+'px';
+        bc.style.marginLeft = leftOffset;
+        console.log(djangoView);
+      } else if (djangoView == 'category_view'){ 
+        leftOffset = (bcWidth-piWidth)/2+'px';
+        console.log(bcWidth);
+        console.log(piWidth);
+        bc.style.marginLeft = leftOffset;
+        
+      }
       //ovdje je sve dobro. ne diraj
       function beSticky() {
-        // console.log(sticky);
+        console.log(sticky);
         if (window.pageYOffset >= sticky) {
           navbar.style.position = 'fixed';
           navbar.style.top = 0;

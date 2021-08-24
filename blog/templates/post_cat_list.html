@@ -4,7 +4,8 @@
 {% block post_listed_showcase %}
 
 <div class="cat-wrapper">
-  <div class="breadcrumbs">
+  
+  <div class="breadcrumbs" id="breadcrumbs">
     <ul>
         <li class="breadcrumbs-item">
           <a href="/" class="breadcrumbs-link">Home</a>
@@ -16,7 +17,6 @@
         </li>
     </ul>
   </div>
-  
   <div class="moto5" style="margin-top: 10%;"> 
     {% if object.description == 'Recipes' %}
       <h2>Plant-based</h2>
@@ -40,6 +40,7 @@
   </div>
   
   <div class="gallery-cat" id="galleryCat">
+    
     {% if request.resolver_match.url_name  == 'category_view' %}
       {% for post in post_cat_list %}
         {% if object.description == post.category %}

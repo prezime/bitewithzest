@@ -288,6 +288,7 @@
     z-index: -1;
     position: relative;
   }
+
   .layer2-1{
     left: -10%;
     width: 40%;
@@ -434,7 +435,6 @@
     color: var(--main);
     font-size:50px;
   }
-
   .hero-btn{
     background-color: var(--main);
     border:none;
@@ -523,7 +523,7 @@
     width: 70%;
     left: 50%;
     margin-left: -35%;
-    
+
   }
   .layer1-1-1 a{
     text-decoration: none;
@@ -567,7 +567,6 @@
     box-sizing: unset;
   }
   
-
   .hero3-card1-pic img {
     border-radius: 30% 0;
     width: 400px;
@@ -585,13 +584,11 @@
   .hero3-card1-text, .hero3-card2-text{
     margin-top: 30px;
     width:440px;
-    
   }
 
   .hero3-card1-text span, .hero3-card2-text span{
     font-size: 26px;
     font-weight: 600;
-    
   }
   .hero3-card1-text p, .hero3-card2-text p{
     font-size: 21px;
@@ -676,6 +673,10 @@
     font-size: 26px;
     font-weight: 600;
   }
+  .hero5-card1-text h3, .hero5-card2-text h3{
+    font-size: 31px;
+    font-weight: 600;
+  }
   .hero5-card1-text p, .hero5-card2-text p{
     font-size: 24px;
     font-weight: 200;
@@ -689,7 +690,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 200px;
-
   }
   .post-intro{
     display: flex;
@@ -704,7 +704,6 @@
     position: relative;
     flex-basis: max-content;
   }
-
   .post-opener img{
     margin: 3%;
     border-radius: 0 180px;
@@ -745,7 +744,6 @@
     border-radius: 40px;
     z-index: 1;
   }
-  
 
   .post-content {
     display: grid;
@@ -1084,12 +1082,10 @@
 
   .breadcrumbs{
     position: relative;
-    padding: 10px;
-    /* z-index: 2; */
+    padding: 10px 0;
+    z-index: 2;
     font-size: 18px;
     text-align: left;
-    margin: 0 14.5%;
-    top:200px;
   }
   .breadcrumbs-item{
     display: inline;
