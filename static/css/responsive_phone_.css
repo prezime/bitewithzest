@@ -1266,7 +1266,7 @@
     color: var(--main);
   }
   .acc_wrapper{
-    max-width: 57%;
+    max-width: 100%;
     margin: -50px auto 50px auto;
   }
   .acc_wrapper .accordion{
