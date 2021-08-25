@@ -1122,11 +1122,10 @@
 
   .breadcrumbs{
     position: relative;
-    padding: 10px 0;
     z-index: 2;
     font-size: 20px;
-    text-align: left;
-    left: -10%;
+    align-self: flex-start;
+    left: 10px;
   }
   .breadcrumbs-item{
     display: block;
@@ -1167,7 +1166,7 @@
     position: relative;
   }
   .cat-wrapper .breadcrumbs{
-    top: 50px;
+    display: none;
   }
 
   .post-cat-card1{
