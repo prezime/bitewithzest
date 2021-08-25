@@ -1310,6 +1310,9 @@
   .acc_wrapper .accordion .acc_content ul{
     margin-left: 20px;
   }
+  .acc_wrapper .accordion .acc_content img{
+    width: 100%;
+  }
   .acc_wrapper .accordion.active .acc_content{
     height: auto;
     padding-bottom: 20px;
