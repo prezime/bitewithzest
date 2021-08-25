@@ -1272,6 +1272,7 @@
     overflow: hidden;
     transition: 0.9s;
     overflow-y: auto;
+    cursor: pointer;
   }
   .acc_wrapper .accordion .acc_content ul{
     margin-left: 20px;

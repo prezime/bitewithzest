@@ -1267,7 +1267,8 @@
   }
   .acc_wrapper{
     max-width: 100%;
-    margin: -50px auto 50px auto;
+    margin: -250px auto 50px auto;
+    z-index: 3;
   }
   .acc_wrapper .accordion{
     position: relative;

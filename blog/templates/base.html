@@ -160,9 +160,9 @@
         }  
       }
       document.onclick = function (e) {
-        console.log(e.target.id);
+        console.log(e.target.parentNode.offsetParent.className);
         var menuToggle = document.getElementById("menu-toggle");
-        if (e.target.id !== 'navbar_ul' && e.target.id !== 'menu-toggle' && e.target.id !== 'change' && e.target.id !== 'bar3' && e.target.id !== 'bar2' && e.target.id !== 'bar1')
+        if (e.target.id !== 'navbar_ul' && e.target.id !== 'menu-toggle' && e.target.id !== 'change' && e.target.id !== 'bar3' && e.target.id !== 'bar2' && e.target.id !== 'bar1' && e.target.parentNode.offsetParent.className !== 'accordion')
         {
           menuToggle.classList.remove('change');
           navbar_ul.style.display = 'none';
@@ -170,7 +170,7 @@
           bar3.style.backgroundColor = "white";
           
         }
-        if (!(e.target instanceof HTMLAnchorElement) && (e.target.id !== 'menu-toggle' && e.target.id !== 'bar3' && e.target.id !== 'bar2' && e.target.id !== 'bar1' && window.pageYOffset > sticky))
+        if (!(e.target instanceof HTMLAnchorElement) && (e.target.id !== 'menu-toggle' && e.target.id !== 'bar3' && e.target.id !== 'bar2' && e.target.id !== 'bar1' && e.target.parentNode.offsetParent.className !== 'accordion' && e.target.parentNode.offsetParent.className !== 'accordion active' && window.pageYOffset > sticky))
         {
           navbar.style.position = 'fixed';
           navbar.style.top = 0;
