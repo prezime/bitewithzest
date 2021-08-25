@@ -85,10 +85,11 @@
   <a class='next' href="?page={{post_cat_list.next_page_number}}">&#8594;</a>
   {% endif %}
 </div>  
-
-
- 
-
+{% if object.description  == 'FAQ' %}
+{% include 'index_faq.html' %}
+{% endif %}
 {% endblock  %}
+
+
   
 

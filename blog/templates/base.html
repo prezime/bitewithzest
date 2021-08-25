@@ -48,7 +48,9 @@
     {% endif %} 
     {% block post_content %}{% endblock post_content %}
     {% block post_listed_showcase %}{% endblock post_listed_showcase %} 
+    
     {% block post_showcase %}{% endblock post_showcase %} 
+    
     <!-- CONTENT -->
 
     <img class="before_footer" src="/../media/layout/footer_basil.png">
@@ -108,7 +110,12 @@
     var navbar = document.getElementById("navbar");
     var sticky = navbar.offsetTop;
     var djangoView = "{{ request.resolver_match.url_name }}";
-    
+    const accordion = document.getElementsByClassName('accordion');
+    for (var i = 0, len = accordion.length; i < len; i++){
+      accordion[i].addEventListener('click', function(){
+        this.classList.toggle('active');
+      })
+    }
     
 
     if (w <= 769) {
