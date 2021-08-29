@@ -1,23 +1,31 @@
 {% extends "base.html" %} 
 {% load static %}
 {% block about %}
-<div class="about">
-  <hr></hr>
-  <!-- <div class="ornament1"><img src="{% static 'img/web_ornament-01.jpeg' %}" alt=""></div>
-  <div class="topleft"><img src="{% static 'img/web_ornament-01-01.jpeg' %}" alt=""></div> -->
-  <div class="abouttext"> 
-    
-   <br> 
-  <p>Whatever we are doing, creating, thinking, we can feel the moment and do it with passion. 
-    This is an inbuilt part of us, it is our nature, the same as we are part of this world, together with all other creatures. 
-    By respecting and being compassionate towards all living beings we are just fulfilling our true self. 
-    Because that's what we are... passion as well as compassion.
-    Let's explore this together.</p>
-    <br>
-    
-  <hr></hr>
+<div class="about_wrapper">
+  <div class="moto5"> 
+    <h2>About</h2>
+    <h1>Us</h1>
   </div>
-  <!-- <div class="bottomright"><img src="{% static 'img/web_ornament-01-02.jpeg' %}" alt=""></div>
-  <div class="ornament2"><img src="{% static 'img/web_ornament-02.jpeg' %}" alt=""></div> -->
+  
+  <div class="layer5-1-1" >
+    <div style="color:var(--grey)">
+      <h3>Founders and editors</h3>
+    </div>
+    {% for author in authors_list|slice:"4" %}
+    
+      <div class="{% cycle 'hero5-card1' 'hero5-card2' %}">
+        <div class="{% cycle 'hero5-card1-pic' 'hero5-card2-pic' %}">
+          <img src="https://source.unsplash.com/random" alt="">  
+        </div>
+        <div class="{% cycle 'hero5-card1-text' 'hero5-card2-text' %}">
+            <h3>{{author.name}}</h3>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae animi deleniti accusantium velit pariatur labore laborum cupiditate voluptatibus optio distinctio aliquam hic odit ipsam, laudantium tempora et, accusamus sequi unde?</p>
+        </div>
+      </div>
+    
+    {% endfor %}
+  </div>
 </div>
+  
 {% endblock about %}

@@ -91,7 +91,7 @@
     /* height:100%; */
     padding: 8% 3% 1% 3%;
     background: url('/../media/layout/footer_basil.png') no-repeat top right;
-    background-size: 100%;
+    background-size: 110%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -142,17 +142,14 @@
     display: flex;
     justify-content: center;
     align-items:center;
-    width: 40px;
-    height: 40px;
     color: white;
     margin-right: 10px;
-    background: var(--main_btn);
     text-decoration: none;
-    border-radius: 4px;
-    font-size: 28px;
+    font-size: 30px;
   }
   .sci li a:hover{
     background: var(--main);
+    color: var(--light_grey);
   }
 
   .quicklinks{
@@ -164,14 +161,15 @@
     list-style: none;
   }
   .quicklinks ul li a{
-    color: var(--light_grey);
+    color: white;
     text-decoration: none;
     display: inline-block;
     list-style: none;
     /* margin: 1px;   */
   }
   .quicklinks ul li a:hover{
-    color: white;
+    
+    color: var(--light_grey);
   }
   .footer_contact{
     position: relative;
@@ -185,6 +183,7 @@
     display: flex;
     flex-direction: row;
     color: var(--light_grey);
+    
   }
   .footer_contact .footer_contact_info li span:nth-child(1){
     font-size: 18px;
@@ -193,10 +192,10 @@
   .footer_contact .footer_contact_info li a{
     list-style: none;
     text-decoration: none;
-    color: var(--light_grey);
+    color: white;
   }
   .footer_contact .footer_contact_info li a:hover{
-    color: white;
+    color: var(--light_grey);
   }
 
   .footer_placeholder{

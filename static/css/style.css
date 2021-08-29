@@ -69,6 +69,24 @@ button a{
   text-decoration: none;
 
 }
+li.active {
+  position: relative;
+  transition: 0.3s;
+}
+li.active:before {
+  content: '';
+  border-bottom: 2px solid var(--yellow);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 90%;
+  transition: 0.3s;
+}
+header nav li.active:before {
+  width: 60%;
+}
 a {
   position: relative;
   text-decoration: none;

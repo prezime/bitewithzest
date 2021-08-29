@@ -19,10 +19,10 @@
       <a href="/"><img src="{% static 'img/BwZ_logo_W.png' %}" alt="logo"></a>
     </div>
     <nav>
-      <ul>
-        <li><a href="#">about</a></li>
-          <li><a href="{% url 'contact_view'  %}">Contact</a></li>
-          <li><a href="javascript:void(0)">fb</a>  <a href="javascript:void(0)">ig</a></li>
+      <ul id="nav_ul">
+        <li class="{% if request.resolver_match.url_name  == 'about_view' %}active{% endif %}"><a href="{% url 'about_view'  %}">About</a></li>
+        <li class="{% if request.resolver_match.url_name  == 'contact_view' %}active{% endif %}"><a href="{% url 'contact_view'  %}">Contact</a></li>
+        <li><a href="javascript:void(0)"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>  <a href="javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
       </ul>
     </nav>
   </header>
@@ -59,9 +59,11 @@
       <div class="footer_container">
         <div class="sec aboutus">
           <h2>About Us</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Iste omnis, aliquam voluptatibus doloribus quos aspernatur. 
-            Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <p>Whatever we are doing, creating, thinking, we can feel the moment and do it with passion. 
+            This is an inbuilt part of us, it is our nature, the same as we are part of this world, together with all other creatures. 
+            By respecting and being compassionate towards all living beings we are just fulfilling our true self. 
+            Because that's what we are... passion as well as compassion.
+            We explore this together with you...
             </p>
           <ul class="sci">
             <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
@@ -112,6 +114,7 @@
     var sticky = navbar.offsetTop;
     var djangoView = "{{ request.resolver_match.url_name }}";
     const accordion = document.getElementsByClassName('accordion');
+
     for (var i = 0, len = accordion.length; i < len; i++){
       accordion[i].addEventListener('click', function(){
         this.classList.toggle('active');
@@ -190,6 +193,7 @@
       var piWidth = 0;
       var factor = 0;
       var leftOffset = '';
+      var refElement = [];
       if (djangoView == 'post_detail'){
         var refElement = document.getElementsByClassName('post-intro');
         factor = 1;

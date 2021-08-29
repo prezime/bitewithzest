@@ -1,11 +1,10 @@
-from django.shortcuts import render,redirect
-from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render
+from django.http import HttpResponse
 from django.views import generic
-from .models import User,Post,Category,SubCategory,Contibutor
+from .models import Post,Category,SubCategory,Contibutor
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger, InvalidPage
-from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
-from django.urls import reverse
+
 
 
 
@@ -147,17 +146,11 @@ class FeaturedList(generic.ListView):
         return context 
                
 
-class About(generic.TemplateView):
-    template_name = 'about.html'
-    # def get_context_data(self, **kwargs):
-    #     context = super(About, self).get_context_data(**kwargs)
-    #     shared_context(context,self)
-    #     return context  
-# 
-def contact_thankyou(request):
-    return render(request, "thankyou.html", {})  
-def contact_invalidfields(request):
-    return render(request, "invalidfields.html", {})    
+def about(request):
+    cat_list = Category.objects.all().filter(status=1).order_by('order_count')
+    authors_list = Contibutor.objects.all()
+    return render(request, "about.html", {'cat_list':cat_list,'authors_list':authors_list})   
+  
 def contact(request):
     cat_list = Category.objects.all().filter(status=1).order_by('order_count')
     if request.method == 'POST':
@@ -181,13 +174,11 @@ def contact(request):
                 send_mail(data['subject'],message,'',['cvetje@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            # return redirect('/contact/thankyou/' , cat_list = 'cat_list')
             return render(request,'thankyou.html', {'cat_list':cat_list} )
         else:
             # In reality we'd use a form class
             # to get proper validation errors.
             return render(request,'invalidfields.html', {'cat_list':cat_list} )
-            #return render(request,'/contact/invalidfields/', {'cat_list':cat_list})
             
     return render(request, "contact.html", {'cat_list':cat_list})     
      
