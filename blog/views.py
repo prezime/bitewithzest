@@ -1,10 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views import generic
 from .models import User,Post,Category,SubCategory,Contibutor
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger, InvalidPage
 from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
+from django.urls import reverse
 
 
 
@@ -152,25 +153,13 @@ class About(generic.TemplateView):
     #     context = super(About, self).get_context_data(**kwargs)
     #     shared_context(context,self)
     #     return context  
-class Contact(generic.TemplateView):
-    template_name = 'contact.html'  
-    
-           
-# class Contact(generic.FormView):
-#     template_name = 'contact.html'
-#     from_class = ContactForm 
-#     success_url = '/contact/'
-#     def form_valid(self, form):
-#         # This method is called when valid form data has been POSTed.
-#         # It should return an HttpResponse.
-#         form.send_email()
-#         return super().form_valid(form)
 # 
 def contact_thankyou(request):
     return render(request, "thankyou.html", {})  
 def contact_invalidfields(request):
     return render(request, "invalidfields.html", {})    
 def contact(request):
+    cat_list = Category.objects.all().filter(status=1).order_by('order_count')
     if request.method == 'POST':
         name = request.POST.get('full_name')
         email = request.POST.get('email')
@@ -192,11 +181,14 @@ def contact(request):
                 send_mail(data['subject'],message,'',['cvetje@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return HttpResponseRedirect('/contact/thankyou/')
+            # return redirect('/contact/thankyou/' , cat_list = 'cat_list')
+            return render(request,'thankyou.html', {'cat_list':cat_list} )
         else:
             # In reality we'd use a form class
             # to get proper validation errors.
-            return HttpResponseRedirect('/contact/invalidfields/')
-    return render(request, "contact.html", {})     
+            return render(request,'invalidfields.html', {'cat_list':cat_list} )
+            #return render(request,'/contact/invalidfields/', {'cat_list':cat_list})
+            
+    return render(request, "contact.html", {'cat_list':cat_list})     
      
        
