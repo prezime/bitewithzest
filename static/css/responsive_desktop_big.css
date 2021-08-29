@@ -1289,6 +1289,68 @@
     color: var(--main);
     font-family: var(--font-cool);
   }
+
+
+  /* CONTACT FORM */
+  .contact_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin:300px 0;
+  }
+  .contact_wrapper .moto5  h1, .thankyou_wrapper .moto5  h1{
+    margin: -25px  20px 10px ;
+  }
+
+  .contact_background{
+    background: url('/../media/layout/faq_bg.png') no-repeat top left;
+    background-size: 110%;
+    width: 60%;
+  }
+  .contact_container{
+    display: flex;
+    padding: 2rem;
+    border-radius: 0 80px ;
+    width: 100%;
+  }
+  .contact_form{
+    width: 100%;
+    margin: 10px;
+  }
+
+  input, textarea{
+    width: 100%;
+    background-color: whitesmoke;
+    border: none;
+    padding: 10px;
+  }
+
+  textarea{
+    height: 10vh;
+  }
+  input:focus,
+  textarea:focus{
+    outline:none;
+  }
+  input.hero3-btn{
+    cursor: pointer;
+  }
+  .tag{
+    padding: 5px 0;
+    font-size: 20px ;
+  }
+  .submit_wrapper{
+    height: 100vh;  
+  }
+  .submit_wrapper .moto5,.moto3{
+    background: url('/../media/layout/faq_bg.png') no-repeat top left;
+    background-size: 110%;
+    width: 60%;
+    max-width: 1000px;
+    top: 200px;
+    padding-left: 50px;
+  }
   
 }
 

@@ -21,7 +21,7 @@
     <nav>
       <ul>
         <li><a href="#">about</a></li>
-          <li><a href="#">contact</a></li>
+          <li><a href="{% url 'contact_view'  %}">Contact</a></li>
           <li><a href="javascript:void(0)">fb</a>  <a href="javascript:void(0)">ig</a></li>
       </ul>
     </nav>
@@ -48,7 +48,8 @@
     {% endif %} 
     {% block post_content %}{% endblock post_content %}
     {% block post_listed_showcase %}{% endblock post_listed_showcase %} 
-    
+    {% block thankyou %}{% endblock thankyou %} 
+    {% block invalidfields %}{% endblock invalidfields %} 
     {% block post_showcase %}{% endblock post_showcase %} 
     
     <!-- CONTENT -->

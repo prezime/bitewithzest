@@ -165,4 +165,14 @@ CKEDITOR_CONFIGS = {
     }
 }
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'mail.wservices.ch'
+EMAIL_HOST_USER = 'contact@bitewithzest.com'
+DEFAULT_FROM_EMAIL = 'contact@bitewithzest.com'
+SERVER_EMAIL = 'contact@bitewithzest.com'
+EMAIL_HOST_PASSWORD = 'Jecvet2311bwz'
+EMAIL_PORT =  587
+EMAIL_USE_TLS = True
+
+
 

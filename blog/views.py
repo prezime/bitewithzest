@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from django.http import HttpResponse, HttpResponseRedirect
 from django.views import generic
 from .models import User,Post,Category,SubCategory,Contibutor
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger, InvalidPage
 from .forms import ContactForm
+from django.core.mail import send_mail, BadHeaderError
 
 
 
@@ -151,7 +153,9 @@ class About(generic.TemplateView):
     #     shared_context(context,self)
     #     return context  
 class Contact(generic.TemplateView):
-    template_name = 'contact.html'         
+    template_name = 'contact.html'  
+    
+           
 # class Contact(generic.FormView):
 #     template_name = 'contact.html'
 #     from_class = ContactForm 
@@ -162,25 +166,37 @@ class Contact(generic.TemplateView):
 #         form.send_email()
 #         return super().form_valid(form)
 # 
-# def contact(request):
-# 	if request.method == 'POST':
-# 		form = ContactForm(request.POST)
-# 		if form.is_valid():
-# 			subject = "Website Inquiry" 
-# 		    body = {
-# 			'first_name': form.cleaned_data['first_name'], 
-# 			'last_name': form.cleaned_data['last_name'], 
-# 			'email': form.cleaned_data['email_address'], 
-# 			'message':form.cleaned_data['message'], 
-# 			}
-# 			message = "\n".join(body.values())
+def contact_thankyou(request):
+    return render(request, "thankyou.html", {})  
+def contact_invalidfields(request):
+    return render(request, "invalidfields.html", {})    
+def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('full_name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+        data = {
+            'name': name,
+            'email': email,
+            'subject': subject,
+            'message': message
+        }
+        message = '''
+            New Message: {}
+            From: {}
+        '''.format(data['message'],data['email'])
 
-# 			try:
-# 				send_mail(subject, message, 'admin@example.com', ['admin@example.com']) 
-# 			except BadHeaderError:
-# 				return HttpResponse('Invalid header found.')
-# 			return redirect ("main:homepage")
-      
-# 	form = ContactForm()
-# 	return render(request, "main/contact.html", {'form':form})            
+        if subject and message and email:
+            try:
+                send_mail(data['subject'],message,'',['cvetje@gmail.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return HttpResponseRedirect('/contact/thankyou/')
+        else:
+            # In reality we'd use a form class
+            # to get proper validation errors.
+            return HttpResponseRedirect('/contact/invalidfields/')
+    return render(request, "contact.html", {})     
+     
        
