@@ -1,3 +1,5 @@
 db.sqlite3
 media/
 static/js/jquery-1.9.0.min.js
+.env
+staticfiles
