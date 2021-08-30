@@ -3,3 +3,5 @@ media/
 static/js/jquery-1.9.0.min.js
 .env
 staticfiles
+deployment_steps.txt
+requirements.txt
