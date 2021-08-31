@@ -1349,6 +1349,11 @@
     top: 200px;
     padding-left: 50px;
   }
+  /* re-CAPTCHA */
+  .g-recaptcha{
+    margin-top: 20px;
+    position: relative;
+  }
 
   /* ABOUT */
   .about_wrapper{
@@ -1370,6 +1375,8 @@
     background-color: white;
     order: 1;
   }
+
+  
 
   
 }

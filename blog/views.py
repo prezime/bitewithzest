@@ -4,7 +4,10 @@ from django.views import generic
 from .models import Post,Category,SubCategory,Contibutor
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger, InvalidPage
 from django.core.mail import send_mail, BadHeaderError
-
+import urllib
+import json
+from django.contrib import messages
+from django.conf import settings
 
 
 
@@ -158,7 +161,7 @@ def contact(request):
         email = request.POST.get('email')
         subject = request.POST.get('subject')
         message = request.POST.get('message')
-        data = {
+        contact_data = {
             'name': name,
             'email': email,
             'subject': subject,
@@ -167,19 +170,34 @@ def contact(request):
         message = '''
             New Message: {}
             From: {}
-        '''.format(data['message'],data['email'])
+        '''.format(contact_data['message'],contact_data['email'])
 
-        if subject and message and email:
-            try:
-                send_mail(data['subject'],message,'',['cvetje@gmail.com'])
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return render(request,'thankyou.html', {'cat_list':cat_list} )
+        ''' Begin reCAPTCHA validation '''
+        recaptcha_response = request.POST.get('g-recaptcha-response')
+        url = 'https://www.google.com/recaptcha/api/siteverify'
+        values = {
+            'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+            'response': recaptcha_response
+        }
+        data = urllib.parse.urlencode(values).encode()
+        req =  urllib.request.Request(url, data=data)
+        response = urllib.request.urlopen(req)
+        result = json.loads(response.read().decode())
+        ''' End reCAPTCHA validation '''
+                
+        if result['success']:
+            if subject and message and email:
+                try:
+                    send_mail(contact_data['subject'],message,'',['cvetje@gmail.com'])
+                except BadHeaderError:
+                    return HttpResponse('Invalid header found.')
+                return render(request,'thankyou.html', {'cat_list':cat_list} )
+            else:
+                # In reality we'd use a form class
+                # to get proper validation errors.
+                return render(request,'invalidfields.html', {'cat_list':cat_list} )
         else:
-            # In reality we'd use a form class
-            # to get proper validation errors.
-            return render(request,'invalidfields.html', {'cat_list':cat_list} )
-            
+            return render(request,'invalidfields.html', {'cat_list':cat_list} )  
     return render(request, "contact.html", {'cat_list':cat_list})     
      
        

@@ -85,7 +85,7 @@ li.active:before {
   transition: 0.3s;
 }
 header nav li.active:before {
-  width: 60%;
+  width: 70%;
 }
 a {
   position: relative;
