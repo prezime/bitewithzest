@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="{% static '/css/style.css' %}" />
   <link rel="stylesheet" href="{% static 'css/responsive_desktop_big.css' %}" />
   <link rel="stylesheet" href="{% static 'css/responsive_desktop.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/responsive_phone_.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/responsive_phone.css' %}" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Bite With Zest! - the ultimate Life Zest blog</title>
 </head>
@@ -92,7 +92,7 @@
             <li><span><i class="fa fa-phone" aria-hidden="true"></i></span>
               +43 680 1446331</li>
             <li><span><i class="fa fa-envelope" aria-hidden="true"></i></span>
-              <a href="mailto:info@cvet-je.com">E-Mail</a></li>
+              <a href="mailto:contact@bitewithzest.com">E-Mail</a></li>
           </ul>
         </div>
         <div class="sec footer_placeholder">
@@ -114,6 +114,7 @@
     var sticky = navbar.offsetTop;
     var djangoView = "{{ request.resolver_match.url_name }}";
     const accordion = document.getElementsByClassName('accordion');
+  
 
     for (var i = 0, len = accordion.length; i < len; i++){
       accordion[i].addEventListener('click', function(){
@@ -166,7 +167,9 @@
       document.onclick = function (e) {
         console.log(e.target.parentNode.offsetParent.className);
         var menuToggle = document.getElementById("menu-toggle");
-        if (e.target.id !== 'navbar_ul' && e.target.id !== 'menu-toggle' && e.target.id !== 'change' && e.target.id !== 'bar3' && e.target.id !== 'bar2' && e.target.id !== 'bar1' && e.target.parentNode.offsetParent.className !== 'accordion')
+        if (e.target.id !== 'navbar_ul' && e.target.id !== 'menu-toggle' && 
+          e.target.id !== 'change' && e.target.id !== 'bar3' && e.target.id !== 'bar2' && e.target.id !== 'bar1' && 
+          e.target.parentNode.offsetParent.className !== 'accordion')
         {
           menuToggle.classList.remove('change');
           navbar_ul.style.display = 'none';
@@ -174,7 +177,11 @@
           bar3.style.backgroundColor = "white";
           
         }
-        if (!(e.target instanceof HTMLAnchorElement) && (e.target.id !== 'menu-toggle' && e.target.id !== 'bar3' && e.target.id !== 'bar2' && e.target.id !== 'bar1' && e.target.parentNode.offsetParent.className !== 'accordion' && e.target.parentNode.offsetParent.className !== 'accordion active' && window.pageYOffset > sticky))
+        if (!(e.target instanceof HTMLAnchorElement) && (e.target.id !== 'fname' && 
+        e.target.id !== 'email' && e.target.id !== 'subject' && e.target.id !== 'message' && 
+        e.target.id !== 'menu-toggle' && e.target.id !== 'bar3' && e.target.id !== 'bar2' && 
+        e.target.id !== 'bar1' && e.target.parentNode.offsetParent.className !== 'accordion' && 
+        e.target.parentNode.offsetParent.className !== 'accordion active' && window.pageYOffset > sticky))
         {
           navbar.style.position = 'fixed';
           navbar.style.top = 0;
@@ -200,7 +207,10 @@
       } else if (djangoView == 'category_view'){ 
         var refElement = document.getElementsByClassName('gallery-cat');
         factor = 0.7;
-      }  
+      } else if (djangoView == 'contact_view'){ 
+        var refElement = document.getElementsByClassName('contact_container');
+        factor = 1;
+      } 
       var breadcrumbs = document.getElementsByClassName('breadcrumbs');
       var bc = document.getElementById('breadcrumbs');
       for (var i = 0, len = breadcrumbs.length; i < len; i++) {
@@ -217,6 +227,13 @@
         console.log(djangoView);
       } else if (djangoView == 'category_view'){ 
         leftOffset = (bcWidth-piWidth)/2+'px';
+        console.log(bcWidth);
+        console.log(piWidth);
+        bc.style.marginLeft = leftOffset;
+        
+      }
+      else if (djangoView == 'contact_view'){ 
+        leftOffset = -(piWidth-bcWidth)+'px';
         console.log(bcWidth);
         console.log(piWidth);
         bc.style.marginLeft = leftOffset;

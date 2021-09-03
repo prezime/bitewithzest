@@ -3,36 +3,52 @@
 {% block contact %}
 
 <dev class="contact_wrapper">
-    <div class="moto5"> 
-        <h2>Write us</h2>
-        <h1>a message </h1>
-    </div>
-    <dev class="contact_background">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <ul>
+            <li class="breadcrumbs-item">
+              <a href="/" class="breadcrumbs-link">Home</a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a href="{% url 'contact_view'  %}"class="breadcrumbs-link">
+                  Contact
+              </a>
+            </li>
+        </ul>
+      </div>
+    <dev class="contact_background"> 
         <dev class="contact_container">
-            <form action="" method="post" class="contact_form">
-                {% csrf_token %}
-                <div class="form_control">  
-                    <div class="tag">Full Name</div>
-                    <input type="text" id="fname" name="full_name" >
+            <div class="moto5"> 
+                <h2>Write us</h2>
+                <h1>a message </h1>
+            </div>
+            <div class="contact_form">
+                <div class="contact_text">
+                    <p>Would you like to work with BiteWithZest? Or do you have some idea you would like to share with us? we are looking forward to your message and will reply soon.</p>
+                    <p>So write to us at <strong><a href="mailto:contact@bitewithzest.com">contact@bitewithzest.com</a></strong> or fill out this form.</p>
+                    <p>* Your email address will not be published.</p>
                 </div>
-                <div class="form_control">  
-                    <div class="tag">E-Mail</div>
-                    <input type="email" id="email" name="email" >
-                </div>
-                <div class="form_control">  
-                    <div class="tag">Subject</div>
-                    <input type="text" id="subject" name="subject" >
-                </div>
-                <div class="form_control">  
-                    <div class="tag">Message</div>
-                    <textarea id="message" name="message" ></textarea>
-                </div>
-                <div class="form_control">
-                    <input type="submit" class="hero3-btn" value="Submit">
-                </div>
-                <script src='https://www.google.com/recaptcha/api.js'></script>
-                <div class="g-recaptcha" data-sitekey="6LcndjMcAAAAADkfpLeFN_nURdmURDsXqrftTgDF"></div>
-            </form>
+                <form action="" method="post" >
+                    {% csrf_token %}
+                    <div class="form_control">  
+                        <input type="text" id="fname" name="full_name" placeholder="Name">
+                    </div>
+                    <div class="form_control">  
+                        <input type="email" id="email" name="email" placeholder="E-Mail">
+                    </div>
+                    <div class="form_control">  
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
+                    </div>
+                    <div class="form_control">  
+                        <textarea rows="7" id="message" name="message" placeholder="Your message"></textarea>
+                    </div>
+                    
+                    <script src='https://www.google.com/recaptcha/api.js'></script>
+                    <div class="g-recaptcha" data-sitekey="6LcndjMcAAAAADkfpLeFN_nURdmURDsXqrftTgDF"></div>
+                    <div class="form_control">
+                        <input type="submit" class="submit-btn" value="Submit">
+                    </div>
+                </form>
+            </div>
         </dev>
     </dev>
 </dev>

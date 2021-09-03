@@ -5,12 +5,13 @@
 
 @font-face {
   font-family: "Richie Brusher";
-  src: url("/static/fonts/Richie Brusher.woff") format('woff');
+  src: url("/static/fonts/Richie Brusher.woff") format('woff'),
+       url("/static/fonts/Richie Brusher.ttf") format('truetype');
 }
 :root {
     --yellow: #ffc600;
     --black: rgb(45, 73, 95);
-    --light_grey: #dbdddd;
+    --light_grey: #e7e9e9;
     --grey: #777777;
     --main: rgb(0, 170, 179);
     --main_transparent: rgba(0, 170, 179, 0.2);

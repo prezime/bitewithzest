@@ -23,12 +23,17 @@ CARDTYPE = (
 class Contibutor(models.Model):
     name = models.CharField(max_length=200, unique=True)
     inactive = models.BooleanField(default=False)
+    description = RichTextUploadingField(default='',blank=True) 
+    pic= models.FileField(upload_to=path_rename.path_and_rename_author,blank=True)
+    order_count = models.IntegerField(default=0)
  
     def __str__(self):
         return self.name
 
     def get_absolute_url(self):
         return reverse('home')  
+
+        
 contributors = Contibutor.objects.all().values_list('name','name')
 contributor_list = []
 for item in contributors:

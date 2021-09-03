@@ -352,7 +352,7 @@
   }
   .moto2 h1{
     font-family: var(--font-cool);
-    margin: -20px  30px 10px ;
+    margin: -10px  30px 10px ;
     color: var(--main);
     font-size:50px;
   }
@@ -380,7 +380,7 @@
   }
   .moto3 h1{
     font-family: var(--font-cool);
-    margin: -20px  30px 10px ;
+    margin: -10px  30px 10px ;
     color: var(--main);
     font-size:50px;
   }
@@ -432,7 +432,7 @@
   }
   .moto5 h1{
     font-family: var(--font-cool);
-    margin: -15px  20px 10px ;
+    margin: -10px  20px 10px ;
     color: var(--main);
     font-size:50px;
   }
@@ -1294,40 +1294,65 @@
   .contact_wrapper{
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin:300px 0;
+    height: 100%;
+    margin: 250px 0;
   }
-  .contact_wrapper .moto5  h1, .thankyou_wrapper .moto5  h1{
-    margin: -25px  20px 10px ;
+  .contact_wrapper .moto5  h1, .thankyou_wrapper .moto5  h1, .about_wrapper .moto5  h1{
+    margin: -18px  20px 10px ;
+  }
+  .contact_wrapper .breadcrumbs{
+    position: absolute;
   }
 
   .contact_background{
     background: url('/../media/layout/faq_bg.png') no-repeat top left;
-    background-size: 110%;
-    width: 60%;
+    background-size: 90%;
+    width: 70%;
+    margin-top: 40px;
   }
   .contact_container{
     display: flex;
     padding: 2rem;
     border-radius: 0 80px ;
     width: 100%;
+    flex-direction:column;
+  }
+
+  .contact_container .moto5{
+    position: relative;
+    top: 0;
+    left: 0;
   }
   .contact_form{
+    display: flex;
     width: 100%;
     margin: 10px;
+  }
+  .contact_text{
+    width: 50%;
+  }
+  .contact_text p{
+    font-size: 21px;
+    font-weight:100;
+  }
+  .contact_form form{
+    width: 50%;
   }
 
   input, textarea{
     width: 100%;
-    background-color: whitesmoke;
+    background-color: var(--light_grey);
     border: none;
     padding: 10px;
+    margin: 10px;
+  }
+  input::placeholder , textarea::placeholder{
+    color: var(--black);
+    font-size: 24px;
+    font-family: "Exo 2";
   }
 
-  textarea{
-    height: 10vh;
-  }
+
   input:focus,
   textarea:focus{
     outline:none;
@@ -1335,20 +1360,95 @@
   input.hero3-btn{
     cursor: pointer;
   }
-  .tag{
-    padding: 5px 0;
-    font-size: 20px ;
+  .submit-btn{
+    background-color: var(--main);
+    color: white;
+    border: 1px solid var(--main);
+    font-size: 22px;
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
   }
   .submit_wrapper{
-    height: 100vh;  
+    height:50vh;
   }
-  .submit_wrapper .moto5,.moto3{
+
+  /* re-CAPTCHA */
+  .g-recaptcha{
+    margin: 10px;
+    position: relative;
+  }
+  /* ABOUT */
+  .about_wrapper{
+    position: relative;
+    height: 100vh;
+    margin-bottom: 60%;
+    top: 70px;
+  }
+
+  .about_wrapper .hero5-card3{
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-end !important; 
+    
+  }
+
+  .about_wrapper .hero5-card3-pic{
+    border: 2px solid var(--main);
+    padding: 15px;
+    border-radius: 0 30% ;
+    width: 300px;
+    min-width: 300px;
+    height: 300px;
+    position: relative;
+    box-sizing: unset;
+    background-color: white;
+    order: 2;
+    margin-left: 30px;
+  }
+  .about_wrapper .hero5-card1-text, .hero5-card3-text{
+    width: 50%;
+  }
+
+  .about_wrapper  .hero5-card3-text{
+    text-align: right;
+    margin-left: calc(50% - 360px);
+    box-sizing: unset;
+  }
+
+  .about_wrapper .hero5-card3-pic img {
+    border-radius: 0 30% ;
+    width: 300px;
+    min-width: 300px;
+    height: 300px;
+    object-fit: cover;
+
+  }
+
+  .about_wrapper .hero5-card3-text span{
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .about_wrapper .hero5-card3-text h3{
+    font-size: 31px;
+    font-weight: 600;
+  }
+  .about_wrapper .hero5-card3-text p{
+    font-size: 24px;
+    font-weight: 200;
+    margin-top: 20px;
+  }
+  .about_background{
     background: url('/../media/layout/faq_bg.png') no-repeat top left;
-    background-size: 110%;
-    width: 60%;
-    max-width: 1000px;
-    top: 200px;
-    padding-left: 50px;
+    background-size: 90%;
+    width: 75%;
+    margin: auto;
+    top: 150px;
+    height: 100vh;
+    position: relative;
   }
   
 }
