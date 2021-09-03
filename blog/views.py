@@ -4,9 +4,8 @@ from django.views import generic
 from .models import Post,Category,SubCategory,Contibutor
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger, InvalidPage
 from django.core.mail import send_mail, BadHeaderError
-import urllib
+import urllib.request
 import json
-from django.contrib import messages
 from django.conf import settings
 
 
