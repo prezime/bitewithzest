@@ -98,6 +98,49 @@ a {
   display: none;
 }
 
+.cookie-container{
+  position: fixed;
+  bottom: -100%;
+  background-color: white;
+  color: var(--main);
+  transition: 400ms;
+  width: 100%;
+  padding: 1% 3%;
+  z-index: 20;
+  box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.5);
+}
+
+.cookie-container a {
+  color: var(--main);
+  font-weight: 600;
+  text-decoration: underline;
+}
+.cookie-container.active{
+  bottom: 0;
+}
+.cookie-btn{
+  background-color: var(--main);
+  color: white;
+  border: none;
+  border-radius:4px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.cookie-policy{
+  margin: 200px 15%;
+}
+.cookie-policy h2{
+  color: var(--main);
+}
+.cookie-policy .moto5{
+  position: absolute;
+  
+}
+.cookie-policy>h2{
+  margin-top: 100px;
+}
+
 
 
 

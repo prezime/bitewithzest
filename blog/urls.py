@@ -11,4 +11,5 @@ urlpatterns = [
     path('filter/type/<cardtype>', views.FeaturedList.as_view(), name='featured_view'),
     path('contact/info/', views.contact, name='contact_view'),
     path('about/info/', views.about, name='about_view'),
+    path('cookies/info/', views.cookies, name='cookies_view'),
 ]

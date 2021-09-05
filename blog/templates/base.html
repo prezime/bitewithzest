@@ -50,6 +50,7 @@
     {% block post_listed_showcase %}{% endblock post_listed_showcase %} 
     {% block thankyou %}{% endblock thankyou %} 
     {% block invalidfields %}{% endblock invalidfields %} 
+    {% block cookies %}{% endblock cookies %} 
     {% block post_showcase %}{% endblock post_showcase %} 
     
     <!-- CONTENT -->
@@ -104,7 +105,12 @@
       <p>For creation of this website no animal was harmed.<br />Copyright © 2021 BiteWithZest.<br />
         All rights reserved. Unauthorized use of copyrighted content is prohibited and punishable.</p>   
     </div>
+    
   </footer>
+  <div class="cookie-container">
+    <p>We us cookies in this website for better user experience. If you want to find out more, please read our <a href="{% url 'cookies_view'  %}">Cookie Policy</a> with detailed information.</p>
+    <button class="cookie-btn">Close</button>
+  </div>
 </div>
   <script src="{% static 'js/scrollr.js' %}"></script>
   <script>
@@ -114,13 +120,25 @@
     var sticky = navbar.offsetTop;
     var djangoView = "{{ request.resolver_match.url_name }}";
     const accordion = document.getElementsByClassName('accordion');
-  
+    // Cookies-Consent
+    const cookieContainer = document.querySelector('.cookie-container');
+    const cookieButton = document.querySelector('.cookie-btn');
+    cookieButton.addEventListener('click',()=>{
+      cookieContainer.classList.remove('active');
+      localStorage.setItem('cookieBannerDisplayed', 'true')
+    });
+    setTimeout(() => {
+      if (!localStorage.getItem('cookieBannerDisplayed')){
+        cookieContainer.classList.add('active');
+      }
+    }, 1000);
+
 
     for (var i = 0, len = accordion.length; i < len; i++){
       accordion[i].addEventListener('click', function(){
         this.classList.toggle('active');
       })
-    }
+    };
     
 
     if (w <= 769) {

@@ -152,6 +152,10 @@ def about(request):
     cat_list = Category.objects.all().filter(status=1).order_by('order_count')
     authors_list = Contibutor.objects.all().order_by('order_count')
     return render(request, "about.html", {'cat_list':cat_list,'authors_list':authors_list})   
+
+def cookies(request):
+    cat_list = Category.objects.all().filter(status=1).order_by('order_count')
+    return render(request, "cookies_info.html", {'cat_list':cat_list})   
   
 def contact(request):
     cat_list = Category.objects.all().filter(status=1).order_by('order_count')
