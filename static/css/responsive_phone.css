@@ -1249,11 +1249,15 @@
     font-weight: 600;
   }
   span.count_active{
-    color: white;
-    font-weight: 400;
     border-radius: 50%;
-    background-color: var(--main);
-    padding: 5px 15px;
+    background: var(--main);
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 40px;
+    margin-right: 5px;
+    text-align: center;
+    width: 40px;
   }
   a.count:hover, a.prev:hover, a.next:hover{
     color: var(--main);
