@@ -1,6 +1,6 @@
 @media screen and (min-width: 769px) and (max-width: 1699px){
   .mobile{
-    display: none;
+    display: none !important;
   }
   header{
     position: absolute;
@@ -130,6 +130,9 @@
   footer  p{
     color: var(--light_grey);
   }
+
+
+  
   .sci{
     display: flex;
     left: 0;
@@ -746,11 +749,10 @@
 
   .post-content {
     display: grid;
-    margin: 0 30%;
     grid-template-areas: 
     "fill-left content fill-right";
     grid-gap: 2px 5px;
-    margin: 0 10% 5% 10%;
+    margin: 0 7% 5% 7%;
     grid-gap: 35px;
   }
   .content {
@@ -1094,6 +1096,7 @@
     content: ' /';
     color: #999;
   }
+  
 
   .breadcrumbs-link {
     text-decoration: none;

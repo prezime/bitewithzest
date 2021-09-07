@@ -2,7 +2,7 @@
 /* 48em = 768px */
 @media screen and (max-width: 48em) {
   .desktop{
-    display: none;
+    display: none !important;
   }
   table {
     width: 90% !important;
@@ -163,6 +163,10 @@
     height: 2px;
     background-color:var(--yellow);
   }
+  li.active:before {
+    border-bottom: 2px solid var(--main);
+  }
+  
   footer  p{
     color: var(--light_grey);
   }
@@ -732,7 +736,6 @@
     align-items: center;
     margin-top: 200px;
     position: relative;
-
   }
   .post-intro{
     display: flex;
@@ -752,6 +755,9 @@
   }
   .post-opener img.layer1-1{
     width: 100%;
+  }
+  img.post-img{
+    width: 100% !important;
   }
 
   .intro-text{
@@ -1130,6 +1136,11 @@
     content: ' /';
     color: #999;
   }
+  .breadcrumbs-item.mobile:not(:last-of-type)::after{
+    content: '';
+    color: #999;
+  }
+  
 
   .breadcrumbs-link {
     text-decoration: none;

@@ -27,8 +27,11 @@
                 </li>
                 {% endif %}
             {% endfor %}
-            <li class="breadcrumbs-item">
-                <a href="{% url 'post_detail' post.slug  %}" class="breadcrumbs-link">{{ object.title }}</a>
+            <li class="breadcrumbs-item mobile">
+                <a href="{% url 'post_detail' post.slug  %}" class="breadcrumbs-link">{{ object.title|safe|slice:"31" }}{% if object.title|safe|length > 31 %}...{% endif %}</a>
+            </li>
+            <li class="breadcrumbs-item desktop">
+                <a href="{% url 'post_detail' post.slug  %}" class="breadcrumbs-link">{{ object.title}}</a>
             </li>
         </ul>
     </div>

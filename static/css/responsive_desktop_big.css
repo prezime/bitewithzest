@@ -131,6 +131,7 @@
   footer  p{
     color: var(--light_grey);
   }
+  
   .sci{
     display: flex;
     left: 0;
