@@ -85,16 +85,9 @@ li.active:before {
   width: 100%;
   transition: 0.3s;
 }
-/* #navbar_ul li.active:before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 100%;
-  transition: 0.3s;
-} */
+.remove-background {
+  background: none !important;
+}
 header nav li.active:before {
   width: 70%;
 }

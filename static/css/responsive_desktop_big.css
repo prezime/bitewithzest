@@ -1112,7 +1112,7 @@
   }
 
   .cat-wrapper{
-    margin-top: 250px;
+    margin-top: 240px;
     background: url('/../media/layout/bg_cat_list1.png') no-repeat top;
     width: 100%;
     background-size: 100%;
@@ -1131,7 +1131,7 @@
     margin: 0 auto;
   }
   .cat-wrapper .breadcrumbs{
-    top: 0;
+    top: 10px;
   }
 
   .post-cat-card1{
@@ -1272,7 +1272,7 @@
   }
   .acc_wrapper .accordion .acc_content{
     position: relative;
-    padding: 0 10px;
+    padding: 0 20px;
     height: 0;
     overflow: hidden;
     transition: 0.9s;

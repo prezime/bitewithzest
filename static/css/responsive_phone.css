@@ -1326,7 +1326,7 @@
   }
   .acc_wrapper .accordion .acc_content{
     position: relative;
-    padding: 0 10px;
+    padding: 0 20px;
     height: 0;
     overflow: hidden;
     transition: 0.9s;
@@ -1340,7 +1340,7 @@
   }
   .acc_wrapper .accordion.active .acc_content{
     height: auto;
-    padding-bottom: 20px;
+    padding: 20px;
     
   }
   .acc_wrapper .accordion.active .acc_label::before{

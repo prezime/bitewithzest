@@ -33,12 +33,11 @@
     {% elif object.description == 'Lifestyle' %}
       <h2>Plant-based</h2>
       <h1>Lifestyle</h1>
-    {% elif object.description == 'FAQ' %}
-      <h2>Frequently asked</h2>
-      <h1>Questions</h1>  
     {% endif %}
   </div>
-  
+  {% if object.description  == 'FAQ' %}
+  {% include 'index_faq.html' %}
+  {% endif %}
   <div class="gallery-cat" id="galleryCat">
     
     {% if request.resolver_match.url_name  == 'category_view' %}
@@ -85,9 +84,7 @@
   <a class='next' href="?page={{post_cat_list.next_page_number}}">►</a>
   {% endif %}
 </div>  
-{% if object.description  == 'FAQ' %}
-{% include 'index_faq.html' %}
-{% endif %}
+
 {% endblock  %}
 
 
