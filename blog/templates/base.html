@@ -120,6 +120,8 @@
     var sticky = navbar.offsetTop;
     var djangoView = "{{ request.resolver_match.url_name }}";
     const accordion = document.getElementsByClassName('accordion');
+    const breadcrumbs = document.getElementsByClassName('breadcrumbs');
+    const bc = document.getElementById('breadcrumbs');
     // Cookies-Consent
     const cookieContainer = document.querySelector('.cookie-container');
     const cookieButton = document.querySelector('.cookie-btn');
@@ -172,14 +174,13 @@
           // navbar.classList.add("sticky");
           navbar_ul.style.zIndex = 10;
           navbar.style.zIndex = 10;
+          
         } else {
-          console.log(navbar.classList);
-          console.log('change no');
           navbar_ul.style.display = 'none';
           bar1.style.backgroundColor = "white";
           bar3.style.backgroundColor = "white";
+          
           beSticky();
-      
         }  
       }
       document.onclick = function (e) {
@@ -229,8 +230,7 @@
         var refElement = document.getElementsByClassName('contact_container');
         factor = 1;
       } 
-      var breadcrumbs = document.getElementsByClassName('breadcrumbs');
-      var bc = document.getElementById('breadcrumbs');
+      
       for (var i = 0, len = breadcrumbs.length; i < len; i++) {
         bcWidth += breadcrumbs[i].offsetWidth;
       }
@@ -260,6 +260,7 @@
       //ovdje je sve dobro. ne diraj
       function beSticky() {
         console.log(sticky);
+        bc.style.zIndex = 0;
         if (window.pageYOffset >= sticky) {
           navbar.style.position = 'fixed';
           navbar.style.top = 0;
