@@ -4,7 +4,7 @@ const sticky = navbar.offsetTop;
 const accordion = document.getElementsByClassName('accordion');
 const breadcrumbs = document.getElementsByClassName('breadcrumbs');
 const catWrapper = document.querySelector('.cat-wrapper');
-const bc = document.getElementById('breadcrumbs');
+var bc = document.getElementById('breadcrumbs');
 if (category == 'FAQ'){
   catWrapper.classList.add('remove-background');
 }
@@ -16,7 +16,7 @@ cookieButton.addEventListener('click',()=>{
   localStorage.setItem('cookieBannerDisplayed', 'true')
 });
 setTimeout(() => {
-  if (!localStorage.getItem('cookieBannerDisplayed')){
+  if (localStorage.getItem('cookieBannerDisplayed')){
     cookieContainer.classList.add('active');
   }
 }, 1000);
@@ -101,6 +101,7 @@ if (w <= 769) {
   }
 } else {
   window.onscroll = function() {beSticky()};
+  
   var bcWidth = 0;
   var piWidth = 0;
   var factor = 0;
@@ -145,9 +146,12 @@ if (w <= 769) {
   }
   //ovdje je sve dobro. ne diraj
   function beSticky() {
-    console.log(sticky);
-    bc.style.zIndex = 0;
+    if (djangoView != 'home'){
+      bc.style.zIndex = 0;
+    }
+    
     if (window.pageYOffset >= sticky) {
+      console.log(sticky);
       navbar.style.position = 'fixed';
       navbar.style.top = 0;
     } else {

@@ -1252,7 +1252,7 @@
   .acc_wrapper{
     position: relative;
     max-width: 57%;
-    margin: 0 auto 50px auto;
+    margin: 0 auto;
   }
   .acc_wrapper .accordion{
     position: relative;

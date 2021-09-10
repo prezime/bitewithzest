@@ -1239,7 +1239,7 @@
   }
   .acc_wrapper{
     max-width: 57%;
-    margin: -50px auto 50px auto;
+    margin: 0 auto;
   }
   .acc_wrapper .accordion{
     position: relative;
@@ -1292,6 +1292,10 @@
     border-radius: 0 20px 0 0;
     color: var(--main);
     font-family: var(--font-cool);
+  }
+  .post-title.faq{
+    margin-top:7%;
+
   }
 
 
