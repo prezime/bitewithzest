@@ -16,7 +16,7 @@ cookieButton.addEventListener('click',()=>{
   localStorage.setItem('cookieBannerDisplayed', 'true')
 });
 setTimeout(() => {
-  if (localStorage.getItem('cookieBannerDisplayed')){
+  if !(localStorage.getItem('cookieBannerDisplayed')){
     cookieContainer.classList.add('active');
   }
 }, 1000);
