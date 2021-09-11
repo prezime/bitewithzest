@@ -116,7 +116,7 @@ if (w <= 769) {
   } else if (djangoView == 'contact_view'){ 
     refElement = document.getElementsByClassName('contact_container');
     factor = 1;
-  } 
+  }  
   
   for (var i = 0, len = breadcrumbs.length; i < len; i++) {
     bcWidth += breadcrumbs[i].offsetWidth;
@@ -124,6 +124,7 @@ if (w <= 769) {
   for (var i = 0, len = refElement.length; i < len; i++) {
     piWidth += refElement[i].offsetWidth;
   }
+  
   piWidth = piWidth * factor;
   
   if (djangoView == 'post_detail'){
@@ -135,7 +136,15 @@ if (w <= 769) {
     console.log(bcWidth);
     console.log(piWidth);
     bc.style.marginLeft = leftOffset;
-    
+    catListCard1= document.getElementsByClassName('post-cat-card1');
+    for (var i = 0, len = catListCard1.length; i < len; i++) {
+      catListCard1[i].style.top = '13vw';
+    }
+    catListCard2= document.getElementsByClassName('post-cat-card2');
+    for (var i = 0, len = catListCard2.length; i < len; i++) {
+      catListCard2[i].style.top = '13vw';
+    }
+
   }
   else if (djangoView == 'contact_view'){ 
     leftOffset = -(piWidth-bcWidth)+'px';
