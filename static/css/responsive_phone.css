@@ -879,7 +879,7 @@
     font-style: italic;
     margin-top: 20px;
     border-radius: 0 70px ;
-    background-color: #c2db6e;
+    background-color: var(--green);
     position: relative;
     display: flex;
     align-items: center; 
