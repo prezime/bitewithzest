@@ -1,7 +1,7 @@
 @media screen and (min-width: 1700px){
 
   .mobile{
-    display: none;
+    display: none !important;
   }
   header{
     position: absolute;
@@ -616,11 +616,9 @@
     top: 300px;
     display: flex;
     flex-direction:column;
-    /* background-color: grey; */
-    width: 90%;
+    width: 56%;
     left: 50%;
-    margin-left: -45%;
-
+    margin-left: -28%;
   }
   .layer5-1-1 a{
     text-decoration: none;
@@ -710,8 +708,15 @@
     /* flex-wrap: column; */
     margin: 0 15% ;
     background: url('/../media/layout/faq_bg.png') no-repeat top left;
-    background-size: 95%;
+    background-size: 80%;
 
+  }
+  .post-date{
+    position: relative;
+    width:180px;
+  }
+  .post-intro-text{
+    width: 400px;
   }
 
   .post-opener{
@@ -720,19 +725,25 @@
   }
   .post-opener img{
     margin: 3%;
-    border-radius: 0 180px;
+    border-radius: 0 180px; 
     width: 900px;
     height: 500px;
-    
     object-fit: cover;
   }
   .post-opener img.layer1-1{
     margin: 3%;
     width: 100%;
-    /* height: 88%; */
+    border-radius: 0;
     object-fit: cover;
     overflow: auto;
     
+  }
+  .post-opener img.layer1-2{
+    margin: 3%;
+    height: auto;
+    object-fit: cover;
+    overflow: auto;
+    border-radius: 0 120px; 
   }
 
   .intro-text{
@@ -761,11 +772,10 @@
 
   .post-content {
     display: grid;
-    margin: 0 30%;
     grid-template-areas: 
     "fill-left content fill-right";
     grid-gap: 2px 5px;
-    margin: 0 10% 5% 10%;
+    margin: 0 7% 5% 7%;
     grid-gap: 35px;
   }
   .content {
@@ -1148,16 +1158,12 @@
 
   .post-cat-card1{
     position: relative;
-    top: 12vw;
-    width: 80%;
     background-color: white;
     border-radius: 0 30% ;
 
   }
   .post-cat-card2{
     position: relative;
-    top: 12vw;
-    width: 80%;
     background-color: white;
     border-radius: 30% 0 ;
 
@@ -1187,7 +1193,6 @@
     width: 18vw;
     height: 18vw;
     object-fit: cover;
-    position: relative;
 
   }
   .post-cat-card2-pic>img {
@@ -1195,7 +1200,6 @@
     width: 18vw;
     height: 18vw;
     object-fit: cover;
-    position: relative;
   }
 
   .post-cat-card1-text, .post-cat-card2-text{
@@ -1315,7 +1319,7 @@
   }
   .post-title.faq{
     margin-top:7%;
-
+    right: 20%;
   }
 
 
@@ -1351,6 +1355,9 @@
     position: relative;
     top: 0;
     left: 0;
+  }
+  .submit_wrapper{
+    height:50vh;
   }
   .contact_form{
     display: flex;
@@ -1409,36 +1416,56 @@
     margin: 10px;
     position: relative;
   }
+
   /* ABOUT */
   .about_wrapper{
     position: relative;
     height: 100vh;
     margin-bottom: 100%;
-    top: 100px;
+    top: 250px;
   }
-  .about_wrapper .moto5{
+  .about_wrapper .breadcrumbs{
     position: relative;
-    top: 20px;
-    left: 20px;
+  }
+
+  .about_container{
+    display: flex;
+    padding: 2rem;
+    width: 100%;
+    flex-direction:column;
+  }
+
+  .about_container .moto5{
+    position: relative;
+    top: 0;
+    left: 0;
   }
   .about-text {
     position: relative;
     margin: 0 5%;
-    text-align: center;
   }
   .about-text p{
     font-size: 26px;
     font-weight: 200;
-    margin-top: 40px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--grey);
+    font-style: italic;
   }
+
+  .about-list{
+    position: absolute;
+    z-index: 1;
+    top: 340px;
+    display: flex;
+    flex-direction:column;
+    width: 90%;
+    left: 50%;
+    margin-left: -45%;
+  }
+
   .about_wrapper .hero5-card3{
     margin: 20px 0;
     width: 100%;
     display: flex;
     align-items: flex-end !important; 
-    
   }
 
   .about_wrapper .hero5-card3-pic{
@@ -1473,13 +1500,13 @@
 
   }
 
-  .about_wrapper .hero5-card3-text span{
-    font-size: 26px;
-    font-weight: 600;
+  .about_wrapper .hero5-card3-text span, .hero5-card1-text span{
+    font-size: 27px;
+    font-weight: 400;
   }
-  .about_wrapper .hero5-card3-text h3{
-    font-size: 31px;
-    font-weight: 600;
+  .about_wrapper .hero5-card3-text h3, .hero5-card1-text h3{
+    font-size: 27px;
+    font-weight: 400;
   }
   .about_wrapper .hero5-card3-text p{
     font-size: 24px;
@@ -1489,9 +1516,8 @@
   .about_background{
     background: url('/../media/layout/faq_bg.png') no-repeat top left;
     background-size: 90%;
-    width: 70%;
+    width: 75%;
     margin: auto;
-    top: 150px;
     height: 100vh;
     position: relative;
   }

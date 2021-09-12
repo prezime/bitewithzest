@@ -116,7 +116,11 @@ if (w <= 769) {
   } else if (djangoView == 'contact_view'){ 
     refElement = document.getElementsByClassName('contact_container');
     factor = 1;
-  }  
+  } 
+  else if (djangoView == 'about_view'){ 
+    refElement = document.getElementsByClassName('about_container');
+    factor = 1;
+  } 
   
   for (var i = 0, len = breadcrumbs.length; i < len; i++) {
     bcWidth += breadcrumbs[i].offsetWidth;
@@ -139,9 +143,11 @@ if (w <= 769) {
     catListCard1= document.getElementsByClassName('post-cat-card1');
     for (var i = 0, len = catListCard1.length; i < len; i++) {
       catListCard1[i].style.top = '13vw';
+      catListCard1[i].style.top = '13vw';
     }
     catListCard2= document.getElementsByClassName('post-cat-card2');
     for (var i = 0, len = catListCard2.length; i < len; i++) {
+      catListCard2[i].style.top = '13vw';
       catListCard2[i].style.top = '13vw';
     }
 
@@ -151,7 +157,14 @@ if (w <= 769) {
     console.log(bcWidth);
     console.log(piWidth);
     bc.style.marginLeft = leftOffset;
-    
+  }
+  else if (djangoView == 'about_view'){ 
+    leftOffset = (w-piWidth)/2+'px';
+    console.log(bcWidth);
+    console.log(piWidth);
+    console.log(leftOffset);
+    console.log(w);
+    bc.style.marginLeft = leftOffset;
   }
   //ovdje je sve dobro. ne diraj
   function beSticky() {

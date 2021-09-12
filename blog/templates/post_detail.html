@@ -50,14 +50,19 @@
         
         <div class="intro-text">  
             <div class="post-title"><h1>{{ object.titleplus | safe }}</h1></div>  
-            {% if post.category == 'Recipes' %}
-            {{ object.intro | safe }}
-            {% endif %} 
-            {% if object.custom_date %}
-            <div class="post-date">{{ object.custom_date | date:"F d Y"}}, <br>{{ object.author}}</div>
-            {% else %}    
-            <div class="post-date">{{ object.created_on | date:"F d Y"}}, <br>{{ object.author}}</div>
-            {% endif %} 
+            <div class="post-intro-text">
+                {% if post.category == 'Recipes' %}
+                    {{ object.intro | safe }}
+                {% endif %} 
+            </div>
+                {% if object.custom_date %}
+                <div class="post-date">{{ object.custom_date | date:"F d Y"}}, <br>{{ object.author}}</div>
+                {% else %}    
+                <div class="post-date">{{ object.created_on | date:"F d Y"}}, <br>{{ object.author}}</div>
+                {% endif %} 
+            
+            
+            
         </div>
         
             
