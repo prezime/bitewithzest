@@ -40,9 +40,9 @@
             {% if post.category != 'Recipes' and post.category != 'Lifestyle' %}
             <img class="layer1-1 desktop" src="../media/layout/bg_plants.png" alt=""> 
             <img class="layer1-1 mobile " src="../media/layout/bg_plantsMob.png" alt=""> 
-            <img class="bg-post " src="../media/post{{post.id}}/opener/post_opener{{post.id}}.jpg" alt=""> 
+            <img class="bg-post " src="../media/{{post.opener_pic}}" alt=""> 
             {% else %} 
-            <img class="bg-post marginTop0" src="../media/post{{post.id}}/opener/post_opener{{post.id}}.jpg" alt=""> 
+            <img class="bg-post marginTop0" src="../media/{{post.opener_pic}}" alt=""> 
             {% endif %} 
                    
         </div>
@@ -104,7 +104,7 @@
                 </div>
                 <div class="preparation-pic">
                     {% if object.intro_pic %}
-                        <img src="../media/post{{post.id}}/intro/post_intro{{post.id}}.jpg" alt="">
+                        <img src="../media/{{post.intro_pic}}" alt=""> 
                     {% endif %} 
                 </div>
                     
@@ -123,7 +123,7 @@
         <a href="{% url 'post_detail' object.relates_to.slug  %}">
         <div class="link-post-card flex-direction-column marginTop30perc marginBottom30perc"> 
             <div class="link-post-card__img">
-                <img  src="../../media/post{{object.relates_to.id}}/thumbs/post_thumb{{object.relates_to.id}}.jpg" alt="">
+                <img  src="../../media/{{object.relates_to.opener_pic}}" alt="">
             </div>
                 <div class="link-post-card__info">
                     <img class="width40perc" src="../../media/layout/tip.png" alt="">    
@@ -141,7 +141,7 @@
         {% endif %}
         {% if object.add_pic %} 
             <div class="add_pic">
-             <img src="../../media/post{{post.id}}/add/post_add{{post.id}}.jpg" alt=""> 
+             <img src="../../media/{{post.add_pic}}" alt=""> 
              <article>
                 {{ object.add_pic_desc }}
               </article>
@@ -175,7 +175,7 @@
         <a href="{% url 'post_detail' post.slug  %}">
         <div class="{% cycle  'card_featured1' 'card_featured2' %}">
             <div class="{% cycle  'card_featured1-pic' 'card_featured2-pic' %}">
-            <img src="../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="" />
+            <img src="../media/{{post.thumb_pic}}" alt="" />
             </div>
             <div class="{% cycle  'card_featured1-text' 'card_featured2-text' %}">
                 <h3>{{post.title}}</h3>
