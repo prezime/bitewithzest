@@ -2,6 +2,9 @@
   p{
     line-height: 1.6em;
   }
+  ul, li, ol{
+    line-height: 1.6;
+  }
   .mobile{
     display: none !important;
   }
@@ -718,7 +721,9 @@
     width:180px;
   }
   .post-intro-text{
+    position: relative;
     width: 400px;
+    top: 50%;
   }
 
   .post-opener{
@@ -751,7 +756,7 @@
   .intro-text{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content:space-between;
     color: var(--grey);
     margin-left: 3%;
     padding-bottom: 3%;
@@ -854,7 +859,7 @@
     font-style: italic;
     margin-top: 20px;
     border-radius: 0 70px ;
-    background-color: #c2db6e;
+    background-color: var(--green);
     position: relative;
     display: flex;
     align-items: center; 

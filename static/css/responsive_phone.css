@@ -768,7 +768,7 @@
     width: 100%;
     object-fit: cover;  
     border-radius: 0 100px;
-    margin: 150px auto 0 auto;
+    margin: 50px auto 0 auto;
   }
   .post-opener img.layer1-1{
     width: 100%;
@@ -1453,7 +1453,6 @@ input.hero3-btn{
 /* ABOUT */
 .about_wrapper{
   position: relative;
-  height: 100%;
   margin-bottom: 60%;
   top: 200px;
 }
@@ -1495,13 +1494,15 @@ input.hero3-btn{
 }
 
 
-.about_background{
-  width: 100%;
-  margin: auto;
-  top: 150px;
-  height: 100vh;
+.about_background {
   position: relative;
+  width: 94%;
+  margin:auto;
 }
+.about-text{
+
+}
+
   
 
 }
@@ -1518,16 +1519,19 @@ input.hero3-btn{
     margin-top: 0 !important;
   }
   .marginLeft20perc{
-    margin-left: 20%;
+    margin-left: 20% !important;
   }
   .marginTop10perc{
-    margin-top: 10%;
+    margin-top: 10% !important;
   }
   .marginTop20perc{
     margin-top: 20%;
   }
   .marginTop30perc{
-    margin-top: 30%;
+    margin-top: 30% !important;
+  }
+  .marginTop10em{
+    margin-top: 10em !important;
   }
   .marginTopMinus10perc{
     margin-top: -10%;

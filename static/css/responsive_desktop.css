@@ -2,6 +2,9 @@
   p{
     line-height: 1.6em;
   }
+  ul, li, ol{
+    line-height: 1.6;
+  }
   .mobile{
     display: none !important;
   }
@@ -715,7 +718,6 @@
   .post-date{
     position: relative;
     width:180px;
-    
   }
   .post-intro-text{
     position: relative;
