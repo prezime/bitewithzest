@@ -4,8 +4,7 @@
 {% block post_listed_showcase %}
 
 <div class="cat-wrapper">
-  
-  <div class="breadcrumbs" id="breadcrumbs">
+  <div class="breadcrumbs"  id="breadcrumbs">
     <ul>
         <li class="breadcrumbs-item">
           <a href="/" class="breadcrumbs-link">Home</a>
@@ -17,55 +16,61 @@
         </li>
     </ul>
   </div>
-  <div class="moto5" style="margin-top: 10%;"> 
-    {% if object.description == 'Recipes' %}
-      <h2>Plant-based</h2>
-      <h1>Recipes</h1>
-    {% elif object.description == 'Lexicon of plants' %}
-      <h2>Lexicon</h2>
-      <h1>of plants</h1>
-    {% elif object.description == 'Immunity Boosting' %}
-      <h2>Immunity</h2>
-      <h1>boosting</h1>
-    {% elif object.description == 'Our Planet' %}
-      <h2>Our</h2>
-      <h1>Planet</h1>
-    {% elif object.description == 'Lifestyle' %}
-      <h2>Plant-based</h2>
-      <h1>Lifestyle</h1>
-    {% endif %}
-  </div>
+  {% if object.description != 'FAQ' %}
+    <div class="moto5" style="margin-top: 10%;"> 
+      {% if object.description == 'Recipes' %}
+        <h2>Plant-based</h2>
+        <h1>Recipes</h1>
+      {% elif object.description == 'Lexicon of plants' %}
+        <h2>Lexicon</h2>
+        <h1>of plants</h1>
+      {% elif object.description == 'Immunity Boosting' %}
+        <h2>Immunity</h2>
+        <h1>boosting</h1>
+      {% elif object.description == 'Our Planet' %}
+        <h2>Our</h2>
+        <h1>Planet</h1>
+      {% elif object.description == 'Lifestyle' %}
+        <h2>Plant-based</h2>
+        <h1>Lifestyle</h1>
+      {% endif %}
+    </div>
+  {% endif %}
+  
   {% if object.description  == 'FAQ' %}
   {% include 'index_faq.html' %}
   {% endif %}
-  <div class="gallery-cat" id="galleryCat">
-    
-    {% if request.resolver_match.url_name  == 'category_view' %}
-      {% for post in post_cat_list %}
-        {% if object.description == post.category %}
-        <a href="{% url 'post_detail' post.slug  %}">
-          <div class="{% cycle 'post-cat-card1' 'post-cat-card2'%}">
-            <div class="{% cycle 'post-cat-card1-pic' 'post-cat-card2-pic' %}">
-              <img src="../../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="">
-            </div>
-            <div class="{% cycle 'post-cat-card1-text' 'post-cat-card2-text' %}">
-              <span>{{ post.titleplus|safe|slice:"47" }}{% if post.titleplus|safe|length > 47 %}...{% endif %}</span>
+  <div class="cat_background">
+    <div class="cat_container">
+      <div class="gallery-cat" id="galleryCat">
+        
+        {% if request.resolver_match.url_name  == 'category_view' %}
+          {% for post in post_cat_list %}
+            {% if object.description == post.category %}
+            <a href="{% url 'post_detail' post.slug  %}">
+              <div class="{% cycle 'post-cat-card1' 'post-cat-card2'%}">
+                <div class="{% cycle 'post-cat-card1-pic' 'post-cat-card2-pic' %}">
+                  <img src="../../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="">
+                </div>
+                <div class="{% cycle 'post-cat-card1-text' 'post-cat-card2-text' %}">
+                  <span>{{ post.titleplus|safe|slice:"47" }}{% if post.titleplus|safe|length > 47 %}...{% endif %}</span>
 
-              <div class="{% cycle 'post-cat-card1-info' 'post-cat-card2-info' %}">
-                {% if object.description == 'Recipes' %}
-                <p>{{ post.legend|safe}}</p>
-                {% else %}
-                <p>{{ post.intro|safe|slice:"131" }}{% if post.intro|safe|length > 131 %}...{% endif %}</p>
-                {% endif %}
+                  <div class="{% cycle 'post-cat-card1-info' 'post-cat-card2-info' %}">
+                    {% if object.description == 'Recipes' %}
+                    <p>{{ post.legend|safe}}</p>
+                    {% else %}
+                    <p>{{ post.intro|safe|slice:"131" }}{% if post.intro|safe|length > 131 %}...{% endif %}</p>
+                    {% endif %}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </a>
-        {% endif %}
-      {% endfor %} 
-      {% endif %}     
-     
-  </div>
+            </a>
+            {% endif %}
+          {% endfor %} 
+          {% endif %}     
+        </div>
+      </div>
+    </div>
 </div> 
 <div class="paginator">
   {% if post_cat_list.has_previous %}

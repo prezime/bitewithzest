@@ -135,10 +135,8 @@ if (w <= 769) {
     leftOffset = -(piWidth-bcWidth)+'px';
     bc.style.marginLeft = leftOffset;
     console.log(djangoView);
-  } else if (djangoView == 'category_view'){ 
-    leftOffset = (bcWidth-piWidth)/2+'px';
-    console.log(bcWidth);
-    console.log(piWidth);
+  } else if (djangoView == 'category_view' || djangoView == 'about_view'){ 
+    leftOffset = (w-piWidth)/2+'px';
     bc.style.marginLeft = leftOffset;
     catListCard1= document.getElementsByClassName('post-cat-card1');
     for (var i = 0, len = catListCard1.length; i < len; i++) {
@@ -150,7 +148,6 @@ if (w <= 769) {
       catListCard2[i].style.top = '13vw';
       catListCard2[i].style.top = '13vw';
     }
-
   }
   else if (djangoView == 'contact_view'){ 
     leftOffset = -(piWidth-bcWidth)+'px';
@@ -158,14 +155,7 @@ if (w <= 769) {
     console.log(piWidth);
     bc.style.marginLeft = leftOffset;
   }
-  else if (djangoView == 'about_view'){ 
-    leftOffset = (w-piWidth)/2+'px';
-    console.log(bcWidth);
-    console.log(piWidth);
-    console.log(leftOffset);
-    console.log(w);
-    bc.style.marginLeft = leftOffset;
-  }
+
   //ovdje je sve dobro. ne diraj
   function beSticky() {
     if (djangoView != 'home'){
