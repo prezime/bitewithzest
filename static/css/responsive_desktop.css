@@ -1,6 +1,6 @@
 @media screen and (min-width: 769px) and (max-width: 1699px){
   p{
-    line-height: 1.5em;
+    line-height: 1.6em;
   }
   .mobile{
     display: none !important;
@@ -757,7 +757,7 @@
   }
   .post-title{
     position: absolute;
-    top: 300px;
+    top: 350px;
     left: 60%;
     display: inline-block;
     margin: 20px;
