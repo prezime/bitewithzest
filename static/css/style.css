@@ -17,7 +17,7 @@
     --main_transparent: rgba(0, 170, 179, 0.2);
     --main_btn: rgba(110, 201, 211, 0.815);
     --red:red;
-    --green: rgb(143,198,64);
+    --green: rgba(194,219,110,0.4);
 
 
     --divider-border-style: solid;
@@ -43,6 +43,7 @@
 ul, li, ol{
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 body{
   margin: 0;
