@@ -160,16 +160,20 @@ if (w <= 769) {
 
   //ovdje je sve dobro. ne diraj
   function beSticky() {
-    if (djangoView != 'home'){
-      bc.style.zIndex = 0;
-    }
+    
     if (window.pageYOffset >= sticky) {
       console.log(sticky);
       navbar.style.position = 'fixed';
       navbar.style.top = 0;
+      if (djangoView != 'home'){
+        bc.style.zIndex = 0;
+      }
     } else {
       navbar.style.position = 'absolute';
       navbar.style.top = '100px';
+      if (djangoView != 'home'){
+        bc.style.zIndex = 2;
+      }
     }
   }
 }

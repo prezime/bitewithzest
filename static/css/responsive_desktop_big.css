@@ -763,7 +763,7 @@
   }
   .post-title{
     position: absolute;
-    top: 300px;
+    top: 350px;
     right: 15%;
     display: inline-block;
     margin: 20px;
@@ -1400,6 +1400,7 @@
     border: none;
     padding: 10px;
     margin: 10px;
+    font-size: 21px;
   }
   input::placeholder , textarea::placeholder{
     color: var(--grey);

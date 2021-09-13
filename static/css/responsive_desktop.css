@@ -1394,6 +1394,7 @@
     border: none;
     padding: 10px;
     margin: 10px;
+    font-size: 21px;
   }
   input::placeholder , textarea::placeholder{
     color: var(--grey);
