@@ -704,17 +704,15 @@
   .post-body{
     display: flex;
     flex-direction:column;
-    justify-content: center;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 250px;
   }
   .post-intro{
-    display: flex;
-    /* flex-wrap: column; */
-    margin: 40px 15% ;
     background: url('/../media/layout/faq_bg.png') no-repeat top left;
-    background-size: 80%;
-
+    background-size: 90%;
+    width: 70%;
+    margin-top: 40px;
+    display: flex;
   }
   .post-date{
     position: relative;
@@ -763,7 +761,7 @@
   }
   .post-title{
     position: absolute;
-    top: 350px;
+    top: 400px;
     right: 15%;
     display: inline-block;
     margin: 20px;
@@ -1112,7 +1110,7 @@
   }
 
   .breadcrumbs{
-    position: relative;
+    position: absolute;
     padding: 10px 0;
     z-index: 2;
     font-size: 18px;
@@ -1148,9 +1146,6 @@
     margin-bottom: 300px;
   }
 
-  .cat_wrapper .breadcrumbs{
-    position: absolute;
-  }
 
   .cat_background{
     background: url('/../media/layout/bg_cat_list1.png') no-repeat top;
@@ -1172,9 +1167,6 @@
   }
   .gallery-cat div{
     margin: 0 auto;
-  }
-  .cat-wrapper .breadcrumbs{
-    position: absolute;
   }
 
   .post-cat-card1{
@@ -1349,9 +1341,6 @@
   .contact_wrapper .moto5  h1, .thankyou_wrapper .moto5  h1, .about_wrapper .moto5  h1{
     margin: -18px  20px 10px ;
   }
-  .contact_wrapper .breadcrumbs{
-    position: absolute;
-  }
 
   .contact_background{
     background: url('/../media/layout/faq_bg.png') no-repeat top left;
@@ -1443,9 +1432,6 @@
     justify-content: center;
     height: 100%;
     margin: 250px 0;
-  }
-  .about_wrapper .breadcrumbs{
-    position: absolute;
   }
 
   .about_container{

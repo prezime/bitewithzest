@@ -109,7 +109,7 @@ if (w <= 769) {
   var refElement = [];
   if (djangoView == 'post_detail'){
     refElement = document.getElementsByClassName('post-intro');
-    factor = 1;
+    factor = 0.975;
   } else if (djangoView == 'category_view'){ 
     refElement = document.getElementsByClassName('gallery-cat');
     factor = 0.7;
@@ -131,11 +131,7 @@ if (w <= 769) {
   
   piWidth = piWidth * factor;
   
-  if (djangoView == 'post_detail'){
-    leftOffset = -(piWidth-bcWidth)+'px';
-    bc.style.marginLeft = leftOffset;
-    console.log(djangoView);
-  } else if (djangoView == 'category_view'){ 
+  if (djangoView == 'category_view'){ 
     leftOffset = (w-piWidth)/2+'px';
     console.log(bcWidth);
     console.log(piWidth);
@@ -151,10 +147,11 @@ if (w <= 769) {
       catListCard2[i].style.top = '12.5vw';
     }
   }
-  else if (djangoView == 'contact_view' || djangoView == 'about_view'){ 
+  else if (djangoView == 'contact_view' || djangoView == 'about_view' || djangoView == 'post_detail'){ 
     leftOffset = -(piWidth-bcWidth)+'px';
     console.log(bcWidth);
     console.log(piWidth);
+    console.log(w);
     bc.style.marginLeft = leftOffset;
   }
 
