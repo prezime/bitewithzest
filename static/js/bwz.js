@@ -135,7 +135,7 @@ if (w <= 769) {
     leftOffset = -(piWidth-bcWidth)+'px';
     bc.style.marginLeft = leftOffset;
     console.log(djangoView);
-  } else if (djangoView == 'category_view' || djangoView == 'about_view'){ 
+  } else if (djangoView == 'category_view'){ 
     leftOffset = (w-piWidth)/2+'px';
     console.log(bcWidth);
     console.log(piWidth);
@@ -151,7 +151,7 @@ if (w <= 769) {
       catListCard2[i].style.top = '12.5vw';
     }
   }
-  else if (djangoView == 'contact_view'){ 
+  else if (djangoView == 'contact_view' || djangoView == 'about_view'){ 
     leftOffset = -(piWidth-bcWidth)+'px';
     console.log(bcWidth);
     console.log(piWidth);

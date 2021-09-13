@@ -1387,6 +1387,9 @@
     font-size: 21px;
     font-weight:100;
   }
+  .contact_text a{
+    color: var(--main);
+  }
   .contact_form form{
     width: 50%;
   }
@@ -1399,8 +1402,8 @@
     margin: 10px;
   }
   input::placeholder , textarea::placeholder{
-    color: var(--black);
-    font-size: 24px;
+    color: var(--grey);
+    font-size: 21px;
     font-family: "Exo 2";
   }
 
@@ -1435,13 +1438,13 @@
 
   /* ABOUT */
   .about_wrapper{
-    position: relative;
-    height: 100vh;
-    margin-bottom: 100%;
-    top: 250px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin: 250px 0;
   }
   .about_wrapper .breadcrumbs{
-    position: relative;
+    position: absolute;
   }
 
   .about_container{
@@ -1467,14 +1470,12 @@
   }
 
   .about-list{
-    position: absolute;
+    position: relative;
     z-index: 1;
-    top: 340px;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     width: 90%;
-    left: 50%;
-    margin-left: -45%;
+    margin: auto;
   }
 
   .about_wrapper .hero5-card3{
@@ -1532,10 +1533,8 @@
   .about_background{
     background: url('/../media/layout/faq_bg.png') no-repeat top left;
     background-size: 90%;
-    width: 75%;
-    margin: auto;
-    height: 100vh;
-    position: relative;
+    width: 70%;
+    margin-top: 40px;
   }
   
 }
