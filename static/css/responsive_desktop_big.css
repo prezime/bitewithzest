@@ -695,7 +695,7 @@
     font-weight: 600;
   }
   .hero5-card1-text p, .hero5-card2-text p{
-    font-size: 24px;
+    font-size: 21px;
     font-weight: 200;
     margin-top: 20px;
   }
@@ -1153,7 +1153,7 @@
   }
 
   .cat_background{
-    background: url('/../media/layout/bg_cat_list.png') no-repeat top;
+    background: url('/../media/layout/bg_cat_list1.png') no-repeat top;
     background-size: 100%;
     margin-top: 40px;
     
@@ -1179,14 +1179,9 @@
 
   .post-cat-card1{
     position: relative;
-    background-color: white;
-    border-radius: 0 30% ;
-
   }
   .post-cat-card2{
     position: relative;
-    background-color: white;
-    border-radius: 30% 0 ;
 
   }
   .post-cat-card1-pic{
@@ -1225,7 +1220,7 @@
 
   .post-cat-card1-text, .post-cat-card2-text{
     top: 20px;
-    height: 350px;
+    height: 320px;
     width:300px;
     position: relative;
     display: flex;
@@ -1466,7 +1461,7 @@
     margin: 0 5%;
   }
   .about-text p{
-    font-size: 26px;
+    font-size: 23px;
     font-weight: 200;
     font-style: italic;
   }
@@ -1530,7 +1525,7 @@
     font-weight: 400;
   }
   .about_wrapper .hero5-card3-text p{
-    font-size: 24px;
+    font-size: 23px;
     font-weight: 200;
     margin-top: 20px;
   }
