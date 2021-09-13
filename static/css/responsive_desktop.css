@@ -710,7 +710,7 @@
     background: url('/../media/layout/faq_bg.png') no-repeat top left;
     background-size: 90%;
     width: 70%;
-    margin-top: 40px;
+    margin: 40px auto;
     display: flex;
   }
   .post-date{
@@ -1138,11 +1138,13 @@
   }
 
   .cat-wrapper{
-    margin-top: 240px; 
+    margin: 250px 0;
     width: 100%;
     background-size: 100%;
-    height:100%;
+    height: 100%;
     margin-bottom: 300px;
+    display: flex;
+    flex-direction: column;
   }
 
 

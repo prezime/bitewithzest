@@ -5,9 +5,6 @@ const accordion = document.getElementsByClassName('accordion');
 const breadcrumbs = document.getElementsByClassName('breadcrumbs');
 const catWrapper = document.querySelector('.cat-wrapper');
 var bc = document.getElementById('breadcrumbs');
-if (category == 'FAQ'){
-  catWrapper.classList.add('remove-background');
-}
 // Cookies-Consent
 const cookieContainer = document.querySelector('.cookie-container');
 const cookieButton = document.querySelector('.cookie-btn');
