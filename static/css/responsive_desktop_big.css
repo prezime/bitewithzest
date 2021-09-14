@@ -316,9 +316,9 @@
     font-size: 27px;
     font-weight: 500;
     color: var(--black);
-    top: 50px;
+    top: 30px;
     position: absolute;
-    left: 0;
+    left: 19px;
     max-width: 500px;
     letter-spacing: 0.02em;
     z-index: 1;
@@ -340,9 +340,9 @@
     letter-spacing: 0.02em;
   }
   .moto1 p{
-    font-size: 21px;
+    font-size: 24px;
     margin-top  :30px;
-    font-weight: 300;
+    font-weight: 600;
 
   }
 
