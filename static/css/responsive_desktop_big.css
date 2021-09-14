@@ -759,7 +759,7 @@
   }
   .post-title{
     position: absolute;
-    top: 330px;
+    top: 340px;
     right: 15%;
     display: inline-block;
     margin: 20px;
@@ -890,7 +890,7 @@
     justify-content:center;
     width: 70%;
     margin: auto auto 100px;
-    grid-gap: 20px;
+    grid-gap: 40px;
     z-index: 1;
     position: relative;
   }
@@ -1015,15 +1015,16 @@
     text-decoration:none;
   }
 
-  .card_featured1{
-    position: relative;
-    z-index: 1;
+  .post-footer {
+    padding-top: 100px;
   }
 
-  .card_featured2{
+  .card_featured1, .card_featured2{
     position: relative;
     z-index: 1;
+    margin-bottom: 50%;
   }
+
 
   .card_featured1-pic{
     border: 2px solid var(--main);
@@ -1072,12 +1073,10 @@
   .card_featured1-text, .card_featured2-text{
     z-index: 1;
     position: absolute;
-    top: 47%;
+    top: 100%;
     background-color: rgba(255, 255, 255, 0.9 );
     width: 98%;
-    height: 50%;
-    margin: auto;
-    left:1%;
+    margin: auto;    
   }
   
   .card_featured1-text>h3, .card_featured2-text>h3{
