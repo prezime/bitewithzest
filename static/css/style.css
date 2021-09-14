@@ -11,6 +11,7 @@
 :root {
     --yellow: #ffc600;
     --black: rgb(45, 73, 95);
+    --really_light_grey: rgba(45, 73, 95, 0.4);
     --light_grey: #e7e9e9;
     --grey: #777777;
     --main: rgb(0, 170, 179);
