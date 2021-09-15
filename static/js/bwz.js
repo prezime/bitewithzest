@@ -133,16 +133,6 @@ if (w <= 769) {
     console.log(bcWidth);
     console.log(piWidth);
     bc.style.marginLeft = leftOffset;
-    catListCard1= document.getElementsByClassName('post-cat-card1');
-    for (var i = 0, len = catListCard1.length; i < len; i++) {
-      catListCard1[i].style.top = '12.5vw';
-      catListCard1[i].style.top = '12.5vw';
-    }
-    catListCard2= document.getElementsByClassName('post-cat-card2');
-    for (var i = 0, len = catListCard2.length; i < len; i++) {
-      catListCard2[i].style.top = '12.5vw';
-      catListCard2[i].style.top = '12.5vw';
-    }
   }
   else if (djangoView == 'contact_view' || djangoView == 'about_view' || djangoView == 'post_detail'){ 
     leftOffset = -(piWidth-bcWidth)+'px';

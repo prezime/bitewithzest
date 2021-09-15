@@ -47,7 +47,7 @@
         {% if request.resolver_match.url_name  == 'category_view' %}
           {% for post in post_cat_list %}
             {% if object.description == post.category %}
-            <a href="{% url 'post_detail' post.slug  %}">
+            <a href="{% url 'post_detail' post.slug  %}" class="{% cycle 'post-cat-card1' 'post-cat-card2'%}">
               <div class="{% cycle 'post-cat-card1' 'post-cat-card2'%}">
                 <div class="{% cycle 'post-cat-card1-pic' 'post-cat-card2-pic' %}">
                   <img src="../../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="">

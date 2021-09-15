@@ -5,6 +5,9 @@
   ul, li, ol{
     line-height: 1.6;
   }
+  a.post-cat-card1, a.post-cat-card2{
+    top: 12.5vw;
+  }
   .mobile{
     display: none !important;
   }
