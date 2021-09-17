@@ -552,7 +552,7 @@
     position: relative;
     top: 330px;
     left: calc(50% - 464px);
-    width: 444px;
+    width: 27rem;
     /* margin-left: -222px; */
     background-color: white;
     border-radius: 140px 0;
@@ -561,7 +561,7 @@
   .hero3-card2{
     position: relative;
     top: 330px;
-    width: 444px;
+    width: 27rem;
     left: calc(50% - 424px);
     /* margin-left: 111px; */
     /* transform: translate(-50%, 0); */
@@ -573,36 +573,36 @@
     border: 2px solid var(--main);
     padding: 20px;
     border-radius: 30% 0;
-    width: 400px;
-    height: 400px;
+    width: 24rem;
+    height: 24rem;
     box-sizing: unset;
   }
   .hero3-card2-pic{
     border: 2px solid var(--main);
     padding: 20px;
     border-radius: 0 30% ;
-    width: 400px;
-    height: 400px;
+    width: 24rem;
+    height: 24rem;
     box-sizing: unset;
   }
   
   .hero3-card1-pic img {
     border-radius: 30% 0;
-    width: 400px;
-    height: 400px;
+    width: 24rem;
+    height: 24rem;
     object-fit: cover;
 
   }
   .hero3-card2-pic img {
     border-radius: 0 30% ;
-    width: 400px;
-    height: 400px;
+    width: 24rem;
+    height: 24rem;
     object-fit: cover;
   }
 
   .hero3-card1-text, .hero3-card2-text{
-    margin-top: 30px;
-    width:440px;
+    margin: 30px auto;
+    width:24rem;
   }
 
   .hero3-card1-text span, .hero3-card2-text span{
