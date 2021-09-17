@@ -538,10 +538,8 @@
     z-index: 1;
     top: 0;
     display: flex;
-    /* background-color: grey; */
-    width: 70%;
-    left: 50%;
-    margin-left: -35%;
+    margin-left: 50%;
+    transform: translate(-50%,0px);
 
   }
   .layer1-1-1 a{
@@ -551,66 +549,61 @@
   .hero3-card1{
     position: relative;
     top: 330px;
-    left: calc(50% - 464px);
-    width: 27rem;
-    /* margin-left: -222px; */
+    left: calc(50% - 25rem);
     background-color: white;
-    border-radius: 140px 0;
-    /* padding: 20px; */
+    border-radius: 110px 0;
   }
   .hero3-card2{
     position: relative;
     top: 330px;
-    width: 27rem;
-    left: calc(50% - 424px);
-    /* margin-left: 111px; */
-    /* transform: translate(-50%, 0); */
+    left: calc(50% - 16rem);
+    margin-left: 111px;
+    transform: translate(-50%, 0);
     background-color: white;
-    border-radius: 0 140px ;
-    /* padding: 20px; */
+    border-radius: 0 110px;
   }
   .hero3-card1-pic{
     border: 2px solid var(--main);
     padding: 20px;
     border-radius: 30% 0;
-    width: 24rem;
-    height: 24rem;
+    width: 20rem;
+    height: 20rem;
     box-sizing: unset;
   }
   .hero3-card2-pic{
     border: 2px solid var(--main);
     padding: 20px;
     border-radius: 0 30% ;
-    width: 24rem;
-    height: 24rem;
+    width: 20rem;
+    height: 20rem;
     box-sizing: unset;
   }
   
   .hero3-card1-pic img {
     border-radius: 30% 0;
-    width: 24rem;
-    height: 24rem;
+    width: 20rem;
+    height: 20rem;
     object-fit: cover;
 
   }
   .hero3-card2-pic img {
     border-radius: 0 30% ;
-    width: 24rem;
-    height: 24rem;
+    width: 20rem;
+    height: 20rem;
     object-fit: cover;
   }
 
   .hero3-card1-text, .hero3-card2-text{
     margin: 30px auto;
-    width:24rem;
+    width:20rem;
   }
 
   .hero3-card1-text span, .hero3-card2-text span{
-    font-size: 26px;
+    font-size: 23px;
     font-weight: 600;
   }
   .hero3-card1-text p, .hero3-card2-text p{
-    font-size: 21px;
+    font-size: 18px;
     margin-top: 20px;
     font-weight: 200;
   }
