@@ -5,6 +5,9 @@
   ul, li, ol{
     line-height: 1.6;
   }
+  a.post-cat-card1, a.post-cat-card2{
+    top: 12.5vw;
+  }
   .mobile{
     display: none !important;
   }
@@ -50,7 +53,7 @@
     position: absolute;
     top: 100px;
     right: 0;
-    padding: 0 10%;
+    padding: 7px 10%;
     background: url('/../media/layout/topnav.png') no-repeat top;
     background-size: auto;
     width: 100%;
@@ -69,7 +72,7 @@
   .navbar ul li a{
     height:50px;
     line-height: 40px;
-    font-size: 18px;
+    font-size: 20px;
     color: white;
     padding: 0 20px;
     text-decoration: none;
@@ -245,6 +248,7 @@
     width: 100%;
     overflow: hidden;
     height:100%;
+    padding-bottom: 200px;
   }
 
   .layer_relative{
@@ -309,11 +313,9 @@
     width: 30%;
     position: absolute;
     z-index: 1;
-    margin-top: -80px;
   }
 
   .moto1{
-    font-size: 27px;
     font-weight: 500;
     color: var(--black);
     top: 30px;
@@ -328,7 +330,7 @@
 
   .moto1 h1{
     font-family: var(--font-cool);
-    margin: 0 0 -15px 30px;
+    margin: 0 0 -10px 30px;
     color: var(--main);
     font-size:70px;
   }
@@ -341,20 +343,19 @@
   }
   .moto1 p{
     font-size: 24px;
-    margin-top  :30px;
+    margin-top:30px;
     font-weight: 600;
 
   }
 
 
   .moto2{
-    font-size: 27px;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--black);
     margin: 1% 25%;
     position: absolute;
     top: 200px;
-    left: 0;
+    left: 50px;
     max-width: 500px;
     letter-spacing: 0.03em;
   }
@@ -369,12 +370,12 @@
     font-family: var(--font-cool);
     margin: -10px  30px 10px ;
     color: var(--main);
-    font-size:50px;
+    font-size:70px;
   }
   .moto2 p{
-    font-size: 21px;
-    margin-top  :30px;
-    font-weight: 300;
+    font-size: 24px;
+    margin-top:30px;
+    font-weight: 600;
   }
 
   .moto3{
@@ -397,7 +398,7 @@
     font-family: var(--font-cool);
     margin: -10px  30px 10px ;
     color: var(--main);
-    font-size:50px;
+    font-size:70px;
   }
   .moto3 p{
     font-size: 21px;
@@ -417,21 +418,19 @@
   }
   .moto4 h1{
     font-family: var(--font-cool);
-    margin: -10px  30px 10px ;
+    margin: -30px  30px 10px ;
     color: white;
+    font-size: 70px;
   }
   .moto4 h2{
     color: white;
     font-size: 30px;
     font-weight: 600;
-    margin-bottom: 0;
   }
   .moto4 p{
-    font-size: 21px;
+    font-size: 24px;
     margin-top:30px;
-    font-weight: 300;
-    color: white;
-    letter-spacing: 0.03em;
+    font-weight: 600;
   }
   .moto5{
     position: absolute;
@@ -447,9 +446,9 @@
   }
   .moto5 h1{
     font-family: var(--font-cool);
-    margin: -10px  20px 10px ;
+    margin: -10px  30px 10px ;
     color: var(--main);
-    font-size:50px;
+    font-size:70px;
   }
   .hero-btn{
     background-color: var(--main);
@@ -533,7 +532,7 @@
   .layer1-1-1{
     position: absolute;
     z-index: 1;
-    top: 330px;
+    top: 450px;
     display: flex;
     margin-left: 50%;
     transform: translate(-50%,0px);
