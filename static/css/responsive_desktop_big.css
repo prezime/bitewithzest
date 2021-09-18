@@ -533,13 +533,10 @@
   .layer1-1-1{
     position: absolute;
     z-index: 1;
-    top: 0;
+    top: 330px;
     display: flex;
-    /* background-color: grey; */
-    width: 70%;
-    left: 50%;
-    margin-left: -35%;
-
+    margin-left: 50%;
+    transform: translate(-50%,0px);
   }
   .layer1-1-1 a{
     text-decoration: none;
@@ -547,59 +544,51 @@
   }
   .hero3-card1{
     position: relative;
-    top: 420px;
-    left: calc(50% - 494px);
-    width: 444px;
-    /* margin-left: -222px; */
-    background-color: white;
-    border-radius: 140px 0;
-    /* padding: 20px; */
+    border-radius: 110px 0;
+    padding: 0 40px;
   }
   .hero3-card2{
     position: relative;
-    top: 420px;
-    width: 444px;
-    left: calc(50% - 394px);
-    /* margin-left: 111px; */
-    /* transform: translate(-50%, 0); */
-    background-color: white;
-    border-radius: 0 140px ;
-    /* padding: 20px; */
+    border-radius: 0 110px;
+    padding: 0 40px;
+  
   }
   .hero3-card1-pic{
     border: 2px solid var(--main);
     padding: 20px;
     border-radius: 30% 0;
-    width: 400px;
-    height: 400px;
+    width: 24rem;
+    height: 24rem;
     box-sizing: unset;
+    background-color: white;
   }
   .hero3-card2-pic{
     border: 2px solid var(--main);
     padding: 20px;
     border-radius: 0 30% ;
-    width: 400px;
-    height: 400px;
+    width: 24rem;
+    height: 24rem;
     box-sizing: unset;
+    background-color: white;
   }
   
   .hero3-card1-pic img {
     border-radius: 30% 0;
-    width: 400px;
-    height: 400px;
+    width: 24rem;
+    height: 24rem;
     object-fit: cover;
 
   }
   .hero3-card2-pic img {
     border-radius: 0 30% ;
-    width: 400px;
-    height: 400px;
+    width: 24rem;
+    height: 24rem;
     object-fit: cover;
   }
 
   .hero3-card1-text, .hero3-card2-text{
-    margin-top: 30px;
-    width:440px;
+    margin: 30px auto;
+    width:24rem;
   }
 
   .hero3-card1-text span, .hero3-card2-text span{

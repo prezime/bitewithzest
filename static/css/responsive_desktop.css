@@ -548,14 +548,12 @@
   .hero3-card1{
     position: relative;
     border-radius: 110px 0;
-    padding: 0 20px;
-  }
-
+    padding: 0 30px;
   }
   .hero3-card2{
     position: relative;
     border-radius: 0 110px;
-    padding: 0 20px;
+    padding: 0 30px;
   
   }
   .hero3-card1-pic{
@@ -712,8 +710,8 @@
   }
   .post-intro-text{
     position: relative;
-    width: 400px;
-    top: 50%;
+    width: 300px;
+    top: 55%;
   }
 
   .post-opener{
