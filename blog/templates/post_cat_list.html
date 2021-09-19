@@ -40,6 +40,14 @@
   {% if object.description  == 'FAQ' %}
   {% include 'index_faq.html' %}
   {% endif %}
+  {% if object.description  == 'Recipes' %}
+  <img class="layer1-1 desktop" src="/../media/layout/basil_bg_png/RL_01_01.png" alt="" data-400="top:100px;">
+  <img class="layer1-1 desktop" src="/../media/layout/basil_bg_png/R_01_01.png" alt="" data-400="top:750px;">
+  {% elif object.description == 'Immunity Boosting' %}
+  <img class="layer1-1 desktop" src="/../media/layout/basil_bg_png/Imm_01_02.png" alt="" data-400="top:650px;">
+  {% elif object.description == 'Lifestyle' %}
+  <img class="layer1-1 desktop" src="/../media/layout/basil_bg_png/L_01_01.png" alt="" data-400="top:100px;">
+  {% endif %}
   <div class="cat_background">
     <div class="cat_container">
       <div class="gallery-cat" id="galleryCat">
