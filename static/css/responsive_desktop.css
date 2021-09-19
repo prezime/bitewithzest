@@ -1215,7 +1215,7 @@
   }
   .post-cat-card1-text p, .post-cat-card2-text p{
     font-size: 19px;
-    margin-top: 20px;
+    margin-top: -20px;
     font-weight: 200;
     
   }
