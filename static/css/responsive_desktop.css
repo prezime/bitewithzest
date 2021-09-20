@@ -1230,7 +1230,7 @@
     width: 100%;
     margin: auto;
     text-align: center;
-    line-height:50px;
+    line-height:30px;
   }
   .paginator>a{
     color: var(--grey);
@@ -1238,6 +1238,7 @@
   a.prev, a.next{
     color: var(--grey);
     font-weight: bold;
+    margin: 15px;
   }
   span.count_active{
     border-radius: 50%;
@@ -1245,10 +1246,10 @@
     color: white;
     display: inline-block;
     font-weight: bold;
-    line-height: 40px;
+    line-height: 30px;
     margin-right: 5px;
     text-align: center;
-    width: 40px;
+    width: 30px;
   }
   a.count:hover, a.prev:hover, a.next:hover{
     color: var(--main);

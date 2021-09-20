@@ -79,7 +79,8 @@
 </div> 
 <div class="paginator">
   {% if post_cat_list.has_previous %}
-  <a class='prev' href="{% url 'category_view' object.slug  %}?page={{post_cat_list.previous_page_number}}">◄</a>
+  <a class='prev' href="{% url 'category_view' object.slug  %}?page={{post_cat_list.previous_page_number}}"><i class="fa fa-angle-double-left" aria-hidden="true"></i>
+  </a>
   {% endif %} 
   {% if post_cat_list.paginator.num_pages > 1 %}
     {% for n in post_cat_list.paginator.page_range %}
@@ -91,7 +92,8 @@
     {% endfor %}
   {% endif %}  
   {% if post_cat_list.has_next %}
-  <a class='next' href="?page={{post_cat_list.next_page_number}}">►</a>
+  <a class='next' href="?page={{post_cat_list.next_page_number}}"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+  </a>
   {% endif %}
 </div>  
 
