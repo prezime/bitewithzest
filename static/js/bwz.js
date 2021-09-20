@@ -1,5 +1,7 @@
 const w = window.outerWidth;
 const navbar = document.getElementById("navbar");
+// const aPostCatCard = document.querySelectorAll('a.post-cat-card1, a.post-cat-card2');
+// const aPostCatCardOffset = aPostCatCard[0].offsetTop;
 const sticky = navbar.offsetTop;
 const accordion = document.getElementsByClassName('accordion');
 const breadcrumbs = document.getElementsByClassName('breadcrumbs');
@@ -144,9 +146,7 @@ if (w <= 769) {
 
   //ovdje je sve dobro. ne diraj
   function beSticky() {
-    
     if (window.pageYOffset >= sticky) {
-      console.log(sticky);
       navbar.style.position = 'fixed';
       navbar.style.top = 0;
       if (djangoView != 'home'){
