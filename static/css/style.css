@@ -97,6 +97,12 @@ a {
   text-decoration: none;
   color:inherit;
 }
+.maintext a {
+  position: relative;
+  text-decoration: underline;
+  color: var(--main);
+  text-decoration-color: var(--main);
+}
 
 .invisible{
   display: none;
