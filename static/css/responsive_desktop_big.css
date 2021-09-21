@@ -1306,6 +1306,9 @@
     padding-bottom: 20px;
     
   }
+  .acc_content>img{
+    width: 100%;
+  }
   .acc_wrapper .accordion.active .acc_label::before{
     content: '-';
     font-size: 1.6em;
