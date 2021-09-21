@@ -354,9 +354,9 @@
     color: var(--black);
     margin: 1% 25%;
     position: absolute;
-    top: 130px;
+    top: 70px;
     left: 50px;
-    max-width: 500px;
+    max-width: 700px;
     letter-spacing: 0.03em;
   }
   .moto2 h2{
@@ -383,8 +383,8 @@
     font-weight: 400;
     color: var(--black);
     position: absolute;
-    top: 180px;
-    left: 20%;
+    top: 110px;
+    left: 15%;
     max-width: 500px;
     z-index: 1;
   }
@@ -410,7 +410,7 @@
     font-weight: 400;
     color: white;
     position: absolute;
-    top: 210px;
+    top: 150px;
     left: 15%;
     max-width: 500px;
     letter-spacing: 0.03em;
@@ -1398,6 +1398,7 @@
     border-radius: 5px;
     position: relative;
     width: 100%;
+    cursor: pointer;
   }
   .submit_wrapper{
     height:50vh;
