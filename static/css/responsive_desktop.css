@@ -1316,6 +1316,9 @@
     color: var(--main);
     font-family: var(--font-cool);
   }
+  .acc_content a{
+    text-decoration: underline;
+  }
  
   /* CONTACT FORM */
   .contact_wrapper{
