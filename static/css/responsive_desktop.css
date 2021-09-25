@@ -873,6 +873,12 @@
     padding: 10px;
     font-size: 14px;
   }
+  .credits{
+    margin-top: 30px;
+  }
+
+
+
   .featured {
     display: flex;
     justify-content:center;
