@@ -876,8 +876,8 @@
   .credits{
     margin-top: 120px;
   }
-  .credits em{
-    margin: 0;
+  .credits p{
+    line-height: 1.1em;
   }
 
 
