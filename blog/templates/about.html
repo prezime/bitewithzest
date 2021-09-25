@@ -33,11 +33,11 @@
             <h2>Founders and editors</h2>
           </div>
           {% for author in authors_list %}
-            <div class="{% cycle 'hero5-card1' 'hero5-card3' %}">
-              <div class="{% cycle 'hero5-card1-pic' 'hero5-card3-pic' %}">
+            <div class="{% cycle 'hero5-card1' 'hero5-card2' %}">
+              <div class="{% cycle 'hero5-card1-pic' 'hero5-card2-pic' %}">
                 <img src="/../media/authors{{author.id}}/pic/author_pic{{author.id}}.jpeg" alt="">  
               </div>
-              <div class="{% cycle 'hero5-card1-text' 'hero5-card3-text' %}">
+              <div class="{% cycle 'hero5-card1-text' 'hero5-card2-text' %}">
                   <h3>{{author.name}}</h3>
 
                   <p>{{author.description|safe}}</p>

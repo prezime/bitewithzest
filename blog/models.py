@@ -115,6 +115,7 @@ class Post(models.Model):
     relates_to = models.ForeignKey('self', on_delete=models.CASCADE, default=1)
     relates_to_desc = models.CharField(max_length=300,default='',blank=True)
     outro = RichTextUploadingField(default='',blank=True)
+    credits = RichTextUploadingField(default='',blank=True)
     
     class Meta:
         ordering = ['-created_on']

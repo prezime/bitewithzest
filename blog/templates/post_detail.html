@@ -74,8 +74,9 @@
             
         </div>
         <div class="fill-right">
-            
-            
+            {% if object.additionaltext %}   
+                {{ object.additionaltext | safe }} 
+            {% endif %}   
         </div>
         <div class="content">
             
@@ -158,9 +159,9 @@
                 </div>
             </div>
         {% endif %}
-        {% if object.additionaltext %}   
+        {% if object.credits %}   
             <div class="outro">
-                {{ object.additionaltext | safe }} 
+                {{ object.credits | safe }} 
             </div>    
         {% endif %}
         

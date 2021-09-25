@@ -1234,6 +1234,7 @@
   }
   .paginator>a{
     color: var(--grey);
+    margin: 15px;
   } 
   a.prev, a.next{
     color: var(--grey);
