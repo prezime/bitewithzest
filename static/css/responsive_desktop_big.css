@@ -821,6 +821,9 @@
     border-radius: 0 45px;
   }
   
+  .ingredients {
+    margin-bottom: 40px;
+  }
   
   .preparationtext>h3, .ingredients>h3{
     color: var(--main);
