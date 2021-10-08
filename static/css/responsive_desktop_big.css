@@ -680,7 +680,8 @@
     font-size: 31px;
     font-weight: 600;
   }
-  .hero5-card1-text p, .hero5-card2-text p{
+  .hero5-card1-text p,
+  .hero5-card2-text p {
     font-size: 21px;
     font-weight: 200;
     margin-top: 20px;
