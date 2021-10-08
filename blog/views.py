@@ -48,7 +48,7 @@ def shared_context(context,self):
     context['post_cat4'] = Category.objects.get(id=4)
     context['post_cat5'] = Category.objects.get(id=8)
     post_queryset_ascending = Post.objects.all().filter(status=1).filter(category = list(context.values())[1]).order_by('-id') 
-    post_queryset_descending = Post.objects.all().filter(status=1).filter(subcategory = list(context.values())[1]).order_by('id')
+    post_queryset_descending = Post.objects.all().filter(status=1).filter(subcategory = list(context.values())[1]).order_by('custom_date')
     post_queryset_cat1 = Post.objects.all().filter(category = context['post_cat1'].description).filter(status=1).order_by('id')  
     post_queryset_cat2 = Post.objects.all().filter(category = context['post_cat2'].description).filter(status=1).order_by('id') 
     post_queryset_cat3 = Post.objects.all().filter(category = context['post_cat3'].description).filter(status=1).order_by('id') 
