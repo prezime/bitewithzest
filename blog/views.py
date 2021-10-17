@@ -105,58 +105,82 @@ def shared_context(context, self):
     page_num = self.request.GET.get('page', 1)
     try:
         post_queryset_paginated_cat1 = p_cat1.page(page_num)
-        postlang_queryset_paginated_cat1 = pl_cat1.page(page_num)
     except (EmptyPage, PageNotAnInteger, InvalidPage):
         post_queryset_paginated_cat1 = p_cat1.page(1)
-        postlang_queryset_paginated_cat1 = pl_cat1.page(1)
 
     try:
         post_queryset_paginated_cat2 = p_cat2.page(page_num)
-        postlang_queryset_paginated_cat2 = pl_cat2.page(page_num)
     except (EmptyPage, PageNotAnInteger, InvalidPage):
         post_queryset_paginated_cat2 = p_cat2.page(1)
-        postlang_queryset_paginated_cat2 = pl_cat2.page(1)
 
     try:
         post_queryset_paginated_cat3 = p_cat3.page(page_num)
-        postlang_queryset_paginated_cat3 = pl_cat3.page(page_num)
     except (EmptyPage, PageNotAnInteger, InvalidPage):
         post_queryset_paginated_cat3 = p_cat3.page(1)
-        postlang_queryset_paginated_cat3 = pl_cat3.page(1)
 
     try:
         post_queryset_paginated_cat4 = p_cat4.page(page_num)
-        postlang_queryset_paginated_cat4 = pl_cat4.page(page_num)
     except (EmptyPage, PageNotAnInteger, InvalidPage):
         post_queryset_paginated_cat4 = p_cat4.page(1)
-        postlang_queryset_paginated_cat4 = pl_cat4.page(1)
 
     try:
         post_queryset_paginated_cat5 = p_cat5.page(page_num)
-        postlang_queryset_paginated_cat5 = pl_cat5.page(page_num)
     except (EmptyPage, PageNotAnInteger, InvalidPage):
         post_queryset_paginated_cat5 = p_cat5.page(1)
-        postlang_queryset_paginated_cat5 = pl_cat5.page(1)
 
     try:
         post_queryset_paginated_feat = p_feat.page(page_num)
-        postlang_queryset_paginated_feat = pl_feat.page(page_num)
     except (EmptyPage, PageNotAnInteger, InvalidPage):
         post_queryset_paginated_feat = p_feat.page(1)
-        postlang_queryset_paginated_feat = pl_feat.page(1)
 
     try:
         post_queryset_paginated_asc = p_asc.page(page_num)
-        postlang_queryset_paginated_asc = pl_asc.page(page_num)
     except (EmptyPage, PageNotAnInteger, InvalidPage):
         post_queryset_paginated_asc = p_asc.page(1)
-        postlang_queryset_paginated_asc = pl_asc.page(1)
 
     try:
         post_queryset_paginated_desc = p_desc.page(page_num)
-        postlang_queryset_paginated_desc = pl_desc.page(page_num)
     except (EmptyPage, PageNotAnInteger, InvalidPage):
         post_queryset_paginated_desc = p_desc.page(1)
+    #
+    try:
+        postlang_queryset_paginated_cat1 = pl_cat1.page(page_num)
+    except (EmptyPage, PageNotAnInteger, InvalidPage):
+        postlang_queryset_paginated_cat1 = pl_cat1.page(1)
+
+    try:
+        postlang_queryset_paginated_cat2 = pl_cat2.page(page_num)
+    except (EmptyPage, PageNotAnInteger, InvalidPage):
+        postlang_queryset_paginated_cat2 = pl_cat2.page(1)
+
+    try:
+        postlang_queryset_paginated_cat3 = pl_cat3.page(page_num)
+    except (EmptyPage, PageNotAnInteger, InvalidPage):
+        postlang_queryset_paginated_cat3 = pl_cat3.page(1)
+
+    try:
+        postlang_queryset_paginated_cat4 = pl_cat4.page(page_num)
+    except (EmptyPage, PageNotAnInteger, InvalidPage):
+        postlang_queryset_paginated_cat4 = pl_cat4.page(1)
+
+    try:
+        postlang_queryset_paginated_cat5 = pl_cat5.page(page_num)
+    except (EmptyPage, PageNotAnInteger, InvalidPage):
+        postlang_queryset_paginated_cat5 = pl_cat5.page(1)
+
+    try:
+        postlang_queryset_paginated_feat = pl_feat.page(page_num)
+    except (EmptyPage, PageNotAnInteger, InvalidPage):
+        postlang_queryset_paginated_feat = pl_feat.page(1)
+
+    try:
+        postlang_queryset_paginated_asc = pl_asc.page(page_num)
+    except (EmptyPage, PageNotAnInteger, InvalidPage):
+        postlang_queryset_paginated_asc = pl_asc.page(1)
+
+    try:
+        postlang_queryset_paginated_desc = pl_desc.page(page_num)
+    except (EmptyPage, PageNotAnInteger, InvalidPage):
         postlang_queryset_paginated_desc = pl_desc.page(1)
 
     post_queryset = Post.objects.all()
