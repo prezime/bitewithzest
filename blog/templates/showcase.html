@@ -1,7 +1,6 @@
 {% extends "base.html" %} 
-{% load shuffle %}
-{% load index %}
-{% load setvar %}
+{% load shuffle i18n index setvar %}
+
 {% block post_showcase %}
 <section class="hero-element1"> 
   <img class="bg1" src="/../media/layout/bg1_2.png" alt="" data-0="transform: scale(1);" data-600="transform: scale(1.5);">
@@ -12,10 +11,10 @@
   <img class="layer1-1 desktop" src="/../media/layout/basil_bg_png/H_01_04.png" alt="" data-0="top:210px;" data-600="top:300px;">
   <img class="layer1-1 mobile" src="/../media/layout/layerMob1-1.png" alt="" > 
   <div class="moto1"> 
-    <h2>Plant-based</h2>
-    <h1>recipe ideas</h1>
-    <p>Healthy and delicious recipes, easy and quick to make. All about how to start & end your day nutritionally well and with a positive energy.</p>
-    <button class="hero-btn"><a href="{% url 'category_view' post_cat1.slug  %}">discover more</a></button>
+    <h2>{% trans 'Plant-based' %}</h2>
+    <h1>{% trans 'recipe ideas' %}</h1>
+    <p>{% trans 'Healthy and delicious recipes, easy and quick to make. All about how to start & end your day nutritionally well and with a positive energy.' %}</p>
+    <button class="hero-btn"><a href="{% url 'category_view' post_cat1.slug  %}">{% trans 'discover more' %}</a></button>
   </div>
   
 </section>
@@ -27,11 +26,12 @@
   <img class="layer2-1" src="/../media/layout/layer2-1.png" alt="" data-400="top: 10px; " data-900="top: 150px;">
   
   <div class="moto2"> 
-    <h2>Lexicon</h2>
-    <h1>of plants</h1>
-    <p>The philosopher and teacher Rudolf Steiner once said, "For every human illness, somewhere in the world there exists a plant which is the cure. "
-      </p><p>For thousands of years, people from all over the globe have used herbs and plants to cure or prevent disease. Sometimes, we are not even aware that some plant familiar to us, has a special gift...</p>
-    <button class="hero2-btn"><a href="{% url 'category_view' post_cat1.slug  %}">discover more</a></button>
+    
+    <h2>{% trans 'Lexicon' %}</h2>
+    <h1>{% trans 'of plants' %}</h1>
+    <p>{% trans 'The philosopher and teacher Rudolf Steiner once said, "For every human illness, somewhere in the world there exists a plant which is the cure. "' %}
+      </p><p>{% trans 'For thousands of years, people from all over the globe have used herbs and plants to cure or prevent disease. Sometimes, we are not even aware that some plant familiar to us, has a special gift...' %}</p>
+    <button class="hero2-btn"><a href="{% url 'category_view' post_cat1.slug  %}">{% trans 'discover more' %}</a></button>
   </div>
 </section>
 <section class="hero-element3">
@@ -39,8 +39,8 @@
   <img class="bg3 mobile" src="/../media/layout/bg3-1.png" alt=""   >
   <img class="layer1-1 desktop" src="/../media/layout/basil_bg_png/H_03_01.png" alt="" data-top="top: 400px; " >
   <div class="moto3"> 
-    <h2>Plant-based</h2>
-    <h1>lifestyle</h1>
+    <h2>{% trans 'Plant-based' %}</h2>
+    <h1>{% trans 'lifestyle' %}</h1>
   </div>
     <div class="layer1-1-1" >
       {% for post in post_cat5_list|shuffle|slice:"2" %}
@@ -50,10 +50,10 @@
               <img src="/../media/post{{post.id}}/opener/post_opener{{post.id}}.jpg" alt="">
             </div>
           <div class="{% cycle 'hero3-card1-text' 'hero3-card2-text' %}">
-              <span>{{post.title}}</span>
-              <p>{{ post.intro|safe|slice:"231" }}{% if post.intro|safe|length > 231 %}...{% endif %}</p>
+              <span>{% trans post.title %}</span>
+              <p>{% trans post.intro|safe|slice:"231"  %}{% if post.intro|safe|length > 231 %}...{% endif %}</p>
           </div>
-          <button class="{% cycle 'invisible' 'hero3-btn' %}"><a href="{% url 'category_view' post_cat5.slug  %}">discover more</a></button>
+          <button class="{% cycle 'invisible' 'hero3-btn' %}"><a href="{% url 'category_view' post_cat5.slug  %}">{% trans 'discover more' %}</a></button>
         </div>
       </a>
       {% endfor %}
@@ -68,11 +68,11 @@
   <img class="layer1-1 desktop" src="/../media/layout/basil_bg_png/H_04_02.png" alt="" data-3500="top: 500px">
   <img class="bg4" src="/../media/layout/bg4.jpg" alt="" data-2500="left: 110px"  data-3900="left:0px">
   <div class="moto4"> 
-    <h2>Our</h2>
-    <h1>planet</h1>
-    <p>Scientists name about 18,000 new species each year. According to study made in 2011 humans share the planet with approximately 8,7 million different forms of life. Every one of them has something interesting to tell.</p>
+    <h2>{% trans 'Our' %}</h2>
+    <h1>{% trans 'planet' %}</h1>
+    <p>{% trans 'Scientists name about 18,000 new species each year. According to study made in 2011 humans share the planet with approximately 8,7 million different forms of life. Every one of them has something interesting to tell.' %}</p>
     <div class="hero4-btn">
-        <button><a href="{% url 'category_view' post_cat1.slug  %}">discover more</a></button>
+        <button><a href="{% url 'category_view' post_cat1.slug  %}">{% trans 'discover more' %}</a></button>
     </div>
   </div>
   
@@ -82,8 +82,8 @@
   <img class="layer1-1 desktop" src="/../media/layout/basil_bg_png/H_05_02.png" alt="" data-4100="top: 100px">
   <img class="bg5 mobile" src="/../media/layout/bgMob5.png" alt=""   >
   <div class="moto5"> 
-    <h2>Immunity</h2>
-    <h1>boosting</h1>
+    <h2>{% trans 'Immunity' %}</h2>
+    <h1>{% trans 'boosting' %}</h1>
   </div>
   <img class="layer1-1 desktop" src="/../media/layout/basil_bg_png/H_05_01.png" alt="" data-4400="top: 600px">
   <div class="layer5-1-1" >
@@ -94,15 +94,15 @@
           <img src="/../media/post{{post.id}}/opener/post_opener{{post.id}}.jpg" alt="">  
         </div>
         <div class="{% cycle 'hero5-card1-text' 'hero5-card2-text' %}">
-            <h3>{{post.title}}</h3>
+            <h3>{% trans post.title %}</h3>
 
-            <p>{{ post.intro|safe|slice:"271" }}{% if post.intro|safe|length > 271 %}...{% endif %}</p>
+            <p>{% trans  post.intro|safe|slice:"271"  %}{% if post.intro|safe|length > 271 %}...{% endif %}</p>
         </div>
       </div>
     </a>
     {% endfor %}
     <div class="hero5-btn">
-      <button><a href="{% url 'category_view' post_cat3.slug  %}">discover more</a></button> 
+      <button><a href="{% url 'category_view' post_cat3.slug  %}">{% trans 'discover more' %}</a></button> 
     </div>
   </div>
   

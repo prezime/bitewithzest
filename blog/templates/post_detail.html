@@ -5,8 +5,7 @@
 <div class="post-body">
     <img class="layer2-1 desktop" src="/../media/layout/basil-5.png" alt="" data-400="top:170px; left:84%; width:15%">
     <img class="layer2-1 desktop" src="/../media/layout/basil-4.png" alt="" data-400="top:900px; left:4%; width:15%">
-    <div class="breadcrumbs" id="breadcrumbs">
-        
+    <div class="breadcrumbs" id="breadcrumbs">       
         <ul>
             <li class="breadcrumbs-item">
                 <a href="/" class="breadcrumbs-link">Home</a>
@@ -51,10 +50,27 @@
 
         
         <div class="intro-text">  
-            <div class="post-title"><h1>{{ object.titleplus | safe }}</h1></div>  
+            <div class="post-title"><h1>
+            {% if LANGUAGE_CODE != 'en' %} 
+                {% for postlang in postlang_list %}
+                    {% if object.id == postlang.id %}
+                        {{ postlang.titleplus | safe }}
+                    {% endif %}
+                {% endfor %}           
+            {% else %}    
+                {{ object.titleplus | safe }} 
+            {% endif %}  </h1></div>       
             <div class="post-intro-text">
                 {% if post.category == 'Recipes' %}
-                    {{ object.intro | safe }}
+                    {% if LANGUAGE_CODE != 'en' %} 
+                        {% for postlang in postlang_list %}
+                            {% if object.id == postlang.id %}
+                                {{ postlang.intro | safe }}
+                            {% endif %}
+                        {% endfor %}           
+                    {% else %}    
+                        {{ object.intro | safe }} 
+                    {% endif %}  
                 {% endif %} 
             </div>
                 {% if object.custom_date %}
@@ -74,8 +90,16 @@
             
         </div>
         <div class="fill-right">
-            {% if object.additionaltext %}   
-                {{ object.additionaltext | safe }} 
+            {% if object.additionaltext %} 
+                {% if LANGUAGE_CODE != 'en' %} 
+                    {% for postlang in postlang_list %}
+                        {% if object.id == postlang.id %}
+                            {{ postlang.additionaltext | safe }}
+                        {% endif %}
+                    {% endfor %}           
+                {% else %}    
+                    {{ object.additionaltext | safe }} 
+                {% endif %}   
             {% endif %}   
         </div>
         <div class="content">
@@ -83,10 +107,26 @@
             <div class="maintext" id="maintext">
                 <strong>
                 {% if post.category != 'Recipes' %}
-                {{ object.intro | safe }}
+                    {% if LANGUAGE_CODE != 'en' %} 
+                        {% for postlang in postlang_list %}
+                            {% if object.id == postlang.id %}
+                                {{ postlang.intro | safe }}
+                            {% endif %}
+                        {% endfor %}           
+                    {% else %}    
+                        {{ object.intro | safe }} 
+                    {% endif %}
                 {% endif %} 
                 </strong>
-                {{ object.maintext | safe }}
+                {% if LANGUAGE_CODE != 'en' %} 
+                    {% for postlang in postlang_list %}
+                        {% if object.id == postlang.id %}
+                            {{ postlang.maintext | safe }}
+                        {% endif %}
+                    {% endfor %}           
+                {% else %}    
+                    {{ object.maintext | safe }} 
+                {% endif %}
             </div> 
             
             <div class="preparation flex-direction-column" id="preparation">

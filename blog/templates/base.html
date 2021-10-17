@@ -1,6 +1,7 @@
-{% load static %}
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,10 +29,29 @@
       <ul id="nav_ul">
         <li class="{% if request.resolver_match.url_name  == 'about_view' %}active{% endif %}"><a href="{% url 'about_view'  %}">About</a></li>
         <li class="{% if request.resolver_match.url_name  == 'contact_view' %}active{% endif %}"><a href="{% url 'contact_view'  %}">Contact</a></li>
-        <li><a href="javascript:void(0)"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>  <a href="javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li>
+          <form class="form-inline" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+            <input name="next" type="hidden" value="{{ redirect_to }}">
+            <select name="language" onchange="if(this.value != '0') this.form.submit()">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}   
+                    <option class="option-style" value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                        {{ language.code }}
+                    </option>
+                {% endfor %}
+            </select>  
+            
+            <a href="javascript:void(0)"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>  
+            <a href="javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a> </li>
+          </form>
+          
       </ul>
+      
     </nav>
   </header>
+  
   <nav class="navbar" id="navbar">
     <ul id="navbar_ul">
     {% for category in cat_list %}

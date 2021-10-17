@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-16 14:16+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: blog/templates/showcase.html:15 blog/templates/showcase.html:42
+msgid "Plant-based"
+msgstr "Pflanzbasierte"
+
+#: blog/templates/showcase.html:16
+msgid "recipe ideas"
+msgstr "Rezeptideen"
+
+#: blog/templates/showcase.html:17
+msgid ""
+"Healthy and delicious recipes, easy and quick to make. All about how to "
+"start & end your day nutritionally well and with a positive energy."
+msgstr ""
+"Gesunde und leckere Rezepte, einfach und schnell zubereitet. Alles darüber, "
+"wie den Tag nahrhaft gut und mit positiver Energie zu beginnen und zu "
+"beenden."
+
+#: blog/templates/showcase.html:30
+msgid "Lexicon"
+msgstr "Lexikon"
+
+#: blog/templates/showcase.html:31
+msgid "of plants"
+msgstr "der Pflanzen"
+
+#: blog/templates/showcase.html:32
+msgid ""
+"The philosopher and teacher Rudolf Steiner once said, \"For every human "
+"illness, somewhere in the world there exists a plant which is the cure. \""
+msgstr ""
+"Der Philosoph und Pädagoge Rudolf Steiner sagte einmal: \"Für jede menschliche "
+"Krankheit gibt es irgendwo auf der Welt eine Pflanze, die das Heilmittel ist. \""
+
+#: blog/templates/showcase.html:33
+msgid ""
+"For thousands of years, people from all over the globe have used herbs and "
+"plants to cure or prevent disease. Sometimes, we are not even aware that "
+"some plant familiar to us, has a special gift..."
+msgstr ""
+"Seit Tausenden von Jahren verwenden Menschen auf der ganzen Welt Kräuter und "
+"Pflanzen, um Krankheiten zu heilen oder zu verhindern. Manchmal sind wir uns nicht einmal bewusst, dass "
+"eine Pflanze, die uns vertraut ist, eine besondere Gabe hat..."
+
+#: blog/templates/showcase.html:34 blog/templates/showcase.html:56
+#: blog/templates/showcase.html:75 blog/templates/showcase.html:105
+msgid "discover more"
+msgstr "mehr entdecken"
+
+#: blog/templates/showcase.html:43
+msgid "lifestyle"
+msgstr "Lifestyle"
+
+#: blog/templates/showcase.html:71
+msgid "Our"
+msgstr "Unser"
+
+#: blog/templates/showcase.html:72
+msgid "planet"
+msgstr "Planet"
+
+#: blog/templates/showcase.html:73
+msgid ""
+"Scientists name about 18,000 new species each year. According to study made "
+"in 2011 humans share the planet with approximately 8,7 million different "
+"forms of life. Every one of them has something interesting to tell."
+msgstr ""
+"Wissenschaftler benennen jedes Jahr etwa 18.000 neue Arten. Laut einer Studie "
+" aus dem Jahr 2011, teilen sich die Menschen den Planeten mit etwa 8,7 Millionen verschiedenen "
+" Lebensformen. Jede einzelne davon hat etwas Interessantes zu erzählen."
+
+#: blog/templates/showcase.html:85
+msgid "Immunity"
+msgstr "Förderung vom"
+
+#: blog/templates/showcase.html:86
+msgid "boosting"
+msgstr "Immunsystem"
+
+

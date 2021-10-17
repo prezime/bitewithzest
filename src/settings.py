@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 import mimetypes
 from decouple import config
+from django.utils.translation import gettext_lazy as _
 
 mimetypes.add_type("text/css", ".css", True)
 
@@ -51,6 +52,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -116,7 +118,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGES = (
+    ('en', _('English')),
+    ('de', _('German')),
+)
 
 TIME_ZONE = 'UTC'
 
@@ -126,12 +131,16 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale')
+]
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.abspath(f"{BASE_DIR}/../static")
-STATIC_ROOT  = os.path.join(BASE_DIR, 'staticfiles/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
@@ -143,17 +152,19 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_CONFIGS = {
     'default': {
-        'enterMode': 0, 
+        'enterMode': 0,
         'toolbar': 'Custom',
         'toolbar_Custom': [
             ['Undo'],
-            ['Styles', 'Format', 'Font', 'FontSize','Bold', 'Italic', 'Underline','Blockquote'],
+            ['Styles', 'Format', 'Font', 'FontSize', 'Bold',
+                'Italic', 'Underline', 'Blockquote'],
             ['TextColor', 'BGColor'],
-            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-',
+                'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
             ['Link', 'Unlink'],
-            ['RemoveFormat', 'Youtube','mediaEmbed','Image','Table','Source'],
-            
-            
+            ['RemoveFormat', 'Youtube', 'mediaEmbed', 'Image', 'Table', 'Source'],
+
+
         ],
         'colorButton_colors': 'ffc600,00aab3,777777,2d495f,CCEAEE,66AB16',
         'extraPlugins': ','.join([
@@ -168,11 +179,8 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 SERVER_EMAIL = config('SERVER_EMAIL')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-EMAIL_PORT =  config('EMAIL_PORT')
+EMAIL_PORT = config('EMAIL_PORT')
 EMAIL_USE_TLS = config('EMAIL_USE_TLS')
 
 
 GOOGLE_RECAPTCHA_SECRET_KEY = config('GOOGLE_RECAPTCHA_SECRET_KEY')
-
-
-

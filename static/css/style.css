@@ -64,6 +64,44 @@ section {
   margin: 0;
   padding: 0;
 }
+/* Style the form - display items horizontally */
+.form-inline {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.form-inline select {
+  font-family: "Exo 2";
+  font-size: 18px;
+  border: none;
+  outline: 0px;
+  background-color: var(--main);
+  color: white;
+  cursor: pointer;
+}
+option.option-style {
+  font-family: "Exo 2" !important;
+  font-size: 18px;
+  border: none !important;
+  outline: 0px;
+  background-color: var(--main);
+  color: white;
+  cursor: pointer;
+}
+
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 0;
+  }
+
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
 li a {
   color: var(--main);
   text-decoration: underline;
