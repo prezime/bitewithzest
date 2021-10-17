@@ -164,23 +164,57 @@ class Post(models.Model):
 
 
 class PostLang(models.Model):
-    id = models.IntegerField(primary_key=True)
+    def save(self):
+        if not self.id:
+            self.id = self.post.id
+        if not self.updated_on:
+            self.updated_on = self.post.updated_on
+        if not self.created_on:
+            self.created_on = self.post.created_on
+        if not self.custom_date:
+            self.custom_date = self.post.custom_date
+        if not self.status:
+            self.status = self.post.status
+        if not self.cardtype:
+            self.cardtype = self.post.cardtype
+        if not self.titleplus:
+            self.titleplus = self.post.titleplus
+        if not self.maintext:
+            self.maintext = self.post.maintext
+        if not self.intro1:
+            self.intro1 = self.post.intro1
+        if not self.intro:
+            self.intro = self.post.intro
+        if not self.legend:
+            self.legend = self.post.legend
+        if not self.ingredients:
+            self.ingredients = self.post.ingredients
+        if not self.additionaltext:
+            self.additionaltext = self.post.additionaltext
+        if not self.preparationtext:
+            self.preparationtext = self.post.preparationtext
+        if not self.tip:
+            self.tip = self.post.tip
+        if not self.outro:
+            self.outro = self.post.outro
+            super(PostLang, self).save()
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    #id = models.IntegerField(primary_key=True)
     updated_on = models.DateTimeField(auto_now=True)
     created_on = models.DateTimeField(auto_now=True)
     custom_date = models.DateTimeField(null=True, blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
     cardtype = models.IntegerField(choices=CARDTYPE, default=0)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
     lang = models.CharField(max_length=5, choices=langlist)
-    titleplus = models.TextField(max_length=240, default='')
+    titleplus = models.TextField(max_length=240, default='', blank=True)
     category = models.CharField(
         max_length=200, choices=category_list, default='')
     subcategory = models.CharField(
         max_length=200, choices=subcategory_list, default='uncategorized')
-    intro = RichTextUploadingField()
+    intro = RichTextUploadingField(blank=True)
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
-    maintext = RichTextUploadingField(default='')
+    slug = models.SlugField(max_length=200, unique=True, blank=True)
+    maintext = RichTextUploadingField(default='', blank=True)
     intro1 = RichTextUploadingField(default='', blank=True)
     legend = RichTextUploadingField(default='', blank=True)
     ingredients = RichTextField(blank=True)

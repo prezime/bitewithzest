@@ -26,7 +26,11 @@ class LanguageAdmin(admin.ModelAdmin):
 
 
 class PostLangAdmin(admin.ModelAdmin):
+    def id_default(self):
+        RefPost = Post.objects.get(id=1)
+        return (RefPost.id)
     list_display = ('title', 'slug', 'category')
+    # raw_id_fields = ('post',)
 
 
 admin.site.register(Post, PostAdmin)
