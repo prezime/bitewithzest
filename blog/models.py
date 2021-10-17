@@ -8,6 +8,8 @@ from django.conf import settings
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 from blog import path_rename
+import deepl
+translator = deepl.Translator("bfec5fb4-82b8-d470-2bb6-1eff0c6b7e84:fx")
 
 
 STATUS = (
@@ -164,6 +166,7 @@ class Post(models.Model):
 
 
 class PostLang(models.Model):
+
     def save(self):
         if not self.id:
             self.id = self.post.id
@@ -177,26 +180,50 @@ class PostLang(models.Model):
             self.status = self.post.status
         if not self.cardtype:
             self.cardtype = self.post.cardtype
+        if not self.title:
+            if self.post.title:
+                self.title = translator.translate_text(
+                    self.post.title, target_lang=self.lang)
         if not self.titleplus:
-            self.titleplus = self.post.titleplus
+            if self.post.titleplus:
+                self.titleplus = translator.translate_text(
+                    self.post.titleplus, target_lang=self.lang)
         if not self.maintext:
-            self.maintext = self.post.maintext
+            if self.post.maintext:
+                self.maintext = translator.translate_text(
+                    self.post.maintext, target_lang=self.lang)
         if not self.intro1:
-            self.intro1 = self.post.intro1
+            if self.post.intro1:
+                self.intro1 = translator.translate_text(
+                    self.post.intro1, target_lang=self.lang)
         if not self.intro:
-            self.intro = self.post.intro
+            if self.post.intro:
+                self.intro = translator.translate_text(
+                    self.post.intro, target_lang=self.lang)
         if not self.legend:
-            self.legend = self.post.legend
+            if self.post.legend:
+                self.legend = translator.translate_text(
+                    self.post.legend, target_lang=self.lang)
         if not self.ingredients:
-            self.ingredients = self.post.ingredients
+            if self.post.ingredients:
+                self.ingredients = translator.translate_text(
+                    self.post.ingredients, target_lang=self.lang)
         if not self.additionaltext:
-            self.additionaltext = self.post.additionaltext
+            if self.post.additionaltext:
+                self.additionaltext = translator.translate_text(
+                    self.post.additionaltext, target_lang=self.lang)
         if not self.preparationtext:
-            self.preparationtext = self.post.preparationtext
+            if self.post.preparationtext:
+                self.preparationtext = translator.translate_text(
+                    self.post.preparationtext, target_lang=self.lang)
         if not self.tip:
-            self.tip = self.post.tip
+            if self.post.tip:
+                self.tip = translator.translate_text(
+                    self.post.tip, target_lang=self.lang)
         if not self.outro:
-            self.outro = self.post.outro
+            if self.post.outro:
+                self.outro = translator.translate_text(
+                    self.post.outro, target_lang=self.lang)
             super(PostLang, self).save()
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     #id = models.IntegerField(primary_key=True)
@@ -212,7 +239,7 @@ class PostLang(models.Model):
     subcategory = models.CharField(
         max_length=200, choices=subcategory_list, default='uncategorized')
     intro = RichTextUploadingField(blank=True)
-    title = models.CharField(max_length=200, unique=True)
+    title = models.CharField(max_length=200, unique=True, blank=True)
     slug = models.SlugField(max_length=200, unique=True, blank=True)
     maintext = RichTextUploadingField(default='', blank=True)
     intro1 = RichTextUploadingField(default='', blank=True)
