@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-16 14:16+0200\n"
+"POT-Creation-Date: 2021-10-18 21:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,75 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: blog/templates/showcase.html:15 blog/templates/showcase.html:42
+#: blog/templates/base.html:89
+msgid "Quicklinks"
+msgstr "Quicklinks"
+
+#: blog/templates/base.html:91
+msgid "About"
+msgstr "Über uns"
+
+#: blog/templates/base.html:92
+msgid "FAQ"
+msgstr "FAQ"
+
+#: blog/templates/base.html:93 blog/templates/base.html:135
+msgid "Cookie policy"
+msgstr "Cookie-Richtlinie"
+
+#: blog/templates/base.html:94
+msgid "Terms & Conditions"
+msgstr "Allgemeine Geschäftsbedingungen"
+
+#: blog/templates/base.html:95 blog/templates/base.html:100
+msgid "Contact"
+msgstr "Kontakt"
+
+#: blog/templates/base.html:104
+msgid "Vienna"
+msgstr "Wien"
+
+#: blog/templates/base.html:104
+msgid "Austria"
+msgstr "Österreich"
+
+#: blog/templates/base.html:125
+msgid "For creation of this website no animal was harmed"
+msgstr "Für die Erstellung dieser Website wurde kein Tier verletzt"
+
+#: blog/templates/base.html:126
+msgid ""
+"All rights reserved. Unauthorized use of copyrighted content is prohibited "
+"and punishable"
+msgstr ""
+"Alle Rechte vorbehalten. Die unbefugte Verwendung von urheberrechtlich "
+"geschützten Inhalten ist verboten und strafbar"
+
+#: blog/templates/base.html:135
+msgid ""
+"We us cookies in this website for better user experience. If you want to "
+"find out more, please read our"
+msgstr ""
+"Wir verwenden Cookies auf dieser Website für eine bessere Benutzerfreundlichkeit. Wenn Sie "
+"mehr erfahren möchten, lesen Sie bitte unsere"
+
+#: blog/templates/base.html:135
+msgid "with detailed information."
+msgstr "mit detaillierten Informationen."
+
+#: blog/templates/base.html:136
+msgid "Close"
+msgstr "Schließen"
+
+#: blog/templates/showcase.html:14 blog/templates/showcase.html:42
 msgid "Plant-based"
 msgstr "Pflanzbasierte"
 
-#: blog/templates/showcase.html:16
+#: blog/templates/showcase.html:15
 msgid "recipe ideas"
 msgstr "Rezeptideen"
 
-#: blog/templates/showcase.html:17
+#: blog/templates/showcase.html:16
 msgid ""
 "Healthy and delicious recipes, easy and quick to make. All about how to "
 "start & end your day nutritionally well and with a positive energy."
@@ -34,6 +94,12 @@ msgstr ""
 "Gesunde und leckere Rezepte, einfach und schnell zubereitet. Alles darüber, "
 "wie den Tag nahrhaft gut und mit positiver Energie zu beginnen und zu "
 "beenden."
+
+#: blog/templates/showcase.html:17 blog/templates/showcase.html:34
+#: blog/templates/showcase.html:56 blog/templates/showcase.html:75
+#: blog/templates/showcase.html:105
+msgid "discover more"
+msgstr "mehr entdecken"
 
 #: blog/templates/showcase.html:30
 msgid "Lexicon"
@@ -48,8 +114,9 @@ msgid ""
 "The philosopher and teacher Rudolf Steiner once said, \"For every human "
 "illness, somewhere in the world there exists a plant which is the cure. \""
 msgstr ""
-"Der Philosoph und Pädagoge Rudolf Steiner sagte einmal: \"Für jede menschliche "
-"Krankheit gibt es irgendwo auf der Welt eine Pflanze, die das Heilmittel ist. \""
+"Der Philosoph und Pädagoge Rudolf Steiner sagte einmal: \"Für jede "
+"menschliche Krankheit gibt es irgendwo auf der Welt eine Pflanze, die das "
+"Heilmittel ist. \""
 
 #: blog/templates/showcase.html:33
 msgid ""
@@ -58,13 +125,9 @@ msgid ""
 "some plant familiar to us, has a special gift..."
 msgstr ""
 "Seit Tausenden von Jahren verwenden Menschen auf der ganzen Welt Kräuter und "
-"Pflanzen, um Krankheiten zu heilen oder zu verhindern. Manchmal sind wir uns nicht einmal bewusst, dass "
-"eine Pflanze, die uns vertraut ist, eine besondere Gabe hat..."
-
-#: blog/templates/showcase.html:34 blog/templates/showcase.html:56
-#: blog/templates/showcase.html:75 blog/templates/showcase.html:105
-msgid "discover more"
-msgstr "mehr entdecken"
+"Pflanzen, um Krankheiten zu heilen oder zu verhindern. Manchmal sind wir uns "
+"nicht einmal bewusst, dass eine Pflanze, die uns vertraut ist, eine "
+"besondere Gabe hat..."
 
 #: blog/templates/showcase.html:43
 msgid "lifestyle"
@@ -84,16 +147,23 @@ msgid ""
 "in 2011 humans share the planet with approximately 8,7 million different "
 "forms of life. Every one of them has something interesting to tell."
 msgstr ""
-"Wissenschaftler benennen jedes Jahr etwa 18.000 neue Arten. Laut einer Studie "
-" aus dem Jahr 2011, teilen sich die Menschen den Planeten mit etwa 8,7 Millionen verschiedenen "
-" Lebensformen. Jede einzelne davon hat etwas Interessantes zu erzählen."
+"Wissenschaftler benennen jedes Jahr etwa 18.000 neue Arten. Laut einer "
+"Studie  aus dem Jahr 2011, teilen sich die Menschen den Planeten mit etwa "
+"8,7 Millionen verschiedenen  Lebensformen. Jede einzelne davon hat etwas "
+"Interessantes zu erzählen."
 
 #: blog/templates/showcase.html:85
 msgid "Immunity"
-msgstr "Förderung vom"
+msgstr "Stärkung des"
 
 #: blog/templates/showcase.html:86
 msgid "boosting"
-msgstr "Immunsystem"
+msgstr "Immunsystems"
 
+#: src/settings.py:122
+msgid "English"
+msgstr "Englisch"
 
+#: src/settings.py:123
+msgid "German"
+msgstr "Deutsch"

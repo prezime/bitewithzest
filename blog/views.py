@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import generic
-from .models import Post, PostLang, Category, SubCategory, Contibutor
+from .models import Post, PostLang, Category, CategoryLang, SubCategory, Contibutor
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger, InvalidPage
 from django.core.mail import send_mail, BadHeaderError
 import urllib.request
@@ -76,19 +76,29 @@ def shared_context(context, self):
     p_desc = Paginator(post_queryset_descending, post_count)
 
     # Languages
+    catlang_queryset = CategoryLang.objects.all()
+    context['catlang_list'] = catlang_queryset.filter(
+        status=1).order_by('order_count')
+    context['catlang_list_asc'] = catlang_queryset.filter(
+        status=1).order_by('-order_count')
+    context['post_catlang1'] = CategoryLang.objects.get(id=1)
+    context['post_catlang2'] = CategoryLang.objects.get(id=7)
+    context['post_catlang3'] = CategoryLang.objects.get(id=3)
+    context['post_catlang4'] = CategoryLang.objects.get(id=4)
+    context['post_catlang5'] = CategoryLang.objects.get(id=8)
     postlang_queryset_ascending = PostLang.objects.all().filter(status=1).filter(
         category=list(context.values())[1]).order_by('-custom_date', 'created_on')
     postlang_queryset_descending = PostLang.objects.all().filter(status=1).filter(
         subcategory=list(context.values())[1]).order_by('-custom_date', 'created_on')
-    postlang_queryset_cat1 = Post.objects.all().filter(
+    postlang_queryset_cat1 = PostLang.objects.all().filter(
         category=context['post_cat1'].description).filter(status=1).order_by('-custom_date', 'created_on')
-    postlang_queryset_cat2 = Post.objects.all().filter(
+    postlang_queryset_cat2 = PostLang.objects.all().filter(
         category=context['post_cat2'].description).filter(status=1).order_by('-custom_date', 'created_on')
-    postlang_queryset_cat3 = Post.objects.all().filter(
+    postlang_queryset_cat3 = PostLang.objects.all().filter(
         category=context['post_cat3'].description).filter(status=1).order_by('-custom_date', 'created_on')
-    postlang_queryset_cat4 = Post.objects.all().filter(
+    postlang_queryset_cat4 = PostLang.objects.all().filter(
         category=context['post_cat4'].description).filter(status=1).order_by('-custom_date', 'created_on')
-    postlang_queryset_cat5 = Post.objects.all().filter(
+    postlang_queryset_cat5 = PostLang.objects.all().filter(
         category=context['post_cat5'].description).filter(status=1).order_by('-custom_date', 'created_on')
     postlang_queryset_featured = PostLang.objects.all().filter(
         cardtype='1').filter(status=1).order_by('id')

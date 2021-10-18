@@ -43,6 +43,11 @@
     <h1>{% trans 'lifestyle' %}</h1>
   </div>
     <div class="layer1-1-1" >
+      {% if LANGUAGE_CODE != 'en' %} 
+        {% setvar postlang_cat5_list as post_cat5_list %}
+      {% else %} 
+        {% setvar post_cat5_list as post_cat5_list %}
+      {% endif %} 
       {% for post in post_cat5_list|shuffle|slice:"2" %}
       <a href="{% url 'post_detail' post.slug  %}">
         <div class="{% cycle 'hero3-card1' 'hero3-card2' %}">
@@ -50,8 +55,8 @@
               <img src="/../media/post{{post.id}}/opener/post_opener{{post.id}}.jpg" alt="">
             </div>
           <div class="{% cycle 'hero3-card1-text' 'hero3-card2-text' %}">
-              <span>{% trans post.title %}</span>
-              <p>{% trans post.intro|safe|slice:"231"  %}{% if post.intro|safe|length > 231 %}...{% endif %}</p>
+              <span>{{post.title}}</span>
+              <p>{{post.intro|safe|slice:"231"}}{% if post.intro|safe|length > 231 %}...{% endif %}</p>
           </div>
           <button class="{% cycle 'invisible' 'hero3-btn' %}"><a href="{% url 'category_view' post_cat5.slug  %}">{% trans 'discover more' %}</a></button>
         </div>
@@ -87,16 +92,21 @@
   </div>
   <img class="layer1-1 desktop" src="/../media/layout/basil_bg_png/H_05_01.png" alt="" data-4400="top: 600px">
   <div class="layer5-1-1" >
-    {% for post in post_cat3_list|shuffle|slice:"3" %}
+  {% if LANGUAGE_CODE != 'en' %} 
+    {% setvar postlang_cat3_list as post_cat3_list %}
+  {% else %} 
+    {% setvar post_cat3_list as post_cat3_list %}
+  {% endif %} 
+  {% for post in post_cat3_list|shuffle|slice:"3" %}
     <a href="{% url 'post_detail' post.slug  %}">
       <div class="{% cycle 'hero5-card1' 'hero5-card2' %}">
         <div class="{% cycle 'hero5-card1-pic' 'hero5-card2-pic' %}">
           <img src="/../media/post{{post.id}}/opener/post_opener{{post.id}}.jpg" alt="">  
         </div>
         <div class="{% cycle 'hero5-card1-text' 'hero5-card2-text' %}">
-            <h3>{% trans post.title %}</h3>
+            <h3>{{post.title}}</h3>
 
-            <p>{% trans  post.intro|safe|slice:"271"  %}{% if post.intro|safe|length > 271 %}...{% endif %}</p>
+            <p>{{ post.intro|safe|slice:"271" }}{% if post.intro|safe|length > 271 %}...{% endif %}</p>
         </div>
       </div>
     </a>

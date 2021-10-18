@@ -133,15 +133,39 @@
                 <div class="preparation-content">
                     {% if not object.title_invisible %}
                     <div class="post-title-inner">
-                        <h2>{{ object.title }}</h2>
+                        <h2>{% if LANGUAGE_CODE != 'en' %} 
+                            {% for postlang in postlang_list %}
+                                {% if object.id == postlang.id %}
+                                    {{ postlang.title | safe }}
+                                {% endif %}
+                            {% endfor %}           
+                        {% else %}    
+                            {{ object.title | safe }} 
+                        {% endif %}  </h2>
                     </div>
                     {% endif %}
                     {% if object.intro1 %} 
                     <div class="intro1">
-                        {{ object.intro1 | safe }}    
+                        {% if LANGUAGE_CODE != 'en' %} 
+                            {% for postlang in postlang_list %}
+                                {% if object.id == postlang.id %}
+                                    {{ postlang.intro1 | safe }}
+                                {% endif %}
+                            {% endfor %}           
+                        {% else %}    
+                            {{ object.intro1 | safe }} 
+                        {% endif %}     
                     </div>
                     <div class="legend">
-                        {{ object.legend | safe }} 
+                        {% if LANGUAGE_CODE != 'en' %} 
+                            {% for postlang in postlang_list %}
+                                {% if object.id == postlang.id %}
+                                    {{ postlang.legend | safe }}
+                                {% endif %}
+                            {% endfor %}           
+                        {% else %}    
+                            {{ object.legend | safe }} 
+                        {% endif %} 
                     </div>
                     {% endif %} 
                 </div>
@@ -154,10 +178,26 @@
             </div>   
              
             <div class="ingredients"> 
-                {{ object.ingredients | safe }}
+                {% if LANGUAGE_CODE != 'en' %} 
+                    {% for postlang in postlang_list %}
+                        {% if object.id == postlang.id %}
+                            {{ postlang.ingredients | safe }}
+                        {% endif %}
+                    {% endfor %}           
+                {% else %}    
+                    {{ object.ingredients | safe }} 
+                {% endif %} 
             </div>
             <div class="preparationtext"> 
-                {{ object.preparationtext | safe }}
+                {% if LANGUAGE_CODE != 'en' %} 
+                    {% for postlang in postlang_list %}
+                        {% if object.id == postlang.id %}
+                            {{ postlang.preparationtext | safe }}
+                        {% endif %}
+                    {% endfor %}           
+                {% else %}    
+                    {{ object.preparationtext | safe }} 
+                {% endif %}
             </div>
         
         
@@ -171,15 +211,40 @@
                 <div class="link-post-card__info">
                     <img class="width40perc" src="../../media/layout/tip.png" alt="">    
                     <p class="link-post-card__text" id="link-post-card__text">{{post.relates_to_desc}} </p>
-                    <p class="link-post-card__title">{{object.relates_to.title}}</p>
-                    {{ object.relates_to.legend | safe}}
+                    <p class="link-post-card__title">
+                        {% if LANGUAGE_CODE != 'en' %} 
+                            {% for postlang in postlang_list %}
+                                {% if object.id == postlang.id %}
+                                    {{ postlang.relates_to.preparationtext | safe }}
+                                {% endif %}
+                            {% endfor %}           
+                        {% else %}    
+                            {{ object.relates_to.preparationtext | safe }} 
+                        {% endif %}</p>
+                        {% if LANGUAGE_CODE != 'en' %} 
+                            {% for postlang in postlang_list %}
+                                {% if object.id == postlang.id %}
+                                    {{ postlang.relates_to.legend | safe }}
+                                {% endif %}
+                            {% endfor %}           
+                        {% else %}    
+                            {{ object.relates_to.legend | safe }} 
+                        {% endif %}
             </div>
         </div>
         </a>
         {% endif %} 
         {% if object.outro %}   
             <div class="outro"> 
-                {{ object.outro | safe }}
+                {% if LANGUAGE_CODE != 'en' %} 
+                    {% for postlang in postlang_list %}
+                        {% if object.id == postlang.id %}
+                            {{ postlang.outro | safe }}
+                        {% endif %}
+                    {% endfor %}           
+                {% else %}    
+                    {{ object.outro | safe }} 
+                {% endif %}
             </div> 
         {% endif %}
         {% if object.add_pic %} 
@@ -193,7 +258,15 @@
         
         {% if object.tip %}
             <div class="tip"> 
-                {{ object.tip | safe }}
+                {% if LANGUAGE_CODE != 'en' %} 
+                    {% for postlang in postlang_list %}
+                        {% if object.id == postlang.id %}
+                            {{ postlang.tip | safe }}
+                        {% endif %}
+                    {% endfor %}           
+                {% else %}    
+                    {{ object.tip | safe }} 
+                {% endif %}
                 <div class="tip-pic">    
                     <img class="width40perc" src="../../media/layout/tip.png" alt=""> 
                 </div>

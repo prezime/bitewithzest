@@ -85,6 +85,39 @@ for item in cats:
     category_list.append(item)
 
 
+class CategoryLang(models.Model):
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    description = models.CharField(max_length=200, unique=True, blank=True)
+    status = models.IntegerField(choices=STATUS, default=0)
+    lang = models.CharField(max_length=5, choices=langlist, default=0)
+    slug = models.SlugField(max_length=200, editable=True, blank=True)
+    order_count = models.IntegerField(default=0)
+
+    class Meta:
+        verbose_name_plural = 'Category Languages'
+
+    def __str__(self):
+        return self.category.slug
+
+    def save(self):
+        self.id = self.category.id
+        if self.category.slug:
+            self.slug = self.category.slug
+        if not self.description:
+            if self.category.description:
+                self.description = translator.translate_text(
+                    self.category.description, target_lang=self.lang)
+        if self.category.order_count:
+            self.order_count = self.category.order_count
+        super(CategoryLang, self).save()
+
+
+catlangs = CategoryLang.objects.all().values_list('description', 'description')
+categorylang_list = []
+for item in catlangs:
+    categorylang_list.append(item)
+
+
 class SubCategory(models.Model):
     name = models.CharField(max_length=100, unique=True)
     category = models.CharField(
@@ -125,7 +158,8 @@ class Post(models.Model):
 
     thumbnail = models.FileField(
         upload_to=path_rename.path_and_rename, blank=True)
-    thumbnail_desc = models.CharField(max_length=200, default='', blank=True)
+    thumbnail_desc = models.CharField(
+        max_length=200, default='', blank=True)
     opener_pic = models.FileField(
         upload_to=path_rename.path_and_rename_opener, blank=True)
 
@@ -137,7 +171,8 @@ class Post(models.Model):
     intro1 = RichTextUploadingField(default='', blank=True)
     intro_pic = models.FileField(
         upload_to=path_rename.path_and_rename_intro, blank=True)
-    intro_pic_desc = models.CharField(max_length=200, default='', blank=True)
+    intro_pic_desc = models.CharField(
+        max_length=200, default='', blank=True)
     legend = RichTextUploadingField(default='', blank=True)
     add_pic = models.FileField(
         upload_to=path_rename.path_and_rename_add, blank=True)
@@ -147,10 +182,13 @@ class Post(models.Model):
     additionaltext = RichTextUploadingField(default='', blank=True)
     main_pic = models.FileField(
         upload_to=path_rename.path_and_rename_main, blank=True)
-    main_pic_desc = models.CharField(max_length=200, default='', blank=True)
+    main_pic_desc = models.CharField(
+        max_length=200, default='', blank=True)
     tip = RichTextField(default='', blank=True)
-    relates_to = models.ForeignKey('self', on_delete=models.CASCADE, default=1)
-    relates_to_desc = models.CharField(max_length=300, default='', blank=True)
+    relates_to = models.ForeignKey(
+        'self', on_delete=models.CASCADE, default=1)
+    relates_to_desc = models.CharField(
+        max_length=300, default='', blank=True)
     outro = RichTextUploadingField(default='', blank=True)
     credits = RichTextUploadingField(default='', blank=True)
 
@@ -166,6 +204,34 @@ class Post(models.Model):
 
 
 class PostLang(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    # id = models.IntegerField(primary_key=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    created_on = models.DateTimeField(auto_now=True)
+    custom_date = models.DateTimeField(null=True, blank=True)
+    status = models.IntegerField(choices=STATUS, default=0)
+    cardtype = models.IntegerField(choices=CARDTYPE, default=0)
+    lang = models.CharField(max_length=5, choices=langlist)
+    titleplus = models.TextField(max_length=240, default='', blank=True)
+    category = models.CharField(
+        max_length=200, choices=category_list, default='')
+    subcategory = models.CharField(
+        max_length=200, choices=subcategory_list, default='uncategorized')
+    intro = RichTextUploadingField(blank=True)
+    title = models.CharField(max_length=200, unique=True, blank=True)
+    slug = models.SlugField(max_length=200, editable=False)
+    maintext = RichTextUploadingField(default='', blank=True)
+    intro1 = RichTextUploadingField(default='', blank=True)
+    legend = RichTextUploadingField(default='', blank=True)
+    ingredients = RichTextField(blank=True)
+    preparationtext = RichTextUploadingField(default='', blank=True)
+    additionaltext = RichTextUploadingField(default='', blank=True)
+    tip = RichTextField(default='', blank=True)
+    outro = RichTextUploadingField(default='', blank=True)
+    credits = RichTextUploadingField(default='', blank=True)
+
+    def __str__(self):
+        return self.post.slug
 
     def save(self):
         if not self.id:
@@ -176,10 +242,9 @@ class PostLang(models.Model):
             self.created_on = self.post.created_on
         if not self.custom_date:
             self.custom_date = self.post.custom_date
-        if not self.status:
-            self.status = self.post.status
         if not self.cardtype:
             self.cardtype = self.post.cardtype
+        self.category = self.post.category
         if not self.title:
             if self.post.title:
                 self.title = translator.translate_text(
@@ -224,35 +289,9 @@ class PostLang(models.Model):
             if self.post.outro:
                 self.outro = translator.translate_text(
                     self.post.outro, target_lang=self.lang)
-            super(PostLang, self).save()
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    #id = models.IntegerField(primary_key=True)
-    updated_on = models.DateTimeField(auto_now=True)
-    created_on = models.DateTimeField(auto_now=True)
-    custom_date = models.DateTimeField(null=True, blank=True)
-    status = models.IntegerField(choices=STATUS, default=0)
-    cardtype = models.IntegerField(choices=CARDTYPE, default=0)
-    lang = models.CharField(max_length=5, choices=langlist)
-    titleplus = models.TextField(max_length=240, default='', blank=True)
-    category = models.CharField(
-        max_length=200, choices=category_list, default='')
-    subcategory = models.CharField(
-        max_length=200, choices=subcategory_list, default='uncategorized')
-    intro = RichTextUploadingField(blank=True)
-    title = models.CharField(max_length=200, unique=True, blank=True)
-    slug = models.SlugField(max_length=200, unique=True, blank=True)
-    maintext = RichTextUploadingField(default='', blank=True)
-    intro1 = RichTextUploadingField(default='', blank=True)
-    legend = RichTextUploadingField(default='', blank=True)
-    ingredients = RichTextField(blank=True)
-    preparationtext = RichTextUploadingField(default='', blank=True)
-    additionaltext = RichTextUploadingField(default='', blank=True)
-    tip = RichTextField(default='', blank=True)
-    outro = RichTextUploadingField(default='', blank=True)
-    credits = RichTextUploadingField(default='', blank=True)
-
-    def __str__(self):
-        return self.slug
+        if self.post.slug:
+            self.slug = self.post.slug
+        super(PostLang, self).save()
 
     class Meta:
         verbose_name_plural = 'Post Languages'

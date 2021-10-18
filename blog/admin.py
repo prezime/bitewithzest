@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Category, SubCategory, Contibutor, Language, PostLang
+from .models import Post, Category, SubCategory, Contibutor, Language, PostLang, CategoryLang
 from django.template.defaultfilters import slugify
 
 
@@ -26,11 +26,11 @@ class LanguageAdmin(admin.ModelAdmin):
 
 
 class PostLangAdmin(admin.ModelAdmin):
-    def id_default(self):
-        RefPost = Post.objects.get(id=1)
-        return (RefPost.id)
-    list_display = ('title', 'slug', 'category')
-    # raw_id_fields = ('post',)
+    list_display = ('title', 'category', 'id')
+
+
+class CategoryLangAdmin(admin.ModelAdmin):
+    list_display = ('description', 'id')
 
 
 admin.site.register(Post, PostAdmin)
@@ -39,3 +39,4 @@ admin.site.register(SubCategory, SubCatAdmin)
 admin.site.register(Contibutor)
 admin.site.register(Language, LanguageAdmin)
 admin.site.register(PostLang, PostLangAdmin)
+admin.site.register(CategoryLang, CategoryLangAdmin)
