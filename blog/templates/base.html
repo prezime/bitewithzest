@@ -54,13 +54,17 @@
   
   <nav class="navbar" id="navbar">
     <ul id="navbar_ul">
-    {% if LANGUAGE_CODE != 'en' %} 
-      {% setvar catlang_list as cat_list %}
-    {% else %} 
-      {% setvar cat_list as cat_list %}
-    {% endif %} 
     {% for category in cat_list %}
-      <li class="{% if category.description == object.description %}active{% endif %}"><a href="{% url 'category_view' category.slug  %}" >{{category.description}}</a></li>
+      <li class="{% if category.description == object.description %}active{% endif %}"><a href="{% url 'category_view' category.slug  %}" >
+        {% if LANGUAGE_CODE != 'en' %} 
+            {% for catlang in catlang_list %}
+                {% if category.id == catlang.id %}
+                    {{ catlang.description | safe }}
+                {% endif %}
+            {% endfor %}           
+        {% else %}    
+            {{ category.description | safe }} 
+        {% endif %}</a></li>
     {% endfor %}
     </ul>
     <div class="menu-toggle" id="menu-toggle" onclick="toggleX(this)">

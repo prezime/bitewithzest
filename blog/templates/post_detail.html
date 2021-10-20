@@ -14,7 +14,15 @@
                 {% for category in cat_list %}
                     {% if category.description == post.category %}
                     <a href="{% url 'category_view' category.slug  %}"class="breadcrumbs-link">
-                        {{ object.category }} 
+                        {% if LANGUAGE_CODE != 'en' %} 
+                            {% for catlang in catlang_list %}
+                                {% if catlang.id == category.id %}
+                                    {{ catlang.description | safe }}
+                                {% endif %}
+                            {% endfor %}           
+                        {% else %}    
+                            {{ object.category | safe }} 
+                        {% endif %} 
                     </a>
                     {% endif %}
                 {% endfor %} 
@@ -29,10 +37,27 @@
                 {% endif %}
             {% endfor %}
             <li class="breadcrumbs-item mobile">
-                <a href="{% url 'post_detail' post.slug  %}" class="breadcrumbs-link">{{ object.title|safe|slice:"31" }}{% if object.title|safe|length > 31 %}...{% endif %}</a>
+                <a href="{% url 'post_detail' post.slug  %}" class="breadcrumbs-link">
+                    {% if LANGUAGE_CODE != 'en' %} 
+                        {% for postlang in postlang_list %}
+                            {% if object.id == postlang.id %}
+                                {{ postlang.title|safe|slice:"31" }}{% if postlang.title|safe|length > 31 %}...{% endif %}
+                            {% endif %}
+                        {% endfor %}           
+                    {% else %}    
+                        {{ object.title|safe|slice:"31" }}{% if object.title|safe|length > 31 %}...{% endif %}
+                    {% endif %}</a>
             </li>
             <li class="breadcrumbs-item desktop">
-                <a href="{% url 'post_detail' post.slug  %}" class="breadcrumbs-link">{{ object.title}}</a>
+                <a href="{% url 'post_detail' post.slug  %}" class="breadcrumbs-link">{% if LANGUAGE_CODE != 'en' %} 
+                    {% for postlang in postlang_list %}
+                            {% if object.id == postlang.id %}
+                                {{ postlang.title |safe}}
+                            {% endif %}
+                        {% endfor %}           
+                    {% else %}    
+                        {{ object.title |safe}}
+                    {% endif %}</a>
             </li>
         </ul>
     </div>
@@ -134,14 +159,14 @@
                     {% if not object.title_invisible %}
                     <div class="post-title-inner">
                         <h2>{% if LANGUAGE_CODE != 'en' %} 
-                            {% for postlang in postlang_list %}
-                                {% if object.id == postlang.id %}
-                                    {{ postlang.title | safe }}
-                                {% endif %}
-                            {% endfor %}           
-                        {% else %}    
-                            {{ object.title | safe }} 
-                        {% endif %}  </h2>
+                                {% for postlang in postlang_list %}
+                                    {% if object.id == postlang.id %}
+                                        {{ postlang.title | safe }}
+                                    {% endif %}
+                                {% endfor %}           
+                            {% else %}    
+                                {{ object.title | safe }} 
+                            {% endif %}  </h2>
                     </div>
                     {% endif %}
                     {% if object.intro1 %} 

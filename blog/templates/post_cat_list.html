@@ -1,8 +1,7 @@
 {% extends "base.html" %} 
-{% load static %}
+{% load static setvar i18n %}
 
 {% block post_listed_showcase %}
-
 <div class="cat-wrapper">
 {% if object.description  != 'FAQ' %}
 <img class="layer2-1 desktop" src="/../media/layout/basil-10.png" alt="" data-400="top:250px; left:74%; width:20%">
@@ -14,28 +13,37 @@
         </li>
         <li class="breadcrumbs-item">
           <a href="{% url 'category_view' category.slug  %}"class="breadcrumbs-link">
-              {{ object.description }} 
+            {% if LANGUAGE_CODE != 'en' %} 
+                {% for catlang in catlang_list %}
+                    {% if object.id == catlang.id %}
+                        {{ catlang.description | safe }}
+                    {% endif %}
+                {% endfor %}           
+            {% else %}    
+                {{ object.description | safe }} 
+            {% endif %}
           </a>
         </li>
     </ul>
   </div>
+  
   {% if object.description != 'FAQ' %}
     <div class="moto5" style="margin-top: 10%;"> 
-      {% if object.description == 'Recipes' %}
-        <h2>Plant-based</h2>
-        <h1>recipe ideas</h1>
-      {% elif object.description == 'Lexicon of plants' %}
-        <h2>Lexicon</h2>
-        <h1>of plants</h1>
-      {% elif object.description == 'Immunity Boosting' %}
-        <h2>Immunity</h2>
-        <h1>boosting</h1>
-      {% elif object.description == 'Our Planet' %}
-        <h2>Our</h2>
-        <h1>planet</h1>
-      {% elif object.description == 'Lifestyle' %}
-        <h2>Plant-based</h2>
-        <h1>lifestyle</h1>
+      {% if object.id == 1 %} <!-- Recipes -->
+        <h2>{% trans 'Plant-based' %}</h2>
+        <h1>{% trans 'recipe ideas' %}</h1>
+      {% elif object.id == 7 %} <!-- Lexicon of plants -->
+        <h2>{% trans 'Lexicon' %}</h2>
+        <h1>{% trans 'of plants' %}</h1>
+      {% elif object.id == 3 %} <!-- Immunity boosting -->
+        <h2>{% trans 'Immunity' %}</h2>
+        <h1>{% trans 'boosting' %}</h1>
+      {% elif object.id == 4 %} <!-- Our planet -->
+        <h2>{% trans 'Our' %}</h2>
+        <h1>{% trans 'planet' %}</h1>
+      {% elif object.id == 8 %} <!-- Lifestyle -->
+        <h2>{% trans 'Plant-based' %}</h2>
+        <h1>{% trans 'lifestyle' %}</h1>
       {% endif %}
     </div>
   {% endif %}
@@ -47,8 +55,7 @@
   <div class="cat_background">
 
     <div class="cat_container">
-      <div class="gallery-cat" id="galleryCat">
-        
+      <div class="gallery-cat" id="galleryCat">   
         {% if request.resolver_match.url_name  == 'category_view' %}
           {% for post in post_cat_list %}
             {% if object.description == post.category %}
@@ -58,13 +65,39 @@
                   <img src="../../media/post{{post.id}}/thumbs/post_thumb{{post.id}}.jpg" alt="">
                 </div>
                 <div class="{% cycle 'post-cat-card1-text' 'post-cat-card2-text' %}">
-                  <span>{{ post.titleplus|safe|slice:"47" }}{% if post.titleplus|safe|length > 47 %}...{% endif %}</span>
+                  <span>
+                    {% if LANGUAGE_CODE != 'en' %} 
+                        {% for postlang in postlang_list %}
+                            {% if post.id == postlang.id %}
+                              {{ postlang.titleplus|safe|slice:"47" }}{% if postlang.titleplus|safe|length > 47 %}...{% endif %}
+                            {% endif %}
+                        {% endfor %}           
+                    {% else %}    
+                      {{ post.titleplus|safe|slice:"47" }}{% if post.titleplus|safe|length > 47 %}...{% endif %}
+                    {% endif %}
+                    </span>
 
                   <div class="{% cycle 'post-cat-card1-info' 'post-cat-card2-info' %}">
-                    {% if object.description == 'Recipes' %}
-                    <p>{{ post.legend|safe}}</p>
+                    {% if object.id == 1 %}
+                    <p>{% if LANGUAGE_CODE != 'en' %} 
+                          {% for postlang in postlang_list %}
+                              {% if post.id == postlang.id %}
+                                {{ postlang.legend|safe}}
+                              {% endif %}
+                          {% endfor %}           
+                      {% else %}    
+                        {{ post.legend|safe}}
+                      {% endif %}</p>
                     {% else %}
-                    <p>{{ post.intro|safe|slice:"181" }}{% if post.intro|safe|length > 181 %}...{% endif %}</p>
+                    <p>{% if LANGUAGE_CODE != 'en' %} 
+                          {% for postlang in postlang_list %}
+                            {% if post.id == postlang.id %}
+                              {{ postlang.intro|safe|slice:"181" }}{% if postlang.intro|safe|length > 181 %}...{% endif %}
+                            {% endif %}
+                          {% endfor %}           
+                      {% else %}    
+                        {{ post.intro|safe|slice:"181" }}{% if post.intro|safe|length > 181 %}...{% endif %}
+                      {% endif %}</p>
                     {% endif %}
                   </div>
                 </div>
