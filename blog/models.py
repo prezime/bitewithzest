@@ -9,6 +9,7 @@ from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 from blog import path_rename
 import deepl
+from django.core.exceptions import ValidationError
 translator = deepl.Translator("bfec5fb4-82b8-d470-2bb6-1eff0c6b7e84:fx")
 
 
@@ -100,6 +101,8 @@ class CategoryLang(models.Model):
         return self.category.slug
 
     def save(self):
+        if catLangExists(self.category):
+            raise ValidationError('Category Language already exists')
         self.id = self.category.id
         if self.category.slug:
             self.slug = self.category.slug
@@ -109,6 +112,7 @@ class CategoryLang(models.Model):
                     self.category.description, target_lang=self.lang)
         if self.category.order_count:
             self.order_count = self.category.order_count
+
         super(CategoryLang, self).save()
 
 
@@ -116,6 +120,13 @@ catlangs = CategoryLang.objects.all().values_list('description', 'description')
 categorylang_list = []
 for item in catlangs:
     categorylang_list.append(item)
+
+
+def catLangExists(CatLang):
+    if CategoryLang.objects.filter(id=CatLang.id):
+        return True
+    else:
+        return False
 
 
 class SubCategory(models.Model):
@@ -234,6 +245,8 @@ class PostLang(models.Model):
         return self.post.slug
 
     def save(self):
+        if postLangExists(self.post):
+            raise ValidationError('Post Language already exists')
         if not self.id:
             self.id = self.post.id
         if not self.updated_on:
@@ -295,3 +308,10 @@ class PostLang(models.Model):
 
     class Meta:
         verbose_name_plural = 'Post Languages'
+
+
+def postLangExists(PostLang):
+    if PostLang.objects.filter(id=PostLang.id):
+        return True
+    else:
+        return False
