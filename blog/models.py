@@ -310,8 +310,8 @@ class PostLang(models.Model):
         verbose_name_plural = 'Post Languages'
 
 
-def postLangExists(PostLang):
-    if PostLang.objects.filter(id=PostLang.id):
+def postLangExists(PostLangParameter):
+    if PostLang.objects.filter(id=PostLangParameter.id):
         return True
     else:
         return False
