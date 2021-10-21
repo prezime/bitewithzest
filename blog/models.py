@@ -245,9 +245,9 @@ class PostLang(models.Model):
         return self.post.slug
 
     def save(self):
-        if postLangExists(self.post):
-            raise ValidationError('Post Language already exists')
         if not self.id:
+            if postLangExists(self.post):
+                raise ValidationError('Post Language already exists')
             self.id = self.post.id
         if not self.updated_on:
             self.updated_on = self.post.updated_on
@@ -312,6 +312,7 @@ class PostLang(models.Model):
 
 def postLangExists(PostLangParameter):
     if PostLang.objects.filter(id=PostLangParameter.id):
+
         return True
     else:
         return False
