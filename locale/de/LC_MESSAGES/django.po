@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-24 18:51+0200\n"
+"POT-Creation-Date: 2021-10-24 22:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,44 +18,79 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: blog/templates/base.html:30 blog/templates/base.html:100
-msgid "About"
+#: blog/templates/about.html:14 blog/templates/base.html:30
+#: blog/templates/base.html:101
+msgid "About us"
 msgstr "Über uns"
 
-#: blog/templates/base.html:31 blog/templates/base.html:104
-#: blog/templates/base.html:109
+#: blog/templates/about.html:22
+msgid "About"
+msgstr "Über"
+
+#: blog/templates/about.html:23
+msgid "us"
+msgstr "uns"
+
+#: blog/templates/about.html:27
+msgid ""
+"Whatever we are doing, creating, thinking, we can feel the moment and do it "
+"with passion. This is an inbuilt part of us, it is our nature, the same as "
+"we are part of this world, together with all other creatures. By respecting "
+"and being compassionate towards all living beings we are just fulfilling our "
+"true self."
+msgstr ""
+"Was auch immer wir tun, erschaffen, denken, wir können den Moment spüren und "
+"es tunmit Leidenschaft. Das ist ein angeborener Teil von uns, es ist unsere "
+"Natur, genauso wie  wir Teil dieser Welt sind, zusammen mit allen anderen "
+"Lebewesen. Indem wir respektvoll und mitfühlend gegenüber allen Lebewesen "
+"sind, erfüllen wir gerade unser wahren Selbst."
+
+#: blog/templates/about.html:28
+msgid ""
+"Because that is what we are... passion as well as compassion. We explore "
+"this together with you..."
+msgstr ""
+"Denn das ist es, was wir sind... Leidenschaft und Mitgefühl. Wir erforschen "
+"dies gemeinsam mit Ihnen..."
+
+#: blog/templates/about.html:33
+msgid "Founders and editors"
+msgstr "Gründer und Bloger"
+
+#: blog/templates/base.html:31 blog/templates/base.html:105
+#: blog/templates/base.html:110
 msgid "Contact"
 msgstr "Kontakt"
 
-#: blog/templates/base.html:98
+#: blog/templates/base.html:99
 msgid "Quicklinks"
 msgstr "Quicklinks"
 
-#: blog/templates/base.html:101
+#: blog/templates/base.html:102
 msgid "FAQ"
 msgstr "FAQ"
 
-#: blog/templates/base.html:102 blog/templates/base.html:144
+#: blog/templates/base.html:103 blog/templates/base.html:145
 msgid "Cookie policy"
 msgstr "Cookie-Richtlinie"
 
-#: blog/templates/base.html:103
+#: blog/templates/base.html:104
 msgid "Terms & Conditions"
 msgstr "Allgemeine Geschäftsbedingungen"
 
-#: blog/templates/base.html:113
+#: blog/templates/base.html:114
 msgid "Vienna"
 msgstr "Wien"
 
-#: blog/templates/base.html:113
+#: blog/templates/base.html:114
 msgid "Austria"
 msgstr "Österreich"
 
-#: blog/templates/base.html:134
+#: blog/templates/base.html:135
 msgid "For creation of this website no animal was harmed"
 msgstr "Für die Erstellung dieser Website wurde kein Tier verletzt"
 
-#: blog/templates/base.html:135
+#: blog/templates/base.html:136
 msgid ""
 "All rights reserved. Unauthorized use of copyrighted content is prohibited "
 "and punishable"
@@ -63,7 +98,7 @@ msgstr ""
 "Alle Rechte vorbehalten. Die unbefugte Verwendung von urheberrechtlich "
 "geschützten Inhalten ist verboten und strafbar"
 
-#: blog/templates/base.html:144
+#: blog/templates/base.html:145
 msgid ""
 "We us cookies in this website for better user experience. If you want to "
 "find out more, please read our"
@@ -72,11 +107,11 @@ msgstr ""
 "Benutzerfreundlichkeit. Wenn Sie mehr erfahren möchten, lesen Sie bitte "
 "unsere"
 
-#: blog/templates/base.html:144
+#: blog/templates/base.html:145
 msgid "with detailed information."
 msgstr "mit detaillierten Informationen."
 
-#: blog/templates/base.html:145
+#: blog/templates/base.html:146
 msgid "Close"
 msgstr "Schließen"
 
@@ -234,9 +269,6 @@ msgstr ""
 "Websites besuchen. "
 
 #: blog/templates/cookies_info.html:36
-#, fuzzy
-#| msgid ""
-#| "If you have any questions about this Cookie Policy, please contact us at"
 msgid ""
 "If you would like more information about these cookies, please contact us."
 msgstr ""
@@ -348,7 +380,7 @@ msgid "Please go back and try again."
 msgstr "Bitte gehen Sie zurück und versuchen Sie es erneut."
 
 #: blog/templates/post_cat_list.html:33 blog/templates/post_cat_list.html:45
-#: blog/templates/showcase.html:18 blog/templates/showcase.html:47
+#: blog/templates/showcase.html:18 blog/templates/showcase.html:46
 msgid "Plant-based"
 msgstr "Pflanzbasierte"
 
@@ -356,31 +388,31 @@ msgstr "Pflanzbasierte"
 msgid "recipe ideas"
 msgstr "Rezeptideen"
 
-#: blog/templates/post_cat_list.html:36 blog/templates/showcase.html:35
+#: blog/templates/post_cat_list.html:36 blog/templates/showcase.html:34
 msgid "Lexicon"
 msgstr "Lexikon"
 
-#: blog/templates/post_cat_list.html:37 blog/templates/showcase.html:36
+#: blog/templates/post_cat_list.html:37 blog/templates/showcase.html:35
 msgid "of plants"
 msgstr "der Pflanzen"
 
-#: blog/templates/post_cat_list.html:39 blog/templates/showcase.html:95
+#: blog/templates/post_cat_list.html:39 blog/templates/showcase.html:94
 msgid "Immunity"
 msgstr "Stärkung des"
 
-#: blog/templates/post_cat_list.html:40 blog/templates/showcase.html:96
+#: blog/templates/post_cat_list.html:40 blog/templates/showcase.html:95
 msgid "boosting"
 msgstr "Immunsystems"
 
-#: blog/templates/post_cat_list.html:42 blog/templates/showcase.html:81
+#: blog/templates/post_cat_list.html:42 blog/templates/showcase.html:80
 msgid "Our"
 msgstr "Unser"
 
-#: blog/templates/post_cat_list.html:43 blog/templates/showcase.html:82
+#: blog/templates/post_cat_list.html:43 blog/templates/showcase.html:81
 msgid "planet"
 msgstr "Planet"
 
-#: blog/templates/post_cat_list.html:46 blog/templates/showcase.html:48
+#: blog/templates/post_cat_list.html:46 blog/templates/showcase.html:47
 msgid "lifestyle"
 msgstr "Lifestyle"
 
@@ -393,13 +425,13 @@ msgstr ""
 "wie den Tag nahrhaft gut und mit positiver Energie zu beginnen und zu "
 "beenden."
 
-#: blog/templates/showcase.html:22 blog/templates/showcase.html:39
-#: blog/templates/showcase.html:66 blog/templates/showcase.html:85
-#: blog/templates/showcase.html:120
+#: blog/templates/showcase.html:22 blog/templates/showcase.html:38
+#: blog/templates/showcase.html:65 blog/templates/showcase.html:84
+#: blog/templates/showcase.html:119
 msgid "discover more"
 msgstr "mehr entdecken"
 
-#: blog/templates/showcase.html:37
+#: blog/templates/showcase.html:36
 msgid ""
 "The philosopher and teacher Rudolf Steiner once said, \"For every human "
 "illness, somewhere in the world there exists a plant which is the cure. \""
@@ -408,7 +440,7 @@ msgstr ""
 "menschliche Krankheit gibt es irgendwo auf der Welt eine Pflanze, die das "
 "Heilmittel ist. \""
 
-#: blog/templates/showcase.html:38
+#: blog/templates/showcase.html:37
 msgid ""
 "For thousands of years, people from all over the globe have used herbs and "
 "plants to cure or prevent disease. Sometimes, we are not even aware that "
@@ -419,7 +451,7 @@ msgstr ""
 "nicht einmal bewusst, dass eine Pflanze, die uns vertraut ist, eine "
 "besondere Gabe hat..."
 
-#: blog/templates/showcase.html:83
+#: blog/templates/showcase.html:82
 msgid ""
 "Scientists name about 18,000 new species each year. According to study made "
 "in 2011 humans share the planet with approximately 8,7 million different "

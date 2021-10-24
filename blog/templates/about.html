@@ -1,5 +1,5 @@
 {% extends "base.html" %} 
-{% load static %}
+{% load static i18n setvar %}
 {% block about %}
 
   <div class="about_wrapper">
@@ -11,7 +11,7 @@
           </li>
           <li class="breadcrumbs-item">
             <a href="{% url 'about_view'  %}"class="breadcrumbs-link">
-                About 
+              {% trans 'About us' %} 
             </a>
           </li>
       </ul>
@@ -19,19 +19,24 @@
     <div class="about_background">
       <div class="about_container">
         <div class="moto5"> 
-          <h2>About</h2>
-          <h1>us</h1>
+          <h2>{% trans 'About' %}</h2>
+          <h1>{% trans 'us' %}</h1>
         </div>
 
         <div class="about-text">
-          <p>Whatever we are doing, creating, thinking, we can feel the moment and do it with passion. This is an inbuilt part of us, it is our nature, the same as we are part of this world, together with all other creatures. By respecting and being compassionate towards all living beings we are just fulfilling our true self. 
-            Because that's what we are... passion as well as compassion. We explore this together with you... </p>
+          <p>{% trans 'Whatever we are doing, creating, thinking, we can feel the moment and do it with passion. This is an inbuilt part of us, it is our nature, the same as we are part of this world, together with all other creatures. By respecting and being compassionate towards all living beings we are just fulfilling our true self.' %} 
+            {% trans 'Because that is what we are... passion as well as compassion. We explore this together with you...' %} </p>
         </div>
         
         <div class="about-list" >
           <div style="color:var(--main); left:0">
-            <h2>Founders and editors</h2>
+            <h2>{% trans 'Founders and editors' %}</h2>
           </div>
+          {% if LANGUAGE_CODE != 'en' %} 
+            {% setvar authorslang_list as authors_list %}
+          {% else %} 
+            {% setvar authors_list as authors_list %}
+          {% endif %} 
           {% for author in authors_list %}
             <div class="{% cycle 'hero5-card1' 'hero5-card2' %}">
               <div class="{% cycle 'hero5-card1-pic' 'hero5-card2-pic' %}">

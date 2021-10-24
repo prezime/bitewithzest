@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import generic
-from .models import Post, PostLang, Category, CategoryLang, SubCategory, Contributor
+from .models import Post, PostLang, Category, CategoryLang, SubCategory, Contributor, ContributorLang
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger, InvalidPage
 from django.core.mail import send_mail, BadHeaderError
 import urllib.request
@@ -251,7 +251,8 @@ def about(request):
     cat_list = Category.objects.all().filter(status=1).order_by('order_count')
     catlang_list = CategoryLang.objects.all().filter(status=1).order_by('order_count')
     authors_list = Contributor.objects.all().order_by('order_count')
-    return render(request, "about.html", {'cat_list': cat_list, 'catlang_list': catlang_list, 'authors_list': authors_list})
+    authorslang_list = ContributorLang.objects.all().order_by('order_count')
+    return render(request, "about.html", {'cat_list': cat_list, 'catlang_list': catlang_list, 'authors_list': authors_list, 'authorslang_list': authorslang_list})
 
 
 def cookies(request):

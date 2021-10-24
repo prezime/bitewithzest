@@ -43,21 +43,6 @@ for rs in llist:
 langlist = (list1)
 
 
-class Contibutor(models.Model):
-    name = models.CharField(max_length=200, unique=True)
-    inactive = models.BooleanField(default=False)
-    description = RichTextUploadingField(default='', blank=True)
-    pic = models.FileField(
-        upload_to=path_rename.path_and_rename_author, blank=True)
-    order_count = models.IntegerField(default=0)
-
-    def __str__(self):
-        return self.name
-
-    def get_absolute_url(self):
-        return reverse('home')
-
-
 class Contributor(models.Model):
     name = models.CharField(max_length=200, unique=True)
     inactive = models.BooleanField(default=False)
@@ -77,6 +62,47 @@ contributors = Contributor.objects.all().values_list('name', 'name')
 contributor_list = []
 for item in contributors:
     contributor_list.append(item)
+
+
+class ContributorLang(models.Model):
+    contributor = models.ForeignKey(Contributor, on_delete=models.CASCADE)
+    name = models.CharField(max_length=200, unique=True, blank=True)
+    inactive = models.BooleanField(default=False)
+    description = RichTextUploadingField(default='', blank=True)
+    lang = models.CharField(max_length=5, choices=langlist, default=0)
+    order_count = models.IntegerField(default=0)
+
+    class Meta:
+        verbose_name_plural = 'Contributor Languages'
+
+    def __str__(self):
+        return self.contributor.name
+
+    def save(self):
+        if not self.id:
+            if contributorLangExists(self.contributor):
+                raise ValidationError('Contributor Language already exists')
+            self.id = self.contributor.id
+        if not self.description:
+            if self.contributor.description:
+                self.description = translator.translate_text(
+                    self.contributor.description, target_lang=self.lang)
+        if not self.name:
+            if self.contributor.name:
+                self.name = translator.translate_text(
+                    self.contributor.name, target_lang=self.lang)
+        if self.contributor.order_count:
+            self.order_count = self.contributor.order_count
+        self.inactive = self.contributor.inactive
+
+        super(ContributorLang, self).save()
+
+
+def contributorLangExists(ContLang):
+    if ContributorLang.objects.filter(id=ContLang.id):
+        return True
+    else:
+        return False
 
 
 class Category(models.Model):

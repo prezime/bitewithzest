@@ -1487,10 +1487,6 @@
     order: 2;
     margin-left: 30px;
   }
-  .about_wrapper .hero5-card1-text,
-  .hero5-card3-text {
-    width: 50%;
-  }
 
   .about_wrapper .hero5-card3-text {
     text-align: right;
@@ -1511,8 +1507,8 @@
     font-size: 27px;
     font-weight: 400;
   }
-  .about_wrapper .hero5-card3-text h3,
-  .hero5-card1-text h3 {
+  .about_wrapper .hero5-card3-text,
+  .about_wrapper .hero5-card1-text h3 {
     font-size: 27px;
     font-weight: 400;
   }

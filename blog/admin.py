@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Category, SubCategory, Contributor, Language, PostLang, CategoryLang
+from .models import Post, Category, SubCategory, Contributor, Language, PostLang, CategoryLang, ContributorLang
 from django.template.defaultfilters import slugify
 
 
@@ -33,6 +33,10 @@ class CategoryLangAdmin(admin.ModelAdmin):
     list_display = ('description', 'id')
 
 
+class ContributorLangAdmin(admin.ModelAdmin):
+    list_display = ('name', 'id')
+
+
 admin.site.register(Post, PostAdmin)
 admin.site.register(Category, CatAdmin)
 admin.site.register(SubCategory, SubCatAdmin)
@@ -40,3 +44,4 @@ admin.site.register(Contributor)
 admin.site.register(Language, LanguageAdmin)
 admin.site.register(PostLang, PostLangAdmin)
 admin.site.register(CategoryLang, CategoryLangAdmin)
+admin.site.register(ContributorLang, ContributorLangAdmin)

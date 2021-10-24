@@ -27,7 +27,7 @@
     </div>
     <nav>
       <ul id="nav_ul">
-        <li class="{% if request.resolver_match.url_name  == 'about_view' %}active{% endif %}"><a href="{% url 'about_view'  %}">{% trans 'About' %}</a></li>
+        <li class="{% if request.resolver_match.url_name  == 'about_view' %}active{% endif %}"><a href="{% url 'about_view'  %}">{% trans 'About us' %}</a></li>
         <li class="{% if request.resolver_match.url_name  == 'contact_view' %}active{% endif %}"><a href="{% url 'contact_view'  %}">{% trans 'Contact' %}</a></li>
         <li>
           <form class="form-inline" action="{% url 'set_language' %}" method="post">{% csrf_token %}
@@ -98,7 +98,7 @@
           <div class="sec quicklinks">
             <h2>{% trans 'Quicklinks' %}</h2>
             <ul>
-              <li><a href="">{% trans 'About' %}</a></li>
+              <li><a href="">{% trans 'About us' %}</a></li>
               <li><a href="">{% trans 'FAQ' %}</a></li>
               <li><a href="">{% trans 'Cookie policy' %}</a></li>
               <li><a href="">{% trans 'Terms & Conditions' %}</a></li>
