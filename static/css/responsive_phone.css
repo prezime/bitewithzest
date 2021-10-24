@@ -300,7 +300,7 @@
     width: 100%;
     overflow: hidden;
     height: 100%;
-    margin-top: -100px;
+    margin-top: -50px;
   }
 
   .layer_relative {
@@ -416,9 +416,9 @@
     margin: 1% 5%;
     position: relative;
     top: -300px;
-
     max-width: 500px;
     letter-spacing: 0.03em;
+    z-index: 3;
   }
   .moto2 h2 {
     color: var(--black);
@@ -426,11 +426,11 @@
     font-weight: 600;
     margin-bottom: 0;
     letter-spacing: 0.02em;
-    margin-left: 45%;
+    margin-left: 25%;
   }
   .moto2 h1 {
     font-family: var(--font-cool);
-    margin: -20px 30px 0 50%;
+    margin: -20px 30px 0 30%;
     color: var(--main);
     font-size: 44px;
     width: 100%;
@@ -1187,10 +1187,17 @@
     width: 100%;
     margin-bottom: 300px;
   }
+  .cat_container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
   .gallery-cat {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
     margin: 200px auto auto;
   }
