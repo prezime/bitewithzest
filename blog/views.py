@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import generic
-from .models import Post, PostLang, Category, CategoryLang, SubCategory, Contibutor
+from .models import Post, PostLang, Category, CategoryLang, SubCategory, Contributor
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger, InvalidPage
 from django.core.mail import send_mail, BadHeaderError
 import urllib.request
@@ -17,7 +17,6 @@ class PostList(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(PostList, self).get_context_data(**kwargs)
-        # pn = self.request.GET.get('page',1)
         shared_context(context, self)
         return context
 
@@ -28,8 +27,6 @@ class PostDetail(generic.DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(PostDetail, self).get_context_data(**kwargs)
-        # post = Post.objects.filter(slug=self.kwargs.get('slug'))
-        # post.update(count=F('count') + 1)
         shared_context(context, self)
         return context
 
@@ -253,7 +250,7 @@ class FeaturedList(generic.ListView):
 def about(request):
     cat_list = Category.objects.all().filter(status=1).order_by('order_count')
     catlang_list = CategoryLang.objects.all().filter(status=1).order_by('order_count')
-    authors_list = Contibutor.objects.all().order_by('order_count')
+    authors_list = Contributor.objects.all().order_by('order_count')
     return render(request, "about.html", {'cat_list': cat_list, 'catlang_list': catlang_list, 'authors_list': authors_list})
 
 
