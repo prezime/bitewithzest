@@ -101,9 +101,10 @@ class CategoryLang(models.Model):
         return self.category.slug
 
     def save(self):
-        if catLangExists(self.category):
-            raise ValidationError('Category Language already exists')
-        self.id = self.category.id
+        if not self.id:
+            if catLangExists(self.category):
+                raise ValidationError('Category Language already exists')
+            self.id = self.category.id
         if self.category.slug:
             self.slug = self.category.slug
         if not self.description:

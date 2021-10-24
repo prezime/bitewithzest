@@ -252,17 +252,20 @@ class FeaturedList(generic.ListView):
 
 def about(request):
     cat_list = Category.objects.all().filter(status=1).order_by('order_count')
+    catlang_list = CategoryLang.objects.all().filter(status=1).order_by('order_count')
     authors_list = Contibutor.objects.all().order_by('order_count')
-    return render(request, "about.html", {'cat_list': cat_list, 'authors_list': authors_list})
+    return render(request, "about.html", {'cat_list': cat_list, 'catlang_list': catlang_list, 'authors_list': authors_list})
 
 
 def cookies(request):
     cat_list = Category.objects.all().filter(status=1).order_by('order_count')
-    return render(request, "cookies_info.html", {'cat_list': cat_list})
+    catlang_list = CategoryLang.objects.all().filter(status=1).order_by('order_count')
+    return render(request, "cookies_info.html", {'cat_list': cat_list, 'catlang_list': catlang_list})
 
 
 def contact(request):
     cat_list = Category.objects.all().filter(status=1).order_by('order_count')
+    catlang_list = CategoryLang.objects.all().filter(status=1).order_by('order_count')
     if request.method == 'POST':
         name = request.POST.get('full_name')
         email = request.POST.get('email')
@@ -299,11 +302,11 @@ def contact(request):
                               message, '', ['cvetje@gmail.com'])
                 except BadHeaderError:
                     return HttpResponse('Invalid header found.')
-                return render(request, 'thankyou.html', {'cat_list': cat_list})
+                return render(request, 'thankyou.html', {'cat_list': cat_list, 'catlang_list': catlang_list})
             else:
                 # In reality we'd use a form class
                 # to get proper validation errors.
-                return render(request, 'invalidfields.html', {'cat_list': cat_list})
+                return render(request, 'invalidfields.html', {'cat_list': cat_list, 'catlang_list': catlang_list})
         else:
-            return render(request, 'invalidfields.html', {'cat_list': cat_list})
-    return render(request, "contact.html", {'cat_list': cat_list})
+            return render(request, 'invalidfields.html', {'cat_list': cat_list, 'catlang_list': catlang_list})
+    return render(request, "contact.html", {'cat_list': cat_list, 'catlang_list': catlang_list})

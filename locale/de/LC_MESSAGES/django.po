@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-18 21:27+0200\n"
+"POT-Creation-Date: 2021-10-24 18:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,43 +18,44 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: blog/templates/base.html:89
-msgid "Quicklinks"
-msgstr "Quicklinks"
-
-#: blog/templates/base.html:91
+#: blog/templates/base.html:30 blog/templates/base.html:100
 msgid "About"
 msgstr "Über uns"
 
-#: blog/templates/base.html:92
-msgid "FAQ"
-msgstr "FAQ"
-
-#: blog/templates/base.html:93 blog/templates/base.html:135
-msgid "Cookie policy"
-msgstr "Cookie-Richtlinie"
-
-#: blog/templates/base.html:94
-msgid "Terms & Conditions"
-msgstr "Allgemeine Geschäftsbedingungen"
-
-#: blog/templates/base.html:95 blog/templates/base.html:100
+#: blog/templates/base.html:31 blog/templates/base.html:104
+#: blog/templates/base.html:109
 msgid "Contact"
 msgstr "Kontakt"
 
-#: blog/templates/base.html:104
+#: blog/templates/base.html:98
+msgid "Quicklinks"
+msgstr "Quicklinks"
+
+#: blog/templates/base.html:101
+msgid "FAQ"
+msgstr "FAQ"
+
+#: blog/templates/base.html:102 blog/templates/base.html:144
+msgid "Cookie policy"
+msgstr "Cookie-Richtlinie"
+
+#: blog/templates/base.html:103
+msgid "Terms & Conditions"
+msgstr "Allgemeine Geschäftsbedingungen"
+
+#: blog/templates/base.html:113
 msgid "Vienna"
 msgstr "Wien"
 
-#: blog/templates/base.html:104
+#: blog/templates/base.html:113
 msgid "Austria"
 msgstr "Österreich"
 
-#: blog/templates/base.html:125
+#: blog/templates/base.html:134
 msgid "For creation of this website no animal was harmed"
 msgstr "Für die Erstellung dieser Website wurde kein Tier verletzt"
 
-#: blog/templates/base.html:126
+#: blog/templates/base.html:135
 msgid ""
 "All rights reserved. Unauthorized use of copyrighted content is prohibited "
 "and punishable"
@@ -62,31 +63,328 @@ msgstr ""
 "Alle Rechte vorbehalten. Die unbefugte Verwendung von urheberrechtlich "
 "geschützten Inhalten ist verboten und strafbar"
 
-#: blog/templates/base.html:135
+#: blog/templates/base.html:144
 msgid ""
 "We us cookies in this website for better user experience. If you want to "
 "find out more, please read our"
 msgstr ""
-"Wir verwenden Cookies auf dieser Website für eine bessere Benutzerfreundlichkeit. Wenn Sie "
-"mehr erfahren möchten, lesen Sie bitte unsere"
+"Wir verwenden Cookies auf dieser Website für eine bessere "
+"Benutzerfreundlichkeit. Wenn Sie mehr erfahren möchten, lesen Sie bitte "
+"unsere"
 
-#: blog/templates/base.html:135
+#: blog/templates/base.html:144
 msgid "with detailed information."
 msgstr "mit detaillierten Informationen."
 
-#: blog/templates/base.html:136
+#: blog/templates/base.html:145
 msgid "Close"
 msgstr "Schließen"
 
-#: blog/templates/showcase.html:14 blog/templates/showcase.html:42
+#: blog/templates/cookies_info.html:7
+msgid "Cookie"
+msgstr "Cookie-"
+
+#: blog/templates/cookies_info.html:8
+msgid "policy"
+msgstr "Richtlinie"
+
+#: blog/templates/cookies_info.html:11
+msgid "1. What is a cookie?"
+msgstr "1. Was ist ein Cookie?"
+
+#: blog/templates/cookies_info.html:12
+msgid ""
+"Cookies are small text files that are downloaded to your computer or mobile "
+"device (e.g. smartphone or tablet) when you visit our sites."
+msgstr ""
+"Cookies sind kleine Textdateien, die auf Ihren Computer oder Ihr Mobilgerät "
+"(z. B. Smartphone oder Tablet) heruntergeladen werden, wenn Sie unsere "
+"Website besuchen."
+
+#: blog/templates/cookies_info.html:13
+msgid ""
+"A cookie typically contains the name of the website that set it, the "
+"lifetime of the cookie (i.e. the period of time the cookie remains on your "
+"device)"
+msgstr ""
+"Ein Cookie enthält in der Regel den Namen der Website, die ihn gesetzt hat, "
+"die  Lebensdauer des Cookies (d.h. die Zeitspanne, die das Cookie auf Ihrem  "
+"Gerät verbleibt)"
+
+#: blog/templates/cookies_info.html:14
+msgid "and a value, which is typically a randomly generated unique number."
+msgstr ""
+"und einen Wert, der in der Regel eine zufällig erzeugte eindeutige Nummer "
+"ist."
+
+#: blog/templates/cookies_info.html:16
+msgid "2. What do we use cookies for?"
+msgstr "2. Wozu verwenden wir Cookies?"
+
+#: blog/templates/cookies_info.html:17
+msgid ""
+"We use cookies to make our sites easier to use and to better tailor the "
+"sites and our products to your interests and needs."
+msgstr ""
+"Wir verwenden Cookies, um die Nutzung unserer Seiten zu erleichtern und die "
+"Seiten und unsere Produkte besser auf Ihre Interessen und Bedürfnisse "
+"abzustimmen."
+
+#: blog/templates/cookies_info.html:18
+msgid ""
+"Cookies can do this because websites can read and write these files. This "
+"enables them to recognise you and store important information that makes "
+msgstr ""
+"Cookies können dies tun, weil Websites diese Dateien lesen und schreiben "
+"können. Dies ermöglicht es ihnen, Sie zu erkennen und wichtige Informationen "
+"zu speichern, die "
+
+#: blog/templates/cookies_info.html:19
+msgid ""
+"your use of a website more convenient (e.g. by storing your preferred "
+"settings)."
+msgstr ""
+"Ihre Nutzung einer Website bequemer zu gestalten (z. B. durch Speicherung "
+"Ihrer bevorzugten Einstellungen)."
+
+#: blog/templates/cookies_info.html:21
+msgid ""
+"Cookies may also be used to help you complete activities on our sites more "
+"quickly in the future. "
+msgstr ""
+"Cookies können auch verwendet werden, um Ihnen zu helfen, die Aktivitäten "
+"auf unseren in Zukunft schneller abzuschließen. "
+
+#: blog/templates/cookies_info.html:22
+msgid ""
+"Furthermore, we use cookies to compile anonymous, aggregated statistics that "
+"give us an understanding of the user behaviour of visitors to "
+msgstr ""
+"Außerdem verwenden wir Cookies, um anonyme, aggregierte Statistiken zu "
+"erstellen, die uns einen Einblick in das Nutzerverhalten der Besucher von "
+
+#: blog/templates/cookies_info.html:23
+msgid ""
+"our sites and help us to improve the structure and content of our sites. The "
+"information in cookies does not enable us to identify you personally."
+msgstr ""
+" und helfen uns, die Struktur und den Inhalt unserer Seiten zu verbessern. "
+"Die Informationen in Cookies ermöglichen es uns nicht, Sie persönlich zu "
+"identifizieren."
+
+#: blog/templates/cookies_info.html:25
+msgid "3. What types of cookies exist?"
+msgstr "3. Welche Arten von Cookies gibt es?"
+
+#: blog/templates/cookies_info.html:26
+msgid ""
+"Two different types of cookies may be used on the sites: so-called \"session "
+"cookies\" and \"permanent cookies\". "
+msgstr ""
+"Auf den Websites können zwei verschiedene Arten von Cookies verwendet "
+"werden: so genannte \"Sitzungs-Cookies\"und \"permanente Cookies\". "
+
+#: blog/templates/cookies_info.html:27
+msgid ""
+"Session cookies are temporary cookies that remain on your device until you "
+"leave the site. A permanent cookie, on the other hand, "
+msgstr ""
+"Sitzungscookies sind temporäre Cookies, die auf Ihrem Gerät verbleiben, bis "
+"Sie die Seite verlassen. Ein permanenter Cookie hingegen, "
+
+#: blog/templates/cookies_info.html:28
+msgid ""
+"remains on your device for a certain period of time after you have left the "
+"site or until you delete it manually "
+msgstr ""
+" bleibt für eine bestimmte Zeit auf Ihrem Gerät, nachdem Sie die Seite "
+"verlassen haben oder bis Sie sie manuell löschen "
+
+#: blog/templates/cookies_info.html:29
+msgid ""
+"(how long a cookie remains on your device depends on the \"lifespan\" of "
+"this cookie)."
+msgstr ""
+"(wie lange ein Cookie auf Ihrem Gerät verbleibt, hängt von der \"Lebensdauer"
+"\"dieses Cookies ab)."
+
+#: blog/templates/cookies_info.html:31
+msgid "4. What types of cookies do we use?"
+msgstr "4. Welche Arten von Cookies verwenden wir?"
+
+#: blog/templates/cookies_info.html:32
+msgid ""
+"Listed below are different types of cookies that may be used when you visit "
+"our page."
+msgstr ""
+"Im Folgenden sind verschiedene Arten von Cookies aufgeführt, die verwendet "
+"werden können, wenn Sie unsere Seite besuchen."
+
+#: blog/templates/cookies_info.html:34
+msgid "Third-party cookies: "
+msgstr "Cookies von Drittparteien:"
+
+#: blog/templates/cookies_info.html:35
+msgid ""
+"We also use various service providers who may also place cookies on your "
+"device for us when you visit our sites. "
+msgstr ""
+"Wir arbeiten auch mit verschiedenen Dienstleistern zusammen, die "
+"möglicherweise ebenfalls Cookies auf Ihrem Gerät platzieren, wenn Sie unsere "
+"Websites besuchen. "
+
+#: blog/templates/cookies_info.html:36
+#, fuzzy
+#| msgid ""
+#| "If you have any questions about this Cookie Policy, please contact us at"
+msgid ""
+"If you would like more information about these cookies, please contact us."
+msgstr ""
+"Wenn Sie Fragen zu dieser Cookie-Richtlinie haben, kontaktieren Sie uns "
+"bitte unter"
+
+#: blog/templates/cookies_info.html:38
+msgid "First-party cookies:"
+msgstr "Cookies von Erstanbietern:"
+
+#: blog/templates/cookies_info.html:39
+msgid ""
+"We use first-party cookies to provide you with a smooth visitor experience."
+msgstr ""
+"Wir verwenden Erstanbieter-Cookies, um Ihnen ein reibungsloses "
+"Besuchererlebnis zu bieten. "
+
+#: blog/templates/cookies_info.html:40
+msgid ""
+"These cookies are necessary for our website to function and cannot be turned "
+"off in our systems."
+msgstr ""
+"Diese Cookies sind notwendig, damit unsere Website funktioniert und können "
+"nicht in unseren Systemen nicht ausgeschaltet werden."
+
+#: blog/templates/cookies_info.html:42
+msgid ""
+"You can set your browser to block cookies or receive a notification about "
+"them; however, if you do so, you may not be able to use our website fully. "
+msgstr ""
+"Sie können Ihren Browser so einstellen, dass er Cookies blockiert oder Sie "
+"über sie benachrichtigt; in diesem Fall können Sie unsere Website jedoch "
+"möglicherweise nicht in vollem Umfang nutzen. "
+
+#: blog/templates/cookies_info.html:43
+msgid "These cookies do not store any personal data."
+msgstr ""
+
+#: blog/templates/cookies_info.html:45
+msgid "Overview of essential cookies/provider cookies:"
+msgstr "Übersicht über wesentliche Cookies/Anbieter-Cookies:"
+
+#: blog/templates/cookies_info.html:47
+msgid "Session cookies:"
+msgstr "Sitzungs-Cookies:"
+
+#: blog/templates/cookies_info.html:48
+msgid ""
+"These cookies enable the use of the function of our order script. When a "
+"browser \"session\" ends, all stored cookies are deleted."
+msgstr ""
+"Diese Cookies ermöglichen die Nutzung der Funktion unseres Scripts. Wenn "
+"eine besondere\"Browser-Sitzung\" endet, werden alle gespeicherten Cookies "
+"gelöscht."
+
+#: blog/templates/cookies_info.html:50
+msgid "Performance Cookies:"
+msgstr "Performance-Cookies:"
+
+#: blog/templates/cookies_info.html:51
+msgid ""
+"Performance cookies collect anonymous data that provides information about "
+"the performance of our website."
+msgstr ""
+"Performance-Cookies sammeln anonyme Daten, die Informationen über die "
+"Leistung unserer Website."
+
+#: blog/templates/cookies_info.html:53
+msgid "We do not use Google Analytics."
+msgstr "Wir verwenden Google Analytics nicht."
+
+#: blog/templates/cookies_info.html:55
+msgid "Want more information about cookies? Visit"
+msgstr "Möchten Sie mehr über Cookies erfahren? Besuchen Sie"
+
+#: blog/templates/cookies_info.html:57
+msgid "5. Contact us"
+msgstr "Kontaktieren sie uns"
+
+#: blog/templates/cookies_info.html:58
+msgid ""
+"If you have any questions about this Cookie Policy, please contact us at"
+msgstr ""
+"Wenn Sie Fragen zu dieser Cookie-Richtlinie haben, kontaktieren Sie uns "
+"bitte unter"
+
+#: blog/templates/cookies_info.html:60
+msgid ""
+"Please note that communication via email is not always secure. Therefore, "
+"please do not send us sensitive data via email."
+msgstr ""
+"Bitte beachten Sie, dass die Kommunikation per E-Mail nicht immer sicher "
+"ist. Deshalb, Bitte senden Sie uns keine sensiblen Daten per E-Mail."
+
+#: blog/templates/cookies_info.html:62
+msgid "6. Helpful links"
+msgstr "6. Hilfreiche Links"
+
+#: blog/templates/cookies_info.html:63
+msgid "Browser dependent help for cookies:"
+msgstr "Browserabhängige Hilfe für Cookies:"
+
+#: blog/templates/invalidfields.html:5
+msgid "Not all fields are valid or re-captcha is missing."
+msgstr "Nicht alle Felder sind gültig oder es fehlt ein Re-Captcha."
+
+#: blog/templates/invalidfields.html:5
+msgid "Please go back and try again."
+msgstr "Bitte gehen Sie zurück und versuchen Sie es erneut."
+
+#: blog/templates/post_cat_list.html:33 blog/templates/post_cat_list.html:45
+#: blog/templates/showcase.html:18 blog/templates/showcase.html:47
 msgid "Plant-based"
 msgstr "Pflanzbasierte"
 
-#: blog/templates/showcase.html:15
+#: blog/templates/post_cat_list.html:34 blog/templates/showcase.html:19
 msgid "recipe ideas"
 msgstr "Rezeptideen"
 
-#: blog/templates/showcase.html:16
+#: blog/templates/post_cat_list.html:36 blog/templates/showcase.html:35
+msgid "Lexicon"
+msgstr "Lexikon"
+
+#: blog/templates/post_cat_list.html:37 blog/templates/showcase.html:36
+msgid "of plants"
+msgstr "der Pflanzen"
+
+#: blog/templates/post_cat_list.html:39 blog/templates/showcase.html:95
+msgid "Immunity"
+msgstr "Stärkung des"
+
+#: blog/templates/post_cat_list.html:40 blog/templates/showcase.html:96
+msgid "boosting"
+msgstr "Immunsystems"
+
+#: blog/templates/post_cat_list.html:42 blog/templates/showcase.html:81
+msgid "Our"
+msgstr "Unser"
+
+#: blog/templates/post_cat_list.html:43 blog/templates/showcase.html:82
+msgid "planet"
+msgstr "Planet"
+
+#: blog/templates/post_cat_list.html:46 blog/templates/showcase.html:48
+msgid "lifestyle"
+msgstr "Lifestyle"
+
+#: blog/templates/showcase.html:20
 msgid ""
 "Healthy and delicious recipes, easy and quick to make. All about how to "
 "start & end your day nutritionally well and with a positive energy."
@@ -95,21 +393,13 @@ msgstr ""
 "wie den Tag nahrhaft gut und mit positiver Energie zu beginnen und zu "
 "beenden."
 
-#: blog/templates/showcase.html:17 blog/templates/showcase.html:34
-#: blog/templates/showcase.html:56 blog/templates/showcase.html:75
-#: blog/templates/showcase.html:105
+#: blog/templates/showcase.html:22 blog/templates/showcase.html:39
+#: blog/templates/showcase.html:66 blog/templates/showcase.html:85
+#: blog/templates/showcase.html:120
 msgid "discover more"
 msgstr "mehr entdecken"
 
-#: blog/templates/showcase.html:30
-msgid "Lexicon"
-msgstr "Lexikon"
-
-#: blog/templates/showcase.html:31
-msgid "of plants"
-msgstr "der Pflanzen"
-
-#: blog/templates/showcase.html:32
+#: blog/templates/showcase.html:37
 msgid ""
 "The philosopher and teacher Rudolf Steiner once said, \"For every human "
 "illness, somewhere in the world there exists a plant which is the cure. \""
@@ -118,7 +408,7 @@ msgstr ""
 "menschliche Krankheit gibt es irgendwo auf der Welt eine Pflanze, die das "
 "Heilmittel ist. \""
 
-#: blog/templates/showcase.html:33
+#: blog/templates/showcase.html:38
 msgid ""
 "For thousands of years, people from all over the globe have used herbs and "
 "plants to cure or prevent disease. Sometimes, we are not even aware that "
@@ -129,19 +419,7 @@ msgstr ""
 "nicht einmal bewusst, dass eine Pflanze, die uns vertraut ist, eine "
 "besondere Gabe hat..."
 
-#: blog/templates/showcase.html:43
-msgid "lifestyle"
-msgstr "Lifestyle"
-
-#: blog/templates/showcase.html:71
-msgid "Our"
-msgstr "Unser"
-
-#: blog/templates/showcase.html:72
-msgid "planet"
-msgstr "Planet"
-
-#: blog/templates/showcase.html:73
+#: blog/templates/showcase.html:83
 msgid ""
 "Scientists name about 18,000 new species each year. According to study made "
 "in 2011 humans share the planet with approximately 8,7 million different "
@@ -152,13 +430,13 @@ msgstr ""
 "8,7 Millionen verschiedenen  Lebensformen. Jede einzelne davon hat etwas "
 "Interessantes zu erzählen."
 
-#: blog/templates/showcase.html:85
-msgid "Immunity"
-msgstr "Stärkung des"
+#: blog/templates/thankyou.html:5
+msgid "Your message"
+msgstr "Ihre Nachricht"
 
-#: blog/templates/showcase.html:86
-msgid "boosting"
-msgstr "Immunsystems"
+#: blog/templates/thankyou.html:5
+msgid "was sent successfully!"
+msgstr "wurde erfolgreich versendet"
 
 #: src/settings.py:122
 msgid "English"
