@@ -98,11 +98,24 @@
           <div class="sec quicklinks">
             <h2>{% trans 'Quicklinks' %}</h2>
             <ul>
-              <li><a href="">{% trans 'About us' %}</a></li>
-              <li><a href="">{% trans 'FAQ' %}</a></li>
-              <li><a href="">{% trans 'Cookie policy' %}</a></li>
-              <li><a href="">{% trans 'Terms & Conditions' %}</a></li>
-              <li><a href="">{% trans 'Contact' %}</a></li>
+              <li><a href="{% url 'about_view'  %}">{% trans 'About us' %}</a></li>
+              {% for category in cat_list %}
+                {% if category.id == 6 %}
+                <li><a href="{% url 'category_view' category.slug  %}" >
+                  {% if LANGUAGE_CODE != 'en' %} 
+                      {% for catlang in catlang_list %}
+                          {% if category.id == catlang.id %}
+                              {{ catlang.description | safe }}
+                          {% endif %}
+                      {% endfor %}           
+                  {% else %}    
+                      {{ category.description | safe }} 
+                  {% endif %}</a></li>
+                {% endif %}  
+              {% endfor %}
+              <li><a href="{% url 'cookies_view'  %}">{% trans 'Cookie policy' %}</a></li>
+              <!-- <li><a href="">{% trans 'Terms & Conditions' %}</a></li> -->
+              <li><a href="{% url 'contact_view'  %}">{% trans 'Contact' %}</a></li>
             </ul>
           </div>
 
