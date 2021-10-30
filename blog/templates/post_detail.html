@@ -239,7 +239,7 @@
                     <p class="link-post-card__title">
                         {% if LANGUAGE_CODE != 'en' %} 
                             {% for postlang in postlang_list %}
-                                {% if object.id == postlang.id %}
+                                {% if object.relates_to.id == postlang.id %}
                                     {{ postlang.title | safe }}
                                 {% endif %}
                             {% endfor %}           
@@ -248,7 +248,7 @@
                         {% endif %}</p>
                         {% if LANGUAGE_CODE != 'en' %} 
                             {% for postlang in postlang_list %}
-                                {% if object.id == postlang.id %}
+                                {% if object.relates_to.id == postlang.id %}
                                     {{ postlang.legend | safe }}
                                 {% endif %}
                             {% endfor %}           
