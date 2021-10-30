@@ -1434,8 +1434,8 @@
   }
   input::placeholder,
   textarea::placeholder {
-    color: var(--black);
-    font-size: 24px;
+    color: var(--grey);
+    font-size: 21px;
     font-family: "Exo 2";
   }
 
