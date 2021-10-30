@@ -240,11 +240,11 @@
                         {% if LANGUAGE_CODE != 'en' %} 
                             {% for postlang in postlang_list %}
                                 {% if object.id == postlang.id %}
-                                    {{ postlang.relates_to.preparationtext | safe }}
+                                    {{ postlang.relates_to.title | safe }}
                                 {% endif %}
                             {% endfor %}           
                         {% else %}    
-                            {{ object.relates_to.preparationtext | safe }} 
+                            {{ object.relates_to.title | safe }} 
                         {% endif %}</p>
                         {% if LANGUAGE_CODE != 'en' %} 
                             {% for postlang in postlang_list %}
