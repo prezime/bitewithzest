@@ -322,14 +322,14 @@
     margin: 5% 15%;
   }
 
-  .moto1,
+  .moto1 h1,
   .moto1-de h1 {
     font-family: var(--font-cool);
     margin: 0 0 -15px 30px;
     color: var(--main);
     font-size: 70px;
   }
-  .moto1,
+  .moto1 h2,
   .moto1-de h2 {
     color: var(--black);
     font-size: 30px;
@@ -337,7 +337,7 @@
     margin-bottom: 0;
     letter-spacing: 0.02em;
   }
-  .moto1,
+  .moto1 p,
   .moto1-de p {
     font-size: 24px;
     margin-top: 30px;
