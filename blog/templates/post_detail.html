@@ -240,7 +240,7 @@
                         {% if LANGUAGE_CODE != 'en' %} 
                             {% for postlang in postlang_list %}
                                 {% if object.id == postlang.id %}
-                                    {{ postlang.relates_to.title | safe }}
+                                    {{ postlang.title | safe }}
                                 {% endif %}
                             {% endfor %}           
                         {% else %}    
@@ -249,7 +249,7 @@
                         {% if LANGUAGE_CODE != 'en' %} 
                             {% for postlang in postlang_list %}
                                 {% if object.id == postlang.id %}
-                                    {{ postlang.relates_to.legend | safe }}
+                                    {{ postlang.legend | safe }}
                                 {% endif %}
                             {% endfor %}           
                         {% else %}    
