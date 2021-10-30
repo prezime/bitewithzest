@@ -316,6 +316,11 @@
       <div class="cat-header-col2"></div>
     </div>
     <div class="featured">
+        {% if LANGUAGE_CODE != 'en' %} 
+            {% setvar postlang_featured_list as post_featured_list %}
+        {% else %} 
+            {% setvar post_featured_list as post_featured_list %}
+        {% endif %} 
         {% for post in post_featured_list|shuffle|slice:":3" %}
         <a href="{% url 'post_detail' post.slug  %}">
         <div class="{% cycle  'card_featured1' 'card_featured2' %}">
