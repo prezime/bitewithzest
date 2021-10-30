@@ -315,12 +315,7 @@
       <div class="cat-header-col1 post-cat-title">FEATURED</div>
       <div class="cat-header-col2"></div>
     </div>
-    <div class="featured">
-        {% if LANGUAGE_CODE != 'en' %} 
-            {% setvar postlang_featured_list as post_featured_list %}
-        {% else %} 
-            {% setvar post_featured_list as post_featured_list %}
-        {% endif %} 
+    <div class="featured"> 
         {% for post in post_featured_list|shuffle|slice:":3" %}
         <a href="{% url 'post_detail' post.slug  %}">
         <div class="{% cycle  'card_featured1' 'card_featured2' %}">
@@ -328,9 +323,18 @@
             <img src="../media/{{post.opener_pic}}" alt="" />
             </div>
             <div class="{% cycle  'card_featured1-text' 'card_featured2-text' %}">
+                {% if LANGUAGE_CODE != 'en' %} 
+                    {% for postlang in postlang_list %}
+                        {% if post.id == postlang.id %}
+                        <h3>{{postlang.title}}</h3>
+                        <p>{{ postlang.intro|safe|slice:"171" }}{% if post.intro|safe|length > 171 %}...{% endif %}</p>
+                        {% endif %}
+                    {% endfor %}           
+                {% else %}    
                 <h3>{{post.title}}</h3>
-
                 <p>{{ post.intro|safe|slice:"171" }}{% if post.intro|safe|length > 171 %}...{% endif %}</p>
+                {% endif %}
+
             </div>  
         </div>
         </a>
