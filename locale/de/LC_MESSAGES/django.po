@@ -384,8 +384,8 @@ msgstr ""
 "Leistung unserer Website."
 
 #: blog/templates/cookies_info.html:53
-msgid "We do not use Google Analytics."
-msgstr "Wir verwenden Google Analytics nicht."
+msgid "We use Google Analytics."
+msgstr "Wir verwenden Google Analytics."
 
 #: blog/templates/cookies_info.html:55
 msgid "Want more information about cookies? Visit"
