@@ -13,10 +13,14 @@
   <link rel="stylesheet" href="{% static 'css/responsive_phone.css' %}" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Bite With Zest! - the ultimate Life Zest blog</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6E5GG8S7XY"></script>
   <script>
-    // window.addEventListener('load', function () {
-    //   alert("It's loaded!")
-    // })
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6E5GG8S7XY');
   </script>
 </head>
 <body>
