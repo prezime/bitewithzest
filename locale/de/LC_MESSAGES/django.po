@@ -56,7 +56,7 @@ msgstr ""
 
 #: blog/templates/about.html:33
 msgid "Founders and editors"
-msgstr "Gründer und Bloger"
+msgstr "Gründer und Blogger"
 
 #: blog/templates/base.html:31 blog/templates/base.html:118
 #: blog/templates/base.html:123 blog/templates/contact.html:14
