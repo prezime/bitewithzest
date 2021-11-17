@@ -101,7 +101,11 @@
       <p>{% trans 'Many people are not aware of the cruelty in the dairy industry. A cow, like a man, has milk only when it has a puppy, because it has to feed it. Cows used in the industry for milk are thus forced into constant pregnancy and constant calving, in order to continue to give milk. Shortly after birth, cows are deprived of their calves - females go on to milk production, while males are an undesirable by-product of the dairy industry and are killed shortly after birth and go for meat production. Cows in the dairy industry are mostly killed at the age of 3, while their natural lifespan is between 20 and 25 years.' %} </p>
       <p>{% trans 'Similarly, in chicken industry, the hens are killed after a year or two, i.e. as soon as their egg-laying is reduced. Chickens usually live for about 10 years. Female chickens are further used for production and their beaks are cut with a hot knife so as not to injure each other, while male chickens are an undesirable by-product and are usually ground to live.' %}
         </p>
+      {% if LANGUAGE_CODE != 'en' %}  
       <img src="https://bitewithzest.com/media/uploads/2021/10/30/faq_pic_de-05_6eqnHg7.jpeg" alt="">
+      {% else %}
+      <img src="https://bitewithzest.com/media/layout/FAQ_pic-02.jpeg" alt="">
+      {% endif %}
     </div>
   </div>
   <div class="accordion">
@@ -136,7 +140,11 @@
           <li>{% trans 'Sheep can also live to 15 years but depending on whether they are slaughtered as lambs or later, they are shot and bled between 3-10 months of age.' %}</li>
           <li>{% trans 'Every week in the UK 3,000 male calves are killed shortly after birth, usually within days, and over 40 million day-old chicks are killed each year, including those from organic farms. Males do not secrete bodily fluids destined for offspring (cows milk), or lay eggs like hens do. Calves are either shot or exported alive to mainland European countries where they are kept.' %}</li>
         </ul>
+        {% if LANGUAGE_CODE != 'en' %} 
         <img src="https://bitewithzest.com/media/uploads/2021/10/30/faq_pic_de-06.jpeg" alt="">
+        {% else %} 
+        <img src="https://bitewithzest.com/media/layout/FAQ_pic-03.jpeg" alt="">
+        {% endif %} 
         <p>{% trans 'A lot of people opt for a vegan lifestyle because of animal exploitation. We all know that animals have emotions and feelings. This will be confirmed to you by those who have pets. Animals in industry live in poor conditions, very short life even if their lifespan is much longer. Vegan philosophy believes that all living beings have the right to life and freedom.' %}
           
           {% trans 'Roughly 60 billion land animals and over a trillion (!) marine animals' %}
@@ -168,7 +176,11 @@
           <li><strong><a href="https://www.weforum.org/agenda/2019/02/chart-of-the-day-this-is-how-many-animals-we-eat-each-year/" target="_blank">How many animals we eat each year...</a></strong></li>
         </ul> 
         </p>
+        {% if LANGUAGE_CODE != 'en' %}
         <img src="https://bitewithzest.com/media/uploads/2021/10/30/faq_pic_de-04_kLYlksy.jpeg" alt="">
+        {% else %} 
+        <img src="https://bitewithzest.com/media/layout/FAQ_pic-01.jpeg" alt="">
+        {% endif %}
         <p>
           {% trans 'For example, it takes 15,500 litres of water to produce 1 kg beef, contrasted with 180 litres for 1 kg tomatoes and 250 litres for 1 kg potatoes.' %}
           {% trans 'Consuming animal products is incredibly resource-intensive. Globally, farming uses about 70% of the planet’s accessible freshwater. This is compared to around 20% for industry, and about 10% for domestic use.' %}
