@@ -14,6 +14,9 @@
   .mobile {
     display: none !important;
   }
+  .tablet {
+    top: 400px !important;
+  }
   header {
     position: absolute;
     top: 0;
@@ -246,7 +249,7 @@
     width: 100%;
     overflow: hidden;
     height: 100%;
-    padding-bottom: 300px;
+    padding-bottom: 800px;
   }
 
   .layer_relative {
