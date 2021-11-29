@@ -713,6 +713,11 @@
     width: 270px;
     top: 40%;
   }
+  .post-intro-text p,
+  .post-date p {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
 
   .post-opener {
     position: relative;

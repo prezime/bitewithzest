@@ -99,9 +99,9 @@
                 {% endif %} 
             </div>
                 {% if object.custom_date %}
-                <div class="post-date">{{ object.custom_date | date:"F d Y"}}, <br>{{ object.author}}</div>
+                <div class="post-date"><p>{{ object.custom_date | date:"F d Y"}}, <br>{{ object.author}}</p></div>
                 {% else %}    
-                <div class="post-date">{{ object.created_on | date:"F d Y"}}, <br>{{ object.author}}</div>
+                <div class="post-date"><p>{{ object.created_on | date:"F d Y"}}, <br>{{ object.author}}</p></div>
                 {% endif %} 
             
             
