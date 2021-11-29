@@ -52,9 +52,6 @@
     padding: 0 20px;
     text-decoration: none;
   }
-  .wrapper {
-    min-height: 100%;
-  }
 
   .navbar {
     position: absolute;
@@ -714,7 +711,7 @@
   .post-intro-text {
     position: relative;
     width: 270px;
-    top: 55%;
+    top: 40%;
   }
 
   .post-opener {
@@ -724,8 +721,8 @@
   .post-opener img {
     margin: 3%;
     border-radius: 0 180px;
-    width: 900px;
-    height: 500px;
+    width: 700px;
+    height: 400px;
     object-fit: cover;
   }
   .post-opener img.layer1-1 {
@@ -754,11 +751,10 @@
   .post-title {
     position: absolute;
     top: 340px;
-    left: 60%;
+    left: 55%;
     display: inline-block;
-    margin: 20px;
     padding-left: 27px;
-    font-size: 23px;
+    font-size: 19px;
     background-color: rgba(255, 255, 255, 0.8);
     width: 550px;
     color: var(--main);
