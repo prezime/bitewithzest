@@ -717,6 +717,7 @@
   .post-date p {
     font-size: 15px;
     margin-bottom: 0;
+    line-height: 1.3em;
   }
 
   .post-opener {
