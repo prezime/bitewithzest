@@ -1,6 +1,5 @@
 /* Responsive layout - when the screen is less than 48em wide, make the two columns stack on top of each other instead of next to each other */
-/* 48em = 768px */
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 768px) {
   .desktop {
     display: none !important;
   }
@@ -1516,8 +1515,6 @@
     position: relative;
     width: 94%;
     margin: auto;
-  }
-  .about-text {
   }
 }
 
