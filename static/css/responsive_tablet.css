@@ -49,6 +49,9 @@
     padding: 0 20px;
     text-decoration: none;
   }
+  .wrapper {
+    min-height: 100%;
+  }
 
   .navbar {
     position: absolute;
@@ -405,7 +408,7 @@
     font-weight: 400;
     color: white;
     position: absolute;
-    top: 150px;
+    top: 120px;
     left: 15%;
     max-width: 500px;
     letter-spacing: 0.03em;
@@ -423,7 +426,7 @@
     font-weight: 600;
   }
   .moto4 p {
-    font-size: 21px;
+    font-size: 19px;
     margin-top: 30px;
     font-weight: 600;
   }
@@ -603,9 +606,9 @@
     top: 340px;
     display: flex;
     flex-direction: column;
-    width: 56%;
+    width: 67%;
     left: 50%;
-    margin-left: -28%;
+    margin-left: -33%;
   }
   .layer5-1-1 a {
     text-decoration: none;
@@ -624,9 +627,9 @@
     border: 2px solid var(--main);
     padding: 15px;
     border-radius: 30% 0;
-    width: 300px;
-    min-width: 300px;
-    height: 300px;
+    width: 270px;
+    min-width: 270px;
+    height: 270px;
     margin-right: 30px;
     position: relative;
     box-sizing: unset;
@@ -637,9 +640,9 @@
     border: 2px solid var(--main);
     padding: 15px;
     border-radius: 0 30%;
-    width: 300px;
-    min-width: 300px;
-    height: 300px;
+    width: 270px;
+    min-width: 270px;
+    height: 270px;
     position: relative;
     box-sizing: unset;
     margin-left: 30px;
@@ -649,17 +652,17 @@
 
   .hero5-card1-pic img {
     border-radius: 30% 0;
-    width: 300px;
-    min-width: 300px;
-    height: 300px;
+    width: 270px;
+    min-width: 270px;
+    height: 270px;
     object-fit: cover;
   }
 
   .hero5-card2-pic img {
     border-radius: 0 30%;
-    width: 300px;
-    min-width: 300px;
-    height: 300px;
+    width: 270px;
+    min-width: 270px;
+    height: 270px;
     object-fit: cover;
   }
   .hero5-card2-text {
@@ -707,7 +710,7 @@
   }
   .post-intro-text {
     position: relative;
-    width: 300px;
+    width: 270px;
     top: 55%;
   }
 
@@ -1533,14 +1536,4 @@
   .copyright_text {
     font-size: 12px;
   }
-  footer {
-    background: url("/../media/layout/header.png");
-    padding: 3%;
-    background-size: cover;
-  }
 }
-/* @media screen and (min-width:1239px) and (max-width:1400px){
-  .aboutus ,.quicklinks, .footer_contact, .copyright_text{
-    font-size: 12px;
-  }
-} */
