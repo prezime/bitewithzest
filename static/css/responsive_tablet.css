@@ -1214,7 +1214,7 @@
   .post-cat-card2-text {
     top: 20px;
     height: 320px;
-    width: 300px;
+    width: 250px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1222,13 +1222,13 @@
 
   .post-cat-card1-text span,
   .post-cat-card2-text span {
-    font-size: 23px;
+    font-size: 21px;
     font-weight: 600;
     flex: 1;
   }
   .post-cat-card1-text p,
   .post-cat-card2-text p {
-    font-size: 19px;
+    font-size: 16px;
     margin-top: -20px;
     font-weight: 200;
   }
