@@ -700,14 +700,22 @@
     margin: 40px auto;
     display: flex;
   }
-  .post-date {
-    position: relative;
-    width: 180px;
+  .post-intro-info {
+    display: flex;
+    margin-top: 240px;
+    flex-direction: column;
   }
   .post-intro-text {
     position: relative;
     width: 400px;
-    top: 50%;
+  }
+  .post-date {
+    position: absolute;
+    bottom: 0px;
+    width: 180px;
+  }
+  .post-date p {
+    margin: 0;
   }
 
   .post-opener {

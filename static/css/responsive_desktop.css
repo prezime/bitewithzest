@@ -701,14 +701,22 @@
     margin: 40px auto;
     display: flex;
   }
-  .post-date {
-    position: relative;
-    width: 180px;
+  .post-intro-info {
+    display: flex;
+    margin-top: 240px;
+    flex-direction: column;
   }
   .post-intro-text {
     position: relative;
-    width: 300px;
-    top: 55%;
+    width: 350px;
+  }
+  .post-date {
+    position: absolute;
+    bottom: 35px;
+    width: 180px;
+  }
+  .post-date p {
+    margin: 0;
   }
 
   .post-opener {
@@ -718,8 +726,8 @@
   .post-opener img {
     margin: 3%;
     border-radius: 0 180px;
-    width: 900px;
-    height: 500px;
+    width: 850px;
+    height: 490px;
     object-fit: cover;
   }
   .post-opener img.layer1-1 {

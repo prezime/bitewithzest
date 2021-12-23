@@ -84,26 +84,27 @@
                 {% endfor %}           
             {% else %}    
                 {{ object.titleplus | safe }} 
-            {% endif %}  </h1></div>       
-            <div class="post-intro-text">
-                {% if post.category == 'Recipes' %}
-                    {% if LANGUAGE_CODE != 'en' %} 
-                        {% for postlang in postlang_list %}
-                            {% if object.id == postlang.id %}
-                                {{ postlang.intro | safe }}
-                            {% endif %}
-                        {% endfor %}           
-                    {% else %}    
-                        {{ object.intro | safe }} 
-                    {% endif %}  
-                {% endif %} 
-            </div>
+            {% endif %}  </h1></div>  
+            <div class="post-intro-info">     
+                <div class="post-intro-text">
+                    {% if post.category == 'Recipes' %}
+                        {% if LANGUAGE_CODE != 'en' %} 
+                            {% for postlang in postlang_list %}
+                                {% if object.id == postlang.id %}
+                                    {{ postlang.intro | safe }}
+                                {% endif %}
+                            {% endfor %}           
+                        {% else %}    
+                            {{ object.intro | safe }} 
+                        {% endif %}  
+                    {% endif %} 
+                </div>
                 {% if object.custom_date %}
                 <div class="post-date"><p>{{ object.custom_date | date:"F d Y"}}, <br>{{ object.author}}</p></div>
                 {% else %}    
                 <div class="post-date"><p>{{ object.created_on | date:"F d Y"}}, <br>{{ object.author}}</p></div>
                 {% endif %} 
-            
+            </div>
             
             
         </div>

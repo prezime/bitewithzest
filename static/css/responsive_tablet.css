@@ -704,14 +704,22 @@
     margin: 40px auto;
     display: flex;
   }
-  .post-date {
-    position: relative;
-    width: 180px;
+  .post-intro-info {
+    display: flex;
+    margin-top: 185px;
+    flex-direction: column;
   }
   .post-intro-text {
     position: relative;
-    width: 270px;
-    top: 45%;
+    width: 280px;
+  }
+  .post-date {
+    position: absolute;
+    bottom: 98px;
+    width: 180px;
+  }
+  .post-date p {
+    margin: 0;
   }
   .post-intro-text p,
   .post-date p {
