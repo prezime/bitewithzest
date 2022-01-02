@@ -706,16 +706,13 @@
   }
   .post-intro-info {
     display: flex;
-    margin-top: 185px;
     flex-direction: column;
   }
   .post-intro-text {
-    position: relative;
     width: 280px;
   }
   .post-date {
     position: absolute;
-    bottom: 98px;
     width: 180px;
   }
   .post-date p {

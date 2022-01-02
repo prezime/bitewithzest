@@ -702,16 +702,13 @@
   }
   .post-intro-info {
     display: flex;
-    margin-top: 240px;
     flex-direction: column;
   }
   .post-intro-text {
-    position: relative;
     width: 400px;
   }
   .post-date {
     position: absolute;
-    bottom: 0px;
     width: 180px;
   }
   .post-date p {

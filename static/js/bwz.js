@@ -104,6 +104,7 @@ if (w <= 769) {
   var bcWidth = 0;
   var piWidth = 0;
   var ptHeight = 0;
+  var poHeight = 0;
   var factor = 0;
   var leftOffset = '';
   var refElement = [];
@@ -115,6 +116,7 @@ if (w <= 769) {
     postTitle = document.getElementsByClassName('post-title');
     postIntroText = document.getElementsByClassName('post-intro-text');
     postDate = document.getElementsByClassName('post-date');
+    postOpener = document.getElementsByClassName('post-opener');
     factor = 0.975;
   } else if (djangoView == 'category_view'){ 
     refElement = document.getElementsByClassName('gallery-cat');
@@ -137,6 +139,9 @@ if (w <= 769) {
   for (var i = 0, len = postTitle.length; i < len; i++) {
     ptHeight += postTitle[i].offsetHeight;
   }
+  for (var i = 0, len = postOpener.length; i < len; i++) {
+    poHeight += postOpener[i].offsetHeight;
+  }
   console.log(ptHeight);
   piWidth = piWidth * factor;
   
@@ -147,8 +152,10 @@ if (w <= 769) {
   else if (djangoView == 'contact_view' || djangoView == 'about_view' || djangoView == 'post_detail'){ 
     leftOffset = -(piWidth-bcWidth)+'px';    
     bc.style.marginLeft = leftOffset;
-    postIntroText[0].style.marginTop = ptHeight+55+'px';
-    postDate[0].style.marginTop = ptHeight+295+'px';
+    if (w > 769 || w < 1300){
+      postIntroText[0].style.marginTop = ptHeight+55+'px';
+      postDate[0].style.marginTop = ptHeight+295+'px';
+    }
   }
 
   //ovdje je sve dobro. ne diraj
