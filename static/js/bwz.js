@@ -152,9 +152,19 @@ if (w <= 769) {
   else if (djangoView == 'contact_view' || djangoView == 'about_view' || djangoView == 'post_detail'){ 
     leftOffset = -(piWidth-bcWidth)+'px';    
     bc.style.marginLeft = leftOffset;
-    if (w > 769 || w < 1300){
+    if (w > 769 && w < 1150){
+      postIntroText[0].style.marginTop = ptHeight+35+'px';
+    } else {
       postIntroText[0].style.marginTop = ptHeight+55+'px';
-      postDate[0].style.marginTop = ptHeight+295+'px';
+    }  
+    if (w > 1700){
+      postDate[0].style.marginTop = ptHeight+310+'px';
+    } else {
+      if (w > 769 && w < 1150){
+        postDate[0].style.marginTop = ptHeight+240+'px';
+      }else{
+        postDate[0].style.marginTop = ptHeight+300+'px';
+      }
     }
   }
 
