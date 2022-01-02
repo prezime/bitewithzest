@@ -703,17 +703,14 @@
   }
   .post-intro-info {
     display: flex;
-    margin-top: 240px;
     flex-direction: column;
   }
   .post-intro-text {
-    position: relative;
     width: 350px;
   }
   .post-date {
-    position: absolute;
-    bottom: 35px;
     width: 180px;
+    position: absolute;
   }
   .post-date p {
     margin: 0;
@@ -748,10 +745,9 @@
   .intro-text {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-content: space-between;
     color: var(--grey);
     margin-left: 3%;
-    padding-bottom: 3%;
   }
   .post-title {
     position: absolute;
