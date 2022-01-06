@@ -7,6 +7,7 @@ const accordion = document.getElementsByClassName('accordion');
 const breadcrumbs = document.getElementsByClassName('breadcrumbs');
 const catWrapper = document.querySelector('.cat-wrapper');
 var bc = document.getElementById('breadcrumbs');
+
 // Cookies-Consent
 const cookieContainer = document.querySelector('.cookie-container');
 const cookieButton = document.querySelector('.cookie-btn');
@@ -98,6 +99,7 @@ if (w <= 769) {
       navbar.style.top = '100px';
     } 
   }
+  
 } else {
   window.onscroll = function() {beSticky()};
   
@@ -124,33 +126,36 @@ if (w <= 769) {
   } else if (djangoView == 'contact_view'){ 
     refElement = document.getElementsByClassName('contact_container');
     factor = 1;
-  } 
-  else if (djangoView == 'about_view'){ 
+  } else if (djangoView == 'about_view'){ 
     refElement = document.getElementsByClassName('about_container');
     factor = 1;
-  } 
+  }
+  
   
   for (var i = 0, len = breadcrumbs.length; i < len; i++) {
     bcWidth += breadcrumbs[i].offsetWidth;
   }
-  for (var i = 0, len = refElement.length; i < len; i++) {
-    piWidth += refElement[i].offsetWidth;
+  
+  
+  for (var j = 0, len = refElement.length; j < len; j++) {
+    piWidth += refElement[j].offsetWidth;
   }
-  for (var i = 0, len = postTitle.length; i < len; i++) {
-    ptHeight += postTitle[i].offsetHeight;
+  
+  for (var k = 0, len = postTitle.length; k < len; k++) {
+    ptHeight += postTitle[k].offsetHeight;
   }
-  for (var i = 0, len = postOpener.length; i < len; i++) {
-    poHeight += postOpener[i].offsetHeight;
-  }
-  console.log(ptHeight);
+  
   piWidth = piWidth * factor;
   
+  
   if (djangoView == 'category_view'){ 
+    
     leftOffset = (w-piWidth)/2+'px';
     bc.style.marginLeft = leftOffset;
   }
   else if (djangoView == 'contact_view' || djangoView == 'about_view' || djangoView == 'post_detail'){ 
-    leftOffset = -(piWidth-bcWidth)+'px';    
+    leftOffset = -(piWidth-bcWidth)+'px';  
+ 
     bc.style.marginLeft = leftOffset;
     if (w > 769 && w < 1150){
       postIntroText[0].style.marginTop = ptHeight+35+'px';
@@ -160,13 +165,14 @@ if (w <= 769) {
     if (w > 1700){
       postDate[0].style.marginTop = ptHeight+310+'px';
     } else {
-      if (w > 769 && w < 1150){
+      if (w > 769 && w < 1399){
         postDate[0].style.marginTop = ptHeight+240+'px';
-      }else{
+      }else if (w > 1399){
         postDate[0].style.marginTop = ptHeight+300+'px';
       }
     }
   }
+
 
   //ovdje je sve dobro. ne diraj
   function beSticky() {
