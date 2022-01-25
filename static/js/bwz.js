@@ -158,17 +158,17 @@ if (w <= 769) {
  
     bc.style.marginLeft = leftOffset;
     if (w > 769 && w < 1150){
-      postIntroText[0].style.marginTop = ptHeight+35+'px';
+      postIntroText[0].style.marginTop = ptHeight+40+'px';
     } else {
-      postIntroText[0].style.marginTop = ptHeight+55+'px';
+      postIntroText[0].style.marginTop = ptHeight+60+'px';
     }  
     if (w > 1700){
-      postDate[0].style.marginTop = ptHeight+310+'px';
+      postDate[0].style.marginTop = ptHeight+315+'px';
     } else {
       if (w > 769 && w < 1399){
-        postDate[0].style.marginTop = ptHeight+240+'px';
+        postDate[0].style.marginTop = ptHeight+245+'px';
       }else if (w > 1399){
-        postDate[0].style.marginTop = ptHeight+300+'px';
+        postDate[0].style.marginTop = ptHeight+305+'px';
       }
     }
   }
