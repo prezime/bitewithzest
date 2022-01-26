@@ -1,2 +1,2 @@
 User-agent: Googlebot-Image
-Disallow: /static/img/BwZ_logo_W.png
+Disallow: https://bitewithzest.com/static/img/BwZ_logo_W.png
