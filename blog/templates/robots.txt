@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /../media/layout/layer1-1.png
+Disallow: /media/layout/layer1-1.png
