@@ -15,7 +15,7 @@ urlpatterns = [
     path('about/info/', views.about, name='about_view'),
     path('cookies/info/', views.cookies, name='cookies_view'),
     path("robots.txt", TemplateView.as_view(
-        template_name="robots.txt", content_type="text/plain"))
+        template_name="robots.txt", content_type="text/plain")),
     path("googlec6c3e7f34fb4a4d9.html", TemplateView.as_view(
         template_name="googlec6c3e7f34fb4a4d9.html", content_type="text/html"))
 ]
