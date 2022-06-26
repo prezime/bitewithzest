@@ -47,7 +47,7 @@ if (w <= 769) {
   
 
   function toggleX(x) {
-    // console.log(sticky);
+    //console.log(sticky);
     x.classList.toggle("change");
     var navbar_ul = document.getElementById("navbar_ul");
     var bar1 = document.getElementById("bar1");
@@ -90,7 +90,7 @@ if (w <= 769) {
     {
       navbar.style.position = 'fixed';
       navbar.style.top = 0;
-      navbar.style.zIndex = 2;
+      navbar.style.zIndex = 11;
     }
   }
   function beSticky() {
