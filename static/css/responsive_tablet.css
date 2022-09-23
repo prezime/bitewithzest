@@ -240,6 +240,8 @@
   }
   .hero-element4 {
     position: relative;
+    width: 100%;
+    height: 100%;
   }
   .hero-element5 {
     position: relative;
