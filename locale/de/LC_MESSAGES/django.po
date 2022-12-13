@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-31 00:12+0200\n"
+"POT-Creation-Date: 2022-12-13 20:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: blog/templates/about.html:14 blog/templates/base.html:30
-#: blog/templates/base.html:101
+#: blog/templates/about.html:14 blog/templates/base.html:35
+#: blog/templates/base.html:106
 msgid "About us"
 msgstr "Über uns"
 
@@ -58,36 +58,36 @@ msgstr ""
 msgid "Founders and editors"
 msgstr "Gründer und Blogger"
 
-#: blog/templates/base.html:31 blog/templates/base.html:118
-#: blog/templates/base.html:123 blog/templates/contact.html:14
+#: blog/templates/base.html:36 blog/templates/base.html:123
+#: blog/templates/base.html:128 blog/templates/contact.html:14
 msgid "Contact"
 msgstr "Kontakt"
 
-#: blog/templates/base.html:99
+#: blog/templates/base.html:104
 msgid "Quicklinks"
 msgstr "Quicklinks"
 
-#: blog/templates/base.html:116 blog/templates/base.html:158
+#: blog/templates/base.html:121 blog/templates/base.html:163
 msgid "Cookie policy"
 msgstr "Cookie-Richtlinie"
 
-#: blog/templates/base.html:117
+#: blog/templates/base.html:122
 msgid "Terms & Conditions"
 msgstr "Allgemeine Geschäftsbedingungen"
 
-#: blog/templates/base.html:127
+#: blog/templates/base.html:132
 msgid "Vienna"
 msgstr "Wien"
 
-#: blog/templates/base.html:127
+#: blog/templates/base.html:132
 msgid "Austria"
 msgstr "Österreich"
 
-#: blog/templates/base.html:148
+#: blog/templates/base.html:153
 msgid "For creation of this website no animal was harmed"
 msgstr "Für die Erstellung dieser Website wurde kein Tier verletzt"
 
-#: blog/templates/base.html:149
+#: blog/templates/base.html:154
 msgid ""
 "All rights reserved. Unauthorized use of copyrighted content is prohibited "
 "and punishable"
@@ -95,7 +95,7 @@ msgstr ""
 "Alle Rechte vorbehalten. Die unbefugte Verwendung von urheberrechtlich "
 "geschützten Inhalten ist verboten und strafbar"
 
-#: blog/templates/base.html:158
+#: blog/templates/base.html:163
 msgid ""
 "We us cookies in this website for better user experience. If you want to "
 "find out more, please read our"
@@ -104,11 +104,11 @@ msgstr ""
 "Benutzerfreundlichkeit. Wenn Sie mehr erfahren möchten, lesen Sie bitte "
 "unsere"
 
-#: blog/templates/base.html:158
+#: blog/templates/base.html:163
 msgid "with detailed information."
 msgstr "mit detaillierten Informationen."
 
-#: blog/templates/base.html:159
+#: blog/templates/base.html:164
 msgid "Close"
 msgstr "Schließen"
 
@@ -521,8 +521,8 @@ msgstr ""
 "Natürlich gibt es auch ungesunde pflanzliche Lebensmittel. Normalerweise "
 "sind diese Lebensmittel bereits im Voraus zubereitet, verarbeitet und "
 "verfeinert. Raffinierte Produkte wie Weißzucker, Weißmehl, süße "
-"kohlensäurehaltige Getränke, einige Arten von Ölen, das Essen in Dosen (nicht "
-"alle), verschiedene Zusatzstoffe und Konservierungsmittel sind in der "
+"kohlensäurehaltige Getränke, einige Arten von Ölen, das Essen in Dosen "
+"(nicht alle), verschiedene Zusatzstoffe und Konservierungsmittel sind in der "
 "Klasse der veganen Ernährung, gehören aber nach Ansicht von Experten nicht "
 "zu den Gruppe der gesunden Lebensmittel. Es ist nicht dasselbe, ob wir "
 "gedämpften Blumenkohl im Salat oder in Öl gebratenen Blumenkohl essen. "
@@ -555,17 +555,18 @@ msgstr ""
 "wichtig, auch Nüsse und Samen zu essen. Natürlich sollten sie nicht in "
 "großen Mengen als Snack verzehrt werden, da sie einen hohen Energiewert "
 "haben. Auf diese Weise kann man schnell den Energiebedarf eines Menschen für "
-"den ganzen Tag überschreiten. Samen oder Nüsse sollten jedoch nicht die Grundlage einer "
-"Mahlzeit sein, sondern die Mahlzeiten bereichern. "
+"den ganzen Tag überschreiten. Samen oder Nüsse sollten jedoch nicht die "
+"Grundlage einer Mahlzeit sein, sondern die Mahlzeiten bereichern. "
 
 #: blog/templates/index_faq.html:51
 msgid ""
-"Also, you should not overdo it with tofu, seitan, tempeh or plant-based milk substitutes. It "
-"is enough to eat them once or twice a week as a supplement to meals."
+"Also, you should not overdo it with tofu, seitan, tempeh or plant-based milk "
+"substitutes. It is enough to eat them once or twice a week as a supplement "
+"to meals."
 msgstr ""
-"Außerdem sollte man es mit Tofu, Seitan, Tempeh oder pflanzbasierten Milchersatzstoffen nicht "
-"übertreiben. Es reicht, sie einpaar Mal pro Woche als Ergänzung zu den "
-"Mahlzeiten zu essen."
+"Außerdem sollte man es mit Tofu, Seitan, Tempeh oder pflanzbasierten "
+"Milchersatzstoffen nicht übertreiben. Es reicht, sie einpaar Mal pro Woche "
+"als Ergänzung zu den Mahlzeiten zu essen."
 
 #: blog/templates/index_faq.html:52
 msgid ""
@@ -574,8 +575,8 @@ msgid ""
 "planning here:"
 msgstr ""
 "Es ist notwendig, eine ausreichende Menge an Nährstoffen aus Obst, Gemüse, "
-"Getreide, Hülsenfrüchte, Samen und Nüsse zu nehmen. Mehr über die Planung von "
-"Mahlzeiten finden Sie hier:"
+"Getreide, Hülsenfrüchte, Samen und Nüsse zu nehmen. Mehr über die Planung "
+"von Mahlzeiten finden Sie hier:"
 
 #: blog/templates/index_faq.html:53
 msgid "How to start planning plant based meals."
@@ -629,9 +630,9 @@ msgstr ""
 msgid ""
 "The average adult only needs about 42 grams of protein a day, but most "
 "people, including vegans, ingest much more than that amount. Both vegans and "
-"omnivores consume an average of 170 percent of the required amount of protein. "
-"Great vegan sources of protein include, tofu, tempeh, seitan, lentils, "
-"chickpeas, beans, nuts and seeds. "
+"omnivores consume an average of 170 percent of the required amount of "
+"protein. Great vegan sources of protein include, tofu, tempeh, seitan, "
+"lentils, chickpeas, beans, nuts and seeds. "
 msgstr ""
 "Der durchschnittliche Erwachsene braucht nur etwa 42 Gramm Eiweiß pro Tag, "
 "aber die meisten Menschen, einschließlich Veganer, nehmen viel mehr als "
@@ -664,10 +665,10 @@ msgstr ""
 "Natürlich! Eine ausgewogene vegane Ernährung mit einer großen Vielfalt an "
 "frischem Obst, Gemüse, Getreide, Hülsenfrüchte, Nüsse und Samen, ist eine "
 "gesunde Ernährung und liefert alle Nährstoffe, die der menschliche Körper "
-"braucht. Pflanzen sind sehr arm an gesättigten Fettsäuren und "
-"sind frei von Cholesterin. Pflanzen sind auch reich an löslichen "
-"Ballaststoffen, die zur Senkung des Cholesterinspiegels beitragen. Erfahren "
-"Sie mehr über den Nährstoffbedarf einer pflanzlichen Ernährung:"
+"braucht. Pflanzen sind sehr arm an gesättigten Fettsäuren und sind frei von "
+"Cholesterin. Pflanzen sind auch reich an löslichen Ballaststoffen, die zur "
+"Senkung des Cholesterinspiegels beitragen. Erfahren Sie mehr über den "
+"Nährstoffbedarf einer pflanzlichen Ernährung:"
 
 #: blog/templates/index_faq.html:82
 msgid ""
@@ -681,12 +682,12 @@ msgid ""
 msgstr ""
 "Lebensmittel tierischen Ursprungs enthalten viele gesättigte Fette und keine "
 "Ballaststoffe, während Lebensmittel pflanzlichen Ursprungs reich an "
-"Ballaststoffen sind und wenig gesättigten Fette enthalten. </p><p>Cholesterin "
-"ist nur in Lebensmitteln tierischen Ursprungs enthalten. Studien zeigen, "
-"dass Lebensmittel mit hohem Gehalt an gesättigten Fetten und Cholesterin "
-"einem erhöhtes Risiko für Herzkrankheiten, Fettleibigkeit, Diabetes und "
-"Krebs haben. Eine hohe Aufnahme von tierischen Proteinen erhöht unter anderem auch "
-"das Risiko für Osteoporose und Nierensteinen. "
+"Ballaststoffen sind und wenig gesättigten Fette enthalten. </"
+"p><p>Cholesterin ist nur in Lebensmitteln tierischen Ursprungs enthalten. "
+"Studien zeigen, dass Lebensmittel mit hohem Gehalt an gesättigten Fetten und "
+"Cholesterin einem erhöhtes Risiko für Herzkrankheiten, Fettleibigkeit, "
+"Diabetes und Krebs haben. Eine hohe Aufnahme von tierischen Proteinen erhöht "
+"unter anderem auch das Risiko für Osteoporose und Nierensteinen. "
 
 #: blog/templates/index_faq.html:83
 msgid "Plant proteins are not associated with these diseases."
@@ -711,16 +712,15 @@ msgid ""
 "drink ...)."
 msgstr ""
 "Vitamin B12 wird von Bakterien im Boden produziert, die durch den Verzehr "
-"von Pflanzen in den Körper und in den Darm "
-"gelangen. Dort vermehren sie sich und produzieren Vitamin B12. Diese "
-"Bakterien fehlen normalerweise in pflanzlichen Lebensmitteln aufgrund der "
-"derzeitigen Produktion. Von allen Vitaminen, die der menschliche Körper "
-"benötigt, ist Vitamin B12 das am wenigsten benötigte Vitamin, was die Menge "
-"betrifft. Seine tägliche Zufuhr wird in Mikrogramm (µg) gemessen. Algen und "
-"fermentierte Lebensmittel wie Sauerkraut, Tempeh,  Kimchi enthalten Vitamin "
-"B12. Wenn es notwendig ist, Vitamin B12 in die Ernährung aufzunehmen, "
-"kann man Lebensmittel verwenden, die mit "
-"diesem Vitamin angereichert sind (Nährhefe, Soja Getränk ...)."
+"von Pflanzen in den Körper und in den Darm gelangen. Dort vermehren sie sich "
+"und produzieren Vitamin B12. Diese Bakterien fehlen normalerweise in "
+"pflanzlichen Lebensmitteln aufgrund der derzeitigen Produktion. Von allen "
+"Vitaminen, die der menschliche Körper benötigt, ist Vitamin B12 das am "
+"wenigsten benötigte Vitamin, was die Menge betrifft. Seine tägliche Zufuhr "
+"wird in Mikrogramm (µg) gemessen. Algen und fermentierte Lebensmittel wie "
+"Sauerkraut, Tempeh,  Kimchi enthalten Vitamin B12. Wenn es notwendig ist, "
+"Vitamin B12 in die Ernährung aufzunehmen, kann man Lebensmittel verwenden, "
+"die mit diesem Vitamin angereichert sind (Nährhefe, Soja Getränk ...)."
 
 #: blog/templates/index_faq.html:93
 msgid "Do I get enough iron when eating only vegan?"
@@ -735,13 +735,13 @@ msgid ""
 "body can be harmful to health, taking iron supplements is generally not "
 "recommended, except in cases where a blood test has found a deficiency."
 msgstr ""
-"Es gibt viele pflanzliche Eisenquellen wie dunkelgrünes Blattgemüse, "
-"Bohnen, Linsen, Körner, Nüsse und Samen. Vitamin C hilft bei der Aufnahme von "
-"Eisen. Daher können wir Zitronensaft oder ein anderes Lebensmittel "
-"die Vitamin C enthalten (Tomaten), zu den Gerichten geben. Da zu viel Eisen im "
-"Körper gesundheitsschädlich sein kann, wird die Einnahme von Eisenpräparaten im Allgemeinen nicht "
-"empfohlen, es sei denn, ein Bluttest hat einen Mangel ergeben."
-
+"Es gibt viele pflanzliche Eisenquellen wie dunkelgrünes Blattgemüse, Bohnen, "
+"Linsen, Körner, Nüsse und Samen. Vitamin C hilft bei der Aufnahme von Eisen. "
+"Daher können wir Zitronensaft oder ein anderes Lebensmittel die Vitamin C "
+"enthalten (Tomaten), zu den Gerichten geben. Da zu viel Eisen im Körper "
+"gesundheitsschädlich sein kann, wird die Einnahme von Eisenpräparaten im "
+"Allgemeinen nicht empfohlen, es sei denn, ein Bluttest hat einen Mangel "
+"ergeben."
 
 #: blog/templates/index_faq.html:99
 msgid "How do the animals in industry actually suffer?"
@@ -759,40 +759,40 @@ msgid ""
 "are mostly killed at the age of 3, while their natural lifespan is between "
 "20 and 25 years."
 msgstr ""
-"Viele Menschen sind sich der Grausamkeiten in der Milchwirtschaft nicht bewusst. Eine Kuh, wie "
-"ein Mensch, gibt nur Milch, wenn sie einen Kalb hat, weil sie ihn füttern muss. Kühe "
-"die in der Milchindustrie gelangen, werden so zu ständiger Trächtigkeit und "
-"ständigem Kalben gezwungen, um weiterhin Milch geben zu können. "
-"Kühe werden kurz nach der Geburt von ihrer Kälber getrennt - die weiblichen Tiere gehen in die Milchproduktion, während "
-"männliche Tiere ein unerwünschtes Nebenprodukt der Milchindustrie sind und werden "
-"kurz nach der Geburt getötet und für die Fleischproduktion verwendet. Kühe in der Milchindustrie "
-"werden meist im Alter von 3 Jahren getötet, während ihre natürliche Lebensspanne zwischen "
-"20 und 25 Jahren liegt."
-
+"Viele Menschen sind sich der Grausamkeiten in der Milchwirtschaft nicht "
+"bewusst. Eine Kuh, wie ein Mensch, gibt nur Milch, wenn sie einen Kalb hat, "
+"weil sie ihn füttern muss. Kühe die in der Milchindustrie gelangen, werden "
+"so zu ständiger Trächtigkeit und ständigem Kalben gezwungen, um weiterhin "
+"Milch geben zu können. Kühe werden kurz nach der Geburt von ihrer Kälber "
+"getrennt - die weiblichen Tiere gehen in die Milchproduktion, während "
+"männliche Tiere ein unerwünschtes Nebenprodukt der Milchindustrie sind und "
+"werden kurz nach der Geburt getötet und für die Fleischproduktion verwendet. "
+"Kühe in der Milchindustrie werden meist im Alter von 3 Jahren getötet, "
+"während ihre natürliche Lebensspanne zwischen 20 und 25 Jahren liegt."
 
 #: blog/templates/index_faq.html:102
 msgid ""
 "Similarly, in chicken industry, the hens are killed after a year or two, i."
 "e. as soon as their egg-laying is reduced. Chickens usually live for about "
-"10 years. Female chickens are further used for production and their beaks are "
-"cut with a hot knife so as not to injure each other, while male chickens are "
-"an undesirable by-product and are usually ground to live."
+"10 years. Female chickens are further used for production and their beaks "
+"are cut with a hot knife so as not to injure each other, while male chickens "
+"are an undesirable by-product and are usually ground to live."
 msgstr ""
 "Auch in der Hühnerindustrie werden die Hühner nach ein oder zwei Jahren "
-"getötet, d.h. sobald ihre Legeleistung nachlässt. Hühner leben "
-"normalerweise etwa 10 Jahre. Weibliche Hühner werden für die Produktion "
-"weiterverwendet und ihre Schnäbel werden mit einem heißen Messer abgeschnitten, "
-"damit sie sich nicht gegenseitig verletzen, während männliche Hühner ein "
-"unerwünschtes Nebenprodukt und werden normalerweise lebendig gemahlen."
+"getötet, d.h. sobald ihre Legeleistung nachlässt. Hühner leben normalerweise "
+"etwa 10 Jahre. Weibliche Hühner werden für die Produktion weiterverwendet "
+"und ihre Schnäbel werden mit einem heißen Messer abgeschnitten, damit sie "
+"sich nicht gegenseitig verletzen, während männliche Hühner ein unerwünschtes "
+"Nebenprodukt und werden normalerweise lebendig gemahlen."
 
-#: blog/templates/index_faq.html:108
+#: blog/templates/index_faq.html:112
 msgid ""
 "And what happens with the products that may contain traces of eggs or milk?"
 msgstr ""
 "Und was passiert mit den Produkten, die Spuren von Eiern oder Milch "
 "enthalten können?"
 
-#: blog/templates/index_faq.html:110
+#: blog/templates/index_faq.html:114
 msgid ""
 "\"May contain traces ...\" usually only means that the product comes from a "
 "production that also uses eggs and milk. This does not mean, however, that "
@@ -812,14 +812,14 @@ msgstr ""
 "sind dies Allergene wie Eier, Milch, Meeresfrüchte und Erdnüsse). Die "
 "Wahrscheinlichkeit, dass ein Produkt eine solche Zutat enthält, ist "
 "normalerweise sehr gering, und wenn doch, dann ist die Menge wahrscheinlich "
-"vernachlässigbar. Für den Fall, dass Sie auf einen der Inhaltsstoffe des Produkts "
-"allergisch sind, ist es besser, es zu meiden."
+"vernachlässigbar. Für den Fall, dass Sie auf einen der Inhaltsstoffe des "
+"Produkts allergisch sind, ist es besser, es zu meiden."
 
-#: blog/templates/index_faq.html:114
+#: blog/templates/index_faq.html:118
 msgid "Is alcohol vegan?"
 msgstr "Ist Alkohol vegan?"
 
-#: blog/templates/index_faq.html:116
+#: blog/templates/index_faq.html:120
 msgid ""
 "Most wine and beer go through a filtration process called \"fining\", which "
 "often contains animal ingredients. Traditionally the most commonly used "
@@ -828,11 +828,11 @@ msgid ""
 msgstr ""
 "Die meisten Weine und Biere durchlaufen einen Filtrationsprozess, der "
 "\"Schönung\" genannt wird und der oft tierische Bestandteile enthält. "
-"Traditionell waren die am häufigsten verwendeten Schönungsmittel "
-"Kasein (ein Milcheiweiß), Albumin (Eiweiß), Gelatine (tierisches Eiweiß) und "
-"Isinglas (Fischblaseneiweiß)."
+"Traditionell waren die am häufigsten verwendeten Schönungsmittel Kasein (ein "
+"Milcheiweiß), Albumin (Eiweiß), Gelatine (tierisches Eiweiß) und Isinglas "
+"(Fischblaseneiweiß)."
 
-#: blog/templates/index_faq.html:117
+#: blog/templates/index_faq.html:121
 msgid ""
 "Although the fining agents is not present in the final product (except "
 "perhaps in traces), it is still necessary to use animal ingredients for the "
@@ -840,9 +840,10 @@ msgid ""
 msgstr ""
 "Obwohl das Schönungsmittel im Endprodukt nicht vorhanden ist (außer "
 "vielleicht in Spuren), ist es dennoch notwendig, tierische Bestandteile für "
-"den Prozess selbst zu benutzen. Daher müssen alkoholische Getränke nicht vegan sein. "
+"den Prozess selbst zu benutzen. Daher müssen alkoholische Getränke nicht "
+"vegan sein. "
 
-#: blog/templates/index_faq.html:118
+#: blog/templates/index_faq.html:122
 msgid ""
 "The regulations on the declaration require the entry of allergens (milk and "
 "eggs), but the intake of gelatin and some other animal ingredients is not "
@@ -857,46 +858,50 @@ msgstr ""
 "Produktmarke zu kontaktieren. Bourbon, Whiskey, Wodka, Gin und Rum sind "
 "vegan."
 
-#: blog/templates/index_faq.html:122
+#: blog/templates/index_faq.html:126
 msgid "Why avoid animal-derived apparel materials like leather or wool?"
 msgstr ""
 "Warum sollte man Bekleidungsmaterialien tierischen Ursprungs wie Leder oder "
 "Wolle vermeiden?"
 
-#: blog/templates/index_faq.html:124
+#: blog/templates/index_faq.html:128
 msgid ""
 "Numerous types of animal materials are commonly used to make clothing and "
-"apparel. These materials include down feathers, wool, silk, and fur. All of these "
-"materials are invariably tied to a great deal of exploitation and suffering. "
-"Additionally, the profits derived from leather production cause more cattle "
-"to be raised and slaughtered than would otherwise be produced."
+"apparel. These materials include down feathers, wool, silk, and fur. All of "
+"these materials are invariably tied to a great deal of exploitation and "
+"suffering. Additionally, the profits derived from leather production cause "
+"more cattle to be raised and slaughtered than would otherwise be produced."
 msgstr ""
-"Zahlreiche Stoffarten werden üblicherweise zur Herstellung von "
-"Kleidung verwendet. Zu diesen Materialien gehören Daunen, Wolle, "
-"Seide und Pelz. Alle diese Materialien sind ausnahmslos mit viel Ausbeutung "
-"und Leid verbunden. Außerdem führen die Gewinne aus der Lederproduktion "
-"dazu, dass mehr Rinder gezüchtet und geschlachtet werden, als sonst "
-"produziert würden."
+"Zahlreiche Stoffarten werden üblicherweise zur Herstellung von Kleidung "
+"verwendet. Zu diesen Materialien gehören Daunen, Wolle, Seide und Pelz. Alle "
+"diese Materialien sind ausnahmslos mit viel Ausbeutung und Leid verbunden. "
+"Außerdem führen die Gewinne aus der Lederproduktion dazu, dass mehr Rinder "
+"gezüchtet und geschlachtet werden, als sonst produziert würden."
 
-#: blog/templates/index_faq.html:128
+#: blog/templates/index_faq.html:132
 msgid "Go vegan for the animals."
 msgstr "Vegan werden für die Tiere."
 
-#: blog/templates/index_faq.html:130
+#: blog/templates/index_faq.html:134
 msgid "Vegans believe killing is not justified. "
 msgstr "Veganer glauben, dass Töten nicht gerechtfertigt ist. "
 
-#: blog/templates/index_faq.html:131
+#: blog/templates/index_faq.html:135
+#, fuzzy, python-format
+#| msgid ""
+#| "Ultimately, humans take away life. Other animals do not ‘give up their "
+#| "life’ as some people believe – they have not given consent to be "
+#| "slaughtered. In over 95% of cases they are killed prematurely:"
 msgid ""
 "Ultimately, humans take away life. Other animals do not ‘give up their life’ "
 "as some people believe – they have not given consent to be slaughtered. In "
-"over 95% of cases they are killed prematurely:"
+"over 95%% of cases they are killed prematurely:"
 msgstr ""
 "Letztlich nimmt der Mensch das Leben weg. Andere Tiere 'geben ihr Leben "
 "nicht auf', wie manche Menschen glauben - sie haben nicht zugestimmt, "
 "geschlachtet zu werden. In über 95% der Fälle werden sie vorzeitig getötet:"
 
-#: blog/templates/index_faq.html:133
+#: blog/templates/index_faq.html:137
 msgid ""
 "Cows, for example, could live to well over 20 years of age, while on \"dairy"
 "\" farms they are usually shot between 3-4 years of age when milk production "
@@ -908,7 +913,7 @@ msgstr ""
 "Jahren geschossen, wenn die Milchproduktion nicht mehr als \"rentabel\" "
 "gilt. Kühe, die für Rindfleisch gezüchtet werden, werden früher."
 
-#: blog/templates/index_faq.html:134
+#: blog/templates/index_faq.html:138
 msgid ""
 "Broiler chicks are just 6 weeks old and grown too rapidly to sustain their "
 "own weight and heart when they are killed. Chickens could live to 10 years "
@@ -918,7 +923,7 @@ msgstr ""
 "Sie sind zu schnell gewachsen, um ihr eigenes Gewicht und Herz zu halten, "
 "wenn sie getötet werden. Hühner können bis zu 10 Jahre alt alt werden."
 
-#: blog/templates/index_faq.html:135
+#: blog/templates/index_faq.html:139
 msgid ""
 "Pigs are slaughtered when they have reached a certain weight, which will be "
 "later in organic systems than in intensive farms, but they are typically "
@@ -929,7 +934,7 @@ msgstr ""
 "sie werden typischerweise zwischen 4 und 6 Monaten getötet, während sie bis "
 "zu 15 Jahre alt werden können."
 
-#: blog/templates/index_faq.html:136
+#: blog/templates/index_faq.html:140
 msgid ""
 "Sheep can also live to 15 years but depending on whether they are "
 "slaughtered as lambs or later, they are shot and bled between 3-10 months of "
@@ -939,7 +944,7 @@ msgstr ""
 "Lämmer oder später geschlachtet werden, werden sie im Alter von 3-10 Monaten "
 "geschossen und entblutet. Alter geschossen und entblutet."
 
-#: blog/templates/index_faq.html:137
+#: blog/templates/index_faq.html:141
 #, fuzzy
 #| msgid ""
 #| "Every week in the UK 3,000 male calves are killed shortly after birth, "
@@ -964,7 +969,7 @@ msgstr ""
 "Kälber werden entweder erschossen oder lebendig in europäische "
 "Festlandländer exportiert, wo sie gehalten werden."
 
-#: blog/templates/index_faq.html:140
+#: blog/templates/index_faq.html:148
 msgid ""
 "A lot of people opt for a vegan lifestyle because of animal exploitation. We "
 "all know that animals have emotions and feelings. This will be confirmed to "
@@ -979,14 +984,14 @@ msgstr ""
 "viel länger ist. Die vegane Philosophie glaubt, dass alle Lebewesen das "
 "Recht auf Leben und Freiheit haben."
 
-#: blog/templates/index_faq.html:142
+#: blog/templates/index_faq.html:150
 #, fuzzy
 #| msgid ""
 #| "Roughly 65 billion land animals and over a trillion (!) marine animals"
 msgid "Roughly 60 billion land animals and over a trillion (!) marine animals"
 msgstr "Rund 65 Milliarden Landtiere und über eine Billion (!) Meerestiere"
 
-#: blog/templates/index_faq.html:143
+#: blog/templates/index_faq.html:151
 msgid ""
 "are used and killed as commodities per year, merely to satisfy human taste "
 "preferences."
@@ -994,7 +999,7 @@ msgstr ""
 "werden jedes Jahr als Ware genutzt und getötet, nur um den menschlichen "
 "Geschmack Vorlieben."
 
-#: blog/templates/index_faq.html:144
+#: blog/templates/index_faq.html:152
 msgid ""
 "However, avoiding animal products is one of the most obvious ways you can "
 "take a stand against animal cruelty and animal exploitation everywhere."
@@ -1003,11 +1008,11 @@ msgstr ""
 "Möglichkeiten, ein Zeichen gegen Tierquälerei und Tierausbeutung überall zu "
 "setzen."
 
-#: blog/templates/index_faq.html:149
+#: blog/templates/index_faq.html:157
 msgid "Go vegan for the people."
 msgstr "Vegan werden für die Menschen."
 
-#: blog/templates/index_faq.html:151
+#: blog/templates/index_faq.html:159
 msgid ""
 "Above all, it is the health of each individual. A well-planned vegan diet "
 "follows healthy eating guidelines and contains all the nutrients our body "
@@ -1026,7 +1031,7 @@ msgstr ""
 "Ernährung den Blutdruck und Cholesterinspiegel senkt. Cholesterinspiegel, "
 "Herzkrankheiten, Typ-2-Diabetes und einige Krebsarten."
 
-#: blog/templates/index_faq.html:153
+#: blog/templates/index_faq.html:161
 msgid ""
 "With the introduction of a varied plant-based diet, you will enrich the menu "
 "with nutrients that are full of useful fibers, vitamins and minerals. All "
@@ -1037,7 +1042,7 @@ msgstr ""
 "Ballaststoffen, Vitaminen und Mineralien sind. All sind in "
 "Vollkornprodukten, Obst, Nüssen, Samen und Gemüse enthalten."
 
-#: blog/templates/index_faq.html:154
+#: blog/templates/index_faq.html:162
 msgid ""
 "The United Nations Food and Agriculture Organization (FAO) estimates that 1 "
 "in 9 people is chronically malnourished. by avoiding animal products we "
@@ -1054,11 +1059,11 @@ msgstr ""
 "Nahrungsmittelsysteme, die unverhältnismäßig die ärmsten Menschen auf der "
 "ganzen Welt."
 
-#: blog/templates/index_faq.html:158
+#: blog/templates/index_faq.html:166
 msgid "Go vegan for the planet."
 msgstr "Vegan werden für den Planeten."
 
-#: blog/templates/index_faq.html:160
+#: blog/templates/index_faq.html:168
 msgid ""
 "Current global food and water insecurity, due to countless environmental and "
 "socio-economic problems, requires rapid response and change. A more "
@@ -1071,7 +1076,7 @@ msgstr ""
 "Lebensstil ist erforderlich. Einer der einfachsten Schritte, die jeder kann "
 "ein plattenbasierter Lebensstil sein."
 
-#: blog/templates/index_faq.html:161
+#: blog/templates/index_faq.html:169
 msgid ""
 "The fact that a plant-based diet requires only 1/3 of the land needed to "
 "grow a meat and dairy diet."
@@ -1079,7 +1084,7 @@ msgstr ""
 "Die Tatsache, dass eine pflanzliche Ernährung nur 1/3 der Fläche benötigt, "
 "die für für den Anbau von Fleisch und Milchprodukten."
 
-#: blog/templates/index_faq.html:162
+#: blog/templates/index_faq.html:170
 msgid ""
 "It is estimated that the human population will reach between 9 and 11 "
 "billion by 2050. One of the most important questions is how to feed people "
@@ -1098,7 +1103,7 @@ msgstr ""
 "Geflügel zu produzieren und etwa 8 kg, um 1 kg Schweinefleisch zu "
 "produzieren."
 
-#: blog/templates/index_faq.html:164
+#: blog/templates/index_faq.html:172
 msgid ""
 "With 65 billion chickens consumed each year, this could be the age of the "
 "chicken"
@@ -1106,11 +1111,11 @@ msgstr ""
 "Mit 65 Milliarden Hühnern, die jedes Jahr verzehrt werden, könnte dies das "
 "Zeitalter des Huhns"
 
-#: blog/templates/index_faq.html:165
+#: blog/templates/index_faq.html:173
 msgid "Read more at:"
 msgstr "Lesen Sie mehr hier"
 
-#: blog/templates/index_faq.html:173
+#: blog/templates/index_faq.html:185
 msgid ""
 "For example, it takes 15,500 litres of water to produce 1 kg beef, "
 "contrasted with 180 litres for 1 kg tomatoes and 250 litres for 1 kg "
@@ -1120,7 +1125,7 @@ msgstr ""
 "produzieren, im Gegensatz zu 180 Litern für 1 kg Tomaten und 250 Litern für "
 "1 kg Kartoffeln."
 
-#: blog/templates/index_faq.html:174
+#: blog/templates/index_faq.html:186
 #, fuzzy, python-format
 #| msgid ""
 #| "Consuming animal products is incredibly resource-intensive. Globally, "
@@ -1136,7 +1141,7 @@ msgstr ""
 "der Erde. Dies ist im Vergleich zu etwa 20 % für die Industrie und etwa 10 "
 "% für den Hausgebrauch."
 
-#: blog/templates/index_faq.html:176
+#: blog/templates/index_faq.html:188
 msgid ""
 "How much water does it take to produce a kilogram of meat or a kilogram of "
 "potatoes? The difference is so huge and shows how much drinking water is "
@@ -1155,7 +1160,7 @@ msgid "Please go back and try again."
 msgstr "Bitte gehen Sie zurück und versuchen Sie es erneut."
 
 #: blog/templates/post_cat_list.html:33 blog/templates/post_cat_list.html:45
-#: blog/templates/showcase.html:18 blog/templates/showcase.html:46
+#: blog/templates/showcase.html:18 blog/templates/showcase.html:48
 msgid "Plant-based"
 msgstr "Pflanzbasierte"
 
@@ -1163,31 +1168,31 @@ msgstr "Pflanzbasierte"
 msgid "recipe ideas"
 msgstr "Rezeptideen"
 
-#: blog/templates/post_cat_list.html:36 blog/templates/showcase.html:34
+#: blog/templates/post_cat_list.html:36 blog/templates/showcase.html:36
 msgid "Lexicon"
 msgstr "Lexikon"
 
-#: blog/templates/post_cat_list.html:37 blog/templates/showcase.html:35
+#: blog/templates/post_cat_list.html:37 blog/templates/showcase.html:37
 msgid "of plants"
 msgstr "der Pflanzen"
 
-#: blog/templates/post_cat_list.html:39 blog/templates/showcase.html:94
+#: blog/templates/post_cat_list.html:39 blog/templates/showcase.html:96
 msgid "Immunity"
 msgstr "Stärkung des"
 
-#: blog/templates/post_cat_list.html:40 blog/templates/showcase.html:95
+#: blog/templates/post_cat_list.html:40 blog/templates/showcase.html:97
 msgid "boosting"
 msgstr "Immunsystems"
 
-#: blog/templates/post_cat_list.html:42 blog/templates/showcase.html:80
+#: blog/templates/post_cat_list.html:42 blog/templates/showcase.html:82
 msgid "Our"
 msgstr "Unser"
 
-#: blog/templates/post_cat_list.html:43 blog/templates/showcase.html:81
+#: blog/templates/post_cat_list.html:43 blog/templates/showcase.html:83
 msgid "planet"
 msgstr "Planet"
 
-#: blog/templates/post_cat_list.html:46 blog/templates/showcase.html:47
+#: blog/templates/post_cat_list.html:46 blog/templates/showcase.html:49
 msgid "lifestyle"
 msgstr "Lifestyle"
 
@@ -1200,13 +1205,17 @@ msgstr ""
 "wie den Tag nahrhaft gut und mit positiver Energie zu beginnen und zu "
 "beenden."
 
-#: blog/templates/showcase.html:22 blog/templates/showcase.html:38
-#: blog/templates/showcase.html:65 blog/templates/showcase.html:84
-#: blog/templates/showcase.html:119
+#: blog/templates/showcase.html:22 blog/templates/showcase.html:40
+#: blog/templates/showcase.html:67 blog/templates/showcase.html:86
+#: blog/templates/showcase.html:121
 msgid "discover more"
 msgstr "mehr entdecken"
 
-#: blog/templates/showcase.html:36
+#: blog/templates/showcase.html:24
+msgid "order our book"
+msgstr "bestelle unser Buch"
+
+#: blog/templates/showcase.html:38
 msgid ""
 "The philosopher and teacher Rudolf Steiner once said, \"For every human "
 "illness, somewhere in the world there exists a plant which is the cure. \""
@@ -1215,7 +1224,7 @@ msgstr ""
 "menschliche Krankheit gibt es irgendwo auf der Welt eine Pflanze, die das "
 "Heilmittel ist. \""
 
-#: blog/templates/showcase.html:37
+#: blog/templates/showcase.html:39
 msgid ""
 "For thousands of years, people from all over the globe have used herbs and "
 "plants to cure or prevent disease. Sometimes, we are not even aware that "
@@ -1226,7 +1235,7 @@ msgstr ""
 "nicht einmal bewusst, dass eine Pflanze, die uns vertraut ist, eine "
 "besondere Gabe hat..."
 
-#: blog/templates/showcase.html:82
+#: blog/templates/showcase.html:84
 msgid ""
 "Scientists name about 18,000 new species each year. According to study made "
 "in 2011 humans share the planet with approximately 8,7 million different "
