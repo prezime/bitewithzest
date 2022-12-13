@@ -20,8 +20,6 @@
     <p>{% trans 'Healthy and delicious recipes, easy and quick to make. All about how to start & end your day nutritionally well and with a positive energy.' %}</p>
     {% if LANGUAGE_CODE != 'en' %}<button class="hero-btn-de">{% else %} <button class="hero-btn">{% endif %} 
       <a href="{% url 'category_view' post_cat1.slug  %}">{% trans 'discover more' %}</a></button>
-    {% if LANGUAGE_CODE != 'en' %}<button class="hero-btn-de">{% else %} <button class="hero-btn">{% endif %}  
-    </button>  
   </div>
   
 </section>
