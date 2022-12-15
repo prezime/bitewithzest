@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-15 13:36+0000\n"
+"POT-Creation-Date: 2022-12-15 14:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -420,13 +420,18 @@ msgstr "Browserabhängige Hilfe für Cookies:"
 
 #: blog/templates/index_book.html:22
 msgid "Serbo-Croatian"
-msgstr ""
+msgstr "Serbo-Kroatisch"
 
-#: blog/templates/index_book.html:43 src/settings.py:123
+#: blog/templates/index_book.html:28 blog/templates/index_book.html:50
+#: blog/templates/index_book.html:72
+msgid "Click here to order now"
+msgstr "Klicken Sie hier, um jetzt zu bestellen"
+
+#: blog/templates/index_book.html:44 src/settings.py:123
 msgid "German"
 msgstr "Deutsch"
 
-#: blog/templates/index_book.html:64 src/settings.py:122
+#: blog/templates/index_book.html:66 src/settings.py:122
 msgid "English"
 msgstr "Englisch"
 
@@ -1213,15 +1218,18 @@ msgid "Balkan VEGAN"
 msgstr "Balkan VEGAN"
 
 #: blog/templates/showcase.html:24
-msgid "Book Tip!"
-msgstr "Buch-Tipp!"
+msgid "book tip"
+msgstr "Buchtipp"
 
 #: blog/templates/showcase.html:25
 msgid ""
 "Finally our new Book is out! <br>Balkan VEGAN combines Balkan cuisine and "
 "plant-based lifestyle. This is the perfect present for you and your dear "
 "ones."
-msgstr "Endlich ist unser neues Buch da! <br>Balkan VEGAN verbindet die Balkanküche mit einem pflanzlichen Lebensstil. Dies ist das perfekte Geschenk für Sie und Ihre Lieben."
+msgstr ""
+"Endlich ist unser neues Buch da! <br>Balkan VEGAN verbindet die Balkanküche "
+"mit einem pflanzlichen Lebensstil. Dies ist das perfekte Geschenk für Sie "
+"und Ihre Lieben."
 
 #: blog/templates/showcase.html:27
 msgid "order now"
