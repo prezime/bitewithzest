@@ -3,7 +3,12 @@
 
 {% block post_showcase %}
 <section class="hero-element1"> 
-  <img class="bg1" src="/../media/layout/bg1_2.png" alt="" data-0="transform: scale(1);" data-600="transform: scale(1.5);">
+  {% if LANGUAGE_CODE != 'en' %} 
+  <img class="bg1" src="/../media/layout/bg1_home_de.png" alt="" data-0="transform: scale(1);" data-600="transform: scale(1.5);">
+  {% else %} 
+  <img class="bg1" src="/../media/layout/bg1_home_en.png" alt="" data-0="transform: scale(1);" data-600="transform: scale(1.5);">
+  {% endif %} 
+  <!-- <img class="bg1" src="/../media/layout/bg1_2.png" alt="" data-0="transform: scale(1);" data-600="transform: scale(1.5);"> -->
   <img class="layer1-1 desktop" src="/../media/layout/layer1-1.png" alt="" >
   <img class="layer1-1 desktop" src="/../media/layout/basil_bg_png/H_01_01.png" alt="" data-200="top:-50px;">
   <img class="layer1-1 desktop" src="/../media/layout/basil_bg_png/H_01_02.png" alt="">
@@ -15,12 +20,25 @@
   {% else %}   
   <div class="moto1"> 
   {% endif %} 
+    <h2>{% trans 'Balkan VEGAN' %}</h2>
+    <h1>{% trans 'Book Tip!' %}</h1>
+    <p>{% trans 'Finally our new Book is out! <br>Balkan VEGAN combines Balkan cuisine and plant-based lifestyle. This is the perfect present for you and your dear ones.' %}</p>
+    {% if LANGUAGE_CODE != 'en' %}<button class="hero-btn-de">{% else %} <button class="hero-btn">{% endif %} 
+      <a href="https://www.bitewithzest.com/filter/shop/">{% trans 'order now' %}</a></button>  
+
+  </div>
+  <!-- {% if LANGUAGE_CODE != 'en' %} 
+  <div class="moto1-de"> 
+  {% else %}   
+  <div class="moto1"> 
+  {% endif %} 
     <h2>{% trans 'Plant-based' %}</h2>
     <h1>{% trans 'recipe ideas' %}</h1>
     <p>{% trans 'Healthy and delicious recipes, easy and quick to make. All about how to start & end your day nutritionally well and with a positive energy.' %}</p>
     {% if LANGUAGE_CODE != 'en' %}<button class="hero-btn-de">{% else %} <button class="hero-btn">{% endif %} 
       <a href="{% url 'category_view' post_cat1.slug  %}">{% trans 'discover more' %}</a></button>
-  </div>
+
+  </div> -->
   
 </section>
 <section class="hero-element2">

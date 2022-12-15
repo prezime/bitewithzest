@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-13 20:01+0000\n"
+"POT-Creation-Date: 2022-12-15 13:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -417,6 +417,18 @@ msgstr "6. Hilfreiche Links"
 #: blog/templates/cookies_info.html:63
 msgid "Browser dependent help for cookies:"
 msgstr "Browserabhängige Hilfe für Cookies:"
+
+#: blog/templates/index_book.html:22
+msgid "Serbo-Croatian"
+msgstr ""
+
+#: blog/templates/index_book.html:43 src/settings.py:123
+msgid "German"
+msgstr "Deutsch"
+
+#: blog/templates/index_book.html:64 src/settings.py:122
+msgid "English"
+msgstr "Englisch"
 
 #: blog/templates/index_faq.html:7
 msgid "Frequently asked Questions"
@@ -1160,43 +1172,62 @@ msgid "Please go back and try again."
 msgstr "Bitte gehen Sie zurück und versuchen Sie es erneut."
 
 #: blog/templates/post_cat_list.html:33 blog/templates/post_cat_list.html:45
-#: blog/templates/showcase.html:18 blog/templates/showcase.html:48
+#: blog/templates/showcase.html:35 blog/templates/showcase.html:64
 msgid "Plant-based"
 msgstr "Pflanzbasierte"
 
-#: blog/templates/post_cat_list.html:34 blog/templates/showcase.html:19
+#: blog/templates/post_cat_list.html:34 blog/templates/showcase.html:36
 msgid "recipe ideas"
 msgstr "Rezeptideen"
 
-#: blog/templates/post_cat_list.html:36 blog/templates/showcase.html:36
+#: blog/templates/post_cat_list.html:36 blog/templates/showcase.html:52
 msgid "Lexicon"
 msgstr "Lexikon"
 
-#: blog/templates/post_cat_list.html:37 blog/templates/showcase.html:37
+#: blog/templates/post_cat_list.html:37 blog/templates/showcase.html:53
 msgid "of plants"
 msgstr "der Pflanzen"
 
-#: blog/templates/post_cat_list.html:39 blog/templates/showcase.html:96
+#: blog/templates/post_cat_list.html:39 blog/templates/showcase.html:112
 msgid "Immunity"
 msgstr "Stärkung des"
 
-#: blog/templates/post_cat_list.html:40 blog/templates/showcase.html:97
+#: blog/templates/post_cat_list.html:40 blog/templates/showcase.html:113
 msgid "boosting"
 msgstr "Immunsystems"
 
-#: blog/templates/post_cat_list.html:42 blog/templates/showcase.html:82
+#: blog/templates/post_cat_list.html:42 blog/templates/showcase.html:98
 msgid "Our"
 msgstr "Unser"
 
-#: blog/templates/post_cat_list.html:43 blog/templates/showcase.html:83
+#: blog/templates/post_cat_list.html:43 blog/templates/showcase.html:99
 msgid "planet"
 msgstr "Planet"
 
-#: blog/templates/post_cat_list.html:46 blog/templates/showcase.html:49
+#: blog/templates/post_cat_list.html:46 blog/templates/showcase.html:65
 msgid "lifestyle"
 msgstr "Lifestyle"
 
-#: blog/templates/showcase.html:20
+#: blog/templates/showcase.html:23
+msgid "Balkan VEGAN"
+msgstr "Balkan VEGAN"
+
+#: blog/templates/showcase.html:24
+msgid "Book Tip!"
+msgstr "Buch-Tipp!"
+
+#: blog/templates/showcase.html:25
+msgid ""
+"Finally our new Book is out! <br>Balkan VEGAN combines Balkan cuisine and "
+"plant-based lifestyle. This is the perfect present for you and your dear "
+"ones."
+msgstr "Endlich ist unser neues Buch da! <br>Balkan VEGAN verbindet die Balkanküche mit einem pflanzlichen Lebensstil. Dies ist das perfekte Geschenk für Sie und Ihre Lieben."
+
+#: blog/templates/showcase.html:27
+msgid "order now"
+msgstr "bestelle jetzt"
+
+#: blog/templates/showcase.html:37
 msgid ""
 "Healthy and delicious recipes, easy and quick to make. All about how to "
 "start & end your day nutritionally well and with a positive energy."
@@ -1205,17 +1236,13 @@ msgstr ""
 "wie den Tag nahrhaft gut und mit positiver Energie zu beginnen und zu "
 "beenden."
 
-#: blog/templates/showcase.html:22 blog/templates/showcase.html:40
-#: blog/templates/showcase.html:67 blog/templates/showcase.html:86
-#: blog/templates/showcase.html:121
+#: blog/templates/showcase.html:39 blog/templates/showcase.html:56
+#: blog/templates/showcase.html:83 blog/templates/showcase.html:102
+#: blog/templates/showcase.html:137
 msgid "discover more"
 msgstr "mehr entdecken"
 
-#: blog/templates/showcase.html:24
-msgid "order our book"
-msgstr "bestelle unser Buch"
-
-#: blog/templates/showcase.html:38
+#: blog/templates/showcase.html:54
 msgid ""
 "The philosopher and teacher Rudolf Steiner once said, \"For every human "
 "illness, somewhere in the world there exists a plant which is the cure. \""
@@ -1224,7 +1251,7 @@ msgstr ""
 "menschliche Krankheit gibt es irgendwo auf der Welt eine Pflanze, die das "
 "Heilmittel ist. \""
 
-#: blog/templates/showcase.html:39
+#: blog/templates/showcase.html:55
 msgid ""
 "For thousands of years, people from all over the globe have used herbs and "
 "plants to cure or prevent disease. Sometimes, we are not even aware that "
@@ -1235,7 +1262,7 @@ msgstr ""
 "nicht einmal bewusst, dass eine Pflanze, die uns vertraut ist, eine "
 "besondere Gabe hat..."
 
-#: blog/templates/showcase.html:84
+#: blog/templates/showcase.html:100
 msgid ""
 "Scientists name about 18,000 new species each year. According to study made "
 "in 2011 humans share the planet with approximately 8,7 million different "
@@ -1250,13 +1277,8 @@ msgstr ""
 msgid "was sent successfully!"
 msgstr "wurde erfolgreich versendet"
 
-#: src/settings.py:122
-msgid "English"
-msgstr "Englisch"
-
-#: src/settings.py:123
-msgid "German"
-msgstr "Deutsch"
+#~ msgid "NEWS!"
+#~ msgstr "NEWS!"
 
 #~ msgid ""
 #~ "Cows, for example, could live to well over 20 years of age, while on "
