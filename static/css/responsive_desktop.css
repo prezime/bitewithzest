@@ -248,6 +248,16 @@
     padding-bottom: 300px;
   }
 
+  .indexbook {
+      font-size: 21px;
+      padding: 0 18%;
+      width: 100%;
+      margin: auto;
+      margin-top: 150px;
+      text-align: left;
+      line-height: 30px;
+    }
+
   .layer_relative {
     position: relative;
   }

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-15 14:14+0000\n"
+"POT-Creation-Date: 2022-12-16 11:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -423,9 +423,9 @@ msgid "Serbo-Croatian"
 msgstr "Serbo-Kroatisch"
 
 #: blog/templates/index_book.html:28 blog/templates/index_book.html:50
-#: blog/templates/index_book.html:72
-msgid "Click here to order now"
-msgstr "Klicken Sie hier, um jetzt zu bestellen"
+#: blog/templates/index_book.html:72 blog/templates/showcase.html:27
+msgid "order now"
+msgstr "bestelle jetzt"
 
 #: blog/templates/index_book.html:44 src/settings.py:123
 msgid "German"
@@ -434,6 +434,109 @@ msgstr "Deutsch"
 #: blog/templates/index_book.html:66 src/settings.py:122
 msgid "English"
 msgstr "Englisch"
+
+#: blog/templates/index_book.html:85
+msgid ""
+"Vegan Balkan cuisine? Sarma? Stuffed peppers? Of course! And that too "
+"in a delicious way! Treat yourself to the Balkan Vegan Cook Book and experience "
+"the variety of traditional Balkan dishes."
+msgstr ""
+"Vegane Balkanküche? Sarma? Gefüllte Paprika? Natürlich! Und das auch noch "
+"auf köstliche Weise! Gönnen Sie sich das Balkan Vegan Cook Book und erleben "
+"Sie die Vielfalt traditioneller Balkan-Gerichte."
+
+#: blog/templates/index_book.html:86
+msgid ""
+"The cookbook is aimed at anyone who wants to discover the magic of Balkan recipes in a "
+"simple and healthy way."
+msgstr ""
+"Das Kochbuch richtet sich an alle, die die Magie der Balkanrezepte auf "
+"einfache und gesunde Weise entdecken möchten."
+
+#: blog/templates/index_book.html:87
+msgid ""
+"Here you will find interesting information and customs connected with the "
+"preparation of food, useful properties of "
+"foods and valuable secrets of vegan cuisine."
+msgstr ""
+"Hier finden Sie interessante Informationen und Bräuche, die mit der "
+"Zubereitung der Speisen verbunden sind, nützliche Eigenschaften der "
+"Nahrungsmittel und wertvolle Geheimnisse der veganen Küche."
+
+#: blog/templates/index_book.html:88
+msgid ""
+"The recipes are divided into 5 groups: Starters, soups, salads, "
+"main courses, and coffee and sweets."
+msgstr ""
+"Die Rezepte sind in 5 Gruppen unterteilt: Vorspeisen, Suppen, Salate, "
+"Hauptgerichte sowie Kaffee und Süßes."
+
+#: blog/templates/index_book.html:91
+msgid "Detailed and understandably written recipes."
+msgstr "Detaillierte und verständlich geschriebene Rezepte."
+
+#: blog/templates/index_book.html:93
+msgid "Clear ingredient lists."
+msgstr "Übersichtliche Zutatenlisten."
+
+#: blog/templates/index_book.html:95
+msgid "Supplemented by helpful practical tips."
+msgstr "Ergänzt durch hilfreiche praktische Tipps."
+
+#: blog/templates/index_book.html:97
+msgid "A clear table on the degree of difficulty of preparation, the "
+"preparation and cooking time."
+
+msgstr "Eine übersichtliche Tabelle über den Schwierigkeitsgrad der Zubereitung, die "
+"Vorbereitungs- und Kochzeit."
+
+#: blog/templates/index_book.html:100
+msgid ""
+"The playfulness and simplicity of the preparation is also reflected in the "
+"photographs of the dishes, which also feature miniature figures in various "
+"scenes from everyday life. Find them! Enjoy the preparation and "
+"the taste."
+msgstr ""
+"Die Verspieltheit und Einfachheit der Zubereitung spiegelt sich auch in den "
+"Fotografien der Speisen wider, die zudem Miniaturfiguren in verschiedenen "
+"Szenen aus dem Alltag zeigen. Finde sie! Genießen Sie die Zubereitung und "
+"den Geschmack."
+
+#: blog/templates/index_book.html:104
+msgid "Title: Balkan VEGAN"
+msgstr "Titel: Balkan VEGAN"
+
+#: blog/templates/index_book.html:105
+msgid "Subtitle: Plant specialities of the Balkan cuisine"
+msgstr "Untertitel: Pflänzliche Spezialitäten der Balkanküche"
+
+#: blog/templates/index_book.html:106
+msgid "Author: Jelena Cvetković Šarkanović"
+msgstr "Autor: Jelena Cvetković Šarkanović"
+
+#: blog/templates/index_book.html:107
+msgid "Publisher: cvet je... e.U. - BITEwithZEST"
+msgstr "Herausgeber: cvet je... e.U. - BITEwithZEST"
+
+#: blog/templates/index_book.html:108
+msgid "Pages: 132"
+msgstr "Seitenzahl: 132"
+
+#: blog/templates/index_book.html:109
+msgid "Format: 21x21 cm"
+msgstr "Format: 21x21 cm"
+
+#: blog/templates/index_book.html:110
+msgid "Weight: 543g"
+msgstr "Gewicht: 543g"
+
+#: blog/templates/index_book.html:111
+msgid "Binding: Hardcover"
+msgstr "Einband: Gebunden"
+
+#: blog/templates/index_book.html:114
+msgid "Delivery by post: €6"
+msgstr "Lieferung per Post: 6 €"
 
 #: blog/templates/index_faq.html:7
 msgid "Frequently asked Questions"
@@ -1231,10 +1334,6 @@ msgstr ""
 "mit einem pflanzlichen Lebensstil. Dies ist das perfekte Geschenk für Sie "
 "und Ihre Lieben."
 
-#: blog/templates/showcase.html:27
-msgid "order now"
-msgstr "bestelle jetzt"
-
 #: blog/templates/showcase.html:37
 msgid ""
 "Healthy and delicious recipes, easy and quick to make. All about how to "
@@ -1284,6 +1383,9 @@ msgstr ""
 #: blog/templates/thankyou.html:5
 msgid "was sent successfully!"
 msgstr "wurde erfolgreich versendet"
+
+#~ msgid "Click here to order now"
+#~ msgstr "Klicken Sie hier, um jetzt zu bestellen"
 
 #~ msgid "NEWS!"
 #~ msgstr "NEWS!"
