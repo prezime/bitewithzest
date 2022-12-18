@@ -255,6 +255,10 @@ def about(request):
     return render(request, "about.html", {'cat_list': cat_list, 'catlang_list': catlang_list, 'authors_list': authors_list, 'authorslang_list': authorslang_list})
 
 
+def shop(request):
+    return render(request, "shop.html")
+
+
 def cookies(request):
     cat_list = Category.objects.all().filter(status=1).order_by('order_count')
     catlang_list = CategoryLang.objects.all().filter(status=1).order_by('order_count')

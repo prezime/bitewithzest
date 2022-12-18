@@ -11,6 +11,7 @@ urlpatterns = [
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path('filter/type/<cardtype>',
          views.FeaturedList.as_view(), name='featured_view'),
+    path('shop/bwz/', views.shop, name='shop_view'),
     path('contact/info/', views.contact, name='contact_view'),
     path('about/info/', views.about, name='about_view'),
     path('cookies/info/', views.cookies, name='cookies_view'),
