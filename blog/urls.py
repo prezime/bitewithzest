@@ -15,6 +15,9 @@ urlpatterns = [
     path('contact/info/', views.contact, name='contact_view'),
     path('about/info/', views.about, name='about_view'),
     path('cookies/info/', views.cookies, name='cookies_view'),
+    path('shipping/info/', views.shipping, name='shipping_view'),
+    path('returns/info/', views.returns, name='returns_view'),
+    path('terms/info/', views.terms, name='terms_view'),
     path("robots.txt", TemplateView.as_view(
         template_name="robots.txt", content_type="text/plain")),
 ]

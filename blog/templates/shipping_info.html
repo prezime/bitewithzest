@@ -1,0 +1,59 @@
+{% extends "base.html" %} 
+{% load i18n setvar %}
+{% block cookies %}
+<div class="cookie-policy">
+  <img class="layer1-1 desktop" src="/../media/layout/basil_bg_png/L_01_01.png" alt="" data-400="top:300px;">
+  <div class="moto5">
+    <h2>{% trans 'Shipping & Delivery' %}</h2>
+    <h1>{% trans 'policy' %}</h1>
+  </div>
+  
+
+  
+  
+  <p>{% trans 'Last updated December 19, 2022' %}</p>
+  <p>{% trans 'This Shipping & Delivery Policy is part of our Terms and Conditions ("Terms") and should be therefore read alongside our main Terms: https://bitewithzest.com/terms/info/.' %}</p>
+  <p>{% trans 'Please carefully review our Shipping & Delivery Policy when purchasing our products. This policy will apply to any order you place with us.' %}</p>
+  <h2>{% trans 'WHAT ARE MY SHIPPING & DELIVERY OPTIONS?' %}</h2>
+  <p>{% trans 'We offer various shipping options. In some cases a third-party supplier may be managing our inventory and will be responsible for shipping your products.' %}
+  <p>{% trans 'Shipping Fees' %}</p>
+  <p>{% trans 'We offer shipping at the following rates:' %}</p>
+  <ul>
+    <li>{% trans 'Shipping & Packaging AT' %}
+        <ul>
+            <li>{% trans 'order value up to 81€: 5,5€' %}</li>
+            <li>{% trans 'order value over 81€: 0€' %}</li>
+          </ul>
+    </li>
+     
+    <li>{% trans 'Shipping & Packaging EU' %}
+        <ul>
+            <li>{% trans 'order value up to 81€: 6,9€' %}</li>
+            <li>{% trans 'order value over 81€: 0€' %}</li>
+          </ul>
+    </li>
+  </ul>
+  <p>{% trans 'All times and dates given for delivery of the products are given in good faith but are estimates only.' %}</p>
+  <p>{% trans 'For EU and UK consumers: This does not affect your statutory rights. Unless specifically noted, estimated delivery times reflect the earliest available delivery, and deliveries will be made within 30 days after the day we accept your order. For more information please refer to our Terms.' %}</p>
+
+  <h2>{% trans 'DO YOU DELIVER INTERNATIONALLY?' %}</h2>
+  <p>{% trans 'We offer international shipping to the following countries:' %} 
+    {% trans 'Austria, Belgium, Bulgaria, Croatia, Republic of Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain and Sweden.' %}
+    {% trans 'Please note, we may be subject to various rules and restrictions in relation to some international deliveries and you may be subject to additional taxes and duties over which we have no control. If such cases apply, you are responsible for complying with the laws applicable to the country where you live and will be responsible for any such additional costs or taxes.' %}</p>
+
+  <h2>{% trans 'WHAT HAPPENS IF MY ORDER IS DELAYED?' %}</h2>
+  <p>{% trans 'If delivery is delayed for any reason we will let you know as soon as possible and will advise you of a revised estimated date for delivery.' %}
+    {% trans 'For EU and UK consumers: This does not affect your statutory rights. For more information please refer to our Terms.' %}
+
+
+  <h2>{% trans 'QUESTIONS ABOUT RETURNS?' %}</h2>
+  <p>{% trans 'If you have questions about returns, please review our Return Policy: https://bitewithzest.com/returns/info/.' %}</p>
+
+  <p>{% trans 'HOW CAN YOU CONTACT US ABOUT THIS POLICY?' %}<br>
+    {% trans 'If you have any further questions or comments, you may contact us at: hello@bitewithzest.com' %}</p>
+
+</div>
+
+{% endblock  %}
+
+ 

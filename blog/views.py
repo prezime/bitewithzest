@@ -259,6 +259,18 @@ def shop(request):
     return render(request, "shop.html")
 
 
+def shipping(request):
+    return render(request, "shipping_info.html")
+
+
+def terms(request):
+    return render(request, "terms_info.html")
+
+
+def returns(request):
+    return render(request, "returns_info.html")
+
+
 def cookies(request):
     cat_list = Category.objects.all().filter(status=1).order_by('order_count')
     catlang_list = CategoryLang.objects.all().filter(status=1).order_by('order_count')

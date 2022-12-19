@@ -60,7 +60,7 @@
   <nav class="navbar" id="navbar">
     <ul id="navbar_ul">
     {% for category in cat_list %}
-      <li class="{% if category.description == object.description %}active{% endif %}"><a href="{% url 'category_view' category.slug  %}" >
+      <li class="{% if category.description == object.description %}active{% endif %}">{% if category.id == 9 %} <a href="/shop/bwz/">{% else %}</a><a href="{% url 'category_view' category.slug  %}" >{% endif %}
         {% if LANGUAGE_CODE != 'en' %} 
             {% for catlang in catlang_list %}
                 {% if category.id == catlang.id %}
