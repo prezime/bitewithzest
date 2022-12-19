@@ -260,15 +260,21 @@ def shop(request):
 
 
 def shipping(request):
-    return render(request, "shipping_info.html")
+    cat_list = Category.objects.all().filter(status=1).order_by('order_count')
+    catlang_list = CategoryLang.objects.all().filter(status=1).order_by('order_count')
+    return render(request, "shipping_info.html", {'cat_list': cat_list, 'catlang_list': catlang_list})
 
 
 def terms(request):
-    return render(request, "terms_info.html")
+    cat_list = Category.objects.all().filter(status=1).order_by('order_count')
+    catlang_list = CategoryLang.objects.all().filter(status=1).order_by('order_count')
+    return render(request, "terms_info.html", {'cat_list': cat_list, 'catlang_list': catlang_list})
 
 
 def returns(request):
-    return render(request, "returns_info.html")
+    cat_list = Category.objects.all().filter(status=1).order_by('order_count')
+    catlang_list = CategoryLang.objects.all().filter(status=1).order_by('order_count')
+    return render(request, "returns_info.html", {'cat_list': cat_list, 'catlang_list': catlang_list})
 
 
 def cookies(request):

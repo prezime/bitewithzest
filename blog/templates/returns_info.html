@@ -1,0 +1,40 @@
+{% extends "base.html" %} 
+{% load i18n setvar %}
+{% block returns %}
+<div class="cookie-policy">
+  <img class="layer1-1 desktop" src="/../media/layout/basil_bg_png/L_01_02.png" alt="" data-400="top:300px;">
+  <div class="moto5">
+    <h2>{% trans 'RETURN' %}</h2>
+    <h1>{% trans 'policy' %}</h1>
+  </div>
+  
+  <h2> </h2>
+  <p>{% trans 'Last updated December 19, 2022' %}</p>
+  <p>{% trans 'Thank you for your purchase. We hope you are happy with your purchase. However, if you are not completely satisfied with your purchase for any reason, you may return it to us for a full refund or an exchange. Please see below for more information on our return policy.' %}</h2>
+  
+  <h2>{% trans 'RETURNS' %}</h2>
+  <p>{% trans 'All returns must be postmarked within fourteen (14) days of the purchase date. All returned items must be in new and unused condition, with all original tags and labels attached.' %}</p>
+
+  <h2>{% trans 'RETURN PROCESS' %}</h2>
+  <p>{% trans 'To return an item, place the item securely in its original packaging, and mail your return to the following address:' %}
+  <p>cvetje... e.U.<br>
+    Jelena Cvetkovic Sarkanovic<br>
+    Guntherstr. 9/1/7<br>
+    Vienna 1150<br>
+    Austria</p>  
+  <p>{% trans 'Please note, you will be responsible for all return shipping charges. We strongly recommend that you use a trackable method to mail your return.' %}</p>  
+  <h2>{% trans 'REFUNDS' %}</h2>
+  <p>{% trans 'After receiving your return and inspecting the condition of your item, we will process your return or exchange. Please allow at least seven (seven) days from the receipt of your item to process your return or exchange. We will notify you by email when your return has been processed.' %}</p>
+
+  <h2>{% trans 'EXCEPTIONS' %}</h2>
+  <p>{% trans 'For defective or damaged products, please contact us at the contact details below to arrange a refund or exchange.' %}</p>
+  
+  <h2>{% trans 'QUESTIONS' %}</h2>
+  <p>{% trans 'If you have any questions concerning our return policy, please contact us at:' %}</p>
+  <p>+4369918252298 <br><a href="mailto:hello@bitewithzest.com"><strong>hello@bitewithzest.com</strong></a></p>
+
+</div>
+
+{% endblock  %}
+
+ 
