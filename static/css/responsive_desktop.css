@@ -463,6 +463,27 @@
     color: var(--main);
     font-size: 70px;
   }
+  .moto6 {
+    font-size: 27px;
+    font-weight: 400;
+    color: var(--black);
+    left: 5%;
+    max-width: 500px;
+    margin-top: -700px;
+    position: absolute;
+  }
+  .moto6 h2 {
+    color: var(--black);
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .moto6 h1 {
+    font-family: var(--font-cool);
+    margin: -10px 30px 10px;
+    color: var(--main);
+    font-size: 70px;
+  }
   .hero-btn,
   .hero-btn-de {
     background-color: var(--main);
