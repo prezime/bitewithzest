@@ -465,6 +465,22 @@
     color: var(--main);
     font-size: 70px;
   }
+  .indexbook {
+    font-size: 21px;
+    padding: 0 18%;
+    width: 100%;
+    margin: auto;
+    margin-top: 150px;
+    text-align: left;
+    line-height: 30px;
+  }
+#my-store-83334683{
+    width: 100%;
+    height: 100%;
+    margin-top: 250px !important;
+    text-align: left;
+    line-height: 30px;
+}
   .hero-btn,
   .hero-btn-de {
     background-color: var(--main);

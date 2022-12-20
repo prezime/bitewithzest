@@ -1419,56 +1419,65 @@ msgid ""
 "\") and should be therefore read alongside our main <a href=\"/terms/info/"
 "\"><strong>Terms</strong></a>."
 msgstr ""
+"Diese Versand- und Lieferbedingungen sind Teil unserer Allgemeinen Geschäftsbedingungen. (\"AGB"
+"\") und sollten daher zusammen mit unseren <a href=\"/terms/info/"
+"\"><strong>AGB</strong></a> gelesen werden ."
 
 #: blog/templates/shipping_info.html:14
 msgid ""
 "Please carefully review our Shipping & Delivery Policy when purchasing our "
 "products. This policy will apply to any order you place with us."
 msgstr ""
+"Bitte lesen Sie unsere Versand- und Lieferbedingungen sorgfältig durch, wenn Sie unsere "
+"Produkte. Diese Richtlinie gilt für jede Bestellung, die Sie bei uns aufgeben."
 
 #: blog/templates/shipping_info.html:15
 msgid "WHAT ARE MY SHIPPING & DELIVERY OPTIONS?"
-msgstr ""
+msgstr "WELCHE VERSAND- UND LIEFERMÖGLICHKEITEN HABE ICH?"
 
 #: blog/templates/shipping_info.html:16
 msgid ""
 "We offer various shipping options. In some cases a third-party supplier may "
 "be managing our inventory and will be responsible for shipping your products."
 msgstr ""
+"Wir bieten verschiedene Versandoptionen an. In einigen Fällen kann ein Drittanbieter "
+"unser Inventar verwalten und für den Versand Ihrer Produkte verantwortlich sein."
 
 #: blog/templates/shipping_info.html:17
 msgid "Shipping Fees"
-msgstr ""
+msgstr "Versandkosten"
 
 #: blog/templates/shipping_info.html:18
 msgid "We offer shipping at the following rates:"
-msgstr ""
+msgstr "Wir bieten den Versand zu folgenden Tarifen an:"
 
 #: blog/templates/shipping_info.html:20
 msgid "Shipping & Packaging AT"
-msgstr ""
+msgstr "Versand & Verpackung AT"
 
 #: blog/templates/shipping_info.html:22
 msgid "order value up to 81€: 5,5€"
-msgstr ""
+msgstr "Bestellwert bis zu 81€: 5,5€"
 
 #: blog/templates/shipping_info.html:23 blog/templates/shipping_info.html:30
 msgid "order value over 81€: 0€"
-msgstr ""
+msgstr "Bestellwert über 81€: 0€"
 
 #: blog/templates/shipping_info.html:27
 msgid "Shipping & Packaging EU"
-msgstr ""
+msgstr "Versand & Verpackung EU"
 
 #: blog/templates/shipping_info.html:29
 msgid "order value up to 81€: 6,9€"
-msgstr ""
+msgstr "Bestellwert bis zu 81€: 6,9€"
 
 #: blog/templates/shipping_info.html:34
 msgid ""
 "All times and dates given for delivery of the products are given in good "
 "faith but are estimates only."
 msgstr ""
+"Alle für die Lieferung der Produkte angegebenen Fristen und Termine werden "
+"nach bestem Wissen und Gewissen angegeben, sind aber nur Schätzungen."
 
 #: blog/templates/shipping_info.html:35
 msgid ""
@@ -1477,14 +1486,18 @@ msgid ""
 "delivery, and deliveries will be made within 30 days after the day we accept "
 "your order. For more information please refer to our Terms."
 msgstr ""
+"Für Verbraucher in der EU und im Vereinigten Königreich: Dies berührt nicht Ihre gesetzlichen Rechte. Sofern "
+"ausdrücklich angegeben, beziehen sich die geschätzten Lieferzeiten auf die frühestmögliche Lieferung"
+"und die Lieferung erfolgt innerhalb von 30 Tagen nach dem Tag der Annahme "
+"Ihrer Bestellung. Weitere Informationen finden Sie in unseren AGB."
 
 #: blog/templates/shipping_info.html:37
 msgid "DO YOU DELIVER INTERNATIONALLY?"
-msgstr ""
+msgstr "LIEFERN SIE AUCH WELTWEIT?"
 
 #: blog/templates/shipping_info.html:38
 msgid "We offer international shipping to the following countries:"
-msgstr ""
+msgstr "Wir bieten internationalen Versand in die folgenden Länder an:"
 
 #: blog/templates/shipping_info.html:39
 msgid ""
@@ -1493,6 +1506,10 @@ msgid ""
 "Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, "
 "Romania, Slovakia, Slovenia, Spain and Sweden."
 msgstr ""
+"Österreich, Belgien, Bulgarien, Kroatien, Republik Zypern, Tschechische Republik, "
+"Dänemark, Estland, Finnland, Frankreich, Deutschland, Griechenland, Ungarn, Irland, Italien, "
+"Lettland, Litauen, Luxemburg, Malta, Niederlande, Polen, Portugal, Ungarn, "
+"Rumänien, Slowakei, Slowenien, Spanien und Schweden."
 
 #: blog/templates/shipping_info.html:40
 msgid ""
@@ -1502,16 +1519,23 @@ msgid ""
 "responsible for complying with the laws applicable to the country where you "
 "live and will be responsible for any such additional costs or taxes."
 msgstr ""
+"Bitte beachten Sie, dass wir in Bezug auf einige internationale Lieferungen verschiedenen Regeln und Beschränkungen "
+"für einige internationale Lieferungen verschiedenen Vorschriften unterliegen und für Sie können zusätzliche Steuern "
+"und Zöllen anfallen, auf die wir keinen Einfluss haben. Wenn solche Fälle eintreten, sind Sie "
+"verantwortlich für die Einhaltung der Gesetze, die in dem Land gelten, in dem Sie sich befinden"
+"und sind für solche zusätzlichen Kosten oder Steuern verantwortlich."
 
 #: blog/templates/shipping_info.html:42
 msgid "WHAT HAPPENS IF MY ORDER IS DELAYED?"
-msgstr ""
+msgstr "WAS PASSIERT, WENN SICH MEINE BESTELLUNG VERZÖGERT?"
 
 #: blog/templates/shipping_info.html:43
 msgid ""
 "If delivery is delayed for any reason we will let you know as soon as "
 "possible and will advise you of a revised estimated date for delivery."
 msgstr ""
+"Sollte sich die Lieferung aus irgendeinem Grund verzögern, werden wir Sie so schnell wie möglich informieren "
+"und teilen Ihnen einen neuen voraussichtlichen Liefertermin mit."
 
 #: blog/templates/shipping_info.html:44
 msgid ""
@@ -1519,29 +1543,29 @@ msgid ""
 "more information please refer to our <a href=\"/terms/info/\"><strong>Terms</"
 "strong></a>."
 msgstr ""
+"Für Verbraucher in der EU und im Vereinigten Königreich: Dies berührt nicht Ihre gesetzlichen Rechte. Für "
+"weitere Informationen finden Sie in unseren <a href=\"/terms/info/\"><strong>AGB</"
+"strong></a>."
 
 #: blog/templates/shipping_info.html:47
 msgid "QUESTIONS ABOUT RETURNS?"
-msgstr ""
+msgstr "FRAGEN ZUR RÜCKGABE?"
 
 #: blog/templates/shipping_info.html:48
 msgid ""
-"If you have questions about returns, please review our <a href=\"/returns/"
-"info/\"><strong>Return Policy:</strong></a>"
+"If you have questions about returns, please review our <a href=\"/returns/info/\"><strong>Return Policy</"
+"strong></a>."
 msgstr ""
+"Wenn Sie Fragen zur Rückgabe haben, lesen Sie bitte unsere <a href=\"/returns/info/\"><strong>Rückgabebedingungen</"
+"strong></a>."
 
 #: blog/templates/shipping_info.html:50
 msgid "HOW CAN YOU CONTACT US ABOUT THIS POLICY?"
-msgstr ""
+msgstr "WIE KÖNNEN SIE UNS ZU DIESEN RICHTLINIEN KONTAKTIEREN?"
 
 #: blog/templates/shipping_info.html:51
-#, fuzzy
-#| msgid ""
-#| "If you have any questions about this Cookie Policy, please contact us at"
 msgid "If you have any further questions or comments, you may contact us at: "
-msgstr ""
-"Wenn Sie Fragen zu dieser Cookie-Richtlinie haben, kontaktieren Sie uns "
-"bitte unter"
+msgstr "Wenn Sie weitere Fragen oder Kommentare haben, können Sie uns unter folgender Adresse erreichen: "
 
 #: blog/templates/showcase.html:23
 msgid "Balkan VEGAN"
