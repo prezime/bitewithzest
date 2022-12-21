@@ -1853,7 +1853,7 @@ msgstr ""
 
 #: blog/templates/terms_info.html:27
 msgid "4. MARKETPLACE OFFERINGS"
-msgstr ""
+msgstr "4. MARKTPLATZANGEBOTE"
 
 #: blog/templates/terms_info.html:28
 msgid ""
@@ -1869,6 +1869,16 @@ msgid ""
 "Such Marketplace Offerings may have limited quantities and are subject to "
 "return or exchange only according to our Return Policy."
 msgstr ""
+"Wir bemühen uns, die Farben, Eigenschaften, Spezifikationen und Details des Marktplatzangebots "
+"auf der Website so genau wie möglich darzustellen. Wir können jedoch nicht garantieren, dass die Farben, Eigenschaften, "
+"Spezifikationen und Details der Marktplatz-Angebote genau, "
+"vollständig, zuverlässig, aktuell oder frei von anderen Fehlern sind, und Ihre elektronische "
+"Bildschirme möglicherweise nicht genau die tatsächlichen Farben und Details der "
+"Produkte widerspiegeln. Alle Marktplatz-Angebote unterliegen der Verfügbarkeit, und wir " 
+"können nicht garantieren, dass Marketplace-Angebote auf Lager sind. Bestimmte "
+"Marktplatz-Angebote können ausschließlich online über die Website erhältlich sein. "
+"Solche Marktplatzangebote können begrenzte Mengen haben und unterliegen der "
+"Rückgabe oder Umtausch nur gemäß unseren Rückgaberichtlinien."
 
 #: blog/templates/terms_info.html:29
 msgid ""
@@ -1880,14 +1890,20 @@ msgid ""
 "any of the Marketplace Offerings purchased by you will meet your "
 "expectations or that any errors in the Site will be corrected."
 msgstr ""
+"Wir behalten uns das Recht vor, die Mengen der auf der Website angebotenen oder verfügbaren Marktplatz-Angebote "
+"zu beschränken, die auf der Website angeboten werden oder verfügbar sind. Alle Beschreibungen oder Preise der "
+"Marktplatz-Angebote können jederzeit ohne Vorankündigung und nach "
+"unserem alleinigen Ermessen geändert werden. Wir behalten uns das Recht vor, Marktplatzangebote " 
+"jederzeit und ohne Angabe von Gründen einzustellen. Wir garantieren nicht, dass die Qualität der "
+"Marktplatzangebots Ihren Erwartungen entspricht oder dass etwaige Fehler auf der Website korrigiert werden."
 
 #: blog/templates/terms_info.html:31
 msgid "5. PURCHASES AND PAYMENT"
-msgstr ""
+msgstr "5. KÄUFE UND ZAHLUNGEN"
 
 #: blog/templates/terms_info.html:32
 msgid "We accept the following forms of payment: Credit/Debit cards, Paypal"
-msgstr ""
+msgstr "Wir akzeptieren die folgenden Zahlungsarten: Kredit-/Debitkarten, Paypal"
 
 #: blog/templates/terms_info.html:33
 msgid ""
@@ -1899,6 +1915,13 @@ msgid ""
 "tax will be added to the price of purchases as deemed required by us. We may "
 "change prices at any time. All payments shall be in Euro."
 msgstr ""
+"Sie verpflichten sich, aktuelle, vollständige und genaue Kauf- und Kontodaten "
+"Informationen für alle Käufe von Marktplatzangeboten, die über die "
+"Seite getätigt werden, anzugeben. Sie verpflichten sich außerdem, Ihre Konto- und Zahlungsinformationen, "
+"einschließlich E-Mail-Adresse, Zahlungsmethode und Ablaufdatum der Zahlungskarte, anzuführen, "
+"damit wir Ihre Transaktionen abschließen und Sie bei Bedarf kontaktieren können. "
+"Die Umsatzsteuer wird im Preis der Einkäufe enthalten, wenn wir dies für erforderlich halten. Wir können "
+"Preise jederzeit ändern. Alle Zahlungen sind in Euro zu leisten."
 
 #: blog/templates/terms_info.html:34
 msgid ""
@@ -1908,6 +1931,11 @@ msgid ""
 "the right to correct any errors or mistakes in pricing, even if we have "
 "already requested or received payment."
 msgstr ""
+"Sie stimmen zu, alle Gebühren zu den dann gültigen Preisen für Ihre Einkäufe zu zahlen "
+"und alle anfallenden Versandgebühren zu zahlen, und Sie ermächtigen uns, den von Ihnen gewählten "
+"Zahlungsanbieter für solche Beträge zu belasten, wenn Sie Ihre Bestellung aufgeben. "
+"Wir behalten uns das Recht vor, Fehler oder Irrtümer bei der Preisgestaltung zu korrigieren, auch wenn wir "
+"bereits eine Zahlung angefordert oder erhalten haben."
 
 #: blog/templates/terms_info.html:35
 msgid ""
@@ -1919,10 +1947,17 @@ msgid ""
 "prohibit orders that, in our sole judgment, appear to be placed by dealers, "
 "resellers, or distributors."
 msgstr ""
+"Wir behalten uns das Recht vor, jede über die Website aufgegebene Bestellung abzulehnen. Wir können, "
+"nach eigenem Ermessen die gekauften Mengen pro Person, pro "
+"Haushalt oder pro Bestellung beschränken. Diese Beschränkungen können Bestellungen umfassen, die von oder "
+"unter demselben Kundenkonto, derselben Zahlungsmethode und/oder Bestellungen, "
+"dieselbe Rechnungs- oder Lieferadresse verwenden. Wir behalten uns das Recht vor, "
+"Bestellungen zu beschränken oder zu verbieten, die nach unserem alleinigen Urteil von Händlern, "
+"Wiederverkäufern oder Distributoren aufgegeben werden."
 
 #: blog/templates/terms_info.html:37
 msgid "6. PROHIBITED ACTIVITIES"
-msgstr ""
+msgstr "6. VERBOTENE AKTIVITÄTEN"
 
 #: blog/templates/terms_info.html:38
 msgid ""
