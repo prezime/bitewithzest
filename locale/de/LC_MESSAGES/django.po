@@ -1456,8 +1456,8 @@ msgid "Shipping & Packaging AT"
 msgstr "Versand & Verpackung AT"
 
 #: blog/templates/shipping_info.html:22
-msgid "order value up to 81€: 5,5€"
-msgstr "Bestellwert bis zu 81€: 5,5€"
+msgid "order value up to 81€ (3 books): 4,5€"
+msgstr "Bestellwert bis zu 81€ (3 Bücher): 4,5€"
 
 #: blog/templates/shipping_info.html:23 blog/templates/shipping_info.html:30
 msgid "order value over 81€: 0€"
@@ -1468,8 +1468,8 @@ msgid "Shipping & Packaging EU"
 msgstr "Versand & Verpackung EU"
 
 #: blog/templates/shipping_info.html:29
-msgid "order value up to 81€: 6,9€"
-msgstr "Bestellwert bis zu 81€: 6,9€"
+msgid "order value up to 81€ (3 books): 6,9€"
+msgstr "Bestellwert bis zu 81€ (3 Bücher): 6,9€"
 
 #: blog/templates/shipping_info.html:34
 msgid ""
