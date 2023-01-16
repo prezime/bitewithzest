@@ -1566,12 +1566,8 @@
     margin-top: 40px;
   }
 }
-@media screen and (min-width: 1400px) and (max-width: 1499px) {
-  header nav ul li a {
-    font-size: 15px;  
-  }
-}
-@media screen and (min-width: 769px) and (max-width: 1400px) {
+
+@media screen and (min-width: 769px) and (max-width: 1450px) {
   .aboutus,
   .quicklinks,
   .footer_contact,
@@ -1582,6 +1578,15 @@
     background: url("/../media/layout/header.png");
     padding: 3%;
     background-size: cover;
+  }
+  .navbar ul li a {
+    font-size: 15px;  
+  }
+  header nav ul li a{
+    font-size: 15px; 
+  }
+  .form-inline select{
+    font-size: 15px;
   }
 }
 /* @media screen and (min-width:1239px) and (max-width:1400px){
