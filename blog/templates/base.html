@@ -60,7 +60,7 @@
   <nav class="navbar" id="navbar">
     <ul id="navbar_ul">
     {% for category in cat_list %}
-      <li class="{% if category.id == object.id or category.id == 9 and not object.id %}active{% endif %}">
+      <li class="{% if category.id == object.id or category.id == 9 and not object.id and request.resolver_match.url_name == 'shop_view' %}active{% endif %}">
         {% if category.id == 9 %} 
           <a href="/shop/bwz/">
         {% else %}
