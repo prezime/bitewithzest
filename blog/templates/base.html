@@ -26,6 +26,11 @@
   </script>
 </head>
 <body>
+  <div id="navnews" class="navnews">
+    <div>            
+      <a href="{% url 'post_detail' 'zagreb'  %}"><h3>NEWS: Join us in Zagreb!</h3></a>
+    </div>
+  </div>
   <header>
     <div class="logo">
       <a href="/"><img src="{% static 'img/BwZ_logo_W.png' %}" alt="logo"></a>
@@ -61,6 +66,7 @@
     <ul id="navbar_ul">
     {% for category in cat_list %}
       <li class="{% if category.id == object.id or category.id == 9 and not object.id and request.resolver_match.url_name == 'shop_view' %}active{% endif %}">
+        {% if category.id != 10 %} 
         {% if category.id == 9 %} 
           <a href="/shop/bwz/">
         {% else %}
@@ -74,6 +80,7 @@
             {% endfor %}           
         {% else %}    
             {{ category.description | safe }} 
+        {% endif %}
         {% endif %}</a></li>
     {% endfor %}
     </ul>
@@ -144,7 +151,7 @@
               <li><span><i class="fa fa-phone" aria-hidden="true"></i></span>
                 +43 680 1446331</li>
               <li><span><i class="fa fa-envelope" aria-hidden="true"></i></span>
-                <a href="mailto:contact@bitewithzest.com">E-Mail</a></li>
+                <a href="mailto:hello@bitewithzest.com">E-Mail</a></li>
             </ul>
           </div>
           <div class="sec footer_placeholder">

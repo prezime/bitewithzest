@@ -19,7 +19,7 @@
   }
   header {
     position: absolute;
-    top: 0;
+    top: 40px;
     left: 0;
     padding: 0 10%;
     background: url("/../media/layout/header.png") top left;
@@ -52,10 +52,30 @@
     padding: 0 20px;
     text-decoration: none;
   }
+  .navnews
+  {
+     top: 0px;
+     height: 41px;
+     line-height: 40px;
+     z-index: 10;
+     background-color: var(--yellow);
+     position: fixed;
+     width: 100%;
+     display: grid;
+     grid-auto-flow: column;
+  }
+  .navnews h3 {
+    color: var(--black);
+    font-size: 22px;
+    font-weight: 600;
+    margin: auto;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
 
   .navbar {
     position: absolute;
-    top: 100px;
+    top: 140px;
     right: 0;
     padding: 7px 10%;
     background: url("/../media/layout/topnav.png") no-repeat top;

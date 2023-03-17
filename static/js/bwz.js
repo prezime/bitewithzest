@@ -1,5 +1,6 @@
 const w = window.outerWidth;
 const navbar = document.getElementById("navbar");
+const navnews = document.getElementById("navnews");
 // const aPostCatCard = document.querySelectorAll('a.post-cat-card1, a.post-cat-card2');
 // const aPostCatCardOffset = aPostCatCard[0].offsetTop;
 const sticky = navbar.offsetTop;
@@ -47,7 +48,7 @@ if (w <= 769) {
   
 
   function toggleX(x) {
-    //console.log(sticky);
+    console.log(sticky);
     x.classList.toggle("change");
     var navbar_ul = document.getElementById("navbar_ul");
     var bar1 = document.getElementById("bar1");
@@ -57,7 +58,7 @@ if (w <= 769) {
       navbar_ul.style.display = 'flex';
       bar1.style.backgroundColor = "rgb(0, 170, 179)";
       bar3.style.backgroundColor = "rgb(0, 170, 179)";
-      // navbar.classList.add("sticky");
+      //navbar.classList.add("sticky");
       navbar_ul.style.zIndex = 10;
       navbar.style.zIndex = 10;
       
@@ -70,8 +71,12 @@ if (w <= 769) {
     }  
   }
   document.onclick = function (e) {
-    console.log(e.target.parentNode.offsetParent.className);
+    console.log(e.target);
     const menuToggle = document.getElementById("menu-toggle");
+    if (e.target.id == 'navbar')
+    {
+    resetBeSticky();
+    }
     if (e.target.id !== 'navbar_ul' && e.target.id !== 'menu-toggle' && 
       e.target.id !== 'change' && e.target.id !== 'bar3' && e.target.id !== 'bar2' && e.target.id !== 'bar1' && 
       e.target.parentNode.offsetParent.className !== 'accordion')
@@ -80,7 +85,6 @@ if (w <= 769) {
       navbar_ul.style.display = 'none';
       bar1.style.backgroundColor = "white";
       bar3.style.backgroundColor = "white";
-      
     }
     if (!(e.target instanceof HTMLAnchorElement) && (e.target.id !== 'fname' && 
     e.target.id !== 'email' && e.target.id !== 'subject' && e.target.id !== 'message' && 
@@ -89,18 +93,28 @@ if (w <= 769) {
     e.target.parentNode.offsetParent.className !== 'accordion active' && window.pageYOffset > sticky))
     {
       navbar.style.position = 'fixed';
-      navbar.style.top = 0;
+      navbar.style.top = '35px';
       navbar.style.zIndex = 11;
     }
   }
   function beSticky() {
+    console.log('scroll');
     if (window.pageYOffset >= sticky) {
+      navbar.style.position = 'fixed';
+      navbar.style.top = '35px';
+      navbar.style.zIndex = 11;
+    } else {
       navbar.style.position = 'absolute';
-      navbar.style.top = '100px';
-    } 
+      navbar.style.top = '135px';
+      navbar.style.zIndex = 0;
+    }
+  }
+  function resetBeSticky() {
+    navbar.style.position = 'absolute';
+    navbar.style.zIndex = 0;
   }
   
-} else {
+} else { //bigger screens
   window.onscroll = function() {beSticky()};
   
   var bcWidth = 0;
@@ -178,13 +192,13 @@ if (w <= 769) {
   function beSticky() {
     if (window.pageYOffset >= sticky) {
       navbar.style.position = 'fixed';
-      navbar.style.top = 0;
+      navbar.style.top = '40px';;
       if (djangoView != 'home'){
         bc.style.zIndex = 0;
       }
     } else {
       navbar.style.position = 'absolute';
-      navbar.style.top = '100px';
+      navbar.style.top = '140px';
       if (djangoView != 'home'){
         bc.style.zIndex = 2;
       }
