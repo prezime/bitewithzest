@@ -1466,6 +1466,9 @@ msgstr "Bestellwert über 81€: 0€"
 #: blog/templates/shipping_info.html:27
 msgid "Shipping & Packaging EU"
 msgstr "Versand & Verpackung EU"
+#: blog/templates/base.html:27
+msgid "LATEST NEWS!"
+msgstr "AKTUELL!"
 
 #: blog/templates/shipping_info.html:29
 msgid "order value up to 81€ (3 books): 6,9€"
